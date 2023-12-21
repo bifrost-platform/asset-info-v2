@@ -1,0 +1,12 @@
+addReviewers: true
+addAssignees: author
+
+reviewers:
+  - @bifrost-platform/AppGroupBackend
+  - oh51dy
+  - gihyeonsung
+  - jormal
+  - yjkellyjoo
+  - zibersaioros
+
+numberOfReviewers: 0
