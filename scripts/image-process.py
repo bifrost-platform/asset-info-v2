@@ -33,15 +33,15 @@ def search (dirname: str):
   for (path, _, files) in os.walk(dirname):
     print(f"> searching {path}")
     file_exts = [ os.path.splitext(filename)[-1] for filename in files ]
-    if ".svg" in file_exts:
-      print(f"  > processing svg in {path}")
-      gen_png256_by_svg(path)
-    elif ".png" in file_exts:
+    if ".png" in file_exts:
       max_size = max([
         int(filename.replace(".png", "").replace("image-", ""))
         for filename in files
         if filename.startswith("image-") and filename.endswith(".png") ])
       print(f"  > processing png-{max_size} in {path}")
       downscale_png (path, max_size)
+    elif ".svg" in file_exts:
+      print(f"  > processing svg in {path}")
+      gen_png256_by_svg(path)
 
 search (pwd)
