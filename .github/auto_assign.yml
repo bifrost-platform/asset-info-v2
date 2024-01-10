@@ -2,7 +2,7 @@ addReviewers: true
 addAssignees: author
 
 reviewers:
-  - @bifrost-platform/AppGroupBackend
+  - bifrost-platform/AppGroupBackend
   - oh51dy
   - gihyeonsung
   - jormal
