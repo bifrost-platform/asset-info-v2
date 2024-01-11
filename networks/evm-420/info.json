@@ -1,0 +1,35 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "id": "eth-0",
+    "name": "Goerli Ether",
+    "symbol": "ETH"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "etherscan",
+      "url": "https://goerli-optimism.etherscan.io/"
+    },
+    {
+      "id": "blockscout",
+      "url": "https://optimism-goerli.blockscout.com"
+    }
+  ],
+  "id": "evm-420",
+  "images": {
+    "png-128": true,
+    "png-256": true,
+    "png-32": true,
+    "png-64": true,
+    "svg": true
+  },
+  "name": "Optimism Goerli Testnet",
+  "tags": [
+    "optimism",
+    "l2-ethereum",
+    "goerli"
+  ],
+  "type": "testnet"
+}

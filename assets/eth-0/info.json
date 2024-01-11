@@ -7,7 +7,7 @@
       "network": "evm-1",
       "symbol": "ETH",
       "tags": [
-        "native_coin",
+        "native-coin",
         "mainnet"
       ]
     },
@@ -18,7 +18,29 @@
       "network": "evm-5",
       "symbol": "ETH",
       "tags": [
-        "native_coin",
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Ether",
+      "network": "evm-10",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Goerli Ether",
+      "network": "evm-420",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
         "testnet"
       ]
     },
@@ -29,7 +51,18 @@
       "network": "evm-11155111",
       "symbol": "ETH",
       "tags": [
-        "native_coin",
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Sepolia Ether",
+      "network": "evm-11155420",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
         "testnet"
       ]
     }
@@ -53,7 +86,7 @@
     }
   ],
   "tags": [
-    "native_coin",
+    "native-coin",
     "ethereum"
   ]
 }
