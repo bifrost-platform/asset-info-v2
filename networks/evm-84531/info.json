@@ -10,14 +10,14 @@
   "explorers": [
     {
       "id": "etherscan",
-      "url": "https://goerli-optimism.etherscan.io/"
+      "url": "https://goerli.basescan.org"
     },
     {
       "id": "blockscout",
-      "url": "https://optimism-goerli.blockscout.com"
+      "url": "https://base-goerli.blockscout.com"
     }
   ],
-  "id": "evm-420",
+  "id": "evm-84531",
   "images": {
     "png128": true,
     "png256": true,
@@ -25,10 +25,10 @@
     "png64": true,
     "svg": true
   },
-  "name": "Optimism Goerli Testnet",
+  "name": "Base Goerli Testnet",
   "network": "testnet",
   "tags": [
-    "optimism",
+    "base",
     "goerli",
     "l2-ethereum"
   ]

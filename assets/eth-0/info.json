@@ -47,6 +47,39 @@
     {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 18,
+      "name": "Ether",
+      "network": "evm-8453",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Goerli Ether",
+      "network": "evm-84531",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Sepolia Ether",
+      "network": "evm-84532",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
       "name": "Sepolia Ether",
       "network": "evm-11155111",
       "symbol": "ETH",
