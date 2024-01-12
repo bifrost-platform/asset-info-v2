@@ -3,27 +3,27 @@
     {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 18,
-      "name": "MATIC",
-      "network": "evm-137",
-      "symbol": "MATIC",
+      "name": "KLAY",
+      "network": "evm-1001",
+      "symbol": "KLAY",
       "tags": [
         "native-coin",
-        "mainnet"
+        "testnet"
       ]
     },
     {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 18,
-      "name": "MATIC",
-      "network": "evm-80001",
-      "symbol": "MATIC",
+      "name": "KLAY",
+      "network": "evm-8217",
+      "symbol": "KLAY",
       "tags": [
         "native-coin",
-        "testnet"
+        "mainnet"
       ]
     }
   ],
-  "id": "matic-0",
+  "id": "klay-0",
   "images": {
     "png128": false,
     "png256": false,
@@ -34,15 +34,15 @@
   "references": [
     {
       "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/polygon"
+      "url": "https://coinmarketcap.com/currencies/klaytn/"
     },
     {
       "id": "coingecko",
-      "url": "https://www.coingecko.com/en/coins/polygon"
+      "url": "https://www.coingecko.com/en/coins/klaytn"
     }
   ],
   "tags": [
     "native-coin",
-    "polygon"
+    "klaytn"
   ]
 }
