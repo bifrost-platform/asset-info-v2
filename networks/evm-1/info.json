@@ -23,10 +23,10 @@
   ],
   "id": "evm-1",
   "images": {
-    "png-128": true,
-    "png-256": true,
-    "png-32": true,
-    "png-64": true,
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
     "svg": true
   },
   "name": "Ethereum Mainnet",

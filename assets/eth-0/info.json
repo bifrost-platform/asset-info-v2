@@ -69,10 +69,10 @@
   ],
   "id": "eth-0",
   "images": {
-    "png-128": false,
-    "png-256": false,
-    "png-32": false,
-    "png-64": false,
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
     "svg": false
   },
   "references": [
