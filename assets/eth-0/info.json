@@ -141,6 +141,7 @@
     "png64": false,
     "svg": false
   },
+  "name": "Ether",
   "references": [
     {
       "id": "coinmarketcap",
