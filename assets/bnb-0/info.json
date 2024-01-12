@@ -1,0 +1,48 @@
+{
+  "contracts": [
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "BNB Chain Native Token",
+      "network": "evm-56",
+      "symbol": "BNB",
+      "tags": [
+        "native-coin",
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "BNB Chain Native Token",
+      "network": "evm-97",
+      "symbol": "tBNB",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    }
+  ],
+  "id": "bnb-0",
+  "images": {
+    "png-128": false,
+    "png-256": false,
+    "png-32": false,
+    "png-64": false,
+    "svg": false
+  },
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/bnb"
+    },
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/bnb"
+    }
+  ],
+  "tags": [
+    "native-coin",
+    "bnb"
+  ]
+}

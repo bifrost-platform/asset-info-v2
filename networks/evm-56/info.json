@@ -1,0 +1,33 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "id": "bnb-0",
+    "name": "BNB Chain Native Token",
+    "symbol": "BNB"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "etherscan",
+      "url": "https://bscscan.com"
+    },
+    {
+      "id": "dexguru",
+      "url": "https://bnb.dex.guru"
+    }
+  ],
+  "id": "evm-56",
+  "images": {
+    "png-128": true,
+    "png-256": true,
+    "png-32": true,
+    "png-64": true,
+    "svg": true
+  },
+  "name": "BNB Smart Chain Mainnet",
+  "network": "mainnet",
+  "tags": [
+    "bnb"
+  ]
+}

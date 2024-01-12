@@ -1,0 +1,29 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "id": "bnb-0",
+    "name": "BNB Chain Native Token",
+    "symbol": "tBNB"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "etherscan",
+      "url": "https://testnet.bscscan.com"
+    }
+  ],
+  "id": "evm-97",
+  "images": {
+    "png-128": true,
+    "png-256": true,
+    "png-32": true,
+    "png-64": true,
+    "svg": true
+  },
+  "name": "BNB Smart Chain Testnet",
+  "network": "testnet",
+  "tags": [
+    "bnb"
+  ]
+}
