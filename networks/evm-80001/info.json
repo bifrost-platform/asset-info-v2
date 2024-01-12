@@ -1,0 +1,29 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "id": "matic-0",
+    "name": "MATIC",
+    "symbol": "MATIC"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "etherscan",
+      "url": "https://mumbai.polygonscan.com"
+    }
+  ],
+  "id": "evm-80001",
+  "images": {
+    "png-128": true,
+    "png-256": true,
+    "png-32": true,
+    "png-64": true,
+    "svg": true
+  },
+  "name": "Polygon Testnet Mumbai",
+  "network": "testnet",
+  "tags": [
+    "polygon"
+  ]
+}
