@@ -1,0 +1,26 @@
+[
+  {
+    "value": "blockscout",
+    "description": "Explorer powered by Blockscout"
+  },
+  {
+    "value": "dexguru",
+    "description": "Explorer powered by DexGuru"
+  },
+  {
+    "value": "etherscan",
+    "description": "Explorer powered by Etherscan"
+  },
+  {
+    "value": "klaytnscope",
+    "description": "Explorer for Klaytn network"
+  },
+  {
+    "value": "otterscan",
+    "description": "Explorer powered by Otterscan"
+  },
+  {
+    "value": "routescan",
+    "description": "Explorer powered by Routescan"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "value": "avax-0",
+    "description": "Avalanche"
+  },
+  {
+    "value": "bfc-0",
+    "description": "Bifrost"
+  },
+  {
+    "value": "bnb-0",
+    "description": "BNB Chain Native Token"
+  },
+  {
+    "value": "eth-0",
+    "description": "Ether"
+  },
+  {
+    "value": "klay-0",
+    "description": "KLAY"
+  },
+  {
+    "value": "matic-0",
+    "description": "MATIC"
+  },
+  {
+    "value": "unknown",
+    "description": "Unknown Asset"
+  }
+]
