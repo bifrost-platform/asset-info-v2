@@ -26,10 +26,10 @@
     "svg": true
   },
   "name": "Optimism Goerli Testnet",
+  "network": "testnet",
   "tags": [
     "optimism",
     "l2-ethereum",
     "goerli"
-  ],
-  "type": "testnet"
+  ]
 }

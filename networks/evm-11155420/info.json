@@ -26,10 +26,10 @@
     "svg": true
   },
   "name": "OP Sepolia Testnet",
+  "network": "testnet",
   "tags": [
     "optimism",
     "l2-ethereum",
     "sepolia"
-  ],
-  "type": "testnet"
+  ]
 }

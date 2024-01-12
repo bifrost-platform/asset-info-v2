@@ -30,8 +30,8 @@
     "svg": true
   },
   "name": "Ethereum Mainnet",
+  "network": "mainnet",
   "tags": [
     "ethereum"
-  ],
-  "type": "mainnet"
+  ]
 }

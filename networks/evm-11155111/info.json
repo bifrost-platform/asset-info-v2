@@ -30,8 +30,9 @@
     "svg": true
   },
   "name": "Ethereum Testnet Sepolia",
+  "network": "testnet",
   "tags": [
-    "ethereum", "sepolia"
-  ],
-  "type": "testnet"
+    "ethereum",
+    "sepolia"
+  ]
 }

@@ -30,9 +30,9 @@
     "svg": true
   },
   "name": "OP Mainnet",
+  "network": "mainnet",
   "tags": [
     "optimism",
     "l2-ethereum"
-  ],
-  "type": "mainnet"
+  ]
 }
