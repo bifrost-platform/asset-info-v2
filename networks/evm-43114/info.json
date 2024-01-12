@@ -1,0 +1,29 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "id": "avax-0",
+    "name": "Avalanche",
+    "symbol": "AVAX"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "routescan",
+      "url": "https://snowtrace.io"
+    }
+  ],
+  "id": "evm-43114",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Avalanche C-Chain",
+  "network": "mainnet",
+  "tags": [
+    "avalanche"
+  ]
+}
