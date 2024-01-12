@@ -1,0 +1,48 @@
+{
+  "contracts": [
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Bifrost",
+      "network": "evm-3068",
+      "symbol": "BFC",
+      "tags": [
+        "native-coin",
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Bifrost",
+      "network": "evm-49088",
+      "symbol": "BFC",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    }
+  ],
+  "id": "bfc-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/bifrost"
+    },
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/bifrost"
+    }
+  ],
+  "tags": [
+    "native-coin",
+    "bifrost"
+  ]
+}
