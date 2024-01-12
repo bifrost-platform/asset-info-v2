@@ -1,0 +1,34 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "id": "eth-0",
+    "name": "Goerli Ether",
+    "symbol": "ETH"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "etherscan",
+      "url": "https://goerli.etherscan.io"
+    },
+    {
+      "id": "blockscout",
+      "url": "https://eth-goerli.blockscout.com"
+    }
+  ],
+  "id": "evm-5",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Ethereum Testnet Goerli",
+  "network": "testnet",
+  "tags": [
+    "ethereum",
+    "goerli"
+  ]
+}

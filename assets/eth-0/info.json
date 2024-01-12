@@ -1,0 +1,159 @@
+{
+  "contracts": [
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Ether",
+      "network": "evm-1",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Goerli Ether",
+      "network": "evm-5",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Ether",
+      "network": "evm-10",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Goerli Ether",
+      "network": "evm-420",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Ether",
+      "network": "evm-8453",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Ether",
+      "network": "evm-42161",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Goerli Ether",
+      "network": "evm-84531",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Sepolia Ether",
+      "network": "evm-84532",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Arbitrum Goerli Ether",
+      "network": "evm-421613",
+      "symbol": "AGOR",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Sepolia Ether",
+      "network": "evm-421614",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Sepolia Ether",
+      "network": "evm-11155111",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Sepolia Ether",
+      "network": "evm-11155420",
+      "symbol": "ETH",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    }
+  ],
+  "id": "eth-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Ether",
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/ethereum"
+    },
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/ethereum"
+    }
+  ],
+  "tags": [
+    "native-coin",
+    "ethereum"
+  ]
+}

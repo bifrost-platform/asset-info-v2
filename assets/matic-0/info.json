@@ -1,0 +1,49 @@
+{
+  "contracts": [
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "MATIC",
+      "network": "evm-137",
+      "symbol": "MATIC",
+      "tags": [
+        "native-coin",
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "MATIC",
+      "network": "evm-80001",
+      "symbol": "MATIC",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    }
+  ],
+  "id": "matic-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "MATIC",
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/polygon"
+    },
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/polygon"
+    }
+  ],
+  "tags": [
+    "native-coin",
+    "polygon"
+  ]
+}

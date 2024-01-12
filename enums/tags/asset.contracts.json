@@ -1,0 +1,14 @@
+[
+  {
+    "value": "mainnet",
+    "description": "This asset contract is deployed at mainnet"
+  },
+  {
+    "value": "native-coin",
+    "description": "Native coin of some network"
+  },
+  {
+    "value": "testnet",
+    "description": "This asset contract is deployed at testnet"
+  }
+]

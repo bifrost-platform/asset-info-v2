@@ -1,0 +1,19 @@
+{
+  "id": "everdex",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Everdex",
+  "networks": [
+    "evm-3068",
+    "evm-49088"
+  ],
+  "tags": [
+    "dex"
+  ],
+  "url": "https://www.everdex.app"
+}

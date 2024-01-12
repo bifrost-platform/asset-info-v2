@@ -1,0 +1,10 @@
+[
+  {
+    "value": "dex",
+    "description": "Protocol provides DEX services"
+  },
+  {
+    "value": "bridge",
+    "description": "Protocol provides bridge services"
+  }
+]

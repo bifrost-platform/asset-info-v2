@@ -1,0 +1,35 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "id": "eth-0",
+    "name": "Sepolia Ether",
+    "symbol": "ETH"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "etherscan",
+      "url": "https://sepolia-optimism.etherscan.io"
+    },
+    {
+      "id": "blockscout",
+      "url": "https://optimism-sepolia.blockscout.com"
+    }
+  ],
+  "id": "evm-11155420",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "OP Sepolia Testnet",
+  "network": "testnet",
+  "tags": [
+    "optimism",
+    "l2-ethereum",
+    "sepolia"
+  ]
+}
