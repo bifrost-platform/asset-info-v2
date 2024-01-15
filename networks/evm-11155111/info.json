@@ -9,12 +9,12 @@
   "engine": "evm",
   "explorers": [
     {
-      "id": "etherscan",
-      "url": "https://sepolia.etherscan.io"
-    },
-    {
       "id": "blockscout",
       "url": "https://eth-sepolia.blockscout.com"
+    },
+    {
+      "id": "etherscan",
+      "url": "https://sepolia.etherscan.io"
     },
     {
       "id": "otterscan",

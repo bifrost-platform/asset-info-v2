@@ -7,8 +7,8 @@
       "network": "evm-3068",
       "symbol": "BFC",
       "tags": [
-        "native-coin",
-        "mainnet"
+        "mainnet",
+        "native-coin"
       ]
     },
     {
@@ -34,16 +34,16 @@
   "name": "Bifrost",
   "references": [
     {
-      "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/bifrost"
-    },
-    {
       "id": "coingecko",
       "url": "https://www.coingecko.com/en/coins/bifrost"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/bifrost"
     }
   ],
   "tags": [
-    "native-coin",
-    "bifrost"
+    "bifrost",
+    "native-coin"
   ]
 }

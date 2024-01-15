@@ -9,12 +9,12 @@
   "engine": "evm",
   "explorers": [
     {
-      "id": "etherscan",
-      "url": "https://goerli-optimism.etherscan.io/"
-    },
-    {
       "id": "blockscout",
       "url": "https://optimism-goerli.blockscout.com"
+    },
+    {
+      "id": "etherscan",
+      "url": "https://goerli-optimism.etherscan.io/"
     }
   ],
   "id": "evm-420",
@@ -28,8 +28,8 @@
   "name": "Optimism Goerli Testnet",
   "network": "testnet",
   "tags": [
-    "optimism",
     "goerli",
-    "l2-ethereum"
+    "l2-ethereum",
+    "optimism"
   ]
 }

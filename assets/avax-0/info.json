@@ -18,8 +18,8 @@
       "network": "evm-43114",
       "symbol": "AVAX",
       "tags": [
-        "native-coin",
-        "mainnet"
+        "mainnet",
+        "native-coin"
       ]
     }
   ],
@@ -34,12 +34,12 @@
   "name": "Avalanche",
   "references": [
     {
-      "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/avalanche"
-    },
-    {
       "id": "coingecko",
       "url": "https://www.coingecko.com/en/coins/avalanche"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/avalanche"
     }
   ],
   "tags": [

@@ -1,9 +1,9 @@
 {
   "currency": {
     "address": "0x0000000000000000000000000000000000000000",
-    "decimals": 18,
+    "decimals": 0,
     "id": "unknown",
-    "name": "Unknown",
+    "name": "Unknown Asset",
     "symbol": "UNKNOWN"
   },
   "engine": "unknown",

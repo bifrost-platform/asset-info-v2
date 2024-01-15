@@ -24,6 +24,10 @@
     "description": "Ethereum networks"
   },
   {
+    "value": "goerli",
+    "description": "Goerli testnet"
+  },
+  {
     "value": "klaytn",
     "description": "Klaytn networks"
   },
@@ -38,5 +42,9 @@
   {
     "value": "polygon",
     "description": "Polygon networks"
+  },
+  {
+    "value": "sepolia",
+    "description": "Sepolia testnet"
   }
 ]

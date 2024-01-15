@@ -9,12 +9,12 @@
   "engine": "evm",
   "explorers": [
     {
-      "id": "etherscan",
-      "url": "https://bscscan.com"
-    },
-    {
       "id": "dexguru",
       "url": "https://bnb.dex.guru"
+    },
+    {
+      "id": "etherscan",
+      "url": "https://bscscan.com"
     }
   ],
   "id": "evm-56",

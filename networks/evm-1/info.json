@@ -9,16 +9,16 @@
   "engine": "evm",
   "explorers": [
     {
-      "id": "etherscan",
-      "url": "https://etherscan.io"
-    },
-    {
       "id": "blockscout",
       "url": "https://eth.blockscout.com"
     },
     {
       "id": "dexguru",
       "url": "https://ethereum.dex.guru"
+    },
+    {
+      "id": "etherscan",
+      "url": "https://etherscan.io"
     }
   ],
   "id": "evm-1",

@@ -7,8 +7,8 @@
       "network": "evm-137",
       "symbol": "MATIC",
       "tags": [
-        "native-coin",
-        "mainnet"
+        "mainnet",
+        "native-coin"
       ]
     },
     {
@@ -34,12 +34,12 @@
   "name": "MATIC",
   "references": [
     {
-      "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/polygon"
-    },
-    {
       "id": "coingecko",
       "url": "https://www.coingecko.com/en/coins/polygon"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/polygon"
     }
   ],
   "tags": [

@@ -9,12 +9,12 @@
   "engine": "evm",
   "explorers": [
     {
-      "id": "etherscan",
-      "url": "https://goerli.basescan.org"
-    },
-    {
       "id": "blockscout",
       "url": "https://base-goerli.blockscout.com"
+    },
+    {
+      "id": "etherscan",
+      "url": "https://goerli.basescan.org"
     }
   ],
   "id": "evm-84531",
