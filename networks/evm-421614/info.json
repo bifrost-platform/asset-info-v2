@@ -9,12 +9,12 @@
   "engine": "evm",
   "explorers": [
     {
-      "id": "etherscan",
-      "url": "https://sepolia.arbiscan.io/"
-    },
-    {
       "id": "blockscout",
       "url": "https://sepolia-explorer.arbitrum.io"
+    },
+    {
+      "id": "etherscan",
+      "url": "https://sepolia.arbiscan.io/"
     }
   ],
   "id": "evm-421614",

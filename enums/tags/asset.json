@@ -1,5 +1,9 @@
 [
   {
+    "value": "avalanche",
+    "description": "Main network of asset is Avalanche"
+  },
+  {
     "value": "bifrost",
     "description": "Main network of asset is Bifrost"
   },

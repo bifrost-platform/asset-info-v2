@@ -9,16 +9,16 @@
   "engine": "evm",
   "explorers": [
     {
-      "id": "etherscan",
-      "url": "https://optimistic.etherscan.io"
-    },
-    {
       "id": "blockscout",
       "url": "https://optimism.blockscout.com"
     },
     {
       "id": "dexguru",
       "url": "https://optimism.dex.guru"
+    },
+    {
+      "id": "etherscan",
+      "url": "https://optimistic.etherscan.io"
     }
   ],
   "id": "evm-10",
@@ -32,7 +32,7 @@
   "name": "OP Mainnet",
   "network": "mainnet",
   "tags": [
-    "optimism",
-    "l2-ethereum"
+    "l2-ethereum",
+    "optimism"
   ]
 }

@@ -3,8 +3,7 @@
     {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 0,
-      "id": "unknown",
-      "name": "Unknown",
+      "name": "Unknown Asset",
       "network": "unknown",
       "symbol": "UNKNOWN",
       "tags": []
@@ -12,11 +11,11 @@
   ],
   "id": "unknown",
   "images": {
-    "png128": false,
-    "png256": false,
-    "png32": false,
-    "png64": false,
-    "svg": false
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
   },
   "name": "Unknown Asset",
   "references": [],

@@ -18,8 +18,8 @@
       "network": "evm-8217",
       "symbol": "KLAY",
       "tags": [
-        "native-coin",
-        "mainnet"
+        "mainnet",
+        "native-coin"
       ]
     }
   ],
@@ -34,16 +34,16 @@
   "name": "KLAY",
   "references": [
     {
-      "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/klaytn/"
-    },
-    {
       "id": "coingecko",
       "url": "https://www.coingecko.com/en/coins/klaytn"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/klaytn/"
     }
   ],
   "tags": [
-    "native-coin",
-    "klaytn"
+    "klaytn",
+    "native-coin"
   ]
 }
