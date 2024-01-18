@@ -1,5 +1,6 @@
+from typing import Type, Annotated
+
 from pydantic import StringConstraints
-from typing_extensions import Type, Annotated
 
 DESCRIPTION_PATTERN: str = r".+[^.]$"
 """Regex pattern for a description."""

@@ -1,5 +1,6 @@
+from typing import Callable, Annotated, Type
+
 from pydantic import HttpUrl, WrapValidator
-from typing_extensions import Callable, Annotated, Type
 
 from libraries.models.id import Id
 from libraries.utils.model import CamelCaseModel
@@ -18,7 +19,7 @@ class Reference(CamelCaseModel):
 
 
 def __validate_reference_list(
-    value: dict, handler: Callable[dict, list[Reference]]
+    value: dict, handler: Callable[[dict], list[Reference]]
 ) -> list[Reference]:
     """Validate the list of references.
 

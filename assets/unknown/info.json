@@ -6,7 +6,9 @@
       "name": "Unknown Asset",
       "network": "unknown",
       "symbol": "UNKNOWN",
-      "tags": []
+      "tags": [
+        "unknown"
+      ]
     }
   ],
   "id": "unknown",

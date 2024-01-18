@@ -1,13 +1,12 @@
-from typing_extensions import Tuple
+from typing import Tuple
 
+from libraries.models.enum_id_type import EnumIdTypeEnum
 from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_type import EnumTypeEnum
+from libraries.models.enum_tag_type import EnumTagTypeEnum
 from libraries.models.protocol import Protocol
 from libraries.utils.file import File
 from tests.utils.checker import check_info_json_existence, check_images_validity
 from tests.utils.reader import read_models, read_enum_info
-
-MODEL_DIR_NAME = "protocols"
 
 
 class TestValidityProtocol:
@@ -20,14 +19,14 @@ class TestValidityProtocol:
 
     def setup_class(self):
         """Set up the class before tests in this class."""
-        self.protocol_list = read_models(Protocol, MODEL_DIR_NAME)
-        self.network_id_list = read_enum_info(EnumTypeEnum.ID, "network")
-        self.protocol_id_list = read_enum_info(EnumTypeEnum.ID, "protocol")
-        self.protocol_tag_list = read_enum_info(EnumTypeEnum.TAG, "protocol")
+        self.protocol_list = read_models(Protocol)
+        self.network_id_list = read_enum_info(EnumIdTypeEnum.NETWORK)
+        self.protocol_id_list = read_enum_info(EnumIdTypeEnum.PROTOCOL)
+        self.protocol_tag_list = read_enum_info(EnumTagTypeEnum.PROTOCOL)
 
     def test_all_dir_has_info_json(self):
         """All directory for protocol information has a `info.json` file."""
-        check_info_json_existence(MODEL_DIR_NAME)
+        check_info_json_existence(Protocol)
 
     def test_all_id_exists_in_enum_info(self):
         """All ID in protocol information has an ID which is described
