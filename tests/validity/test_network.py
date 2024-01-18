@@ -1,8 +1,9 @@
 from typing import Tuple
 
 from libraries.models.asset import Asset
+from libraries.models.enum_id_type import EnumIdTypeEnum
 from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_type import EnumTypeEnum
+from libraries.models.enum_tag_type import EnumTagTypeEnum
 from libraries.models.network import Network
 from libraries.models.network_type import NetworkTypeEnum
 from libraries.utils.file import File
@@ -11,8 +12,6 @@ from tests.utils.checker import (
     check_images_validity,
 )
 from tests.utils.reader import read_models, read_enum_info
-
-MODEL_DIR_NAME = "networks"
 
 
 class TestValidityNetwork:
@@ -34,17 +33,15 @@ class TestValidityNetwork:
 
     def setup_class(self):
         """Set up the class before tests in this class."""
-        self.asset_list = read_models(Asset, "assets")
-        self.network_list = read_models(Network, MODEL_DIR_NAME)
-        self.network_id_list = read_enum_info(EnumTypeEnum.ID, "network")
-        self.network_explorer_id_list = read_enum_info(
-            EnumTypeEnum.ID, "network.explorer"
-        )
-        self.network_tag_list = read_enum_info(EnumTypeEnum.TAG, "network")
+        self.asset_list = read_models(Asset)
+        self.network_list = read_models(Network)
+        self.network_id_list = read_enum_info(EnumIdTypeEnum.NETWORK)
+        self.network_explorer_id_list = read_enum_info(EnumIdTypeEnum.NETWORK_EXPLORER)
+        self.network_tag_list = read_enum_info(EnumTagTypeEnum.NETWORK)
 
     def test_all_dir_has_info_json(self):
         """All directory for network information has a `info.json` file."""
-        check_info_json_existence(MODEL_DIR_NAME)
+        check_info_json_existence(Network)
 
     def test_currency_exists_in_asset_contract(self):
         """Currency exists in asset contract and its information is match with it.

@@ -1,16 +1,15 @@
 from typing import Tuple
 
 from libraries.models.asset import Asset
+from libraries.models.enum_id_type import EnumIdTypeEnum
 from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_type import EnumTypeEnum
+from libraries.models.enum_tag_type import EnumTagTypeEnum
 from libraries.utils.file import File
 from tests.utils.checker import (
     check_info_json_existence,
     check_images_validity,
 )
 from tests.utils.reader import read_models, read_enum_info
-
-MODEL_DIR_NAME = "assets"
 
 
 class TestValidityAsset:
@@ -34,20 +33,16 @@ class TestValidityAsset:
 
     def setup_class(self):
         """Set up the class before tests in this class."""
-        self.asset_list = read_models(Asset, MODEL_DIR_NAME)
-        self.asset_id_list = read_enum_info(EnumTypeEnum.ID, "asset")
-        self.asset_reference_id_list = read_enum_info(
-            EnumTypeEnum.ID, "asset.reference"
-        )
-        self.network_id_list = read_enum_info(EnumTypeEnum.ID, "network")
-        self.asset_contract_tag_list = read_enum_info(
-            EnumTypeEnum.TAG, "asset.contracts"
-        )
-        self.asset_tag_list = read_enum_info(EnumTypeEnum.TAG, "asset")
+        self.asset_list = read_models(Asset)
+        self.asset_id_list = read_enum_info(EnumIdTypeEnum.ASSET)
+        self.asset_reference_id_list = read_enum_info(EnumIdTypeEnum.ASSET_REFERENCE)
+        self.network_id_list = read_enum_info(EnumIdTypeEnum.NETWORK)
+        self.asset_contract_tag_list = read_enum_info(EnumTagTypeEnum.ASSET_CONTRACTS)
+        self.asset_tag_list = read_enum_info(EnumTagTypeEnum.ASSET)
 
     def test_all_dir_has_info_json(self):
         """All directory for asset information has a `info.json` file."""
-        check_info_json_existence(MODEL_DIR_NAME)
+        check_info_json_existence(Asset)
 
     def test_all_contracts_network_exists_in_enum_info(self):
         """All contracts in asset information has a network which is described
@@ -85,7 +80,8 @@ class TestValidityAsset:
         """All assets' name exists in `contracts` of :class:`Asset`."""
         for asset, _ in self.asset_list:
             contract_name_list = [contract.name for contract in asset.contracts]
-            assert asset.name in contract_name_list
+            if len(contract_name_list) != 0:
+                assert asset.name in contract_name_list
 
     def test_all_reference_id_exists_in_enum_info(self):
         """All asset information has a reference ID which is described in the

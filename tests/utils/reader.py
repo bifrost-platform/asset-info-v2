@@ -1,67 +1,45 @@
-import os
-from json import loads
-from typing import TypeVar, Type, Tuple
+from typing import Tuple, Type
 
-from pydantic import ValidationError, RootModel
+from pydantic import ValidationError
 
-from libraries.models.enum_info import EnumInfoList, EnumInfo
-from libraries.models.enum_type import EnumTypeEnum
-from libraries.utils.file import search, PWD, File
-from libraries.utils.model import CamelCaseModel
-
-CamelModel = TypeVar("CamelModel", bound=CamelCaseModel)
-"""A type variable for the :class:`CamelCaseModel`.""" ""
+from libraries.models.enum_id_type import EnumIdTypeEnum
+from libraries.models.enum_info import EnumInfo
+from libraries.models.enum_tag_type import EnumTagTypeEnum
+from libraries.utils.file import File, get_model_info_list, get_enum_info
 
 
-def read_models(
-    model_type: Type[CamelModel], model_dir_name: str
-) -> list[Tuple[CamelModel, File]]:
-    """Reads all models from the given directory and returns a list of models.
+def read_models[T](model_type: Type[T]) -> list[Tuple[T, File]]:
+    """Reads all models from the given directory and validates a list of models.
 
     Args:
-        model_type: The type of the models to read.
-        model_dir_name: The name of the directory in the project to read the models from.
+        model_type: The type of the model.
 
     Returns:
-        A list of models.
-
-    Notes:
-        It only reads the `info.json` file from the given directory and its child directories.
+        A list of validated models.
     """
-    models = []
-    files = search(PWD.joinpath(model_dir_name), "info.json")
-    for file in files:
-        with open(file.path, "r") as fp:
-            try:
-                model = model_type.model_validate(loads(fp.read()))
-                if model.id != file.path.parent.name:
-                    raise AssertionError(
-                        f"ID of model '{model.id}' does not match the directory name '{file.path.parent.name}'"
-                    )
-                models.append((model, file))
-            except ValidationError as e:
-                raise AssertionError(
-                    f"Failed to validation {file.path.parent.name}@{model_dir_name}\n{e}"
-                )
-    return models
+    try:
+        model_list = get_model_info_list(model_type)
+    except ValidationError as e:
+        raise AssertionError(f"Failed to validation {model_type}\n{e}")
+    for model, file in model_list:
+        if model.id != file.path.parent.name:
+            raise AssertionError(
+                f"ID of model '{model.id}' does not match the directory name"
+                + "'{file.path.parent.name}'"
+            )
+    return model_list
 
 
-def read_enum_info(enum_type: EnumTypeEnum, enum_name: str) -> list[EnumInfo]:
+def read_enum_info(enum_type: EnumTagTypeEnum | EnumIdTypeEnum) -> list[EnumInfo]:
     """Reads the enum information from the given enum type and enum name.
 
     Args:
         enum_type: The type of the enum.
-        enum_name: The name of the enum.
 
     Returns:
         A list of enum information.
     """
-    with open(
-        os.path.join(PWD, f"enums/{enum_type.value}/{enum_name}.json"), "r"
-    ) as fp:
-        try:
-            return RootModel[EnumInfoList].model_validate(loads(fp.read())).root
-        except ValidationError as e:
-            raise AssertionError(
-                f"Failed to validation {enum_name}@{enum_type.value}\n{e}"
-            )
+    try:
+        return get_enum_info(enum_type)
+    except ValidationError as e:
+        raise AssertionError(f"Failed to validation {enum_type}\n{e}")
