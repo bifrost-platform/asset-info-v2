@@ -1,0 +1,37 @@
+{
+  "contracts": [
+    {
+      "address": "0xe4f05A66Ec68B54A58B17c22107b02e0232cC817",
+      "decimals": 18,
+      "name": "Wrapped Klay",
+      "network": "evm-8217",
+      "symbol": "WKLAY",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "wklay-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Wrapped Klay",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/wrapped-klay"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/wrapped-klaytn"
+    }
+  ],
+  "tags": [
+    "klaytn",
+    "native-coin"
+  ]
+}

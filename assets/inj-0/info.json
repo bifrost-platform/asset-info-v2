@@ -1,0 +1,44 @@
+{
+  "contracts": [
+    {
+      "address": "0xe28b3B32B6c345A34Ff64674606124Dd5Aceca30",
+      "decimals": 18,
+      "name": "Injective Token",
+      "network": "evm-1",
+      "symbol": "INJ",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xa2B726B1145A4773F68593CF171187d8EBe4d495",
+      "decimals": 18,
+      "name": "Injective Protocol",
+      "network": "evm-56",
+      "symbol": "INJ",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "inj-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Injective Protocol",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/injective"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/injective"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,47 @@
+{
+  "contracts": [
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Arbitrum Asset",
+      "network": "evm-42161",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Arbitrum Asset",
+      "network": "evm-421613",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Arbitrum Asset",
+      "network": "evm-421614",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "unknown-arbitrum",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Arbitrum Asset",
+  "references": [],
+  "tags": [
+    "arbitrum"
+  ]
+}

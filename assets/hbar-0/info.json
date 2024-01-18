@@ -1,0 +1,23 @@
+{
+  "contracts": [],
+  "id": "hbar-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Hedera",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/hedera"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/hedera"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,23 @@
+{
+  "contracts": [],
+  "id": "mina-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Mina Protocol",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/avalanche"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/avalanche"
+    }
+  ],
+  "tags": []
+}

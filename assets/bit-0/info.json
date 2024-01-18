@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x1A4b46696b2bB4794Eb3D4c26f1c55F9170fa4C5",
+      "decimals": 18,
+      "name": "BitDAO",
+      "network": "evm-1",
+      "symbol": "BIT",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "bit-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "BitDAO",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/bitdao"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/bitdao"
+    }
+  ],
+  "tags": []
+}

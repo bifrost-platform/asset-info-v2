@@ -1,0 +1,37 @@
+{
+  "contracts": [
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Avalanche Asset",
+      "network": "evm-43113",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Avalanche Asset",
+      "network": "evm-43114",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "unknown-avalanche",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Avalanche Asset",
+  "references": [],
+  "tags": [
+    "avalanche"
+  ]
+}

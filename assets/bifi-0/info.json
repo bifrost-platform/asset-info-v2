@@ -1,0 +1,74 @@
+{
+  "contracts": [
+    {
+      "address": "0x2791BfD60D232150Bff86b39B7146c0eaAA2BA81",
+      "decimals": 18,
+      "name": "BiFi",
+      "network": "evm-1",
+      "symbol": "BiFi",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x047938C3aD13c1eB821C8e310B2B6F889b6d0003",
+      "decimals": 18,
+      "name": "Unified BiFi",
+      "network": "evm-3068",
+      "symbol": "BiFi",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x8010a873d59719e895E20f15f9906B5a1F399C3A",
+      "decimals": 18,
+      "name": "Unified BiFi",
+      "network": "evm-49088",
+      "symbol": "BiFi",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x055ED934c426855caB467FdF8441D4FD6a7D2659",
+      "decimals": 18,
+      "name": "BiFi",
+      "network": "evm-5",
+      "symbol": "BiFi",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x1378e33a09d8bd8e449CFD8A5aBCa0439286d645",
+      "decimals": 18,
+      "name": "BiFi BSC",
+      "network": "evm-56",
+      "symbol": "BiFiB",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "bifi-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "BiFi",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/bifi"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/bifi"
+    }
+  ],
+  "tags": []
+}

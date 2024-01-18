@@ -1,0 +1,37 @@
+{
+  "contracts": [
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Klaytn Asset",
+      "network": "evm-1001",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Klaytn Asset",
+      "network": "evm-8217",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "unknown-klaytn",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Klaytn Asset",
+  "references": [],
+  "tags": [
+    "klaytn"
+  ]
+}

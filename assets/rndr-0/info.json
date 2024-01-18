@@ -1,0 +1,44 @@
+{
+  "contracts": [
+    {
+      "address": "0x6De037ef9aD2725EB40118Bb1702EBb27e4Aeb24",
+      "decimals": 18,
+      "name": "Render Token",
+      "network": "evm-1",
+      "symbol": "RNDR",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x61299774020dA444Af134c82fa83E3810b309991",
+      "decimals": 18,
+      "name": "Render Token",
+      "network": "evm-137",
+      "symbol": "RNDR",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "rndr-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Render Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/render"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/render"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,94 @@
+{
+  "contracts": [
+    {
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "decimals": 18,
+      "name": "Wrapped Ether",
+      "network": "evm-1",
+      "symbol": "WETH",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x4200000000000000000000000000000000000006",
+      "decimals": 18,
+      "name": "Wrapped Ether",
+      "network": "evm-10",
+      "symbol": "WETH",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+      "decimals": 18,
+      "name": "Wrapped Ether",
+      "network": "evm-137",
+      "symbol": "WETH",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": 18,
+      "name": "Wrapped Ether",
+      "network": "evm-42161",
+      "symbol": "WETH",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
+      "decimals": 18,
+      "name": "Wrapped Ether",
+      "network": "evm-43114",
+      "symbol": "WETH.e",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
+      "decimals": 18,
+      "name": "Wrapped Ether",
+      "network": "evm-5",
+      "symbol": "WETH",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x4200000000000000000000000000000000000006",
+      "decimals": 18,
+      "name": "Wrapped Ether",
+      "network": "evm-8453",
+      "symbol": "WETH",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "weth-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Wrapped Ether",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/weth"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/weth"
+    }
+  ],
+  "tags": []
+}

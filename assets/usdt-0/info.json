@@ -1,0 +1,144 @@
+{
+  "contracts": [
+    {
+      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "decimals": 6,
+      "name": "Tether USD",
+      "network": "evm-1",
+      "symbol": "USDT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+      "decimals": 6,
+      "name": "Tether USD",
+      "network": "evm-10",
+      "symbol": "USDT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+      "decimals": 6,
+      "name": "(POS) Tether USD",
+      "network": "evm-137",
+      "symbol": "USDT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x3eA8654d5755e673599473ab37d92788B5bA12aE",
+      "decimals": 6,
+      "name": "Unified USDT",
+      "network": "evm-3068",
+      "symbol": "USDT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "decimals": 6,
+      "name": "Tether USD",
+      "network": "evm-42161",
+      "symbol": "USDT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xCf82e5f1738f38BbfeD169D089609D42201271E4",
+      "decimals": 6,
+      "name": "USDT",
+      "network": "evm-421613",
+      "symbol": "USDT",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+      "decimals": 6,
+      "name": "TetherToken",
+      "network": "evm-43114",
+      "symbol": "USDt",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x815e850CDDb2BB8C8afb61266525daFfB9adD7dc",
+      "decimals": 6,
+      "name": "Unified USDT",
+      "network": "evm-49088",
+      "symbol": "USDT",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xF26d15E6484e00Af2772b840eb4F2B36F0BD569C",
+      "decimals": 6,
+      "name": "Tether USD",
+      "network": "evm-5",
+      "symbol": "USDT",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "decimals": 18,
+      "name": "Tether USD",
+      "network": "evm-56",
+      "symbol": "USDT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x312d92B462492B2D110c7b378a72F6F78B1d6289",
+      "decimals": 6,
+      "name": "Tether USD",
+      "network": "evm-80001",
+      "symbol": "USDT",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x66B57c5ea363cFC94033275675C57776F89B06C4",
+      "decimals": 18,
+      "name": "Tether USD",
+      "network": "evm-97",
+      "symbol": "USDT",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "usdt-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Tether USD",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/tether"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/tether"
+    }
+  ],
+  "tags": []
+}

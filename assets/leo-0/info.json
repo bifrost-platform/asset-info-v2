@@ -1,0 +1,44 @@
+{
+  "contracts": [
+    {
+      "address": "0x2AF5D2aD76741191D15Dfe7bF6aC92d4Bd912Ca3",
+      "decimals": 18,
+      "name": "Bitfinex LEO Token",
+      "network": "evm-1",
+      "symbol": "LEO",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x06D02e9D62A13fC76BB229373FB3BBBD1101D2fC",
+      "decimals": 18,
+      "name": "Bitfinex LEO Token (PoS)",
+      "network": "evm-137",
+      "symbol": "LEO",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "leo-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Bitfinex LEO Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/leo-token"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/unus-sed-leo/"
+    }
+  ],
+  "tags": []
+}

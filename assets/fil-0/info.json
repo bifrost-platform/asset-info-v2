@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x0D8Ce2A99Bb6e3B7Db580eD848240e4a0F9aE153",
+      "decimals": 18,
+      "name": "Filecoin",
+      "network": "evm-56",
+      "symbol": "FIL",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "fil-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Filecoin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/filecoin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/filecoin"
+    }
+  ],
+  "tags": []
+}

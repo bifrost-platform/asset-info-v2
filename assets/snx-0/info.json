@@ -1,0 +1,74 @@
+{
+  "contracts": [
+    {
+      "address": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
+      "decimals": 18,
+      "name": "Synthetix Network Token",
+      "network": "evm-1",
+      "symbol": "SNX",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4",
+      "decimals": 18,
+      "name": "Synthetix Network Token",
+      "network": "evm-10",
+      "symbol": "SNX",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x50B728D8D964fd00C2d0AAD81718b71311feF68a",
+      "decimals": 18,
+      "name": "Synthetix Network Token (PoS)",
+      "network": "evm-137",
+      "symbol": "SNX",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xBeC243C995409E6520D7C41E404da5dEba4b209B",
+      "decimals": 18,
+      "name": "Synthetix Network Token",
+      "network": "evm-43114",
+      "symbol": "SNX.e",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x9Ac983826058b8a9C7Aa1C9171441191232E8404",
+      "decimals": 18,
+      "name": "Synthetix Network Token",
+      "network": "evm-56",
+      "symbol": "SNX",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "snx-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Synthetix Network Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/synthetix-network-token"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/synthetix"
+    }
+  ],
+  "tags": []
+}

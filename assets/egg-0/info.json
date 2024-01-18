@@ -1,0 +1,64 @@
+{
+  "contracts": [
+    {
+      "address": "0x65cCD72c0813CE6f2703593B633202a0F3Ca6a0c",
+      "decimals": 18,
+      "name": "Nestree",
+      "network": "evm-1",
+      "symbol": "EGG",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x9DD4d64e41EA7Fc90ACEC15B08552172Ce94556a",
+      "decimals": 18,
+      "name": "Unified EGG",
+      "network": "evm-3068",
+      "symbol": "EGG",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xc53CE1aA929e9E8B7F9587bbEE2aB0fB530Fe676",
+      "decimals": 18,
+      "name": "Unified EGG",
+      "network": "evm-49088",
+      "symbol": "EGG",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x9225c534403eEAB0B80394F60683F51EF9acD627",
+      "decimals": 18,
+      "name": "Nestree",
+      "network": "evm-5",
+      "symbol": "EGG",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "egg-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Nestree",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/nestree"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/nestree"
+    }
+  ],
+  "tags": []
+}

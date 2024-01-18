@@ -1,0 +1,44 @@
+{
+  "contracts": [
+    {
+      "address": "0x50327c6c5a14DCaDE707ABad2E27eB517df87AB5",
+      "decimals": 6,
+      "name": "TRON",
+      "network": "evm-1",
+      "symbol": "TRX",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xCE7de646e7208a4Ef112cb6ed5038FA6cC6b12e3",
+      "decimals": 6,
+      "name": "TRON",
+      "network": "evm-56",
+      "symbol": "TRX",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "trx-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "TRON",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/tron"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/tron"
+    }
+  ],
+  "tags": []
+}

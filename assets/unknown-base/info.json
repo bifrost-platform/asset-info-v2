@@ -1,0 +1,47 @@
+{
+  "contracts": [
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Base Asset",
+      "network": "evm-8453",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Base Asset",
+      "network": "evm-84531",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Base Asset",
+      "network": "evm-84532",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "unknown-base",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Base Asset",
+  "references": [],
+  "tags": [
+    "base"
+  ]
+}
