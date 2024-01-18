@@ -1,0 +1,23 @@
+{
+  "contracts": [
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 0,
+      "name": "Unknown Asset",
+      "network": "unknown",
+      "symbol": "UNKNOWN",
+      "tags": []
+    }
+  ],
+  "id": "unknown",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Asset",
+  "references": [],
+  "tags": []
+}

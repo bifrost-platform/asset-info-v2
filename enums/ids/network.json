@@ -1,0 +1,94 @@
+[
+  {
+    "value": "evm-1",
+    "description": "Ethereum Mainnet"
+  },
+  {
+    "value": "evm-10",
+    "description": "OP Mainnet"
+  },
+  {
+    "value": "evm-1001",
+    "description": "Klaytn Testnet Baobab"
+  },
+  {
+    "value": "evm-11155111",
+    "description": "Ethereum Testnet Sepolia"
+  },
+  {
+    "value": "evm-11155420",
+    "description": "OP Sepolia Testnet"
+  },
+  {
+    "value": "evm-137",
+    "description": "Polygon Mainnet"
+  },
+  {
+    "value": "evm-3068",
+    "description": "Bifrost Mainnet"
+  },
+  {
+    "value": "evm-420",
+    "description": "Optimism Goerli Testnet"
+  },
+  {
+    "value": "evm-42161",
+    "description": "Arbitrum One"
+  },
+  {
+    "value": "evm-421613",
+    "description": "Arbitrum Goerli"
+  },
+  {
+    "value": "evm-421614",
+    "description": "Arbitrum Sepolia"
+  },
+  {
+    "value": "evm-43113",
+    "description": "Avalanche Fuji Testnet"
+  },
+  {
+    "value": "evm-43114",
+    "description": "Avalanche C-Chain"
+  },
+  {
+    "value": "evm-49088",
+    "description": "Bifrost Testnet"
+  },
+  {
+    "value": "evm-5",
+    "description": "Ethereum Testnet Goerli"
+  },
+  {
+    "value": "evm-56",
+    "description": "BNB Smart Chain Mainnet"
+  },
+  {
+    "value": "evm-80001",
+    "description": "Polygon Testnet Mumbai"
+  },
+  {
+    "value": "evm-8217",
+    "description": "Klaytn Mainnet Cypress"
+  },
+  {
+    "value": "evm-8453",
+    "description": "Base"
+  },
+  {
+    "value": "evm-84531",
+    "description": "Base Goerli Testnet"
+  },
+  {
+    "value": "evm-84532",
+    "description": "Base Sepolia Testnet"
+  },
+  {
+    "value": "evm-97",
+    "description": "BNB Smart Chain Testnet"
+  },
+  {
+    "value": "unknown",
+    "description": "Unknown Network"
+  }
+]

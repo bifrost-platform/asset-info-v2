@@ -1,0 +1,30 @@
+[
+  {
+    "value": "avalanche",
+    "description": "Main network of asset is Avalanche"
+  },
+  {
+    "value": "bifrost",
+    "description": "Main network of asset is Bifrost"
+  },
+  {
+    "value": "bnb",
+    "description": "Main network of asset is BNB chain"
+  },
+  {
+    "value": "ethereum",
+    "description": "Main network of asset is Ethereum"
+  },
+  {
+    "value": "klaytn",
+    "description": "Main network of asset is Klaytn"
+  },
+  {
+    "value": "native-coin",
+    "description": "Native coin of some network"
+  },
+  {
+    "value": "polygon",
+    "description": "Main network of asset is Polygon"
+  }
+]

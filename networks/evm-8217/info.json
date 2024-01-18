@@ -1,0 +1,29 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "id": "klay-0",
+    "name": "KLAY",
+    "symbol": "KLAY"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "klaytnscope",
+      "url": "https://klaytnscope.com"
+    }
+  ],
+  "id": "evm-8217",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Klaytn Mainnet Cypress",
+  "network": "mainnet",
+  "tags": [
+    "klaytn"
+  ]
+}

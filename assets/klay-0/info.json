@@ -1,0 +1,49 @@
+{
+  "contracts": [
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "KLAY",
+      "network": "evm-1001",
+      "symbol": "KLAY",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "KLAY",
+      "network": "evm-8217",
+      "symbol": "KLAY",
+      "tags": [
+        "mainnet",
+        "native-coin"
+      ]
+    }
+  ],
+  "id": "klay-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "KLAY",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/klaytn"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/klaytn/"
+    }
+  ],
+  "tags": [
+    "klaytn",
+    "native-coin"
+  ]
+}

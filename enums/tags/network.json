@@ -1,0 +1,50 @@
+[
+  {
+    "value": "arbitrum",
+    "description": "Arbitrum networks"
+  },
+  {
+    "value": "avalanche",
+    "description": "Avalanche networks"
+  },
+  {
+    "value": "base",
+    "description": "Base networks"
+  },
+  {
+    "value": "bifrost",
+    "description": "Bifrost networks"
+  },
+  {
+    "value": "bnb",
+    "description": "BNB networks"
+  },
+  {
+    "value": "ethereum",
+    "description": "Ethereum networks"
+  },
+  {
+    "value": "goerli",
+    "description": "Goerli testnet"
+  },
+  {
+    "value": "klaytn",
+    "description": "Klaytn networks"
+  },
+  {
+    "value": "l2-ethereum",
+    "description": "Layer-2 networks of Ethereum"
+  },
+  {
+    "value": "optimism",
+    "description": "Optimism networks"
+  },
+  {
+    "value": "polygon",
+    "description": "Polygon networks"
+  },
+  {
+    "value": "sepolia",
+    "description": "Sepolia testnet"
+  }
+]

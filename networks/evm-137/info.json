@@ -1,0 +1,37 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "id": "matic-0",
+    "name": "MATIC",
+    "symbol": "MATIC"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "blockscout",
+      "url": "https://polygon.blockscout.com/"
+    },
+    {
+      "id": "dexguru",
+      "url": "https://polygon.dex.guru"
+    },
+    {
+      "id": "etherscan",
+      "url": "https://polygonscan.com"
+    }
+  ],
+  "id": "evm-137",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Polygon Mainnet",
+  "network": "mainnet",
+  "tags": [
+    "polygon"
+  ]
+}

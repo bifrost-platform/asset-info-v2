@@ -1,0 +1,49 @@
+{
+  "contracts": [
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Avalanche",
+      "network": "evm-43113",
+      "symbol": "AVAX",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "Avalanche",
+      "network": "evm-43114",
+      "symbol": "AVAX",
+      "tags": [
+        "mainnet",
+        "native-coin"
+      ]
+    }
+  ],
+  "id": "avax-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Avalanche",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/avalanche"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/avalanche"
+    }
+  ],
+  "tags": [
+    "avalanche",
+    "native-coin"
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "value": "coingecko",
+    "description": "Reference to CoinGecko"
+  },
+  {
+    "value": "coinmarketcap",
+    "description": "Reference to CoinMarketCap"
+  }
+]

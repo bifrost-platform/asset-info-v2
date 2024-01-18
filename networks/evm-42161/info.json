@@ -1,0 +1,34 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "id": "eth-0",
+    "name": "Ether",
+    "symbol": "ETH"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "dexguru",
+      "url": "https://arbitrum.dex.guru"
+    },
+    {
+      "id": "etherscan",
+      "url": "https://arbiscan.io"
+    }
+  ],
+  "id": "evm-42161",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Arbitrum One",
+  "network": "mainnet",
+  "tags": [
+    "arbitrum",
+    "l2-ethereum"
+  ]
+}

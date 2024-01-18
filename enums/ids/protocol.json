@@ -1,0 +1,22 @@
+[
+  {
+    "value": "1inch",
+    "description": "1inch Network"
+  },
+  {
+    "value": "bifrost-bridge",
+    "description": "Bifrost Bridge"
+  },
+  {
+    "value": "everdex",
+    "description": "Everdex"
+  },
+  {
+    "value": "stargate",
+    "description": "Stargate"
+  },
+  {
+    "value": "unknown",
+    "description": "Unknown Protocol"
+  }
+]

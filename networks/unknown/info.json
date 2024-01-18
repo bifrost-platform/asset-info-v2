@@ -1,0 +1,22 @@
+{
+  "currency": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 0,
+    "id": "unknown",
+    "name": "Unknown Asset",
+    "symbol": "UNKNOWN"
+  },
+  "engine": "unknown",
+  "explorers": [],
+  "id": "unknown",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Network",
+  "network": "unknown",
+  "tags": []
+}
