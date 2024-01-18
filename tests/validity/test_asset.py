@@ -1,5 +1,8 @@
 from typing import Tuple
 
+from web3 import Web3
+
+from libraries.models.address import is_evm_address
 from libraries.models.asset import Asset
 from libraries.models.enum_id_type import EnumIdTypeEnum
 from libraries.models.enum_info import EnumInfo
@@ -47,6 +50,13 @@ class TestValidityAsset:
     def test_all_dir_has_info_json(self):
         """All directory for asset information has a `info.json` file."""
         check_info_json_existence(Asset)
+
+    def test_all_contracts_address_checksum_valid(self):
+        """All contracts in asset information has a valid address checksum."""
+        for asset, _ in self.asset_list:
+            for contract in asset.contracts:
+                if is_evm_address(contract.address):
+                    assert Web3.is_checksum_address(contract.address)
 
     def test_all_contracts_network_exists_in_enum_info(self):
         """All contracts in asset information has a network which is described
