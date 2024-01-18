@@ -1,5 +1,6 @@
+from typing import Annotated, Type, Union
+
 from pydantic import StringConstraints
-from typing_extensions import Annotated, Type, Union
 
 EVM_ADDRESS_PATTERN: str = r"^0x[a-fA-F0-9]{40}$"
 """Regex pattern for an Ethereum Virtual Machine (EVM) address."""

@@ -1,8 +1,8 @@
 import os
 from json import loads
+from typing import TypeVar, Type, Tuple
 
 from pydantic import ValidationError, RootModel
-from typing_extensions import TypeVar, Type, Tuple
 
 from libraries.models.enum_info import EnumInfoList, EnumInfo
 from libraries.models.enum_type import EnumTypeEnum

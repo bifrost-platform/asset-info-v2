@@ -1,4 +1,4 @@
-from typing_extensions import Tuple
+from typing import Tuple
 
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_type import EnumTypeEnum

@@ -1,5 +1,6 @@
+from typing import Annotated, Type
+
 from pydantic import StringConstraints, WrapValidator
-from typing_extensions import Annotated, Type
 
 ID_PATTERN: str = r"^[a-z0-9]+(\-[a-z0-9]+)*(\-[0-9]+)?$"
 """Regex pattern for an ID."""
