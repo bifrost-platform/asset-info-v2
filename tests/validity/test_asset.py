@@ -4,6 +4,7 @@ from libraries.models.asset import Asset
 from libraries.models.enum_id_type import EnumIdTypeEnum
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_tag_type import EnumTagTypeEnum
+from libraries.models.network import Network
 from libraries.utils.file import File
 from tests.utils.checker import (
     check_info_json_existence,
@@ -17,6 +18,7 @@ class TestValidityAsset:
 
     Attributes:
         asset_list: List of asset information.
+        network_list: List of network information.
         asset_id_list: List of asset ID enum information.
         asset_reference_id_list: List of asset reference ID enum information.
         network_id_list: List of network ID enum information.
@@ -25,6 +27,7 @@ class TestValidityAsset:
     """
 
     asset_list: list[Tuple[Asset, File]]
+    network_list: list[Tuple[Network, File]]
     asset_id_list: list[EnumInfo]
     asset_reference_id_list: list[EnumInfo]
     network_id_list: list[EnumInfo]
@@ -34,6 +37,7 @@ class TestValidityAsset:
     def setup_class(self):
         """Set up the class before tests in this class."""
         self.asset_list = read_models(Asset)
+        self.network_list = read_models(Network)
         self.asset_id_list = read_enum_info(EnumIdTypeEnum.ASSET)
         self.asset_reference_id_list = read_enum_info(EnumIdTypeEnum.ASSET_REFERENCE)
         self.network_id_list = read_enum_info(EnumIdTypeEnum.NETWORK)
@@ -51,6 +55,8 @@ class TestValidityAsset:
         for asset, _ in self.asset_list:
             for contract in asset.contracts:
                 assert contract.network in network_value_list
+                network = next(item for item, _ in self.network_list if item.id == contract.network)
+                assert network.network in contract.tags
 
     def test_all_contracts_tag_exists_in_enum_info(self):
         """All contracts in asset information has a tag which is described
