@@ -55,7 +55,7 @@ def __convert_svg_to_png256(svg_path: Path) -> None:
             )
 
 
-async def create_downscaled_image(base_image_path: Path) -> None:
+def create_downscaled_image(base_image_path: Path) -> None:
     """Creates downscaled images.
 
     Args:
