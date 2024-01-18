@@ -1,6 +1,16 @@
 {
   "contracts": [
     {
+      "address": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0",
+      "decimals": 18,
+      "name": "Matic Token",
+      "network": "evm-1",
+      "symbol": "MATIC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 18,
       "name": "MATIC",
@@ -9,6 +19,46 @@
       "tags": [
         "mainnet",
         "native-coin"
+      ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000001010",
+      "decimals": 18,
+      "name": "Matic Token",
+      "network": "evm-137",
+      "symbol": "MATIC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x21ad243b81eff53482F6F6E7C76539f2CfC0B734",
+      "decimals": 18,
+      "name": "Unified MATIC",
+      "network": "evm-3068",
+      "symbol": "MATIC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xad115F901a1Af99dc83D055C89641031fd1a50Dc",
+      "decimals": 18,
+      "name": "Unified MATIC",
+      "network": "evm-49088",
+      "symbol": "MATIC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xCC42724C6683B7E57334c4E856f4c9965ED682bD",
+      "decimals": 18,
+      "name": "Matic Token",
+      "network": "evm-56",
+      "symbol": "MATIC",
+      "tags": [
+        "mainnet"
       ]
     },
     {
@@ -25,11 +75,11 @@
   ],
   "id": "matic-0",
   "images": {
-    "png128": false,
-    "png256": false,
-    "png32": false,
-    "png64": false,
-    "svg": false
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
   },
   "name": "MATIC",
   "references": [
