@@ -1,30 +1,374 @@
 [
   {
+    "value": "aave-0",
+    "description": "Aave Token"
+  },
+  {
+    "value": "ada-0",
+    "description": "Cardano Token"
+  },
+  {
+    "value": "algo-0",
+    "description": "Algorand"
+  },
+  {
+    "value": "apt-0",
+    "description": "Aptos"
+  },
+  {
+    "value": "arb-0",
+    "description": "Arbitrum"
+  },
+  {
+    "value": "atom-0",
+    "description": "Cosmos"
+  },
+  {
     "value": "avax-0",
     "description": "Avalanche"
+  },
+  {
+    "value": "bch-0",
+    "description": "Bitcoin Cash Token"
   },
   {
     "value": "bfc-0",
     "description": "Bifrost"
   },
   {
+    "value": "bifi-0",
+    "description": "BiFi"
+  },
+  {
+    "value": "bit-0",
+    "description": "BitDAO"
+  },
+  {
     "value": "bnb-0",
     "description": "BNB Chain Native Token"
+  },
+  {
+    "value": "bsv-0",
+    "description": "Bitcoin SV"
+  },
+  {
+    "value": "btc-0",
+    "description": "Bitcoin"
+  },
+  {
+    "value": "btcb-0",
+    "description": "BTCB Token"
+  },
+  {
+    "value": "busd-0",
+    "description": "BUSD"
+  },
+  {
+    "value": "cro-0",
+    "description": "CRO"
+  },
+  {
+    "value": "dai-0",
+    "description": "Dai Stablecoin"
+  },
+  {
+    "value": "doge-0",
+    "description": "Dogecoin"
+  },
+  {
+    "value": "dot-0",
+    "description": "Polkadot Token"
+  },
+  {
+    "value": "egg-0",
+    "description": "Nestree"
+  },
+  {
+    "value": "egld-0",
+    "description": "Elrond"
+  },
+  {
+    "value": "eos-0",
+    "description": "EOS Token"
+  },
+  {
+    "value": "etc-0",
+    "description": "Ethereum Classic"
   },
   {
     "value": "eth-0",
     "description": "Ether"
   },
   {
+    "value": "fdusd-0",
+    "description": "First Digital USD"
+  },
+  {
+    "value": "fil-0",
+    "description": "Filecoin"
+  },
+  {
+    "value": "flow-0",
+    "description": "Flow"
+  },
+  {
+    "value": "ftm-0",
+    "description": "Fantom"
+  },
+  {
+    "value": "grt-0",
+    "description": "Graph Token"
+  },
+  {
+    "value": "hbar-0",
+    "description": "Hedera"
+  },
+  {
+    "value": "icp-0",
+    "description": "Internet Computer"
+  },
+  {
+    "value": "imx-0",
+    "description": "Immutable X"
+  },
+  {
+    "value": "inj-0",
+    "description": "Injective Protocol"
+  },
+  {
+    "value": "kas-0",
+    "description": "Kaspa"
+  },
+  {
     "value": "klay-0",
     "description": "KLAY"
+  },
+  {
+    "value": "ldo-0",
+    "description": "Lido DAO Token"
+  },
+  {
+    "value": "leo-0",
+    "description": "Bitfinex LEO Token"
+  },
+  {
+    "value": "link-0",
+    "description": "ChainLink Token"
+  },
+  {
+    "value": "ltc-0",
+    "description": "Litecoin Token"
+  },
+  {
+    "value": "lusd-0",
+    "description": "LUSD Stablecoin"
   },
   {
     "value": "matic-0",
     "description": "MATIC"
   },
   {
+    "value": "mina-0",
+    "description": "Mina Protocol"
+  },
+  {
+    "value": "mkr-0",
+    "description": "Maker"
+  },
+  {
+    "value": "mnt-0",
+    "description": "Mantle"
+  },
+  {
+    "value": "near-0",
+    "description": "NEAR Protocol"
+  },
+  {
+    "value": "okb-0",
+    "description": "OKB"
+  },
+  {
+    "value": "op-0",
+    "description": "Optimism"
+  },
+  {
+    "value": "ordi-0",
+    "description": "Ordinals"
+  },
+  {
+    "value": "p2d-0",
+    "description": "P2D"
+  },
+  {
+    "value": "qnt-0",
+    "description": "Quant"
+  },
+  {
+    "value": "rndr-0",
+    "description": "Render Token"
+  },
+  {
+    "value": "rune-0",
+    "description": "THOR Chain"
+  },
+  {
+    "value": "sand-0",
+    "description": "SAND"
+  },
+  {
+    "value": "sat-0",
+    "description": "Super Athletes Token"
+  },
+  {
+    "value": "sats-0",
+    "description": "Satoshis"
+  },
+  {
+    "value": "sei-0",
+    "description": "Sei"
+  },
+  {
+    "value": "shib-0",
+    "description": "SHIBA INU"
+  },
+  {
+    "value": "snx-0",
+    "description": "Synthetix Network Token"
+  },
+  {
+    "value": "sol-0",
+    "description": "Solana"
+  },
+  {
+    "value": "stx-0",
+    "description": "Stacks"
+  },
+  {
+    "value": "tia-0",
+    "description": "Celestia"
+  },
+  {
+    "value": "ton-0",
+    "description": "Wrapped TON Coin"
+  },
+  {
+    "value": "trx-0",
+    "description": "TRON"
+  },
+  {
+    "value": "tusd-0",
+    "description": "TrueUSD"
+  },
+  {
+    "value": "uni-0",
+    "description": "Uniswap"
+  },
+  {
     "value": "unknown",
     "description": "Unknown Asset"
+  },
+  {
+    "value": "unknown-arbitrum",
+    "description": "Unknown Arbitrum Asset"
+  },
+  {
+    "value": "unknown-avalanche",
+    "description": "Unknown Avalanche Asset"
+  },
+  {
+    "value": "unknown-base",
+    "description": "Unknown Base Asset"
+  },
+  {
+    "value": "unknown-bifrost",
+    "description": "Unknown Bifrost Asset"
+  },
+  {
+    "value": "unknown-bnb",
+    "description": "Unknown BNB Asset"
+  },
+  {
+    "value": "unknown-ethereum",
+    "description": "Unknown Ethereum Asset"
+  },
+  {
+    "value": "unknown-klaytn",
+    "description": "Unknown Klaytn Asset"
+  },
+  {
+    "value": "unknown-optimism",
+    "description": "Unknown Optimism Asset"
+  },
+  {
+    "value": "unknown-polygon",
+    "description": "Unknown Polygon Asset"
+  },
+  {
+    "value": "usdc-0",
+    "description": "USD Coin"
+  },
+  {
+    "value": "usdd-0",
+    "description": "Decentralized USD"
+  },
+  {
+    "value": "usdt-0",
+    "description": "Tether USD"
+  },
+  {
+    "value": "vet-0",
+    "description": "VeChain"
+  },
+  {
+    "value": "wavax-0",
+    "description": "Wrapped AVAX"
+  },
+  {
+    "value": "wbfc-0",
+    "description": "Wrapped Bifrost"
+  },
+  {
+    "value": "wbnb-0",
+    "description": "Wrapped BNB"
+  },
+  {
+    "value": "wbtc-0",
+    "description": "Wrapped BTC"
+  },
+  {
+    "value": "weth-0",
+    "description": "Wrapped Ether"
+  },
+  {
+    "value": "wfil-0",
+    "description": "Wrapped Filecoin"
+  },
+  {
+    "value": "wflow-0",
+    "description": "Wrapped Flow"
+  },
+  {
+    "value": "witch-0",
+    "description": "Witch Token"
+  },
+  {
+    "value": "wklay-0",
+    "description": "Wrapped Klay"
+  },
+  {
+    "value": "wmatic-0",
+    "description": "Wrapped Matic"
+  },
+  {
+    "value": "xlm-0",
+    "description": "Stellar"
+  },
+  {
+    "value": "xmr-0",
+    "description": "Monero"
+  },
+  {
+    "value": "xrp-0",
+    "description": "XRP Token"
   }
 ]
