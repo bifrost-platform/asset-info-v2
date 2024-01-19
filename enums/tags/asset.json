@@ -1,7 +1,15 @@
 [
   {
+    "value": "arbitrum",
+    "description": "Main network of asset is Arbitrum"
+  },
+  {
     "value": "avalanche",
     "description": "Main network of asset is Avalanche"
+  },
+  {
+    "value": "base",
+    "description": "Main network of asset is Base"
   },
   {
     "value": "bifrost",
@@ -22,6 +30,10 @@
   {
     "value": "native-coin",
     "description": "Native coin of some network"
+  },
+  {
+    "value": "optimism",
+    "description": "Main network of asset is Optimism"
   },
   {
     "value": "polygon",

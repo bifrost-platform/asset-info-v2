@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x1Fa4a73a3F0133f0025378af00236f3aBDEE5D63",
+      "decimals": 18,
+      "name": "NEAR Protocol",
+      "network": "evm-56",
+      "symbol": "NEAR",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "near-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "NEAR Protocol",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/near"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/near-protocol"
+    }
+  ],
+  "tags": []
+}

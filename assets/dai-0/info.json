@@ -1,0 +1,124 @@
+{
+  "contracts": [
+    {
+      "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "decimals": 18,
+      "name": "Dai Stablecoin",
+      "network": "evm-1",
+      "symbol": "DAI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+      "decimals": 18,
+      "name": "Dai Stablecoin",
+      "network": "evm-10",
+      "symbol": "DAI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
+      "decimals": 18,
+      "name": "(PoS) Dai Stablecoin",
+      "network": "evm-137",
+      "symbol": "DAI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xcDB9579Db96EB5C8298dF889D915D0FF668AfF2a",
+      "decimals": 18,
+      "name": "Unified DAI",
+      "network": "evm-3068",
+      "symbol": "DAI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+      "decimals": 18,
+      "name": "Dai Stablecoin",
+      "network": "evm-43114",
+      "symbol": "DAI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
+      "decimals": 18,
+      "name": "Dai Stablecoin",
+      "network": "evm-43114",
+      "symbol": "DAI.e",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x2353859d0c5CD0CB4Da701d2aCA9f1222Ad71110",
+      "decimals": 18,
+      "name": "DAI",
+      "network": "evm-49088",
+      "symbol": "DAI",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3",
+      "decimals": 18,
+      "name": "Dai Token",
+      "network": "evm-56",
+      "symbol": "DAI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb",
+      "decimals": 18,
+      "name": "Dai Stablecoin",
+      "network": "evm-8453",
+      "symbol": "DAI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x263deEAd49900486A1E9C312BB70CC172E333917",
+      "decimals": 18,
+      "name": "DAI stable",
+      "network": "evm-84531",
+      "symbol": "DAI",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "dai-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Dai Stablecoin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/dai"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/multi-collateral-dai"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x4200000000000000000000000000000000000042",
+      "decimals": 18,
+      "name": "Optimism",
+      "network": "evm-10",
+      "symbol": "OP",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "op-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Optimism",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/optimism"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/optimism-ethereum"
+    }
+  ],
+  "tags": []
+}

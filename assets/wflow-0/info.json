@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0x5c147e74D63B1D31AA3Fd78Eb229B65161983B2b",
+      "decimals": 18,
+      "name": "Wrapped Flow",
+      "network": "evm-1",
+      "symbol": "WFLOW",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "wflow-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Wrapped Flow",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/wrapped-flow"
+    }
+  ],
+  "tags": []
+}

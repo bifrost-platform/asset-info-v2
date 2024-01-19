@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47",
+      "decimals": 18,
+      "name": "Cardano Token",
+      "network": "evm-56",
+      "symbol": "ADA",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ada-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Cardano Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/cardano"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/cardano"
+    }
+  ],
+  "tags": []
+}

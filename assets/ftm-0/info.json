@@ -1,0 +1,54 @@
+{
+  "contracts": [
+    {
+      "address": "0x4E15361FD6b4BB609Fa63C81A2be19d873717870",
+      "decimals": 18,
+      "name": "Fantom Token",
+      "network": "evm-1",
+      "symbol": "FTM",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xC9c1c1c20B3658F8787CC2FD702267791f224Ce1",
+      "decimals": 18,
+      "name": "Fantom Token (PoS)",
+      "network": "evm-137",
+      "symbol": "FTM",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xAD29AbB318791D579433D831ed122aFeAf29dcfe",
+      "decimals": 18,
+      "name": "Fantom",
+      "network": "evm-56",
+      "symbol": "FTM",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ftm-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Fantom",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/fantom"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/fantom"
+    }
+  ],
+  "tags": []
+}

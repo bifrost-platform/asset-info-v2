@@ -1,0 +1,23 @@
+{
+  "contracts": [],
+  "id": "vet-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "VeChain",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/vechain"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/vechain"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,64 @@
+{
+  "contracts": [
+    {
+      "address": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
+      "decimals": 18,
+      "name": "Maker",
+      "network": "evm-1",
+      "symbol": "MKR",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x6f7C932e7684666C9fd1d44527765433e01fF61d",
+      "decimals": 18,
+      "name": "MAKER (PoS)",
+      "network": "evm-137",
+      "symbol": "MKR",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x88128fd4b259552A9A1D457f435a6527AAb72d42",
+      "decimals": 18,
+      "name": "Maker",
+      "network": "evm-43114",
+      "symbol": "MKR.e",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x5f0Da599BB2ccCfcf6Fdfd7D81743B6020864350",
+      "decimals": 18,
+      "name": "Maker",
+      "network": "evm-56",
+      "symbol": "MKR",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "mkr-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Maker",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/maker"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/maker"
+    }
+  ],
+  "tags": []
+}

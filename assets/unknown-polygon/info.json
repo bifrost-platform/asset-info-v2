@@ -1,0 +1,37 @@
+{
+  "contracts": [
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Polygon Asset",
+      "network": "evm-137",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Polygon Asset",
+      "network": "evm-80001",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "unknown-polygon",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Polygon Asset",
+  "references": [],
+  "tags": [
+    "polygon"
+  ]
+}

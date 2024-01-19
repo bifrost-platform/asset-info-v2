@@ -45,6 +45,16 @@
       ]
     },
     {
+      "address": "0x6c9944674C1D2cF6c4c4999FC7290Ba105dcd70e",
+      "decimals": 18,
+      "name": "Unified ETH",
+      "network": "evm-3068",
+      "symbol": "ETH",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 18,
       "name": "Goerli Ether",
@@ -89,6 +99,26 @@
       ]
     },
     {
+      "address": "0xf20d962a6c8f70c731bd838a3a388D7d48fA6e15",
+      "decimals": 18,
+      "name": "Ether",
+      "network": "evm-43114",
+      "symbol": "ETH",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xc83EEd1bf5464eD5383bc3342b918E08f6815950",
+      "decimals": 18,
+      "name": "Unified ETH",
+      "network": "evm-49088",
+      "symbol": "ETH",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 18,
       "name": "Goerli Ether",
@@ -97,6 +127,16 @@
       "tags": [
         "native-coin",
         "testnet"
+      ]
+    },
+    {
+      "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+      "decimals": 18,
+      "name": "Ethereum Token",
+      "network": "evm-56",
+      "symbol": "ETH",
+      "tags": [
+        "mainnet"
       ]
     },
     {
@@ -135,11 +175,11 @@
   ],
   "id": "eth-0",
   "images": {
-    "png128": false,
-    "png256": false,
-    "png32": false,
-    "png64": false,
-    "svg": false
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
   },
   "name": "Ether",
   "references": [

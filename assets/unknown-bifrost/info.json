@@ -1,0 +1,37 @@
+{
+  "contracts": [
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Bifrost Asset",
+      "network": "evm-3068",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Bifrost Asset",
+      "network": "evm-49088",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "unknown-bifrost",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Bifrost Asset",
+  "references": [],
+  "tags": [
+    "bifrost"
+  ]
+}

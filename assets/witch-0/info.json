@@ -1,0 +1,74 @@
+{
+  "contracts": [
+    {
+      "address": "0xdc524e3c6910257744C1F93Cf15E9F472b5bD236",
+      "decimals": 18,
+      "name": "Witch Token",
+      "network": "evm-1",
+      "symbol": "WITCH",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xB1f3A83597Bce2AD842c29bD750AE17afc474137",
+      "decimals": 18,
+      "name": "Unified WITCH",
+      "network": "evm-3068",
+      "symbol": "WITCH",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x97C46701A8599DF99abB306ce8980B5f57D833fB",
+      "decimals": 18,
+      "name": "Unified WITCH",
+      "network": "evm-49088",
+      "symbol": "WITCH",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x8d9a156587C4593F34294D6b1DCBc7A5F29e0356",
+      "decimals": 18,
+      "name": "WITCH Token",
+      "network": "evm-5",
+      "symbol": "WITCH",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xF71a7D20c6FC34A3Bf362780aee0FC9Ee3eCE5fE",
+      "decimals": 18,
+      "name": "Witch Token",
+      "network": "evm-56",
+      "symbol": "WITCH",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "witch-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Witch Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/witch-token"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/witch-token"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C873402",
+      "decimals": 18,
+      "name": "Polkadot Token",
+      "network": "evm-56",
+      "symbol": "DOT",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "dot-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Polkadot Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/polkadot"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/polkadot-new"
+    }
+  ],
+  "tags": []
+}

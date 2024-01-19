@@ -1,0 +1,44 @@
+{
+  "contracts": [
+    {
+      "address": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
+      "decimals": 18,
+      "name": "SHIBA INU",
+      "network": "evm-1",
+      "symbol": "SHIB",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x2859e4544C4bB03966803b044A93563Bd2D0DD4D",
+      "decimals": 18,
+      "name": "SHIBA INU",
+      "network": "evm-56",
+      "symbol": "SHIB",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "shib-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "SHIBA INU",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/shiba-inu"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/shiba-inu"
+    }
+  ],
+  "tags": []
+}

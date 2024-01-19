@@ -1,0 +1,64 @@
+{
+  "contracts": [
+    {
+      "address": "0xc944E90C64B2c07662A292be6244BDf05Cda44a7",
+      "decimals": 18,
+      "name": "Graph Token",
+      "network": "evm-1",
+      "symbol": "GRT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x5fe2B58c013d7601147DcdD68C143A77499f5531",
+      "decimals": 18,
+      "name": "Graph Token (PoS)",
+      "network": "evm-137",
+      "symbol": "GRT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x9623063377AD1B27544C965cCd7342f7EA7e88C7",
+      "decimals": 18,
+      "name": "Graph Token",
+      "network": "evm-42161",
+      "symbol": "GRT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x8a0cAc13c7da965a312f08ea4229c37869e85cB9",
+      "decimals": 18,
+      "name": "Graph Token",
+      "network": "evm-43114",
+      "symbol": "GRT.e",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "grt-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Graph Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/the-graph"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/the-graph"
+    }
+  ],
+  "tags": []
+}

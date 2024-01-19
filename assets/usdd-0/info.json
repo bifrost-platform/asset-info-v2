@@ -1,0 +1,54 @@
+{
+  "contracts": [
+    {
+      "address": "0x0C10bF8FcB7Bf5412187A595ab97a3609160b5c6",
+      "decimals": 18,
+      "name": "Decentralized USD",
+      "network": "evm-1",
+      "symbol": "USDD",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x680447595e8b7b3Aa1B43beB9f6098C79ac2Ab3f",
+      "decimals": 18,
+      "name": "Decentralized USD",
+      "network": "evm-42161",
+      "symbol": "USDD",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xd17479997F34dd9156Deef8F95A52D81D265be9c",
+      "decimals": 18,
+      "name": "Decentralized USD",
+      "network": "evm-56",
+      "symbol": "USDD",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "usdd-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Decentralized USD",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/usdd"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/usdd"
+    }
+  ],
+  "tags": []
+}

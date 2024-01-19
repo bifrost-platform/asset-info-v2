@@ -1,6 +1,16 @@
 {
   "contracts": [
     {
+      "address": "0x0c7D5ae016f806603CB1782bEa29AC69471CAb9c",
+      "decimals": 18,
+      "name": "Bifrost",
+      "network": "evm-1",
+      "symbol": "BFC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 18,
       "name": "Bifrost",
@@ -21,15 +31,25 @@
         "native-coin",
         "testnet"
       ]
+    },
+    {
+      "address": "0x3A815eBa66EaBE966a6Ae7e5Df9652eca24e9c54",
+      "decimals": 18,
+      "name": "Bifrost",
+      "network": "evm-5",
+      "symbol": "BFC",
+      "tags": [
+        "testnet"
+      ]
     }
   ],
   "id": "bfc-0",
   "images": {
-    "png128": false,
-    "png256": false,
-    "png32": false,
-    "png64": false,
-    "svg": false
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
   },
   "name": "Bifrost",
   "references": [

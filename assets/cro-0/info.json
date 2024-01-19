@@ -1,0 +1,44 @@
+{
+  "contracts": [
+    {
+      "address": "0xA0b73E1Ff0B80914AB6fe0444E65848C4C34450b",
+      "decimals": 8,
+      "name": "CRO",
+      "network": "evm-1",
+      "symbol": "CRO",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xAdA58DF0F643D959C2A47c9D4d4c1a4deFe3F11C",
+      "decimals": 8,
+      "name": "CRO (PoS)",
+      "network": "evm-137",
+      "symbol": "CRO",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "cro-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "CRO",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/cronos"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/cronos"
+    }
+  ],
+  "tags": []
+}
