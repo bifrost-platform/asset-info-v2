@@ -25,5 +25,6 @@
   "network": "testnet",
   "tags": [
     "bifrost"
-  ]
+  ],
+  "unknownAssetId": "unknown-bifrost"
 }

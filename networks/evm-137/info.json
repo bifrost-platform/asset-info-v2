@@ -33,5 +33,6 @@
   "network": "mainnet",
   "tags": [
     "polygon"
-  ]
+  ],
+  "unknownAssetId": "unknown-polygon"
 }

@@ -22,6 +22,8 @@ class Network(CamelCaseModel):
         network: type of the network. (:class:`NetworkType`)
         tags: tags of the network.
               (:class:`TagList`: constrained :class:`list` of :class:`Tag`.)
+        unknown_asset_id: ID of the unknown asset of the network.
+                          (:class:`Id`: constrained :class:`str`.)
     """
 
     currency: Currency
@@ -32,3 +34,4 @@ class Network(CamelCaseModel):
     name: str
     network: NetworkType
     tags: TagList
+    unknown_asset_id: Id

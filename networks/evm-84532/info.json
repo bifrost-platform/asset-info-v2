@@ -31,5 +31,6 @@
     "base",
     "l2-ethereum",
     "sepolia"
-  ]
+  ],
+  "unknownAssetId": "unknown-base"
 }
