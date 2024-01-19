@@ -1,3 +1,4 @@
+import re
 from typing import Tuple
 
 from libraries.models.asset import Asset
@@ -95,3 +96,16 @@ class TestValidityNetwork:
         for network, _ in self.network_list:
             for tag in network.tags:
                 assert tag in tag_value_list
+
+    def test_all_unknown_asset_id_in_asset_list(self):
+        """All unknown asset ID in network information has an asset which is
+        described in the asset information `asset.json`."""
+        asset_id_list = [item.id for item, _ in self.asset_list]
+        for network, _ in self.network_list:
+            assert network.unknown_asset_id in asset_id_list
+            match re.match(r"^unknown-(.+)$", network.unknown_asset_id):
+                case match if match is not None:
+                    print(match.group(1))
+                    assert match.group(1) in network.tags
+                case None:
+                    pass
