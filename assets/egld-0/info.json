@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xbF7c81FFF98BbE61B40Ed186e4AfD6DDd01337fe",
+      "decimals": 18,
+      "name": "Elrond",
+      "network": "evm-56",
+      "symbol": "EGLD",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "egld-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Elrond",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/multiversx"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/multiversx-egld"
+    }
+  ],
+  "tags": []
+}

@@ -1,6 +1,16 @@
 {
   "contracts": [
     {
+      "address": "0x2C89bbc92BD86F8075d1DEcc58C7F4E0107f286b",
+      "decimals": 18,
+      "name": "Avalanche Token",
+      "network": "evm-137",
+      "symbol": "AVAX",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 18,
       "name": "Avalanche",
@@ -21,15 +31,25 @@
         "mainnet",
         "native-coin"
       ]
+    },
+    {
+      "address": "0x1CE0c2827e2eF14D5C4f29a091d735A204794041",
+      "decimals": 18,
+      "name": "Avalanche",
+      "network": "evm-56",
+      "symbol": "AVAX",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "avax-0",
   "images": {
-    "png128": false,
-    "png256": false,
-    "png32": false,
-    "png64": false,
-    "svg": false
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
   },
   "name": "Avalanche",
   "references": [

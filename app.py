@@ -1,5 +1,4 @@
 from argparse import ArgumentParser
-from asyncio import run
 
 from libraries.preprocess import run_preprocess
 
@@ -16,4 +15,4 @@ if __name__ == "__main__":
         help="The operation to run.",
     )
     args = parser.parse_args()
-    run(OPERATION_DICT[args.operation]())
+    OPERATION_DICT[args.operation]()

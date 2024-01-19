@@ -1,0 +1,40 @@
+{
+  "contracts": [
+    {
+      "address": "0x6e1A19F235bE7ED8E3369eF73b196C07257494DE",
+      "decimals": 18,
+      "name": "Wrapped Filecoin",
+      "network": "evm-1",
+      "symbol": "WFIL",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xEde1B77C0Ccc45BFa949636757cd2cA7eF30137F",
+      "decimals": 18,
+      "name": "Wrapped Filecoin (PoS)",
+      "network": "evm-137",
+      "symbol": "WFIL",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "wfil-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Wrapped Filecoin",
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/wrapped-filecoin/"
+    }
+  ],
+  "tags": []
+}

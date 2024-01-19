@@ -1,5 +1,6 @@
+from typing import Callable, Annotated
+
 from pydantic import WrapValidator
-from typing_extensions import Callable, Annotated
 
 from libraries.models.description import Description
 from libraries.models.id import Id
@@ -19,7 +20,7 @@ class EnumInfo(CamelCaseModel):
 
 
 def _validate_enum_info_list(
-    value: list[dict], handler: Callable[list[dict], list[EnumInfo]]
+    value: list[dict], handler: Callable[[list[dict]], list[EnumInfo]]
 ) -> list[EnumInfo]:
     """Validate the list of enum information.
 

@@ -1,0 +1,64 @@
+{
+  "contracts": [
+    {
+      "address": "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
+      "decimals": 18,
+      "name": "Lido DAO Token",
+      "network": "evm-1",
+      "symbol": "LDO",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xFdb794692724153d1488CcdBE0C56c252596735F",
+      "decimals": 18,
+      "name": "Lido DAO Token",
+      "network": "evm-10",
+      "symbol": "LDO",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xC3C7d422809852031b44ab29EEC9F1EfF2A58756",
+      "decimals": 18,
+      "name": "Lido DAO Token (PoS)",
+      "network": "evm-137",
+      "symbol": "LDO",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x13Ad51ed4F1B7e9Dc168d8a00cB3f4dDD85EfA60",
+      "decimals": 18,
+      "name": "Lido DAO Token",
+      "network": "evm-42161",
+      "symbol": "LDO",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ldo-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Lido DAO Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/lido-dao"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/lido-dao"
+    }
+  ],
+  "tags": []
+}

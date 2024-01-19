@@ -10,5 +10,9 @@
   {
     "value": "testnet",
     "description": "This asset contract is deployed at testnet"
+  },
+  {
+    "value": "unknown",
+    "description": "This asset contract is deployed at unknown network"
   }
 ]

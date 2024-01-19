@@ -1,0 +1,94 @@
+{
+  "contracts": [
+    {
+      "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "decimals": 18,
+      "name": "ChainLink Token",
+      "network": "evm-1",
+      "symbol": "LINK",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x350a791Bfc2C21F9Ed5d10980Dad2e2638ffa7f6",
+      "decimals": 18,
+      "name": "ChainLink Token",
+      "network": "evm-10",
+      "symbol": "LINK",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
+      "decimals": 18,
+      "name": "ChainLink Token",
+      "network": "evm-137",
+      "symbol": "LINK",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1",
+      "decimals": 18,
+      "name": "ChainLink Token",
+      "network": "evm-137",
+      "symbol": "LINK",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
+      "decimals": 18,
+      "name": "ChainLink Token",
+      "network": "evm-42161",
+      "symbol": "LINK",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x5947BB275c521040051D82396192181b413227A3",
+      "decimals": 18,
+      "name": "Chainlink Token",
+      "network": "evm-43114",
+      "symbol": "LINK.e",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD",
+      "decimals": 18,
+      "name": "ChainLink Token",
+      "network": "evm-56",
+      "symbol": "LINK",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "link-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "ChainLink Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/chainlink"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/chainlink"
+    }
+  ],
+  "tags": []
+}

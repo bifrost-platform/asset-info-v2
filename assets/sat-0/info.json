@@ -1,0 +1,50 @@
+{
+  "contracts": [
+    {
+      "address": "0x5ABf88cF3444611D13F6D1B39F3f3EE8575c91a2",
+      "decimals": 18,
+      "name": "Super Athletes Token",
+      "network": "evm-1",
+      "symbol": "SAT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x17102AC78a02a98fC78B0c29B7b0506f035A99E5",
+      "decimals": 18,
+      "name": "Unified SAT",
+      "network": "evm-3068",
+      "symbol": "SAT",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x3325B631CD1B972628f021c3bB776e21290baB21",
+      "decimals": 18,
+      "name": "Super Athletes Token",
+      "network": "evm-49088",
+      "symbol": "SAT",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "sat-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Super Athletes Token",
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/super-athletes"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,204 @@
+{
+  "contracts": [
+    {
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "decimals": 6,
+      "name": "USD Coin",
+      "network": "evm-1",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+      "decimals": 6,
+      "name": "USD Coin",
+      "network": "evm-10",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
+      "decimals": 6,
+      "name": "USD Coin",
+      "network": "evm-10",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+      "decimals": 6,
+      "name": "USD Coin (PoS)",
+      "network": "evm-137",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+      "decimals": 6,
+      "name": "USD Coin",
+      "network": "evm-137",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x640952E7984f2ECedeAd8Fd97aA618Ab1210A21C",
+      "decimals": 6,
+      "name": "Unified USDC",
+      "network": "evm-3068",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+      "decimals": 6,
+      "name": "USD Coin (Arb1)",
+      "network": "evm-42161",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "decimals": 6,
+      "name": "USD Coin",
+      "network": "evm-42161",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x7E453cAcAD3CCfA13aCE3E03296c091aaC860501",
+      "decimals": 6,
+      "name": "USDC",
+      "network": "evm-421613",
+      "symbol": "USDC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
+      "decimals": 6,
+      "name": "USD Coin",
+      "network": "evm-43114",
+      "symbol": "USDC.e",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+      "decimals": 6,
+      "name": "USD Coin",
+      "network": "evm-43114",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xc7198437980c041c805A1EDcbA50c1Ce5db95118",
+      "decimals": 6,
+      "name": "Tether USD",
+      "network": "evm-43114",
+      "symbol": "USDT.e",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x28661511CDA7119B2185c647F23106a637CC074f",
+      "decimals": 6,
+      "name": "Unified USDC",
+      "network": "evm-49088",
+      "symbol": "USDC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xD978Be30CE95D42DF7067b988f25bCa2b286Fb70",
+      "decimals": 6,
+      "name": "USD Coin",
+      "network": "evm-5",
+      "symbol": "USDC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+      "decimals": 18,
+      "name": "USD Coin",
+      "network": "evm-56",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xc508ab50142721A0213A47AaFF4E93C3eDb978E2",
+      "decimals": 6,
+      "name": "USD Coin (PoS)",
+      "network": "evm-80001",
+      "symbol": "USDC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "decimals": 6,
+      "name": "USD Coin",
+      "network": "evm-8453",
+      "symbol": "USDC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xC9C0aD3179eE2f4801454926ED5D6A2Da30b56FB",
+      "decimals": 18,
+      "name": "USD Coin",
+      "network": "evm-97",
+      "symbol": "USDC",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "usdc-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "USD Coin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/usdc"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/usd-coin"
+    }
+  ],
+  "tags": []
+}

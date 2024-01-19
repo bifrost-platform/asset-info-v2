@@ -1,0 +1,47 @@
+{
+  "contracts": [
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Ethereum Asset",
+      "network": "evm-1",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Ethereum Asset",
+      "network": "evm-11155111",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Ethereum Asset",
+      "network": "evm-5",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "unknown-ethereum",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Ethereum Asset",
+  "references": [],
+  "tags": [
+    "ethereum"
+  ]
+}

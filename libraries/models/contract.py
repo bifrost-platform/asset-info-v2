@@ -1,5 +1,6 @@
+from typing import Annotated, Callable, Type
+
 from pydantic import NonNegativeInt, WrapValidator
-from typing_extensions import Annotated, Callable, Type
 
 from libraries.models.address import Address
 from libraries.models.id import Id
@@ -28,7 +29,7 @@ class Contract(CamelCaseModel):
 
 
 def __validate_contract_list(
-    value: dict, handler: Callable[dict, list[Contract]]
+    value: dict, handler: Callable[[dict], list[Contract]]
 ) -> list[Contract]:
     """Validate the list of contracts.
 

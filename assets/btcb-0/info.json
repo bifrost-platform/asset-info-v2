@@ -1,0 +1,44 @@
+{
+  "contracts": [
+    {
+      "address": "0x152b9d0FdC40C096757F570A51E494bd4b943E50",
+      "decimals": 8,
+      "name": "Bitcoin",
+      "network": "evm-43114",
+      "symbol": "BTC.b",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+      "decimals": 18,
+      "name": "BTCB Token",
+      "network": "evm-56",
+      "symbol": "BTCB",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "btcb-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "BTCB Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://coinmarketcap.com/currencies/bitcoin-bep2"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://www.coingecko.com/en/coins/bitcoin-bep2"
+    }
+  ],
+  "tags": []
+}

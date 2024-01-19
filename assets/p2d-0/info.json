@@ -1,0 +1,55 @@
+{
+  "contracts": [
+    {
+      "address": "0xAa2E0911AC56C6f8A9C4f0006A8C907D5d180A6a",
+      "decimals": 18,
+      "name": "Unified P2D",
+      "network": "evm-3068",
+      "symbol": "P2D",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xDa007Bea12013Ee90D5DEC4111DBA5bd98314F93",
+      "decimals": 18,
+      "name": "P2D",
+      "network": "evm-49088",
+      "symbol": "P2D",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x3ce414000C518FC55846388ef0aaB5d0abf275Be",
+      "decimals": 18,
+      "name": "P2D",
+      "network": "evm-56",
+      "symbol": "P2D",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x018185EB57D6DA77A269EC740e80EF6eBEE793EC",
+      "decimals": 18,
+      "name": "P2D",
+      "network": "evm-97",
+      "symbol": "P2D",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "p2d-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "P2D",
+  "references": [],
+  "tags": []
+}

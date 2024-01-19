@@ -1,0 +1,74 @@
+{
+  "contracts": [
+    {
+      "address": "0x0000000000085d4780B73119b644AE5ecd22b376",
+      "decimals": 18,
+      "name": "TrueUSD",
+      "network": "evm-1",
+      "symbol": "TUSD",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x2e1AD108fF1D8C782fcBbB89AAd783aC49586756",
+      "decimals": 18,
+      "name": "TrueUSD (PoS)",
+      "network": "evm-137",
+      "symbol": "TUSD",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x4D15a3A2286D883AF0AA1B3f21367843FAc63E07",
+      "decimals": 18,
+      "name": "TrueUSD",
+      "network": "evm-42161",
+      "symbol": "TUSD",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x1C20E891Bab6b1727d14Da358FAe2984Ed9B59EB",
+      "decimals": 18,
+      "name": "TrueUSD",
+      "network": "evm-43114",
+      "symbol": "TUSD",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x40af3827F39D0EAcBF4A168f8D4ee67c121D11c9",
+      "decimals": 18,
+      "name": "TrueUSD",
+      "network": "evm-56",
+      "symbol": "TUSD",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "tusd-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "TrueUSD",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/true-usd"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/trueusd"
+    }
+  ],
+  "tags": []
+}

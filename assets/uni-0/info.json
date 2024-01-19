@@ -1,0 +1,84 @@
+{
+  "contracts": [
+    {
+      "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "decimals": 18,
+      "name": "Uniswap",
+      "network": "evm-1",
+      "symbol": "UNI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x6fd9d7AD17242c41f7131d257212c54A0e816691",
+      "decimals": 18,
+      "name": "Uniswap",
+      "network": "evm-10",
+      "symbol": "UNI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xb33EaAd8d922B1083446DC23f610c2567fB5180f",
+      "decimals": 18,
+      "name": "Uniswap (PoS)",
+      "network": "evm-137",
+      "symbol": "UNI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+      "decimals": 18,
+      "name": "Uniswap",
+      "network": "evm-42161",
+      "symbol": "UNI",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x8eBAf22B6F053dFFeaf46f4Dd9eFA95D89ba8580",
+      "decimals": 18,
+      "name": "Uniswap",
+      "network": "evm-43114",
+      "symbol": "UNI.e",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xBf5140A22578168FD562DCcF235E5D43A02ce9B1",
+      "decimals": 18,
+      "name": "Uniswap",
+      "network": "evm-56",
+      "symbol": "UNI",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "uni-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Uniswap",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/uniswap"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/uniswap"
+    }
+  ],
+  "tags": []
+}

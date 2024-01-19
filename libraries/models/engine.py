@@ -1,7 +1,7 @@
 from enum import Enum
+from typing import Type, Annotated
 
 from pydantic import BeforeValidator
-from typing_extensions import Type, Annotated
 
 
 class EngineEnum(str, Enum):

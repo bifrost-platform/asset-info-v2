@@ -1,0 +1,44 @@
+{
+  "contracts": [
+    {
+      "address": "0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1",
+      "decimals": 9,
+      "name": "Wrapped TON Coin",
+      "network": "evm-1",
+      "symbol": "TONCOIN",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x76A797A59Ba2C17726896976B7B3747BfD1d220f",
+      "decimals": 9,
+      "name": "Wrapped TON Coin",
+      "network": "evm-56",
+      "symbol": "TONCOIN",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ton-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Wrapped TON Coin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/toncoin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/toncoin"
+    }
+  ],
+  "tags": []
+}

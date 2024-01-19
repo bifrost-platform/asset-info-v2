@@ -1,6 +1,56 @@
 {
   "contracts": [
     {
+      "address": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
+      "decimals": 18,
+      "name": "BNB",
+      "network": "evm-1",
+      "symbol": "BNB",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x3BA4c387f786bFEE076A58914F5Bd38d668B42c3",
+      "decimals": 18,
+      "name": "BNB (PoS)",
+      "network": "evm-137",
+      "symbol": "BNB",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xB800EaF843F962DFe5e145A8c9D07A3e70b11d7F",
+      "decimals": 18,
+      "name": "Unified BNB",
+      "network": "evm-3068",
+      "symbol": "BNB",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x2bab7aB8F69172cf51f169cFD0933Fbf3407051f",
+      "decimals": 18,
+      "name": "BNB",
+      "network": "evm-43114",
+      "symbol": "BNB",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xCd8bf79fA84D551f2465C0a646cABc295d43Be5C",
+      "decimals": 18,
+      "name": "Unified BNB",
+      "network": "evm-49088",
+      "symbol": "BNB",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 18,
       "name": "BNB Chain Native Token",
@@ -25,11 +75,11 @@
   ],
   "id": "bnb-0",
   "images": {
-    "png128": false,
-    "png256": false,
-    "png32": false,
-    "png64": false,
-    "svg": false
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
   },
   "name": "BNB Chain Native Token",
   "references": [
