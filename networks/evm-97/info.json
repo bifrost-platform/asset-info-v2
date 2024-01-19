@@ -25,5 +25,6 @@
   "network": "testnet",
   "tags": [
     "bnb"
-  ]
+  ],
+  "unknownAssetId": "unknown-bnb"
 }

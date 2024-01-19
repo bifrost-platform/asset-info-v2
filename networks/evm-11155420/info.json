@@ -31,5 +31,6 @@
     "l2-ethereum",
     "optimism",
     "sepolia"
-  ]
+  ],
+  "unknownAssetId": "unknown-optimism"
 }

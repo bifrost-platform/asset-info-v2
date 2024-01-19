@@ -33,5 +33,6 @@
   "network": "mainnet",
   "tags": [
     "ethereum"
-  ]
+  ],
+  "unknownAssetId": "unknown-ethereum"
 }

@@ -34,5 +34,6 @@
   "tags": [
     "ethereum",
     "sepolia"
-  ]
+  ],
+  "unknownAssetId": "unknown-ethereum"
 }

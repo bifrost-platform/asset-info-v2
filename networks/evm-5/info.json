@@ -30,5 +30,6 @@
   "tags": [
     "ethereum",
     "goerli"
-  ]
+  ],
+  "unknownAssetId": "unknown-ethereum"
 }

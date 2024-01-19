@@ -31,5 +31,6 @@
     "arbitrum",
     "l2-ethereum",
     "sepolia"
-  ]
+  ],
+  "unknownAssetId": "unknown-arbitrum"
 }

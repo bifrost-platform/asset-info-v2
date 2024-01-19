@@ -22,5 +22,6 @@
     "arbitrum",
     "goerli",
     "l2-ethereum"
-  ]
+  ],
+  "unknownAssetId": "unknown-arbitrum"
 }
