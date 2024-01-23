@@ -11,6 +11,16 @@
       ]
     },
     {
+      "address": "0x469B7B5e119348ad7d61aa8ac38101CdC2b42A22",
+      "decimals": 18,
+      "name": "Bifrost",
+      "network": "evm-11155111",
+      "symbol": "BFC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0x0000000000000000000000000000000000000000",
       "decimals": 18,
       "name": "Bifrost",

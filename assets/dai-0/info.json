@@ -99,6 +99,16 @@
       "tags": [
         "testnet"
       ]
+    },
+    {
+      "address": "0x4e64812e093167EbA03b829284C1C959CC28DA72",
+      "decimals": 18,
+      "name": "DAI stable",
+      "network": "evm-84532",
+      "symbol": "DAI",
+      "tags": [
+        "testnet"
+      ]
     }
   ],
   "id": "dai-0",
