@@ -21,6 +21,16 @@
       ]
     },
     {
+      "address": "0x7870D8a5a669a0BA0C1f940EAe4e945a5583CF3A",
+      "decimals": 6,
+      "name": "Tether USD",
+      "network": "evm-11155111",
+      "symbol": "USDT",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
       "decimals": 6,
       "name": "(POS) Tether USD",
@@ -55,6 +65,16 @@
       "decimals": 6,
       "name": "USDT",
       "network": "evm-421613",
+      "symbol": "USDT",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x2e578Fc8712506A22abb584F7BbBb971ad65f290",
+      "decimals": 6,
+      "name": "USDT",
+      "network": "evm-421614",
       "symbol": "USDT",
       "tags": [
         "testnet"

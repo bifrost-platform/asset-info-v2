@@ -11,6 +11,16 @@
       ]
     },
     {
+      "address": "0xa2b384F74058D5C4Ca2994414388DD456dd63fdA",
+      "decimals": 18,
+      "name": "BiFi",
+      "network": "evm-11155111",
+      "symbol": "BiFi",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0x047938C3aD13c1eB821C8e310B2B6F889b6d0003",
       "decimals": 18,
       "name": "Unified BiFi",

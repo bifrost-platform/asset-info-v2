@@ -11,6 +11,16 @@
       ]
     },
     {
+      "address": "0xc2301048F43B0da6354484c225526Be78d21e222",
+      "decimals": 18,
+      "name": "Nestree",
+      "network": "evm-11155111",
+      "symbol": "EGG",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0x9DD4d64e41EA7Fc90ACEC15B08552172Ce94556a",
       "decimals": 18,
       "name": "Unified EGG",

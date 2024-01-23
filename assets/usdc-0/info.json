@@ -31,6 +31,16 @@
       ]
     },
     {
+      "address": "0x176efbA371f5f50BDC058e5B568F4fCd58d0Ddd4",
+      "decimals": 6,
+      "name": "USD Coin",
+      "network": "evm-11155111",
+      "symbol": "USDC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
       "decimals": 6,
       "name": "USD Coin (PoS)",
@@ -85,6 +95,16 @@
       "decimals": 6,
       "name": "USDC",
       "network": "evm-421613",
+      "symbol": "USDC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xA743D461686742d380AA49d554421919EA9964Fa",
+      "decimals": 6,
+      "name": "USDC",
+      "network": "evm-421614",
       "symbol": "USDC",
       "tags": [
         "testnet"
