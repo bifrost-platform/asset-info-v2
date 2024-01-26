@@ -41,6 +41,16 @@
       ]
     },
     {
+      "address": "0x7b8FAC5F29E101BaaB33c5f9c39d4F85ba2cc7C1",
+      "decimals": 8,
+      "name": "Unified WBTC",
+      "network": "evm-3068",
+      "symbol": "WBTC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
       "decimals": 8,
       "name": "Wrapped BTC",
