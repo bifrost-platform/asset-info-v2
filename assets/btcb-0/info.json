@@ -11,6 +11,16 @@
       ]
     },
     {
+      "address": "0xa4BDE980dAAbDf9861F87ea89d4854a5FF062755",
+      "decimals": 18,
+      "name": "Unified BTCB",
+      "network": "evm-49088",
+      "symbol": "BTCB",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
       "decimals": 18,
       "name": "BTCB Token",
@@ -18,6 +28,16 @@
       "symbol": "BTCB",
       "tags": [
         "mainnet"
+      ]
+    },
+    {
+      "address": "0xCb3BCc6300D416A96b6FAD1814C00Af0031EFff0",
+      "decimals": 18,
+      "name": "BTCB Token",
+      "network": "evm-97",
+      "symbol": "BTCB",
+      "tags": [
+        "testnet"
       ]
     }
   ],

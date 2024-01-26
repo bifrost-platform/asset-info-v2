@@ -21,6 +21,16 @@
       ]
     },
     {
+      "address": "0xfb227D3d049a2cdB7b5b75D5227B50219eDe3224",
+      "decimals": 8,
+      "name": "Wrapped BTC",
+      "network": "evm-11155111",
+      "symbol": "WBTC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
       "decimals": 8,
       "name": "(PoS) Wrapped BTC",
@@ -41,6 +51,16 @@
       ]
     },
     {
+      "address": "0xdD3B4c386729aE16dA6F961d7E0d4775C28ecA09",
+      "decimals": 8,
+      "name": "Wrapped BTC",
+      "network": "evm-421614",
+      "symbol": "WBTC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0x408D4cD0ADb7ceBd1F1A1C33A0Ba2098E1295bAB",
       "decimals": 8,
       "name": "Wrapped BTC",
@@ -58,6 +78,26 @@
       "symbol": "WBTC.e",
       "tags": [
         "mainnet"
+      ]
+    },
+    {
+      "address": "0xb710c446E2e4e162D734580Bd6f13725c345E1F7",
+      "decimals": 8,
+      "name": "Unified WBTC",
+      "network": "evm-49088",
+      "symbol": "WBTC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x8ed42D9ae83213813AB077B71a80b9331FB690A2",
+      "decimals": 8,
+      "name": "Wrapped BTC",
+      "network": "evm-80001",
+      "symbol": "WBTC",
+      "tags": [
+        "testnet"
       ]
     }
   ],
