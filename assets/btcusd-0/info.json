@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x9039B6f30aa5bD00c303A3644c16B8Cc8031CE53",
+      "decimals": 18,
+      "name": "Bitcoin USD",
+      "network": "evm-49088",
+      "symbol": "BtcUSD",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "btcusd-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Bitcoin USD",
+  "references": [],
+  "tags": []
+}

@@ -60,6 +60,10 @@
     "description": "BTCB Token"
   },
   {
+    "value": "btcusd-0",
+    "description": "Bitcoin USD"
+  },
+  {
     "value": "busd-0",
     "description": "BUSD"
   },
