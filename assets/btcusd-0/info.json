@@ -1,7 +1,7 @@
 {
   "contracts": [
     {
-      "address": "0xDC53057c769793f5Dd4e9C1C17456dD4f7366Ffb",
+      "address": "0x9039B6f30aa5bD00c303A3644c16B8Cc8031CE53",
       "decimals": 18,
       "name": "Bitcoin USD",
       "network": "evm-49088",
