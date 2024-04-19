@@ -1,0 +1,5 @@
+# Specifies the packages for testing the project.
+-r essential.txt
+-r dev.txt
+pytest==7.4.4
+pigar==2.1.4

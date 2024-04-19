@@ -1,24 +1,21 @@
 from setuptools import setup
 
-install_required = ["pydantic==2.5.3"]
+from libraries.utils.dependency import (
+    packages,
+    read_requirements,
+    install_require_key,
+    extras_require_keys,
+)
 
-dev_required = [
-    "CairoSVG==2.7.1",
-    "pillow==10.2.0",
-    "pytest==7.4.4",
-    "svgpathtools==1.6.1",
-    "web3==6.14.0",
-]
+install_requires = read_requirements(install_require_key)
+extras_require = {key: read_requirements(key) for key in extras_require_keys}
 
 setup(
     name="asset-info-v2",
     version="1.0.0",
-    packages=[
-        "libraries.utils",
-        "libraries.models",
-    ],
-    install_requires=install_required,
-    extras_require={"dev": dev_required},
+    packages=packages,
+    install_requires=install_requires,
+    extras_require=extras_require,
     url="https://github.com/bifrost-platform/asset-info-v2",
     license="",
     author="Backend Team of Bifrost",

@@ -40,7 +40,7 @@ $ source venv/bin/activate
 #### 3. Install the dependencies
 
 ```bash
-(venv) $ pip install -e ".[dev]"
+(venv) $ pip install -e ".[all]"
 ```
 
 ### Contribution Guidelines
