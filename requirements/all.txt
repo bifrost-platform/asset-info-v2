@@ -1,0 +1,4 @@
+# Contains all requirements for the project.
+-r essential.txt
+-r dev.txt
+-r test.txt
