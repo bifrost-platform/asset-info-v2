@@ -32,7 +32,7 @@ def read_requirements(key: str) -> list[str]:
     return ref_reqs + reqs
 
 
-packages = ["libraries.models"]
+packages = ["libraries.models", "libraries.utils"]
 """List of packages to be used by the users."""
 
 install_require_key = "essential"
