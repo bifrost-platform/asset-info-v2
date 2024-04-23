@@ -1,9 +1,9 @@
 from libraries.models.asset import Asset
 from libraries.models.network import Network
 from libraries.models.protocol import Protocol
-from libraries.utils.enum_info import update_id_enum
+from libraries.preprocess.enum_info import update_id_enum
+from libraries.preprocess.image import get_base_image_list, create_downscaled_image
 from libraries.utils.file import PWD
-from libraries.utils.image import get_base_image_list, create_downscaled_image
 
 
 def __run_image_preprocess() -> None:
@@ -24,6 +24,6 @@ def __run_enum_preprocess() -> None:
 
 
 def run_preprocess() -> None:
-    """Run preprocess list."""
+    """Run a preprocessing list."""
     __run_image_preprocess()
     __run_enum_preprocess()
