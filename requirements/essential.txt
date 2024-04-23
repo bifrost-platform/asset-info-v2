@@ -1,2 +1,2 @@
 # Specifies the essential requirements of the project.
-pydantic==2.5.3
+pydantic>=2.5.3
