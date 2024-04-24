@@ -1,6 +1,6 @@
 from argparse import ArgumentParser
 
-from libraries.preprocess import run_preprocess
+from libraries.preprocess.runner import run_preprocess
 
 OPERATION_DICT = {"preprocess": run_preprocess}
 """The dictionary of operations application supports."""
