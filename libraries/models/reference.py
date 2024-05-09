@@ -10,8 +10,8 @@ class Reference(CamelCaseModel):
     """The base model of information about each reference.
 
     Attributes:
-        id: ID of the reference. (:class:`Id`: constrained :class:`str`.)
-        url: URL of the reference. (:class:`HttpUrl`: constrained :class:`str`.)
+        id: ID of the reference.
+        url: URL of the reference.
     """
 
     id: Id
@@ -19,7 +19,8 @@ class Reference(CamelCaseModel):
 
 
 def __validate_reference_list(
-    value: dict, handler: Callable[[dict], list[Reference]]
+    value: list[dict | Reference],
+    handler: Callable[[list[dict | Reference]], list[Reference]],
 ) -> list[Reference]:
     """Validate the list of references.
 
@@ -28,17 +29,26 @@ def __validate_reference_list(
         handler: The handler of the Pydantic validator.
 
     Returns:
-        The validated list of :class:`Reference`.
+        The validated list of `Reference`.
 
     Notes:
         The list of references must be sorted by ID in ascending order and unique.
     """
     for idx in range(len(value) - 1):
-        fst, snd = idx, idx + 1
-        if value[fst]["id"] >= value[snd]["id"]:
+        fst = (
+            Reference.model_validate(value[idx])
+            if isinstance(value[idx], dict)
+            else value[idx]
+        )
+        snd = (
+            Reference.model_validate(value[idx + 1])
+            if isinstance(value[idx + 1], dict)
+            else value[idx + 1]
+        )
+        if fst.id >= snd.id:
             raise ValueError(
                 "Reference list must be sorted by ID in ascending order and unique, but got "
-                + f"""{value[fst]["id"]}, before {value[snd]["id"]}"""
+                + f"""{fst.id}, before {snd.id}"""
             )
     return handler(value)
 
@@ -46,4 +56,4 @@ def __validate_reference_list(
 ReferenceList: Type = Annotated[
     list[Reference], WrapValidator(__validate_reference_list)
 ]
-"""Constrained :class:`list` of :class:`Reference`."""
+"""Constrained list of `Reference`."""
