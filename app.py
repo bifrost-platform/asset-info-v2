@@ -1,8 +1,9 @@
 from argparse import ArgumentParser
 
 from libraries.preprocess.runner import run_preprocess
+from libraries.puller.runner import run_token_puller
 
-OPERATION_DICT = {"preprocess": run_preprocess}
+OPERATION_DICT = {"preprocess": run_preprocess, "pull_token": run_token_puller}
 """The dictionary of operations application supports."""
 
 

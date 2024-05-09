@@ -1,6 +1,10 @@
 # Specifies the required packages for developing the project.
 -r essential.txt
 CairoSVG==2.7.1
+bs4==0.0.2
 pillow==10.2.0
+prompt-toolkit==3.0.43
 setuptools==69.5.1
 svgpathtools==1.6.1
+requests==2.31.0
+yarl==1.9.4
