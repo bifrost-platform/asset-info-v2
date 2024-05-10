@@ -9,9 +9,11 @@ from prompt_toolkit.shortcuts import clear
 from libraries.puller.getters.explorer_getter import get_explorer_id
 from libraries.puller.getters.network_getter import get_network
 from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAbstracted
+from libraries.puller.token_pullers.token_puller_dexguru import TokenPullerDexguru
 from libraries.puller.token_pullers.token_puller_etherscan import TokenPullerEtherscan
 
 TOKEN_PULLER_CLASS_MAP: dict[str, Type[TokenPullerAbstracted]] = {
+    "dexguru": TokenPullerDexguru,
     "etherscan": TokenPullerEtherscan,
 }
 
