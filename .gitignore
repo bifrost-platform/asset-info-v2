@@ -141,7 +141,7 @@ lib64/
 parts/
 sdist/
 var/
-tmp/
+tmp_*/
 wheels/
 share/python-wheels/
 *.egg-info/

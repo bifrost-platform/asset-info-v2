@@ -34,6 +34,27 @@ class ImageInfo(CamelCaseModel):
             svg=False,
         )
 
+    def get(self, image_type: ImageTypeEnum) -> bool:
+        """Get the flag of image type.
+
+        Args:
+            image_type: The image type to get.
+
+        Returns:
+            The flag of image type.
+        """
+        match image_type:
+            case ImageTypeEnum.PNG128:
+                return self.png128
+            case ImageTypeEnum.PNG256:
+                return self.png256
+            case ImageTypeEnum.PNG32:
+                return self.png32
+            case ImageTypeEnum.PNG64:
+                return self.png64
+            case ImageTypeEnum.SVG:
+                return self.svg
+
     def set(self, image_type: ImageTypeEnum):
         """Set the flag of image type.
 
