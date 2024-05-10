@@ -13,11 +13,13 @@ from prompt_toolkit import (
 from prompt_toolkit.shortcuts import confirm, clear
 from pydantic import HttpUrl
 from requests import get
+from web3 import Web3, HTTPProvider
 from yarl import URL
 
 from libraries.models.address import Address
 from libraries.models.asset import Asset
 from libraries.models.contract import Contract
+from libraries.models.engine import EngineEnum
 from libraries.models.id import Id
 from libraries.models.image_info import ImageInfo
 from libraries.models.network import Network
@@ -70,6 +72,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         self.network = network
         self.token_count = get_token_count()
         self.node_url = get_http_url(f"Enter the node URL of {self.network.name}")
+        self.__check_node_url(network, URL(self.node_url))
         self.flag_image_pull = get_flag("Do you want to pull images?")
         self.all_assets, self.network_assets = self.__get_assets()
         self.forbidden_asset_id = set(
@@ -144,6 +147,26 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         raise ModuleNotFoundError(
             "Abstract method `download_token_image` is not implemented"
         )
+
+    @staticmethod
+    def __check_node_url(network: Network, url: URL) -> None:
+        """Check the node URL.
+
+        Args:
+            network: The network information.
+            url: The node URL.
+
+        Raises:
+            ValueError: If the node URL is invalid.
+        """
+        if network.engine == EngineEnum.EVM:
+            web3 = Web3(HTTPProvider(str(url)))
+            if (
+                not web3.is_connected()
+                or str(web3.eth.chain_id) != network.id.split("-")[-1]
+            ):
+                printf(HTML(f"<red>Invalid node URL: {url}</red>"))
+                raise ValueError("Invalid node URL")
 
     def __get_assets(self) -> tuple[dict[Id, Asset], dict[Address, Asset]]:
         """Get the asset information in the given network.
