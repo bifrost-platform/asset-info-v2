@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+      "decimals": 18,
+      "name": "Curve DAO Token",
+      "network": "evm-1",
+      "symbol": "CRV",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "crv-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Curve DAO Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/curve-dao-token"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/curve-dao-token"
+    }
+  ],
+  "tags": []
+}

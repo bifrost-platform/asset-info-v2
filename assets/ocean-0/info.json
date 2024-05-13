@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
+      "decimals": 18,
+      "name": "Ocean Token",
+      "network": "evm-1",
+      "symbol": "OCEAN",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ocean-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Ocean Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/ocean-protocol"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/ocean-protocol"
+    }
+  ],
+  "tags": []
+}

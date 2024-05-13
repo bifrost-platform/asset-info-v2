@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x1151CB3d861920e07a38e03eEAd12C32178567F6",
+      "decimals": 5,
+      "name": "Bonk",
+      "network": "evm-1",
+      "symbol": "Bonk",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "bonk-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Bonk",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/bonk"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/bonk1"
+    }
+  ],
+  "tags": []
+}

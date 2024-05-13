@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0xE452E6Ea2dDeB012e20dB73bf5d3863A3Ac8d77a",
+      "decimals": 18,
+      "name": "Wrapped Celo",
+      "network": "evm-1",
+      "symbol": "wCELO",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "wcelo-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Wrapped Celo",
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/wrapped-celo"
+    }
+  ],
+  "tags": []
+}

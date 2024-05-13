@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x5B7533812759B45C2B44C19e320ba2cD2681b542",
+      "decimals": 8,
+      "name": "SingularityNET Token",
+      "network": "evm-1",
+      "symbol": "AGIX",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "agix-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "SingularityNET Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/singularitynet"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/singularitynet"
+    }
+  ],
+  "tags": []
+}

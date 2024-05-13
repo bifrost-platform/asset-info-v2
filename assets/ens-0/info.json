@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+      "decimals": 18,
+      "name": "Ethereum Name Service",
+      "network": "evm-1",
+      "symbol": "ENS",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ens-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Ethereum Name Service",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/ethereum-name-service"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/ethereum-name-service"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0xD850942eF8811f2A866692A623011bDE52a462C1",
+      "decimals": 18,
+      "name": "VeChain Token",
+      "network": "evm-1",
+      "symbol": "VEN",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ven-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "VeChain Token",
+  "references": [],
+  "tags": []
+}

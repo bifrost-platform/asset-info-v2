@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x6fB3e0A217407EFFf7Ca062D46c26E5d60a14d69",
+      "decimals": 18,
+      "name": "IoTeX Network",
+      "network": "evm-1",
+      "symbol": "IOTX",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "iotx-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "IoTeX Network",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/iotex"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/iotex"
+    }
+  ],
+  "tags": []
+}

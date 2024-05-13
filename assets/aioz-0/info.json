@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x626E8036dEB333b408Be468F951bdB42433cBF18",
+      "decimals": 18,
+      "name": "AIOZ Network",
+      "network": "evm-1",
+      "symbol": "AIOZ",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "aioz-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "AIOZ Network",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/aioz-network"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/aioz-network"
+    }
+  ],
+  "tags": []
+}

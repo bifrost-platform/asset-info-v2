@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xe3c408BD53c31C085a1746AF401A4042954ff740",
+      "decimals": 8,
+      "name": "GreenMetaverseToken",
+      "network": "evm-1",
+      "symbol": "GMT",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "gmt-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "GreenMetaverseToken",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/stepn"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/green-metaverse-token"
+    }
+  ],
+  "tags": []
+}
