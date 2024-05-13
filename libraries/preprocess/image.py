@@ -1,4 +1,3 @@
-import math
 import os
 from pathlib import Path
 
@@ -8,29 +7,72 @@ from PIL import Image
 from libraries.models.image_type import ImageTypeEnum
 from libraries.utils.file import search, File
 
+PNG_SIZES: list[int] = [
+    typ.get_size() for typ in ImageTypeEnum.get_descending_type_list() if typ.is_png()
+]
 
-def __downscale_png(png_path: Path) -> None:
+
+def __png_to_square(img: Image) -> tuple[Image, int]:
+    """Converts the PNG image to a square image.
+
+    Args:
+        img: The PNG image.
+
+    Returns:
+        The square image and the size of the square image.
+    """
+    if img.size[0] == img.size[1]:
+        return img, img.size[0]
+    size = max(img.size)
+    return (
+        Image.new(
+            "RGBA",
+            (size, size),
+            (255, 255, 255, 0),
+        ),
+        size,
+    )
+
+
+def downscale_png(
+    dir_path: Path, png_path: Path, overwrite: bool = True
+) -> list[ImageTypeEnum]:
+    """Downscales the PNG image in the given directory.
+
+    Args:
+        dir_path: The directory path to save the downscaled PNG image.
+        png_path: The PNG image path to downscale.
+        overwrite: Whether to overwrite the downscaled PNG image.
+
+    Returns:
+        The size list of the downscaled PNG image.
+    """
+    downloaded_type = []
+    with Image.open(png_path) as img:
+        squared_img, img_size = __png_to_square(img)
+        target_sizes = [size for size in PNG_SIZES if size <= img_size]
+        for size in target_sizes:
+            new_png_path = ImageTypeEnum.get_png_image_type(size).get_path(dir_path)
+            if overwrite or not os.path.isfile(new_png_path):
+                new_img = squared_img.resize((size, size))
+                new_img.save(new_png_path, "png", optimize=True)
+                downloaded_type.append(ImageTypeEnum.get_png_image_type(size))
+    return downloaded_type
+
+
+def __convert_png_to_downscaled(png_path: Path) -> None:
     """Downscales the PNG image.
 
     Args:
         png_path: The path of the PNG image.
 
     Notes:
-        The PNG image is downscaled to 2 squared times smaller than the original
+        The PNG image is downscaled to two squared times smaller than the original
         image size (minimum: 32x32).
     """
     image_type = ImageTypeEnum.get_image_type(png_path)
     if image_type.is_png():
-        image_size = image_type.get_size()
-        sizes = [2**i for i in range(5, math.floor(math.log2(image_size - 1)) + 1)]
-        with Image.open(png_path) as img:
-            for size in sizes:
-                new_png_path = ImageTypeEnum.get_png_image_type(size).get_path(
-                    png_path.parent
-                )
-                if not os.path.isfile(new_png_path):
-                    new_img = img.resize((size, size))
-                    new_img.save(new_png_path, "png", optimize=True)
+        downscale_png(png_path.parent, png_path)
 
 
 def __convert_svg_to_png256(svg_path: Path) -> None:
@@ -70,9 +112,11 @@ def create_downscaled_image(base_image_path: Path) -> None:
     match ImageTypeEnum.get_image_type(base_image_path):
         case ImageTypeEnum.SVG:
             __convert_svg_to_png256(base_image_path)
-            __downscale_png(ImageTypeEnum.PNG256.get_path(base_image_path.parent))
+            __convert_png_to_downscaled(
+                ImageTypeEnum.PNG256.get_path(base_image_path.parent)
+            )
         case image_type if image_type.is_png():
-            __downscale_png(base_image_path)
+            __convert_png_to_downscaled(base_image_path)
         case _:
             raise ValueError(f"Unknown image path: {base_image_path}")
 
