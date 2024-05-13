@@ -13,10 +13,10 @@
   ],
   "id": "1inch-0",
   "images": {
-    "png128": true,
+    "png128": false,
     "png256": false,
-    "png32": true,
-    "png64": true,
+    "png32": false,
+    "png64": false,
     "svg": false
   },
   "name": "1INCH Token",
