@@ -12,7 +12,7 @@ from prompt_toolkit import (
     HTML,
 )
 from prompt_toolkit.shortcuts import confirm, clear
-from pydantic import HttpUrl
+from pydantic import HttpUrl, ValidationError
 from requests import get
 from web3 import Web3, HTTPProvider
 from yarl import URL
@@ -39,6 +39,10 @@ ETH_REFERENCE_BASE: dict[Id, URL] = {
     "coingecko": URL("https://www.coingecko.com/en/coins/"),
     "coinmarketcap": URL("https://coinmarketcap.com/currencies/"),
 }
+
+
+class NotSavedError(Exception):
+    """Exception for not saved asset information."""
 
 
 class TokenPullerAbstracted(metaclass=ABCMeta):
@@ -82,7 +86,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         )
 
     def __del__(self):
-        """Remove the temporary directory and run the enum preprocess."""
+        """Remove the temporary directory and run the enum preprocessing."""
         rmtree(self.tmp_dir)
         run_enum_preprocess(Asset)
         printf(HTML("<b>✶ End puller ✶</b>"))
@@ -92,9 +96,19 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         target_token_list = self.__get_target_token_list()
         length = len(target_token_list)
         for idx, (address, info) in enumerate(target_token_list.items(), 1):
-            clear()
-            printf(HTML(f"<b>✶ [{idx}/{length}] Pull {address} ✶</b>"))
-            self.__run_body(address, info)
+            retry = True
+            while retry:
+                retry = False
+                try:
+                    clear()
+                    printf(HTML(f"<b>✶ [{idx}/{length}] Pull {address} ✶</b>"))
+                    self.__run_body(address, info)
+                except ValidationError as e:
+                    printf(HTML(f"<red>Validation Error</red>\n<grey>{e}</grey>"))
+                    retry = confirm("Would you like to retry?")
+                except NotSavedError:
+                    printf(HTML("<grey>Not saved</grey>"))
+                    retry = confirm("Would you like to retry?")
             if idx < length and not confirm("Next?"):
                 break
 
@@ -425,3 +439,5 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
                 image_path = image_type.get_path(image_info[0])
                 if exists(image_path):
                     copy(image_path, path)
+        else:
+            raise NotSavedError()
