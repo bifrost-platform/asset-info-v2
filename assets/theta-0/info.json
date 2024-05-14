@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x3883f5e181fccaF8410FA61e12b59BAd963fb645",
+      "decimals": 18,
+      "name": "Theta Token",
+      "network": "evm-1",
+      "symbol": "THETA",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "theta-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Theta Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/theta-network"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/theta-network"
+    }
+  ],
+  "tags": []
+}

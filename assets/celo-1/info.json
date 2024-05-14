@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0x3294395e62F4eB6aF3f1Fcf89f5602D90Fb3Ef69",
+      "decimals": 18,
+      "name": "Celo native asset",
+      "network": "evm-1",
+      "symbol": "CELO",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "celo-1",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Celo native asset",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/celo-wormhole"
+    }
+  ],
+  "tags": []
+}

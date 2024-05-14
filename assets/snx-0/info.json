@@ -11,6 +11,16 @@
       ]
     },
     {
+      "address": "0xd0dA9cBeA9C3852C5d63A95F9ABCC4f6eA0F9032",
+      "decimals": 18,
+      "name": "Synthetix Network Token",
+      "network": "evm-1",
+      "symbol": "SNX",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4",
       "decimals": 18,
       "name": "Synthetix Network Token",

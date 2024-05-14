@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xB0fFa8000886e57F86dd5264b9582b2Ad87b2b91",
+      "decimals": 18,
+      "name": "Wormhole Token",
+      "network": "evm-1",
+      "symbol": "W",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "w-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Wormhole Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/wormhole"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/wormhole"
+    }
+  ],
+  "tags": []
+}

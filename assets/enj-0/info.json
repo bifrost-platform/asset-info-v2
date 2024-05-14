@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xF629cBd94d3791C9250152BD8dfBDF380E2a3B9c",
+      "decimals": 18,
+      "name": "Enjin Coin",
+      "network": "evm-1",
+      "symbol": "ENJ",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "enj-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Enjin Coin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/enjin-coin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/enjin-coin"
+    }
+  ],
+  "tags": []
+}

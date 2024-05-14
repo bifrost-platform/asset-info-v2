@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0xFd09Cf7cFffa9932e33668311C4777Cb9db3c9Be",
+      "decimals": 18,
+      "name": "Wrapped Decentraland MANA",
+      "network": "evm-1",
+      "symbol": "wMANA",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "wmana-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Wrapped Decentraland MANA",
+  "references": [],
+  "tags": []
+}

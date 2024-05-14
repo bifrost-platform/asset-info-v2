@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x4691937a7508860F876c9c0a2a617E7d9E945D4B",
+      "decimals": 18,
+      "name": "Wootrade Network",
+      "network": "evm-1",
+      "symbol": "WOO",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "woo-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Wootrade Network",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/woo"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/wootrade"
+    }
+  ],
+  "tags": []
+}

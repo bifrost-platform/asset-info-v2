@@ -1,5 +1,9 @@
 [
   {
+    "value": "1inch-0",
+    "description": "1INCH Token"
+  },
+  {
     "value": "aave-0",
     "description": "Aave Token"
   },
@@ -8,8 +12,24 @@
     "description": "Cardano Token"
   },
   {
+    "value": "agix-0",
+    "description": "SingularityNET Token"
+  },
+  {
+    "value": "aioz-0",
+    "description": "AIOZ Network"
+  },
+  {
     "value": "algo-0",
     "description": "Algorand"
+  },
+  {
+    "value": "alt-0",
+    "description": "AltLayer Token"
+  },
+  {
+    "value": "ape-0",
+    "description": "ApeCoin"
   },
   {
     "value": "apt-0",
@@ -20,6 +40,10 @@
     "description": "Arbitrum"
   },
   {
+    "value": "arkm-0",
+    "description": "Arkham"
+  },
+  {
     "value": "atom-0",
     "description": "Cosmos"
   },
@@ -28,12 +52,28 @@
     "description": "Avalanche"
   },
   {
+    "value": "axl-0",
+    "description": "Axelar"
+  },
+  {
+    "value": "axs-0",
+    "description": "Axie Infinity Shard"
+  },
+  {
     "value": "bch-0",
     "description": "Bitcoin Cash Token"
   },
   {
+    "value": "beam-0",
+    "description": "Beam"
+  },
+  {
     "value": "bfc-0",
     "description": "Bifrost"
+  },
+  {
+    "value": "bgb-0",
+    "description": "BitgetToken"
   },
   {
     "value": "bifi-0",
@@ -44,8 +84,16 @@
     "description": "BitDAO"
   },
   {
+    "value": "blur-0",
+    "description": "Blur"
+  },
+  {
     "value": "bnb-0",
     "description": "BNB Chain Native Token"
+  },
+  {
+    "value": "bonk-0",
+    "description": "Bonk"
   },
   {
     "value": "bsv-0",
@@ -64,16 +112,44 @@
     "description": "Bitcoin USD"
   },
   {
+    "value": "btt-0",
+    "description": "BitTorrent"
+  },
+  {
     "value": "busd-0",
     "description": "BUSD"
+  },
+  {
+    "value": "cake-0",
+    "description": "PancakeSwap Token"
+  },
+  {
+    "value": "cbeth-0",
+    "description": "Coinbase Wrapped Staked ETH"
+  },
+  {
+    "value": "celo-1",
+    "description": "Celo native asset"
+  },
+  {
+    "value": "chz-0",
+    "description": "chiliZ"
   },
   {
     "value": "cro-0",
     "description": "CRO"
   },
   {
+    "value": "crv-0",
+    "description": "Curve DAO Token"
+  },
+  {
     "value": "dai-0",
     "description": "Dai Stablecoin"
+  },
+  {
+    "value": "dexe-0",
+    "description": "Dexe"
   },
   {
     "value": "doge-0",
@@ -84,12 +160,32 @@
     "description": "Polkadot Token"
   },
   {
+    "value": "dydx-0",
+    "description": "dYdX"
+  },
+  {
+    "value": "eeth-0",
+    "description": "ether.fi ETH"
+  },
+  {
     "value": "egg-0",
     "description": "Nestree"
   },
   {
     "value": "egld-0",
     "description": "Elrond"
+  },
+  {
+    "value": "ena-0",
+    "description": "ENA"
+  },
+  {
+    "value": "enj-0",
+    "description": "Enjin Coin"
+  },
+  {
+    "value": "ens-0",
+    "description": "Ethereum Name Service"
   },
   {
     "value": "eos-0",
@@ -104,20 +200,52 @@
     "description": "Ether"
   },
   {
+    "value": "ezeth-0",
+    "description": "Renzo Restaked ETH"
+  },
+  {
     "value": "fdusd-0",
     "description": "First Digital USD"
+  },
+  {
+    "value": "fet-0",
+    "description": "Fetch"
   },
   {
     "value": "fil-0",
     "description": "Filecoin"
   },
   {
+    "value": "floki-0",
+    "description": "FLOKI"
+  },
+  {
     "value": "flow-0",
     "description": "Flow"
   },
   {
+    "value": "frax-0",
+    "description": "Frax"
+  },
+  {
+    "value": "frxeth-0",
+    "description": "Frax Ether"
+  },
+  {
     "value": "ftm-0",
     "description": "Fantom"
+  },
+  {
+    "value": "glm-0",
+    "description": "Golem Network Token"
+  },
+  {
+    "value": "gmt-0",
+    "description": "GreenMetaverseToken"
+  },
+  {
+    "value": "gno-0",
+    "description": "Gnosis Token"
   },
   {
     "value": "grt-0",
@@ -132,6 +260,10 @@
     "description": "Internet Computer"
   },
   {
+    "value": "ilv-0",
+    "description": "Illuvium"
+  },
+  {
     "value": "imx-0",
     "description": "Immutable X"
   },
@@ -140,8 +272,16 @@
     "description": "Injective Protocol"
   },
   {
+    "value": "iotx-0",
+    "description": "IoTeX Network"
+  },
+  {
     "value": "kas-0",
     "description": "Kaspa"
+  },
+  {
+    "value": "kcs-0",
+    "description": "KuCoin Token"
   },
   {
     "value": "klay-0",
@@ -160,6 +300,10 @@
     "description": "ChainLink Token"
   },
   {
+    "value": "lpt-0",
+    "description": "Livepeer Token"
+  },
+  {
     "value": "ltc-0",
     "description": "Litecoin Token"
   },
@@ -168,8 +312,20 @@
     "description": "LUSD Stablecoin"
   },
   {
+    "value": "mana-0",
+    "description": "Decentraland MANA"
+  },
+  {
     "value": "matic-0",
     "description": "MATIC"
+  },
+  {
+    "value": "meme-0",
+    "description": "Memecoin"
+  },
+  {
+    "value": "meth-0",
+    "description": "mETH"
   },
   {
     "value": "mina-0",
@@ -184,12 +340,36 @@
     "description": "Mantle"
   },
   {
+    "value": "mx-0",
+    "description": "MX Token"
+  },
+  {
     "value": "near-0",
     "description": "NEAR Protocol"
   },
   {
+    "value": "nexo-0",
+    "description": "Nexo"
+  },
+  {
+    "value": "nft-0",
+    "description": "APENFT"
+  },
+  {
+    "value": "ocean-0",
+    "description": "Ocean Token"
+  },
+  {
     "value": "okb-0",
     "description": "OKB"
+  },
+  {
+    "value": "om-0",
+    "description": "MANTRA DAO"
+  },
+  {
+    "value": "ondo-0",
+    "description": "Ondo"
   },
   {
     "value": "op-0",
@@ -204,16 +384,52 @@
     "description": "P2D"
   },
   {
+    "value": "paxg-0",
+    "description": "Paxos Gold"
+  },
+  {
+    "value": "pendle-0",
+    "description": "Pendle"
+  },
+  {
+    "value": "pepe-0",
+    "description": "Pepe"
+  },
+  {
+    "value": "prime-0",
+    "description": "Prime"
+  },
+  {
     "value": "qnt-0",
     "description": "Quant"
+  },
+  {
+    "value": "rbn-0",
+    "description": "Ribbon"
+  },
+  {
+    "value": "reth-0",
+    "description": "Rocket Pool ETH"
   },
   {
     "value": "rndr-0",
     "description": "Render Token"
   },
   {
+    "value": "rpl-0",
+    "description": "Rocket Pool Protocol"
+  },
+  {
+    "value": "rseth-0",
+    "description": "rsETH"
+  },
+  {
     "value": "rune-0",
     "description": "THOR Chain"
+  },
+  {
+    "value": "safe-0",
+    "description": "Safe Token"
   },
   {
     "value": "sand-0",
@@ -232,6 +448,10 @@
     "description": "Sei"
   },
   {
+    "value": "sfrxeth-0",
+    "description": "Staked Frax Ether"
+  },
+  {
     "value": "shib-0",
     "description": "SHIBA INU"
   },
@@ -244,8 +464,24 @@
     "description": "Solana"
   },
   {
+    "value": "steth-0",
+    "description": "Liquid staked Ether 2.0"
+  },
+  {
+    "value": "stkaave-0",
+    "description": "Staked Aave"
+  },
+  {
     "value": "stx-0",
     "description": "Stacks"
+  },
+  {
+    "value": "susde-0",
+    "description": "Staked USDe"
+  },
+  {
+    "value": "theta-0",
+    "description": "Theta Token"
   },
   {
     "value": "tia-0",
@@ -316,12 +552,24 @@
     "description": "Decentralized USD"
   },
   {
+    "value": "usde-0",
+    "description": "USDe"
+  },
+  {
     "value": "usdt-0",
     "description": "Tether USD"
   },
   {
+    "value": "ven-0",
+    "description": "VeChain Token"
+  },
+  {
     "value": "vet-0",
     "description": "VeChain"
+  },
+  {
+    "value": "w-0",
+    "description": "Wormhole Token"
   },
   {
     "value": "wavax-0",
@@ -336,8 +584,20 @@
     "description": "Wrapped BNB"
   },
   {
+    "value": "wbt-0",
+    "description": "WBT"
+  },
+  {
     "value": "wbtc-0",
     "description": "Wrapped BTC"
+  },
+  {
+    "value": "wcelo-0",
+    "description": "Wrapped Celo"
+  },
+  {
+    "value": "weeth-0",
+    "description": "Wrapped eETH"
   },
   {
     "value": "weth-0",
@@ -360,8 +620,24 @@
     "description": "Wrapped Klay"
   },
   {
+    "value": "wld-0",
+    "description": "Worldcoin"
+  },
+  {
+    "value": "wmana-0",
+    "description": "Wrapped Decentraland MANA"
+  },
+  {
     "value": "wmatic-0",
     "description": "Wrapped Matic"
+  },
+  {
+    "value": "woo-0",
+    "description": "Wootrade Network"
+  },
+  {
+    "value": "xaut-0",
+    "description": "Tether Gold"
   },
   {
     "value": "xlm-0",

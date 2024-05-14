@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xBB0E17EF65F82Ab018d8EDd776e8DD940327B28b",
+      "decimals": 18,
+      "name": "Axie Infinity Shard",
+      "network": "evm-1",
+      "symbol": "AXS",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "axs-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Axie Infinity Shard",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/axie-infinity"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/axie-infinity"
+    }
+  ],
+  "tags": []
+}

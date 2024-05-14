@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xD33526068D116cE69F19A9ee46F0bd304F21A51f",
+      "decimals": 18,
+      "name": "Rocket Pool Protocol",
+      "network": "evm-1",
+      "symbol": "RPL",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "rpl-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Rocket Pool Protocol",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/rocket-pool"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/rocket-pool"
+    }
+  ],
+  "tags": []
+}

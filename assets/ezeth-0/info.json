@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+      "decimals": 18,
+      "name": "Renzo Restaked ETH",
+      "network": "evm-1",
+      "symbol": "ezETH",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ezeth-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": false,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Renzo Restaked ETH",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/renzo-restaked-eth"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/renzo-restaked-eth"
+    }
+  ],
+  "tags": []
+}

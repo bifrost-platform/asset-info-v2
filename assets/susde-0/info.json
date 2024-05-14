@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+      "decimals": 18,
+      "name": "Staked USDe",
+      "network": "evm-1",
+      "symbol": "sUSDe",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "susde-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Staked USDe",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/ethena-staked-usde"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/ethena-staked-usde"
+    }
+  ],
+  "tags": []
+}

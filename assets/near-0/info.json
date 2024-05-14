@@ -1,6 +1,16 @@
 {
   "contracts": [
     {
+      "address": "0x85F17Cf997934a597031b2E18a9aB6ebD4B9f6a4",
+      "decimals": 24,
+      "name": "NEAR",
+      "network": "evm-1",
+      "symbol": "NEAR",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x1Fa4a73a3F0133f0025378af00236f3aBDEE5D63",
       "decimals": 18,
       "name": "NEAR Protocol",

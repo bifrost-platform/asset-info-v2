@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x163f8C2467924be0ae7B5347228CABF260318753",
+      "decimals": 18,
+      "name": "Worldcoin",
+      "network": "evm-1",
+      "symbol": "WLD",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "wld-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Worldcoin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/worldcoin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/worldcoin-org"
+    }
+  ],
+  "tags": []
+}

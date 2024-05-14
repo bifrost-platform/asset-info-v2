@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xcf0C122c6b73ff809C693DB761e7BaeBe62b6a2E",
+      "decimals": 9,
+      "name": "FLOKI",
+      "network": "evm-1",
+      "symbol": "FLOKI",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "floki-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "FLOKI",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/floki"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/floki-inu"
+    }
+  ],
+  "tags": []
+}
