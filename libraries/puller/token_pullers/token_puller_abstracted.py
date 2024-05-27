@@ -53,11 +53,11 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         node_url: The node URL of the network.
         flag_image_pull: The flag for image pull.
         network: The network information.
+        tmp_dir: The temporary directory for images.
         token_count: The token count for pulling.
     """
 
     all_assets: dict[Id, Asset]
-    forbidden_asset_id: set[Id]
     network_assets: dict[Address, Asset]
     node_url: HttpUrl
     flag_image_pull: bool
@@ -80,9 +80,6 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         self.__check_node_url(network, URL(self.node_url))
         self.flag_image_pull = confirm("Do you want to pull images?")
         self.all_assets, self.network_assets = self.__get_assets(self.network)
-        self.forbidden_asset_id = set(
-            asset.id for asset in self.network_assets.values()
-        )
 
     def __del__(self):
         """Remove the temporary directory and run the enum preprocessing."""
@@ -224,10 +221,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         all_assets = {asset.id: asset for asset, _ in get_model_info_list(Asset)}
         network_assets = {}
         for asset in all_assets.values():
-            if contract := next(
-                filter(lambda x: x.network == network.id, asset.contracts),
-                None,
-            ):
+            for contract in filter(lambda x: x.network == network.id, asset.contracts):
                 if contract.address.lower() in network_assets:
                     raise ValueError(f"Duplicate address found: {contract.address}")
                 else:
@@ -282,10 +276,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         Returns:
             The asset information if it is new or updated, otherwise None.
         """
-        asset_id = get_id(
-            f"Enter the ID of asset",
-            forbidden_id=self.forbidden_asset_id,
-        )
+        asset_id = get_id(f"Enter the ID of asset")
         if asset_id not in self.all_assets:
             contract = self.__pull_contract_information(address, name, symbol, decimals)
             return self.__pull_asset_information(contract, asset_id)
@@ -293,7 +284,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             if confirm(
                 f"The id '{asset_id}' is already exists. Would you like to overwrite?"
             ):
-                info = self.all_assets.get(asset_id)
+                info = deepcopy(self.all_assets.get(asset_id))
                 contract = self.__pull_contract_information(
                     address, name, symbol, decimals
                 )
@@ -394,8 +385,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             return None
         if (image := self._download_token_image(token_image_url)) is None:
             return None
-        new_info = deepcopy(info)
-        image_path = Path(mkdtemp(prefix=new_info.id, dir=self.tmp_dir))
+        image_path = Path(mkdtemp(prefix=info.id, dir=self.tmp_dir))
         with NamedTemporaryFile(mode="w+b", dir=self.tmp_dir, suffix=".png") as fp:
             fp.write(image)
             fp.flush()
@@ -427,13 +417,20 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             new_info.images.set(image_type)
         printf(HTML(f"<grey>{new_info.model_dump(mode='json')}</grey>"))
         if confirm("Would you like to save this asset information?"):
-            self.forbidden_asset_id.add(new_info.id)
+            # Update all_assets and network_assets
+            self.all_assets[new_info.id] = new_info
+            for contract in new_info.contracts:
+                if contract.address.lower() in self.network_assets:
+                    self.network_assets[contract.address.lower()] = new_info
+            # Get the path of the asset information
             path = get_model_dir_path(Asset).joinpath(new_info.id)
             if not exists(path):
                 mkdir(path)
+            # Save the asset information
             with open(path.joinpath("info.json"), "w") as fp:
                 dump(new_info.model_dump(mode="json"), fp, indent=2)
                 fp.write("\n")
+            # Save the images
             for image_type in image_info[1] if image_info else []:
                 image_path = image_type.get_path(image_info[0])
                 if exists(image_path):
