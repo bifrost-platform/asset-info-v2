@@ -13,11 +13,9 @@ from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAb
 
 HEADER: dict[str, str] = {"User-Agent": "Mozilla/5.0"}
 TOKEN_ADDRESS_SELECTOR: str = (
-    "#ContentPlaceHolder1_tblErc20Tokens > table > tbody > tr > td:nth-child(2) > a"
+    "#ContentPlaceHolder1_tblErc20Tokens > table > tbody > tr > td > a"
 )
-TOKEN_IMAGE_SELECTOR: str = (
-    "#content > section:nth-child(9) > div > div:nth-child(1) > img"
-)
+TOKEN_IMAGE_SELECTOR: str = "#content > section > div > div > img"
 
 
 class TokenPullerEtherscan(TokenPullerAbstracted):
