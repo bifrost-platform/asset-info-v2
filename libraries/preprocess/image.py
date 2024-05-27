@@ -7,8 +7,8 @@ from PIL import Image
 from libraries.models.image_type import ImageTypeEnum
 from libraries.utils.file import search, File
 
-PNG_SIZES: list[int] = [
-    typ.get_size() for typ in ImageTypeEnum.get_descending_type_list() if typ.is_png()
+PNG_SIZES: list[ImageTypeEnum] = [
+    typ for typ in ImageTypeEnum.get_descending_type_list() if typ.is_png()
 ]
 
 
@@ -50,7 +50,9 @@ def downscale_png(
     downloaded_type = []
     with Image.open(png_path) as img:
         squared_img, img_size = __png_to_square(img)
-        target_sizes = [size for size in PNG_SIZES if size <= img_size]
+        target_sizes = [
+            size.get_size() for size in PNG_SIZES if size.get_size() <= img_size
+        ]
         for size in target_sizes:
             new_png_path = ImageTypeEnum.get_png_image_type(size).get_path(dir_path)
             if overwrite or not os.path.isfile(new_png_path):

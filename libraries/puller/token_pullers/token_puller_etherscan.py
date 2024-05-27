@@ -1,13 +1,15 @@
 from math import ceil
-from re import sub
+from re import sub, search
 
 from bs4 import BeautifulSoup
+from prompt_toolkit import print_formatted_text as printf, HTML
 from requests import get
 from yarl import URL
 
 from libraries.models.address import Address
 from libraries.models.network import Network
 from libraries.preprocess.image import PNG_SIZES
+from libraries.puller.getters.image_type_getter import get_image_type
 from libraries.puller.getters.token_count_getter import TOKEN_COUNT_PER_PAGE
 from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAbstracted
 
@@ -61,13 +63,27 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
         soup = BeautifulSoup(token_page.content, "html.parser")
         if (prefix := soup.select_one(TOKEN_IMAGE_SELECTOR).get("src", None)) is None:
             return None
-        base_url = (self.etherscan_url / prefix.lstrip("/")).with_suffix(".png")
+        base_url = str((self.etherscan_url / prefix.lstrip("/")).with_suffix(".png"))
+        available_images = dict()
         for size in PNG_SIZES:
-            url = sub(r"(_\d+)?.png", f"_{size}.png", str(base_url))
+            url = sub(r"_\d+", f"_{size.get_size()}", base_url)
+            if url == base_url and not bool(search(r"_\d+", base_url)):
+                url = sub(r".png", f"_{size.get_size()}.png", base_url)
             response = get(url, headers=HEADER)
             if response.status_code == 200 and response.url == url:
-                return URL(url)
-        return base_url
+                available_images[size] = URL(url)
+        if len(available_images) == 0:
+            return URL(base_url)
+        elif len(available_images) == 1:
+            return available_images.popitem()[1]
+        else:
+            printf(HTML(f"⎡ <b>Available images for {address}:</b>"))
+            for size, url in available_images.items():
+                printf(HTML(f"⎢ <b>∙ {size.upper()}</b>: {url}"))
+            selected_type = get_image_type(
+                "⎣ Select the image type", list(available_images.keys())
+            )
+            return available_images[selected_type]
 
     def _download_token_image(self, token_image_url: URL) -> bytes | None:
         response = get(str(token_image_url), headers=HEADER)
