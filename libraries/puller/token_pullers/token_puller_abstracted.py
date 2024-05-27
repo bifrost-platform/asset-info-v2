@@ -31,7 +31,6 @@ from libraries.preprocess.runner import run_enum_preprocess
 from libraries.puller.getters.http_url_getter import get_http_url
 from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import get_token_count
-from libraries.puller.getters.yn_getter import get_flag
 from libraries.utils.eth_erc20 import EthErc20Interface
 from libraries.utils.file import get_model_dir_path, PWD, get_model_info_list
 
@@ -79,7 +78,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         self.token_count = get_token_count()
         self.node_url = get_http_url(f"Enter the node URL of {self.network.name}")
         self.__check_node_url(network, URL(self.node_url))
-        self.flag_image_pull = get_flag("Do you want to pull images?")
+        self.flag_image_pull = confirm("Do you want to pull images?")
         self.all_assets, self.network_assets = self.__get_assets(self.network)
         self.forbidden_asset_id = set(
             asset.id for asset in self.network_assets.values()
