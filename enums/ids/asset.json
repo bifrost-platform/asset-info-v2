@@ -244,6 +244,10 @@
     "description": "Fantom"
   },
   {
+    "value": "gala-0",
+    "description": "Gala"
+  },
+  {
     "value": "glm-0",
     "description": "Golem Network Token"
   },
@@ -282,6 +286,10 @@
   {
     "value": "iotx-0",
     "description": "IoTeX Network"
+  },
+  {
+    "value": "jasmy-0",
+    "description": "JasmyCoin"
   },
   {
     "value": "kas-0",
@@ -480,6 +488,10 @@
     "description": "Staked Aave"
   },
   {
+    "value": "strk-0",
+    "description": "StarkNet Token"
+  },
+  {
     "value": "stx-0",
     "description": "Stacks"
   },
@@ -498,6 +510,10 @@
   {
     "value": "tia-0",
     "description": "Celestia"
+  },
+  {
+    "value": "tkx-0",
+    "description": "Tokenize Emblem"
   },
   {
     "value": "ton-0",
