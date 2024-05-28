@@ -132,6 +132,10 @@
     "description": "Celo native asset"
   },
   {
+    "value": "ceth-0",
+    "description": "Compound Ether"
+  },
+  {
     "value": "chz-0",
     "description": "chiliZ"
   },
@@ -198,6 +202,10 @@
   {
     "value": "eth-0",
     "description": "Ether"
+  },
+  {
+    "value": "ethx-0",
+    "description": "ETHx"
   },
   {
     "value": "ezeth-0",
@@ -480,6 +488,10 @@
     "description": "Staked USDe"
   },
   {
+    "value": "sweth-0",
+    "description": "swETH"
+  },
+  {
     "value": "theta-0",
     "description": "Theta Token"
   },
@@ -494,6 +506,10 @@
   {
     "value": "trx-0",
     "description": "TRON"
+  },
+  {
+    "value": "turbo-0",
+    "description": "Turbo"
   },
   {
     "value": "tusd-0",
@@ -650,5 +666,9 @@
   {
     "value": "xrp-0",
     "description": "XRP Token"
+  },
+  {
+    "value": "zrx-0",
+    "description": "0x Protocol Token"
   }
 ]

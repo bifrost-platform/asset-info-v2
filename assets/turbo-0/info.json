@@ -1,17 +1,17 @@
 {
   "contracts": [
     {
-      "address": "0x5B7533812759B45C2B44C19e320ba2cD2681b542",
-      "decimals": 8,
-      "name": "SingularityNET Token",
+      "address": "0xA35923162C49cF95e6BF26623385eb431ad920D3",
+      "decimals": 18,
+      "name": "Turbo",
       "network": "evm-1",
-      "symbol": "AGIX",
+      "symbol": "TURBO",
       "tags": [
         "mainnet"
       ]
     }
   ],
-  "id": "agix-0",
+  "id": "turbo-0",
   "images": {
     "png128": false,
     "png256": false,
@@ -19,15 +19,15 @@
     "png64": false,
     "svg": false
   },
-  "name": "SingularityNET Token",
+  "name": "Turbo",
   "references": [
     {
       "id": "coingecko",
-      "url": "https://www.coingecko.com/en/coins/singularitynet"
+      "url": "https://www.coingecko.com/en/coins/turbo"
     },
     {
       "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/singularitynet"
+      "url": "https://coinmarketcap.com/currencies/turbo"
     }
   ],
   "tags": []

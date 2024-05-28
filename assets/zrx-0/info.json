@@ -1,17 +1,17 @@
 {
   "contracts": [
     {
-      "address": "0x5B7533812759B45C2B44C19e320ba2cD2681b542",
-      "decimals": 8,
-      "name": "SingularityNET Token",
+      "address": "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
+      "decimals": 18,
+      "name": "0x Protocol Token",
       "network": "evm-1",
-      "symbol": "AGIX",
+      "symbol": "ZRX",
       "tags": [
         "mainnet"
       ]
     }
   ],
-  "id": "agix-0",
+  "id": "zrx-0",
   "images": {
     "png128": false,
     "png256": false,
@@ -19,15 +19,15 @@
     "png64": false,
     "svg": false
   },
-  "name": "SingularityNET Token",
+  "name": "0x Protocol Token",
   "references": [
     {
       "id": "coingecko",
-      "url": "https://www.coingecko.com/en/coins/singularitynet"
+      "url": "https://www.coingecko.com/en/coins/0x"
     },
     {
       "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/singularitynet"
+      "url": "https://coinmarketcap.com/currencies/0x"
     }
   ],
   "tags": []

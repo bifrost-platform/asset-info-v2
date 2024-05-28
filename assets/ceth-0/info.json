@@ -1,17 +1,17 @@
 {
   "contracts": [
     {
-      "address": "0x5B7533812759B45C2B44C19e320ba2cD2681b542",
+      "address": "0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5",
       "decimals": 8,
-      "name": "SingularityNET Token",
+      "name": "Compound Ether",
       "network": "evm-1",
-      "symbol": "AGIX",
+      "symbol": "cETH",
       "tags": [
         "mainnet"
       ]
     }
   ],
-  "id": "agix-0",
+  "id": "ceth-0",
   "images": {
     "png128": false,
     "png256": false,
@@ -19,15 +19,15 @@
     "png64": false,
     "svg": false
   },
-  "name": "SingularityNET Token",
+  "name": "Compound Ether",
   "references": [
     {
       "id": "coingecko",
-      "url": "https://www.coingecko.com/en/coins/singularitynet"
+      "url": "https://www.coingecko.com/en/coins/compound-ether"
     },
     {
       "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/singularitynet"
+      "url": "https://coinmarketcap.com/currencies/compound-ether"
     }
   ],
   "tags": []
