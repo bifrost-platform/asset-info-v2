@@ -7,9 +7,10 @@ from requests import get
 from yarl import URL
 
 from libraries.models.address import Address
+from libraries.models.id import Id
 from libraries.models.network import Network
 from libraries.preprocess.image import PNG_SIZES
-from libraries.puller.getters.image_type_getter import get_image_type
+from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import TOKEN_COUNT_PER_PAGE
 from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAbstracted
 
@@ -70,29 +71,27 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
             return None
         base_url = str((self.etherscan_url / prefix.lstrip("/")).with_suffix(".png"))
         # Get the available images for the token.
-        available_images = dict()
+        available_images: dict[Id, str] = dict()
         for size in PNG_SIZES:
             url = sub(r"_\d+", f"_{size.get_size()}", base_url)
             if url == base_url and not bool(search(r"_\d+", base_url)):
                 url = sub(r".png", f"_{size.get_size()}.png", base_url)
             response = get(url, headers=HEADER)
             if response.status_code == 200 and response.url == url:
-                available_images[size] = url
+                available_images.update({Id(size.lower()): url})
         if base_url not in available_images.values():
-            available_images[None] = base_url
+            available_images.update({Id("original"): base_url})
         # Select the image type.
         if len(available_images) == 1:
             return URL(available_images.popitem()[1])
         else:
             printf(HTML(f"⎡ <b>Available images for {address}:</b>"))
             for size, url in available_images.items():
-                printf(
-                    HTML(f"⎢ <b>∙ {size.upper() if size else 'Original'}</b>: {url}")
-                )
-            selected_type = get_image_type(
+                printf(HTML(f"⎢ <b>∙ {size}</b>: {url}"))
+            selected_type = get_id(
                 "⎣ Select the image type",
-                [key for key in available_images.keys() if key],
-                None in available_images,
+                None,
+                set(available_images.keys()),
             )
             return URL(available_images[selected_type])
 
