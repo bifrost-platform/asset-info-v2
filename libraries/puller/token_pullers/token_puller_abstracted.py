@@ -431,10 +431,10 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         printf(HTML(f"<grey>{new_info.model_dump(mode='json')}</grey>"))
         if confirm("Would you like to save this asset information?"):
             # Update all_assets and network_assets
-            self.all_assets[new_info.id] = new_info
+            self.all_assets.update({new_info.id: new_info})
             for contract in new_info.contracts:
                 if contract.address.lower() in self.network_assets:
-                    self.network_assets[contract.address.lower()] = new_info
+                    self.network_assets.update({contract.address.lower(): new_info})
             # Get the path of the asset information
             path = get_model_dir_path(Asset).joinpath(new_info.id)
             if not exists(path):
