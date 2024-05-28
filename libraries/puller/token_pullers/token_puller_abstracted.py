@@ -26,7 +26,7 @@ from libraries.models.image_info import ImageInfo
 from libraries.models.image_type import ImageTypeEnum
 from libraries.models.network import Network
 from libraries.models.reference import Reference
-from libraries.preprocess.image import downscale_png
+from libraries.preprocess.image import downscale_png, png_to_square
 from libraries.preprocess.runner import run_enum_preprocess
 from libraries.puller.getters.http_url_getter import get_http_url
 from libraries.puller.getters.id_getter import get_id
@@ -378,21 +378,32 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         Returns:
             The tuple of image path and image type if the image is downloaded, otherwise None.
         """
+        # Get the image URL
         if (token_image_url := self._get_token_image_url(address)) is None:
             return None
         printf(HTML(f"Image URL found: <skyblue>{token_image_url}</skyblue>"))
         if not confirm("Would you like to download the image?"):
             return None
+        # Download the image
         if (image := self._download_token_image(token_image_url)) is None:
             return None
+        # Save the image
         image_path = Path(mkdtemp(prefix=info.id, dir=self.tmp_dir))
-        with NamedTemporaryFile(mode="w+b", dir=self.tmp_dir, suffix=".png") as fp:
-            fp.write(image)
-            fp.flush()
-            downloaded_type = downscale_png(
-                Path(image_path),
-                Path(fp.name),
-            )
+        with NamedTemporaryFile(
+            mode="w+b", dir=image_path, suffix="_origin.png"
+        ) as fp_origin:
+            fp_origin.write(image)
+            fp_origin.flush()
+            with NamedTemporaryFile(
+                mode="w+b", dir=image_path, suffix="_squared.png"
+            ) as fp_square:
+                # Convert the downloaded PNG image to a squared image
+                png_to_square(Path(fp_origin.name), Path(fp_square.name))
+                # Downscale the image
+                downloaded_type = downscale_png(
+                    Path(image_path),
+                    Path(fp_square.name),
+                )
         if len(downloaded_type) == 0 or info.images.get(
             max(downloaded_type, key=lambda x: x.get_size())
         ):
