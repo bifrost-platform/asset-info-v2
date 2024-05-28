@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+      "decimals": 18,
+      "name": "ETHx",
+      "network": "evm-1",
+      "symbol": "ETHx",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ethx-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "ETHx",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/stader-ethx"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/stader-ethx"
+    }
+  ],
+  "tags": []
+}

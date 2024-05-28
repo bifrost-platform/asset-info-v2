@@ -26,12 +26,11 @@ from libraries.models.image_info import ImageInfo
 from libraries.models.image_type import ImageTypeEnum
 from libraries.models.network import Network
 from libraries.models.reference import Reference
-from libraries.preprocess.image import downscale_png
+from libraries.preprocess.image import downscale_png, png_to_square
 from libraries.preprocess.runner import run_enum_preprocess
 from libraries.puller.getters.http_url_getter import get_http_url
 from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import get_token_count
-from libraries.puller.getters.yn_getter import get_flag
 from libraries.utils.eth_erc20 import EthErc20Interface
 from libraries.utils.file import get_model_dir_path, PWD, get_model_info_list
 
@@ -54,11 +53,11 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         node_url: The node URL of the network.
         flag_image_pull: The flag for image pull.
         network: The network information.
+        tmp_dir: The temporary directory for images.
         token_count: The token count for pulling.
     """
 
     all_assets: dict[Id, Asset]
-    forbidden_asset_id: set[Id]
     network_assets: dict[Address, Asset]
     node_url: HttpUrl
     flag_image_pull: bool
@@ -79,11 +78,8 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         self.token_count = get_token_count()
         self.node_url = get_http_url(f"Enter the node URL of {self.network.name}")
         self.__check_node_url(network, URL(self.node_url))
-        self.flag_image_pull = get_flag("Do you want to pull images?")
+        self.flag_image_pull = confirm("Do you want to pull images?")
         self.all_assets, self.network_assets = self.__get_assets(self.network)
-        self.forbidden_asset_id = set(
-            asset.id for asset in self.network_assets.values()
-        )
 
     def __del__(self):
         """Remove the temporary directory and run the enum preprocessing."""
@@ -95,14 +91,14 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         """Run the interactive token puller."""
         target_token_list = self.__get_target_token_list()
         length = len(target_token_list)
-        for idx, (address, info) in enumerate(target_token_list.items(), 1):
+        for idx, address in enumerate(target_token_list, 1):
             retry = True
             while retry:
                 retry = False
                 try:
                     clear()
                     printf(HTML(f"<b>✶ [{idx}/{length}] Pull {address} ✶</b>"))
-                    self.__run_body(address, info)
+                    self.__run_body(address)
                 except ValidationError as e:
                     printf(HTML(f"<red>Validation Error</red>\n<grey>{e}</grey>"))
                     retry = confirm("Would you like to retry?")
@@ -112,12 +108,11 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             if idx < length and not confirm("Next?"):
                 break
 
-    def __run_body(self, address: Address, info: Asset | None) -> None:
+    def __run_body(self, address: Address) -> None:
         """Run the interactive token puller.
 
         Args:
             address: The address of the token.
-            info: The asset information.
         """
         address, name, symbol, decimals = self.__get_contract_info(address)
         printf(HTML(f"<b>  Name: {name}</b>"))
@@ -125,6 +120,9 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         printf(
             HTML(f"<b>  Source: <skyblue>{self._get_token_url(address)}</skyblue></b>")
         )
+        info = self.network_assets.get(address.lower(), None)
+        if info is not None and not confirm("Would you like to renew the information?"):
+            return None
         gen_info = (
             info
             if info
@@ -140,7 +138,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         self.__save_asset_information(gen_info, img_info)
 
     @abstractmethod
-    def _get_top_token_list(self) -> set[Address]:
+    def _get_top_token_list(self) -> set[tuple[int, Address]]:
         """Get the top token list from the given network's explorer.
 
         Returns:
@@ -225,30 +223,27 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         all_assets = {asset.id: asset for asset, _ in get_model_info_list(Asset)}
         network_assets = {}
         for asset in all_assets.values():
-            if contract := next(
-                filter(lambda x: x.network == network.id, asset.contracts),
-                None,
-            ):
+            for contract in filter(lambda x: x.network == network.id, asset.contracts):
                 if contract.address.lower() in network_assets:
                     raise ValueError(f"Duplicate address found: {contract.address}")
                 else:
                     network_assets[contract.address.lower()] = asset
         return all_assets, network_assets
 
-    def __get_target_token_list(self) -> dict[Address, Asset | None]:
+    def __get_target_token_list(self) -> list[Address]:
         """Get the target token list from the top token list.
 
         Returns:
             The map of target token addresses and asset information.
         """
-        top_token_list = self._get_top_token_list()
-        target_token_list = {}
-        for token in top_token_list:
+        top_token_list = sorted(self._get_top_token_list(), key=lambda x: x[0])
+        target_token_list = list()
+        for _, token in top_token_list:
             if asset := self.network_assets.get(token.lower(), None):
                 if self.flag_image_pull and not asset.images.svg:
-                    target_token_list[token] = asset
+                    target_token_list.append(token)
             else:
-                target_token_list[token] = None
+                target_token_list.append(token)
         return target_token_list
 
     def __get_contract_info(self, address: Address) -> tuple[Address, str, str, int]:
@@ -283,10 +278,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         Returns:
             The asset information if it is new or updated, otherwise None.
         """
-        asset_id = get_id(
-            f"Enter the ID of asset",
-            forbidden_id=self.forbidden_asset_id,
-        )
+        asset_id = get_id(f"Enter the ID of asset")
         if asset_id not in self.all_assets:
             contract = self.__pull_contract_information(address, name, symbol, decimals)
             return self.__pull_asset_information(contract, asset_id)
@@ -294,7 +286,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             if confirm(
                 f"The id '{asset_id}' is already exists. Would you like to overwrite?"
             ):
-                info = self.all_assets.get(asset_id)
+                info = deepcopy(self.all_assets.get(asset_id))
                 contract = self.__pull_contract_information(
                     address, name, symbol, decimals
                 )
@@ -388,22 +380,32 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         Returns:
             The tuple of image path and image type if the image is downloaded, otherwise None.
         """
+        # Get the image URL
         if (token_image_url := self._get_token_image_url(address)) is None:
             return None
         printf(HTML(f"Image URL found: <skyblue>{token_image_url}</skyblue>"))
         if not confirm("Would you like to download the image?"):
             return None
+        # Download the image
         if (image := self._download_token_image(token_image_url)) is None:
             return None
-        new_info = deepcopy(info)
-        image_path = Path(mkdtemp(prefix=new_info.id, dir=self.tmp_dir))
-        with NamedTemporaryFile(mode="w+b", dir=self.tmp_dir, suffix=".png") as fp:
-            fp.write(image)
-            fp.flush()
-            downloaded_type = downscale_png(
-                Path(image_path),
-                Path(fp.name),
-            )
+        # Save the image
+        image_path = Path(mkdtemp(prefix=info.id, dir=self.tmp_dir))
+        with NamedTemporaryFile(
+            mode="w+b", dir=image_path, suffix="_origin.png"
+        ) as fp_origin:
+            fp_origin.write(image)
+            fp_origin.flush()
+            with NamedTemporaryFile(
+                mode="w+b", dir=image_path, suffix="_squared.png"
+            ) as fp_square:
+                # Convert the downloaded PNG image to a squared image
+                png_to_square(Path(fp_origin.name), Path(fp_square.name))
+                # Downscale the image
+                downloaded_type = downscale_png(
+                    Path(image_path),
+                    Path(fp_square.name),
+                )
         if len(downloaded_type) == 0 or info.images.get(
             max(downloaded_type, key=lambda x: x.get_size())
         ):
@@ -428,13 +430,20 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             new_info.images.set(image_type)
         printf(HTML(f"<grey>{new_info.model_dump(mode='json')}</grey>"))
         if confirm("Would you like to save this asset information?"):
-            self.forbidden_asset_id.add(new_info.id)
+            # Update all_assets and network_assets
+            self.all_assets.update({new_info.id: new_info})
+            for contract in new_info.contracts:
+                if contract.address.lower() in self.network_assets:
+                    self.network_assets.update({contract.address.lower(): new_info})
+            # Get the path of the asset information
             path = get_model_dir_path(Asset).joinpath(new_info.id)
             if not exists(path):
                 mkdir(path)
+            # Save the asset information
             with open(path.joinpath("info.json"), "w") as fp:
                 dump(new_info.model_dump(mode="json"), fp, indent=2)
                 fp.write("\n")
+            # Save the images
             for image_type in image_info[1] if image_info else []:
                 image_path = image_type.get_path(image_info[0])
                 if exists(image_path):

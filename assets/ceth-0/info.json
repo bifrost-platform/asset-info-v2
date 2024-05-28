@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5",
+      "decimals": 8,
+      "name": "Compound Ether",
+      "network": "evm-1",
+      "symbol": "cETH",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ceth-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Compound Ether",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/compound-ether"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/compound-ether"
+    }
+  ],
+  "tags": []
+}

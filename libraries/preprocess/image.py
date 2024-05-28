@@ -7,31 +7,47 @@ from PIL import Image
 from libraries.models.image_type import ImageTypeEnum
 from libraries.utils.file import search, File
 
-PNG_SIZES: list[int] = [
-    typ.get_size() for typ in ImageTypeEnum.get_descending_type_list() if typ.is_png()
+PNG_SIZES: list[ImageTypeEnum] = [
+    typ for typ in ImageTypeEnum.get_descending_type_list() if typ.is_png()
 ]
 
 
-def __png_to_square(img: Image) -> tuple[Image, int]:
+def __png_to_square_body(img: Image, size: int | None = None) -> tuple[Image, int]:
     """Converts the PNG image to a square image.
 
     Args:
         img: The PNG image.
+        size: The size of the square image (If None, the maximum size of the image is used.)
 
     Returns:
         The square image and the size of the square image.
     """
-    if img.size[0] == img.size[1]:
-        return img, img.size[0]
-    size = max(img.size)
+    desired_size = size or max(img.size)
+    if img.size[0] == desired_size and img.size[1] == desired_size:
+        return img, desired_size
     return (
-        Image.new(
-            "RGBA",
-            (size, size),
-            (255, 255, 255, 0),
-        ),
-        size,
+        img.resize((desired_size, desired_size), Image.LANCZOS),
+        desired_size,
     )
+
+
+def png_to_square(png_path: Path, dest_path: Path, size: int | None = None) -> None:
+    """Converts the PNG image to a square image.
+
+    Args:
+        png_path: The PNG image path to make a square image.
+        dest_path: The destination path to save the square image.
+        size: The size of the square image (If None, the minimum size of png image in this system.)
+
+    Returns:
+        The path of the square image.
+    """
+    with Image.open(png_path) as img:
+        desired_size = size or max(
+            list(img.size) + [min(size.get_size() for size in PNG_SIZES)]
+        )
+        img, _ = __png_to_square_body(img, desired_size)
+        img.save(dest_path, "png", optimize=True)
 
 
 def downscale_png(
@@ -49,8 +65,10 @@ def downscale_png(
     """
     downloaded_type = []
     with Image.open(png_path) as img:
-        squared_img, img_size = __png_to_square(img)
-        target_sizes = [size for size in PNG_SIZES if size <= img_size]
+        squared_img, img_size = __png_to_square_body(img)
+        target_sizes = [
+            size.get_size() for size in PNG_SIZES if size.get_size() <= img_size
+        ]
         for size in target_sizes:
             new_png_path = ImageTypeEnum.get_png_image_type(size).get_path(dir_path)
             if overwrite or not os.path.isfile(new_png_path):
