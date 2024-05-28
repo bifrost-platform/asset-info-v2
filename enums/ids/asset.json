@@ -4,6 +4,10 @@
     "description": "1INCH Token"
   },
   {
+    "value": "1st-0",
+    "description": "FirstBlood Token"
+  },
+  {
     "value": "aave-0",
     "description": "Aave Token"
   },
@@ -140,6 +144,10 @@
     "description": "chiliZ"
   },
   {
+    "value": "corgiai-0",
+    "description": "CorgiAI"
+  },
+  {
     "value": "cro-0",
     "description": "CRO"
   },
@@ -204,6 +212,10 @@
     "description": "Ether"
   },
   {
+    "value": "ethfi-0",
+    "description": "ether.fi governance token"
+  },
+  {
     "value": "ethx-0",
     "description": "ETHx"
   },
@@ -244,6 +256,10 @@
     "description": "Fantom"
   },
   {
+    "value": "ftn-0",
+    "description": "Fasttoken"
+  },
+  {
     "value": "gala-0",
     "description": "Gala"
   },
@@ -262,6 +278,10 @@
   {
     "value": "grt-0",
     "description": "Graph Token"
+  },
+  {
+    "value": "gt-0",
+    "description": "GateChainToken"
   },
   {
     "value": "hbar-0",
@@ -356,6 +376,10 @@
     "description": "Mantle"
   },
   {
+    "value": "mog-0",
+    "description": "Mog Coin"
+  },
+  {
     "value": "mx-0",
     "description": "MX Token"
   },
@@ -410,6 +434,10 @@
   {
     "value": "pepe-0",
     "description": "Pepe"
+  },
+  {
+    "value": "pepecoin-0",
+    "description": "pepeCoin"
   },
   {
     "value": "prime-0",
@@ -518,6 +546,10 @@
   {
     "value": "ton-0",
     "description": "Wrapped TON Coin"
+  },
+  {
+    "value": "trump-0",
+    "description": "MAGA"
   },
   {
     "value": "trx-0",

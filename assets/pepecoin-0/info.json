@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xA9E8aCf069C58aEc8825542845Fd754e41a9489A",
+      "decimals": 18,
+      "name": "pepeCoin",
+      "network": "evm-1",
+      "symbol": "pepecoin",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "pepecoin-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "pepeCoin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/pepecoin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/pepecoin"
+    }
+  ],
+  "tags": []
+}
