@@ -40,7 +40,7 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
             str(next(filter(lambda x: x.id == "etherscan", self.network.explorers)).url)
         )
 
-    def _get_top_token_list(self) -> set[Address]:
+    def _get_top_token_list(self) -> set[tuple[int, Address]]:
         addresses = []
         for page in range(ceil(self.token_count / TOKEN_COUNT_PER_PAGE)):
             token_list_page = get(
@@ -50,7 +50,10 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
                 break
             soup = BeautifulSoup(token_list_page.content, "html.parser")
             items = soup.select(TOKEN_ADDRESS_SELECTOR)
-            addresses.extend(Address(item.get("href").split("/")[-1]) for item in items)
+            addresses.extend(
+                (idx, Address(item.get("href").split("/")[-1]))
+                for idx, item in enumerate(items, len(addresses))
+            )
         return set(addresses)
 
     def _get_token_url(self, address: Address) -> URL:

@@ -38,11 +38,14 @@ class TokenPullerDexguru(TokenPullerAbstracted):
             str(next(filter(lambda x: x.id == "dexguru", self.network.explorers)).url)
         )
 
-    def _get_top_token_list(self) -> set[Address]:
+    def _get_top_token_list(self) -> set[tuple[int, Address]]:
         addresses = []
         for page in range(ceil(self.token_count / TOKEN_COUNT_PER_PAGE)):
             token_list = self.__get_token_list(page + 1)
-            addresses.extend(address for address, _ in token_list)
+            addresses.extend(
+                (idx, address)
+                for idx, (address, _) in enumerate(token_list, len(addresses))
+            )
             self.token_image_map.update({address: url for address, url in token_list})
         return set(addresses)
 

@@ -91,14 +91,14 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         """Run the interactive token puller."""
         target_token_list = self.__get_target_token_list()
         length = len(target_token_list)
-        for idx, (address, info) in enumerate(target_token_list.items(), 1):
+        for idx, address in enumerate(target_token_list, 1):
             retry = True
             while retry:
                 retry = False
                 try:
                     clear()
                     printf(HTML(f"<b>✶ [{idx}/{length}] Pull {address} ✶</b>"))
-                    self.__run_body(address, info)
+                    self.__run_body(address)
                 except ValidationError as e:
                     printf(HTML(f"<red>Validation Error</red>\n<grey>{e}</grey>"))
                     retry = confirm("Would you like to retry?")
@@ -108,12 +108,11 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             if idx < length and not confirm("Next?"):
                 break
 
-    def __run_body(self, address: Address, info: Asset | None) -> None:
+    def __run_body(self, address: Address) -> None:
         """Run the interactive token puller.
 
         Args:
             address: The address of the token.
-            info: The asset information.
         """
         address, name, symbol, decimals = self.__get_contract_info(address)
         printf(HTML(f"<b>  Name: {name}</b>"))
@@ -121,6 +120,9 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         printf(
             HTML(f"<b>  Source: <skyblue>{self._get_token_url(address)}</skyblue></b>")
         )
+        info = self.network_assets.get(address.lower(), None)
+        if info is not None and not confirm("Would you like to renew the information?"):
+            return None
         gen_info = (
             info
             if info
@@ -136,7 +138,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         self.__save_asset_information(gen_info, img_info)
 
     @abstractmethod
-    def _get_top_token_list(self) -> set[Address]:
+    def _get_top_token_list(self) -> set[tuple[int, Address]]:
         """Get the top token list from the given network's explorer.
 
         Returns:
@@ -228,20 +230,20 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
                     network_assets[contract.address.lower()] = asset
         return all_assets, network_assets
 
-    def __get_target_token_list(self) -> dict[Address, Asset | None]:
+    def __get_target_token_list(self) -> list[Address]:
         """Get the target token list from the top token list.
 
         Returns:
             The map of target token addresses and asset information.
         """
-        top_token_list = self._get_top_token_list()
-        target_token_list = {}
-        for token in top_token_list:
+        top_token_list = sorted(self._get_top_token_list(), key=lambda x: x[0])
+        target_token_list = list()
+        for _, token in top_token_list:
             if asset := self.network_assets.get(token.lower(), None):
                 if self.flag_image_pull and not asset.images.svg:
-                    target_token_list[token] = asset
+                    target_token_list.append(token)
             else:
-                target_token_list[token] = None
+                target_token_list.append(token)
         return target_token_list
 
     def __get_contract_info(self, address: Address) -> tuple[Address, str, str, int]:

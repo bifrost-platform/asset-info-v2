@@ -33,12 +33,15 @@ class TokenPullerBlockscout(TokenPullerAbstracted):
             )
         )
 
-    def _get_top_token_list(self) -> set[Address]:
+    def _get_top_token_list(self) -> set[tuple[int, Address]]:
         addresses = []
         page_param = {"items_count": TOKEN_COUNT_PER_PAGE}
         for _ in range(ceil(self.token_count / TOKEN_COUNT_PER_PAGE)):
             token_list, page_param = self.__get_token_list(page_param)
-            addresses.extend(address for address, _ in token_list)
+            addresses.extend(
+                (idx, address)
+                for idx, (address, _) in enumerate(token_list, len(addresses))
+            )
             self.token_image_map.update({address: url for address, url in token_list})
         return set(addresses)
 
