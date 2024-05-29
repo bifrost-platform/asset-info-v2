@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x7420B4b9a0110cdC71fB720908340C03F9Bc03EC",
+      "decimals": 18,
+      "name": "JasmyCoin",
+      "network": "evm-1",
+      "symbol": "JASMY",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "jasmy-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "JasmyCoin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/jasmycoin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/jasmy"
+    }
+  ],
+  "tags": []
+}
