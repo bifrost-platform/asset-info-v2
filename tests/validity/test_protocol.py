@@ -25,7 +25,7 @@ class TestValidityProtocol:
         self.protocol_tag_list = read_enum_info(EnumTagTypeEnum.PROTOCOL)
 
     def test_all_dir_has_info_json(self):
-        """All directory for protocol information has a `info.json` file."""
+        """All directories for protocol information have a `info.json` file."""
         check_info_json_existence(Protocol)
 
     def test_all_id_exists_in_enum_info(self):
@@ -34,7 +34,7 @@ class TestValidityProtocol:
         id_map = {item.value: item.description for item in self.protocol_id_list}
         for protocol, _ in self.protocol_list:
             assert protocol.id in id_map
-            # its description is same as its name
+            # its description is the same as its name
             assert id_map.get(protocol.id) == protocol.name
 
     def test_all_image_exists(self):
@@ -43,7 +43,7 @@ class TestValidityProtocol:
             check_images_validity(protocol.images, file)
 
     def test_all_networks_exists_in_enum_info(self):
-        """All networks in protocol information has a network which is described
+        """All networks in protocol information have a network which is described
         in the enum information `enum/ids/network.json`."""
         network_value_list = [item.value for item in self.network_id_list]
         for protocol, _ in self.protocol_list:
@@ -51,7 +51,7 @@ class TestValidityProtocol:
                 assert network in network_value_list
 
     def test_all_tags_exists_in_enum_info(self):
-        """All tags in protocol information has a tag which is described
+        """All tags in protocol information have a tag which is described
         in the enum information `enum/tags/protocol.json`."""
         tag_value_list = [item.value for item in self.protocol_tag_list]
         for protocol, _ in self.protocol_list:

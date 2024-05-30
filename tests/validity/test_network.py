@@ -41,11 +41,11 @@ class TestValidityNetwork:
         self.network_tag_list = read_enum_info(EnumTagTypeEnum.NETWORK)
 
     def test_all_dir_has_info_json(self):
-        """All directory for network information has a `info.json` file."""
+        """All directories for network information have a `info.json` file."""
         check_info_json_existence(Network)
 
     def test_currency_exists_in_asset_contract(self):
-        """Currency exists in asset contract and its information is match with it.
+        """The Currency exists in asset contract and its information is match with it.
 
         Notes:
             Contract also has `native-coin` and network type tags.
@@ -81,7 +81,7 @@ class TestValidityNetwork:
         id_map = {item.value: item.description for item in self.network_id_list}
         for network, _ in self.network_list:
             assert network.id in id_map
-            # its description is same as its name
+            # its description is the same as its name
             assert id_map.get(network.id) == network.name
 
     def test_all_image_exists(self):
@@ -90,7 +90,7 @@ class TestValidityNetwork:
             check_images_validity(network.images, file)
 
     def test_all_tags_exists_in_enum_info(self):
-        """All tags in network information has a tag which is described
+        """All tags in network information have a tag which is described
         in the enum information `enum/tags/network.json`."""
         tag_value_list = [item.value for item in self.network_tag_list]
         for network, _ in self.network_list:
