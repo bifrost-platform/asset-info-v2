@@ -6,7 +6,6 @@ from typing import Type, Tuple
 from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfoList, EnumInfo
 from libraries.models.enum_tag_type import EnumTagType
-from libraries.models.file import File
 from libraries.models.info_category import InfoCategoryEnum
 from libraries.utils.string import is_regex_in
 
@@ -14,7 +13,7 @@ from libraries.utils.string import is_regex_in
 PWD: Path = Path(os.path.join(os.path.dirname(os.path.realpath(__file__)), "../../"))
 
 
-def search(base_dir: Path, pattern: str) -> list[File]:
+def search(base_dir: Path, pattern: str) -> list[Path]:
     """Searches for files in the given directory and its child directories.
 
     Args:
@@ -28,7 +27,7 @@ def search(base_dir: Path, pattern: str) -> list[File]:
     for path, _, files in os.walk(base_dir):
         searched_files.extend(
             [
-                File(path=os.path.join(path, file), name=file)
+                Path(os.path.join(path, file))
                 for file in files
                 if is_regex_in(file, pattern)
             ]
@@ -74,7 +73,7 @@ def get_enum_path(enum_type: EnumTagType | EnumIdType) -> Path:
             raise ValueError(f"Unknown enum type: {enum_type}")
 
 
-def __get_model_info[T](model_type: Type[T], file_path: File) -> Tuple[T, File]:
+def __get_model_info[T](model_type: Type[T], file_path: Path) -> Tuple[T, Path]:
     """Gets the model information from the given model type and file path.
 
     Args:
@@ -84,14 +83,14 @@ def __get_model_info[T](model_type: Type[T], file_path: File) -> Tuple[T, File]:
     Returns:
         The model information.
     """
-    with open(file_path.path, "r") as fp:
+    with open(file_path, "r") as fp:
         return (
             model_type.model_validate(loads(fp.read())),
             file_path,
         )
 
 
-def get_model_info_list[T](model_type: Type[T]) -> list[Tuple[T, File]]:
+def get_model_info_list[T](model_type: Type[T]) -> list[Tuple[T, Path]]:
     """Reads all models from the given directory and returns a list of models.
 
     Args:

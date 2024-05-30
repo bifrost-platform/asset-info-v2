@@ -5,7 +5,7 @@ import cairosvg
 from PIL import Image
 
 from libraries.models.image_type import ImageTypeEnum
-from libraries.utils.file import search, File
+from libraries.utils.file import search
 
 PNG_SIZES: list[ImageTypeEnum] = [
     typ for typ in ImageTypeEnum.get_descending_type_list() if typ.is_png()
@@ -139,7 +139,7 @@ def create_downscaled_image(base_image_path: Path) -> None:
             raise ValueError(f"Unknown image path: {base_image_path}")
 
 
-def get_base_image_list(base_dir: Path) -> list[File]:
+def get_base_image_list(base_dir: Path) -> list[Path]:
     """Gets the list of base images.
 
     Args:
@@ -155,9 +155,7 @@ def get_base_image_list(base_dir: Path) -> list[File]:
     file_list = []
     for image_type in ImageTypeEnum.get_descending_type_list():
         images = search(base_dir, image_type.get_regex_pattern())
-        new_images = [
-            file for file in images if file.path.parent not in dirs_already_found
-        ]
+        new_images = [file for file in images if file.parent not in dirs_already_found]
         file_list.extend(new_images)
-        dirs_already_found.update([file.path.parent for file in new_images])
+        dirs_already_found.update([file.parent for file in new_images])
     return file_list

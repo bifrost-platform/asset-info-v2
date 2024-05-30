@@ -1,10 +1,10 @@
+from pathlib import Path
 from typing import Tuple
 
 from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_tag_type import EnumTagType
 from libraries.models.protocol import Protocol
-from libraries.utils.file import File
 from tests.utils.checker import check_info_json_existence, check_images_validity
 from tests.utils.reader import read_models, read_enum_info
 
@@ -12,7 +12,7 @@ from tests.utils.reader import read_models, read_enum_info
 class TestValidityProtocol:
     """Tests the validity of protocol information."""
 
-    protocol_list: list[Tuple[Protocol, File]]
+    protocol_list: list[Tuple[Protocol, Path]]
     network_id_list = list[EnumInfo]
     protocol_id_list = list[EnumInfo]
     protocol_tag_list = list[EnumInfo]

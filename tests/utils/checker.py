@@ -7,7 +7,7 @@ from svgpathtools import svg2paths2
 
 from libraries.models.image_info import ImageInfo
 from libraries.models.image_type import ImageTypeEnum
-from libraries.utils.file import File, get_model_dir_path
+from libraries.utils.file import get_model_dir_path
 from libraries.utils.model import CamelCaseModel
 
 
@@ -72,7 +72,7 @@ def __check_image_preprocessed(image_info: ImageInfo) -> None:
     assert len(exist_images) == max_image
 
 
-def check_images_validity(image_info: ImageInfo, file: File) -> None:
+def check_images_validity(image_info: ImageInfo, file: Path) -> None:
     """Check if all images are valid.
 
     Args:
@@ -82,7 +82,7 @@ def check_images_validity(image_info: ImageInfo, file: File) -> None:
     __check_image_preprocessed(image_info)
     for image, existence in image_info.model_dump().items():
         image_type = ImageTypeEnum(image)
-        image_path = image_type.get_path(file.path.parent)
+        image_path = image_type.get_path(file.parent)
         __check_image_existence(image_path, existence)
         if existence:
             __check_image_size(image_type, image_path)

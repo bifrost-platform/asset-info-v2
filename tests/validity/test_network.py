@@ -1,4 +1,5 @@
 import re
+from pathlib import Path
 from typing import Tuple
 
 from libraries.models.asset import Asset
@@ -7,7 +8,6 @@ from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_tag_type import EnumTagType
 from libraries.models.network import Network
 from libraries.models.network_type import NetworkTypeEnum
-from libraries.utils.file import File
 from tests.utils.checker import (
     check_info_json_existence,
     check_images_validity,
@@ -26,8 +26,8 @@ class TestValidityNetwork:
         network_tag_list: List of network tag enum information.
     """
 
-    asset_list = list[Tuple[Asset, File]]
-    network_list = list[Tuple[Network, File]]
+    asset_list = list[Tuple[Asset, Path]]
+    network_list = list[Tuple[Network, Path]]
     network_id_list = list[EnumInfo]
     network_explorer_id_list = list[EnumInfo]
     network_tag_list = list[EnumInfo]
