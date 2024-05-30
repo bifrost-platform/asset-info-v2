@@ -1,4 +1,3 @@
-import re
 from pathlib import Path
 from typing import Tuple
 
@@ -103,9 +102,8 @@ class TestValidityNetwork:
         asset_id_list = [item.id for item, _ in self.asset_list]
         for network, _ in self.network_list:
             assert network.unknown_asset_id in asset_id_list
-            match re.match(r"^unknown-(.+)$", network.unknown_asset_id):
-                case match if match is not None:
-                    print(match.group(1))
-                    assert match.group(1) in network.tags
-                case None:
-                    pass
+            if network.unknown_asset_id.root.startswith("unknown-"):
+                assert (
+                    network.unknown_asset_id.root.removeprefix("unknown-")
+                    in network.tags
+                )

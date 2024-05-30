@@ -6,6 +6,7 @@ from prompt_toolkit import (
 )
 from prompt_toolkit.shortcuts import clear
 
+from libraries.models.id import Id
 from libraries.puller.getters.explorer_getter import get_explorer_id
 from libraries.puller.getters.network_getter import get_network
 from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAbstracted
@@ -13,10 +14,10 @@ from libraries.puller.token_pullers.token_puller_blockscout import TokenPullerBl
 from libraries.puller.token_pullers.token_puller_dexguru import TokenPullerDexguru
 from libraries.puller.token_pullers.token_puller_etherscan import TokenPullerEtherscan
 
-TOKEN_PULLER_CLASS_MAP: dict[str, Type[TokenPullerAbstracted]] = {
-    "blockscout": TokenPullerBlockscout,
-    "dexguru": TokenPullerDexguru,
-    "etherscan": TokenPullerEtherscan,
+TOKEN_PULLER_CLASS_MAP: dict[Id, Type[TokenPullerAbstracted]] = {
+    Id("blockscout"): TokenPullerBlockscout,
+    Id("dexguru"): TokenPullerDexguru,
+    Id("etherscan"): TokenPullerEtherscan,
 }
 
 

@@ -34,8 +34,8 @@ from libraries.utils.eth_erc20 import EthErc20Interface
 from libraries.utils.file import get_model_dir_path, PWD, get_model_info_list
 
 ETH_REFERENCE_BASE: dict[Id, URL] = {
-    "coingecko": URL("https://www.coingecko.com/en/coins/"),
-    "coinmarketcap": URL("https://coinmarketcap.com/currencies/"),
+    Id("coingecko"): URL("https://www.coingecko.com/en/coins/"),
+    Id("coinmarketcap"): URL("https://coinmarketcap.com/currencies/"),
 }
 
 
@@ -366,7 +366,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             f"Enter the asset ID on https://{ref_base_url.host} if exists"
         )
         if asset_id != "":
-            url = ref_base_url / asset_id
+            url = ref_base_url / asset_id.root
             response = get(str(url))
             if response.status_code == 200:
                 return Reference(id=ref_id, url=HttpUrl(str(url)))
@@ -394,7 +394,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         if (image := self._download_token_image(token_image_url)) is None:
             return None
         # Save the image
-        image_path = Path(mkdtemp(prefix=info.id, dir=self.tmp_dir))
+        image_path = Path(mkdtemp(prefix=info.id.root, dir=self.tmp_dir))
         with NamedTemporaryFile(
             mode="w+b", dir=image_path, suffix="_origin.png"
         ) as fp_origin:
@@ -440,7 +440,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
                 if contract.address.lower() in self.network_assets:
                     self.network_assets.update({contract.address.lower(): new_info})
             # Get the path of the asset information
-            path = get_model_dir_path(Asset).joinpath(new_info.id)
+            path = get_model_dir_path(Asset).joinpath(new_info.id.root)
             if not exists(path):
                 mkdir(path)
             # Save the asset information

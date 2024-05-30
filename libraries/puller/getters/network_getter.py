@@ -51,12 +51,17 @@ def get_network() -> Network:
         [network for network, _ in get_model_info_list(Network)], key=lambda x: x.id
     )
     network_ids = [network.id for network in networks if len(network.explorers) > 0]
-    printf(HTML("<b>Enter the network ID: </b>" + ", ".join(network_ids)))
-    network_completer = WordCompleter(network_ids)
+    printf(
+        HTML(
+            "<b>Enter the network ID: </b>"
+            + ", ".join(value.root for value in network_ids)
+        )
+    )
+    network_completer = WordCompleter([value.root for value in network_ids])
     network_id = prompt(
         HTML("<b>> </b>"),
         completer=network_completer,
-        placeholder=network_ids[0],
+        placeholder=network_ids[0].root if len(network_ids) != 0 else None,
         validator=NetworkValidator(network_ids),
     )
-    return next(filter(lambda x: x.id == network_id, networks))
+    return next(filter(lambda x: x.id == Id(network_id), networks))
