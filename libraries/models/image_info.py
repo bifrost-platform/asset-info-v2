@@ -1,3 +1,5 @@
+from typing import Iterator
+
 from libraries.models.image_type import ImageTypeEnum
 from libraries.utils.model import CamelCaseModel
 
@@ -90,3 +92,19 @@ class ImageInfo(CamelCaseModel):
                 self.png64 = False
             case ImageTypeEnum.SVG:
                 self.svg = False
+
+    def __iter__(self) -> Iterator[tuple[ImageTypeEnum, bool]]:
+        """Iterate the image type and flag.
+
+        Returns:
+            The iterator of image type and flag.
+
+        Notes:
+            The image types are iterated in ascending order.
+        """
+        return iter(
+            [
+                (image_type, self.get(image_type))
+                for image_type in ImageTypeEnum.get_ascending_type_list()
+            ]
+        )

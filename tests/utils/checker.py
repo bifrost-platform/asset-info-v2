@@ -66,7 +66,7 @@ def __check_image_preprocessed(image_info: ImageInfo) -> None:
     exist_images = [
         idx
         for idx, image_type in enumerate(ImageTypeEnum.get_ascending_type_list())
-        if image_info.model_dump()[image_type.value]
+        if image_info.get(image_type)
     ]
     max_image = 0 if len(exist_images) == 0 else max(exist_images) + 1
     assert len(exist_images) == max_image
@@ -80,8 +80,7 @@ def check_images_validity(image_info: ImageInfo, file: Path) -> None:
         file: File object of the image.
     """
     __check_image_preprocessed(image_info)
-    for image, existence in image_info.model_dump().items():
-        image_type = ImageTypeEnum(image)
+    for image_type, existence in image_info:
         image_path = image_type.get_path(file.parent)
         __check_image_existence(image_path, existence)
         if existence:
