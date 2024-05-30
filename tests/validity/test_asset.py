@@ -3,7 +3,7 @@ from typing import Tuple
 from libraries.models.asset import Asset
 from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_tag_type import EnumTagTypeEnum
+from libraries.models.enum_tag_type import EnumTagType
 from libraries.models.network import Network
 from libraries.utils.file import File
 from tests.utils.checker import (
@@ -41,8 +41,8 @@ class TestValidityAsset:
         self.asset_id_list = read_enum_info(EnumIdType.asset())
         self.asset_reference_id_list = read_enum_info(EnumIdType.asset_reference())
         self.network_id_list = read_enum_info(EnumIdType.network())
-        self.asset_contract_tag_list = read_enum_info(EnumTagTypeEnum.ASSET_CONTRACTS)
-        self.asset_tag_list = read_enum_info(EnumTagTypeEnum.ASSET)
+        self.asset_contract_tag_list = read_enum_info(EnumTagType.asset_contracts())
+        self.asset_tag_list = read_enum_info(EnumTagType.asset())
 
     def test_all_dir_has_info_json(self):
         """All directories for asset information have a `info.json` file."""

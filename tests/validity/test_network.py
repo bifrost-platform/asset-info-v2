@@ -4,7 +4,7 @@ from typing import Tuple
 from libraries.models.asset import Asset
 from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_tag_type import EnumTagTypeEnum
+from libraries.models.enum_tag_type import EnumTagType
 from libraries.models.network import Network
 from libraries.models.network_type import NetworkTypeEnum
 from libraries.utils.file import File
@@ -38,7 +38,7 @@ class TestValidityNetwork:
         self.network_list = read_models(Network)
         self.network_id_list = read_enum_info(EnumIdType.network())
         self.network_explorer_id_list = read_enum_info(EnumIdType.network_explorer())
-        self.network_tag_list = read_enum_info(EnumTagTypeEnum.NETWORK)
+        self.network_tag_list = read_enum_info(EnumTagType.network())
 
     def test_all_dir_has_info_json(self):
         """All directories for network information have a `info.json` file."""
