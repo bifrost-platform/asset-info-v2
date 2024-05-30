@@ -1,6 +1,6 @@
 from typing import Tuple
 
-from libraries.models.enum_id_type import EnumIdTypeEnum
+from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_tag_type import EnumTagTypeEnum
 from libraries.models.protocol import Protocol
@@ -20,8 +20,8 @@ class TestValidityProtocol:
     def setup_class(self):
         """Set up the class before tests in this class."""
         self.protocol_list = read_models(Protocol)
-        self.network_id_list = read_enum_info(EnumIdTypeEnum.NETWORK)
-        self.protocol_id_list = read_enum_info(EnumIdTypeEnum.PROTOCOL)
+        self.network_id_list = read_enum_info(EnumIdType.network())
+        self.protocol_id_list = read_enum_info(EnumIdType.protocol())
         self.protocol_tag_list = read_enum_info(EnumTagTypeEnum.PROTOCOL)
 
     def test_all_dir_has_info_json(self):

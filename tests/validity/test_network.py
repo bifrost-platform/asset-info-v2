@@ -2,7 +2,7 @@ import re
 from typing import Tuple
 
 from libraries.models.asset import Asset
-from libraries.models.enum_id_type import EnumIdTypeEnum
+from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_tag_type import EnumTagTypeEnum
 from libraries.models.network import Network
@@ -36,8 +36,8 @@ class TestValidityNetwork:
         """Set up the class before tests in this class."""
         self.asset_list = read_models(Asset)
         self.network_list = read_models(Network)
-        self.network_id_list = read_enum_info(EnumIdTypeEnum.NETWORK)
-        self.network_explorer_id_list = read_enum_info(EnumIdTypeEnum.NETWORK_EXPLORER)
+        self.network_id_list = read_enum_info(EnumIdType.network())
+        self.network_explorer_id_list = read_enum_info(EnumIdType.network_explorer())
         self.network_tag_list = read_enum_info(EnumTagTypeEnum.NETWORK)
 
     def test_all_dir_has_info_json(self):

@@ -1,7 +1,7 @@
 import json
 from typing import Type
 
-from libraries.models.enum_id_type import EnumIdTypeEnum
+from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
 from libraries.models.info_category import InfoCategoryEnum
 from libraries.utils.file import get_model_info_list, get_enum_path
@@ -36,7 +36,7 @@ def update_id_enum[T](model_type: Type[T]) -> None:
     ]
     with open(
         get_enum_path(
-            EnumIdTypeEnum.get_enum_type(InfoCategoryEnum.get_info_category(model_type))
+            EnumIdType.get_enum_type(InfoCategoryEnum.get_info_category(model_type))
         ),
         "w",
     ) as fp:

@@ -1,7 +1,7 @@
 from typing import Tuple
 
 from libraries.models.asset import Asset
-from libraries.models.enum_id_type import EnumIdTypeEnum
+from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_tag_type import EnumTagTypeEnum
 from libraries.models.network import Network
@@ -38,9 +38,9 @@ class TestValidityAsset:
         """Set up the class before tests in this class."""
         self.asset_list = read_models(Asset)
         self.network_list = read_models(Network)
-        self.asset_id_list = read_enum_info(EnumIdTypeEnum.ASSET)
-        self.asset_reference_id_list = read_enum_info(EnumIdTypeEnum.ASSET_REFERENCE)
-        self.network_id_list = read_enum_info(EnumIdTypeEnum.NETWORK)
+        self.asset_id_list = read_enum_info(EnumIdType.asset())
+        self.asset_reference_id_list = read_enum_info(EnumIdType.asset_reference())
+        self.network_id_list = read_enum_info(EnumIdType.network())
         self.asset_contract_tag_list = read_enum_info(EnumTagTypeEnum.ASSET_CONTRACTS)
         self.asset_tag_list = read_enum_info(EnumTagTypeEnum.ASSET)
 

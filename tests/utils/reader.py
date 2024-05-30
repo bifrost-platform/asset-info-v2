@@ -2,7 +2,7 @@ from typing import Tuple, Type
 
 from pydantic import ValidationError
 
-from libraries.models.enum_id_type import EnumIdTypeEnum
+from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_tag_type import EnumTagTypeEnum
 from libraries.utils.file import File, get_model_info_list, get_enum_info
@@ -30,7 +30,7 @@ def read_models[T](model_type: Type[T]) -> list[Tuple[T, File]]:
     return model_list
 
 
-def read_enum_info(enum_type: EnumTagTypeEnum | EnumIdTypeEnum) -> list[EnumInfo]:
+def read_enum_info(enum_type: EnumTagTypeEnum | EnumIdType) -> list[EnumInfo]:
     """Reads the enum information from the given enum type and enum name.
 
     Args:
