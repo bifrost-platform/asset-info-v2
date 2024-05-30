@@ -58,7 +58,7 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
         return set(addresses)
 
     def _get_token_url(self, address: Address) -> URL:
-        return self.etherscan_url / "token" / address
+        return self.etherscan_url / "token" / address.root
 
     def _get_token_image_url(self, address: Address) -> URL | None:
         # Get the token page for getting the token image URL.

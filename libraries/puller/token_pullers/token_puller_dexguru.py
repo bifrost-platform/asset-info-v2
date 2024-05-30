@@ -50,7 +50,7 @@ class TokenPullerDexguru(TokenPullerAbstracted):
         return set(addresses)
 
     def _get_token_url(self, address: Address) -> URL:
-        return self.dexguru_url / "token" / address
+        return self.dexguru_url / "token" / address.root
 
     def _get_token_image_url(self, address: Address) -> URL | None:
         if address in self.token_image_map:

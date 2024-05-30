@@ -262,7 +262,12 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             return contract.address, contract.name, contract.symbol, contract.decimals
         assert self.network.engine == EngineEnum.EVM
         it = EthErc20Interface(self.node_url, address)
-        return it.contract.address, it.get_name(), it.get_symbol(), it.get_decimals()
+        return (
+            Address(it.contract.address),
+            it.get_name(),
+            it.get_symbol(),
+            it.get_decimals(),
+        )
 
     def __make_asset_information(
         self, address: Address, name: str, symbol: str, decimals: int
