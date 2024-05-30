@@ -9,12 +9,11 @@ class Currency(CamelCaseModel):
     """The base model of information on assets as currencies in blockchain networks.
 
     Attributes:
-        address: address regarded as a currency contract in asset information.
-                 (:class:`Address`: constrained :class:`str`.)
-        decimals: decimals of the currency. (:class:`NonNegativeInt`: constrained :class:`int`.)
-        id: ID of the currency in asset information. (:class:`Id`: constrained :class:`str`.)
-        name: name of the currency. (:class:`str`)
-        symbol: the symbol string of the currency. (:class:`str`)
+        address: address regarded as a currency contract in asset information (`Address`: constrained `str`.)
+        decimals: decimals of the currency (`NonNegativeInt`: constrained `int`.)
+        id: ID of the currency in asset information (`Id`: constrained `str`.)
+        name: name of the currency (`str`)
+        symbol: the symbol string of the currency (`str`)
     """
 
     address: Address
