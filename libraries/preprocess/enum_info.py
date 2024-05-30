@@ -32,7 +32,8 @@ def update_id_enum[T](model_type: Type[T]) -> None:
         model_type: The type of the model.
     """
     enum_info_list = [
-        model.model_dump() for model in __get_id_enum_from_model(model_type)
+        model.model_dump(mode="python")
+        for model in __get_id_enum_from_model(model_type)
     ]
     with open(
         get_enum_path(

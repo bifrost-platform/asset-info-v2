@@ -3,8 +3,6 @@ from json import loads
 from pathlib import Path
 from typing import Type, Tuple
 
-from pydantic import RootModel
-
 from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfoList, EnumInfo
 from libraries.models.enum_tag_type import EnumTagTypeEnum
@@ -122,4 +120,4 @@ def get_enum_info(enum_type: EnumTagTypeEnum | EnumIdType) -> list[EnumInfo]:
         A list of enum information.
     """
     with open(get_enum_path(enum_type), "r") as fp:
-        return RootModel[EnumInfoList].model_validate(loads(fp.read())).root
+        return EnumInfoList.model_validate(loads(fp.read())).root
