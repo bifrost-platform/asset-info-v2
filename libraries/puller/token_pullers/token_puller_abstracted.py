@@ -22,7 +22,7 @@ from libraries.models.asset import Asset
 from libraries.models.contract import Contract
 from libraries.models.id import Id
 from libraries.models.image_info import ImageInfo
-from libraries.models.image_type import ImageTypeEnum
+from libraries.models.image_type import ImageType
 from libraries.models.network import Network
 from libraries.models.reference import Reference
 from libraries.preprocess.image import downscale_png, png_to_square
@@ -374,7 +374,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
 
     def __save_image(
         self, address: Address, info: Asset
-    ) -> tuple[Path, list[ImageTypeEnum]] | None:
+    ) -> tuple[Path, list[ImageType]] | None:
         """Download the image of the asset.
 
         Args:
@@ -411,7 +411,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
                     Path(fp_square.name),
                 )
         if len(downloaded_type) == 0 or info.images.get(
-            max(downloaded_type, key=lambda x: x.get_size())
+            max(downloaded_type, key=lambda x: x.size)
         ):
             return None
         return image_path, (
@@ -421,7 +421,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
     def __save_asset_information(
         self,
         info: Asset,
-        image_info: tuple[Path, list[ImageTypeEnum]] | None,
+        image_info: tuple[Path, list[ImageType]] | None,
     ) -> None:
         """Save the updated asset information.
 

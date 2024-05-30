@@ -1,6 +1,6 @@
 from typing import Iterator
 
-from libraries.models.image_type import ImageTypeEnum
+from libraries.models.image_type import ImageType
 from libraries.utils.model import CamelCaseModel
 
 
@@ -36,7 +36,7 @@ class ImageInfo(CamelCaseModel):
             svg=False,
         )
 
-    def get(self, image_type: ImageTypeEnum) -> bool:
+    def get(self, image_type: ImageType) -> bool:
         """Get the flag of image type.
 
         Args:
@@ -45,55 +45,56 @@ class ImageInfo(CamelCaseModel):
         Returns:
             The flag of image type.
         """
-        match image_type:
-            case ImageTypeEnum.PNG128:
-                return self.png128
-            case ImageTypeEnum.PNG256:
-                return self.png256
-            case ImageTypeEnum.PNG32:
-                return self.png32
-            case ImageTypeEnum.PNG64:
-                return self.png64
-            case ImageTypeEnum.SVG:
-                return self.svg
+        if image_type.is_png128:
+            return self.png128
+        elif image_type.is_png256:
+            return self.png256
+        elif image_type.is_png32:
+            return self.png32
+        elif image_type.is_png64:
+            return self.png64
+        elif image_type.is_svg:
+            return self.svg
+        else:
+            raise ValueError(f"Unknown image type: {image_type}")
 
-    def set(self, image_type: ImageTypeEnum):
+    def set(self, image_type: ImageType):
         """Set the flag of image type.
 
         Args:
             image_type: The image type to set.
         """
-        match image_type:
-            case ImageTypeEnum.PNG128:
-                self.png128 = True
-            case ImageTypeEnum.PNG256:
-                self.png256 = True
-            case ImageTypeEnum.PNG32:
-                self.png32 = True
-            case ImageTypeEnum.PNG64:
-                self.png64 = True
-            case ImageTypeEnum.SVG:
-                self.svg = True
+        if image_type.is_png128:
+            self.png128 = True
+        elif image_type.is_png256:
+            self.png256 = True
+        elif image_type.is_png32:
+            self.png32 = True
+        elif image_type.is_png64:
+            self.png64 = True
+        elif image_type.is_svg:
+            self.svg = True
+        else:
+            raise ValueError(f"Unknown image type: {image_type}")
 
-    def unset(self, image_type: ImageTypeEnum):
+    def unset(self, image_type: ImageType):
         """Unset the flag of image type.
 
         Args:
             image_type: The image type to unset.
         """
-        match image_type:
-            case ImageTypeEnum.PNG128:
-                self.png128 = False
-            case ImageTypeEnum.PNG256:
-                self.png256 = False
-            case ImageTypeEnum.PNG32:
-                self.png32 = False
-            case ImageTypeEnum.PNG64:
-                self.png64 = False
-            case ImageTypeEnum.SVG:
-                self.svg = False
+        if image_type.is_png128:
+            self.png128 = False
+        elif image_type.is_png256:
+            self.png256 = False
+        elif image_type.is_png32:
+            self.png32 = False
+        elif image_type.is_png64:
+            self.png64 = False
+        elif image_type.is_svg:
+            self.svg = False
 
-    def __iter__(self) -> Iterator[tuple[ImageTypeEnum, bool]]:
+    def __iter__(self) -> Iterator[tuple[ImageType, bool]]:
         """Iterate the image type and flag.
 
         Returns:
@@ -105,6 +106,6 @@ class ImageInfo(CamelCaseModel):
         return iter(
             [
                 (image_type, self.get(image_type))
-                for image_type in ImageTypeEnum.get_ascending_type_list()
+                for image_type in ImageType.get_ascending_type_list()
             ]
         )
