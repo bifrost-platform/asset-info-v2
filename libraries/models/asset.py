@@ -10,14 +10,13 @@ class Asset(CamelCaseModel):
     """The base model of information about assets in blockchain networks.
 
     Attributes:
-        contracts: contracts' information about the asset in blockchain networks.
-                   (:class:`ContractList`: constrained :class:`list` of :class:`Contract`.)
-        id: ID of the asset. (:class:`Id`: constrained :class:`str`.)
-        images: information about the existence of each image type. (:class:`ImageInfo`)
-        name: name of the asset. (:class:`str`: must be the same as one of the contract's names.)
-        references: reference information for the asset.
-                    (:class:`ReferenceList`: constrained :class:`list` of :class:`Reference`.)
-        tags: tags of the asset. (:class:`TagList`: constrained :class:`list` of :class:`Tag`.)
+        contracts: contracts' information about the asset in blockchain networks (`ContractList`: constrained `list` of
+            `Contract`.)
+        id: ID of the asset (`Id`: constrained `str`.)
+        images: information about the existence of each image type (`ImageInfo`)
+        name: name of the asset (`str`: must be the same as one of the contract's names.)
+        references: reference information for the asset (`ReferenceList`: constrained `list` of `Reference`.)
+        tags: tags of the asset (`TagList`: constrained `list` of `Tag`.)
     """
 
     contracts: ContractList
