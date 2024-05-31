@@ -1,35 +1,25 @@
 from abc import abstractmethod
 from enum import StrEnum
-from typing import Any, Annotated
+from typing import Any, Annotated, Self
 
-from pydantic import BaseModel, ConfigDict, RootModel, BeforeValidator
-from pydantic.alias_generators import to_camel
-
-
-class CamelCaseModel(BaseModel):
-    """A model that converts snake_case to camelCase."""
-
-    model_config = ConfigDict(
-        alias_generator=to_camel,
-        extra="forbid",
-        strict=True,
-        str_strip_whitespace=True,
-        str_min_length=1,
-        use_enum_values=True,
-        validate_assignment=True,
-    )
+from pydantic import RootModel, BeforeValidator
 
 
-class EnumModel[T: StrEnum](
-    RootModel[
-        Annotated[
-            T,
-            BeforeValidator(
-                lambda x: x if isinstance(x, str) or x is T else ValueError()
-            ),
-        ]
-    ]
-):
+def _check_enum(enum: Any) -> str:
+    """Check if the value is an Enum.
+
+    Args:
+        enum: The value to check.
+
+    Returns:
+        The valid Enum.
+    """
+    if not isinstance(enum, str):
+        raise ValueError(f"The value must be a string.: {enum}")
+    return enum
+
+
+class EnumModel[T: StrEnum](RootModel[Annotated[T, BeforeValidator(_check_enum)]]):
     """A model that converts string to Enum.
 
     Notes:
@@ -43,16 +33,16 @@ class EnumModel[T: StrEnum](
             case str():
                 return self.root == other
 
-    def __lt__(self, other: "EnumModel") -> bool:
+    def __lt__(self, other: Self) -> bool:
         return self.order < other.order
 
-    def __le__(self, other: "EnumModel") -> bool:
+    def __le__(self, other: Self) -> bool:
         return self.__lt__(other) or self.__eq__(other)
 
-    def __gt__(self, other: "EnumModel") -> bool:
+    def __gt__(self, other: Self) -> bool:
         return not self.__le__(other)
 
-    def __ge__(self, other: "EnumModel") -> bool:
+    def __ge__(self, other: Self) -> bool:
         return not self.__lt__(other)
 
     @property
@@ -75,7 +65,7 @@ class EnumModel[T: StrEnum](
 
     @classmethod
     @abstractmethod
-    def ascending_list(cls) -> list["EnumModel"]:
+    def ascending_list(cls) -> list[Self]:
         """Get the list of Enum in ascending order.
 
         Returns:
@@ -84,7 +74,7 @@ class EnumModel[T: StrEnum](
         raise NotImplementedError
 
     @classmethod
-    def descending_list(cls) -> list["EnumModel"]:
+    def descending_list(cls) -> list[Self]:
         """Get the list of Enum in descending order.
 
         Returns:

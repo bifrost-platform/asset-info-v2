@@ -1,9 +1,9 @@
 from libraries.models.contract_list import ContractList
 from libraries.models.id import Id
 from libraries.models.image_info import ImageInfo
-from libraries.models.reference import ReferenceList
 from libraries.models.tag import TagList
 from libraries.utils.model import CamelCaseModel
+from libraries.models.reference_list import ReferenceList
 
 
 class Asset(CamelCaseModel):
