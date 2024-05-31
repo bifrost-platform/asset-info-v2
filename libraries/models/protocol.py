@@ -3,8 +3,8 @@ from pydantic import HttpUrl
 from libraries.models.id import Id
 from libraries.models.id_list import IdList
 from libraries.models.image_info import ImageInfo
-from libraries.utils.model import CamelCaseModel
 from libraries.models.tag_list import TagList
+from libraries.models.templates.camelcase_model import CamelCaseModel
 
 
 class Protocol(CamelCaseModel):

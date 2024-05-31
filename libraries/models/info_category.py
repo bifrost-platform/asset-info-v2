@@ -6,6 +6,7 @@ from libraries.models.asset import Asset as AssetModel
 from libraries.models.enum_id_type import EnumIdType
 from libraries.models.network import Network as NetworkModel
 from libraries.models.protocol import Protocol as ProtocolModel
+from libraries.models.templates.camelcase_model import CamelCaseModel
 from libraries.utils.file import PWD, get_model_info, search
 from libraries.utils.model import CamelCaseModel, EnumModel
 

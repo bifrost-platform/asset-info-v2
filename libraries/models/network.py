@@ -3,7 +3,6 @@ from libraries.models.engine import Engine
 from libraries.models.id import Id
 from libraries.models.image_info import ImageInfo
 from libraries.models.network_type import NetworkType
-from libraries.utils.model import CamelCaseModel
 from libraries.models.reference_list import ReferenceList
 from libraries.models.tag_list import TagList
 from libraries.models.templates.camelcase_model import CamelCaseModel

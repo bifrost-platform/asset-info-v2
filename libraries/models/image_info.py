@@ -1,7 +1,7 @@
 from typing import Iterator
 
 from libraries.models.image_type import ImageType
-from libraries.utils.model import CamelCaseModel
+from libraries.models.templates.camelcase_model import CamelCaseModel
 
 
 class ImageInfo(CamelCaseModel):

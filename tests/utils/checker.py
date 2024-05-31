@@ -8,7 +8,7 @@ from svgpathtools import svg2paths2
 from libraries.models.image_info import ImageInfo
 from libraries.models.image_type import ImageType
 from libraries.models.info_category import InfoCategory
-from libraries.utils.model import CamelCaseModel
+from libraries.models.templates.camelcase_model import CamelCaseModel
 
 
 def check_info_json_existence(model_type: Type[CamelCaseModel]) -> None:

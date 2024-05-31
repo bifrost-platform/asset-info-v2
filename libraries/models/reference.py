@@ -1,7 +1,7 @@
 from pydantic import HttpUrl
 
 from libraries.models.id import Id
-from libraries.utils.model import CamelCaseModel
+from libraries.models.templates.camelcase_model import CamelCaseModel
 
 
 class Reference(CamelCaseModel):
