@@ -1,13 +1,13 @@
 import re
+from pathlib import Path
 from typing import Tuple
 
 from libraries.models.asset import Asset
-from libraries.models.enum_id_type import EnumIdTypeEnum
+from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_tag_type import EnumTagTypeEnum
+from libraries.models.enum_tag_type import EnumTagType
 from libraries.models.network import Network
 from libraries.models.network_type import NetworkTypeEnum
-from libraries.utils.file import File
 from tests.utils.checker import (
     check_info_json_existence,
     check_images_validity,
@@ -26,8 +26,8 @@ class TestValidityNetwork:
         network_tag_list: List of network tag enum information.
     """
 
-    asset_list = list[Tuple[Asset, File]]
-    network_list = list[Tuple[Network, File]]
+    asset_list = list[Tuple[Asset, Path]]
+    network_list = list[Tuple[Network, Path]]
     network_id_list = list[EnumInfo]
     network_explorer_id_list = list[EnumInfo]
     network_tag_list = list[EnumInfo]
@@ -36,16 +36,16 @@ class TestValidityNetwork:
         """Set up the class before tests in this class."""
         self.asset_list = read_models(Asset)
         self.network_list = read_models(Network)
-        self.network_id_list = read_enum_info(EnumIdTypeEnum.NETWORK)
-        self.network_explorer_id_list = read_enum_info(EnumIdTypeEnum.NETWORK_EXPLORER)
-        self.network_tag_list = read_enum_info(EnumTagTypeEnum.NETWORK)
+        self.network_id_list = read_enum_info(EnumIdType.network())
+        self.network_explorer_id_list = read_enum_info(EnumIdType.network_explorer())
+        self.network_tag_list = read_enum_info(EnumTagType.network())
 
     def test_all_dir_has_info_json(self):
-        """All directory for network information has a `info.json` file."""
+        """All directories for network information have a `info.json` file."""
         check_info_json_existence(Network)
 
     def test_currency_exists_in_asset_contract(self):
-        """Currency exists in asset contract and its information is match with it.
+        """The Currency exists in asset contract and its information is match with it.
 
         Notes:
             Contract also has `native-coin` and network type tags.
@@ -81,7 +81,7 @@ class TestValidityNetwork:
         id_map = {item.value: item.description for item in self.network_id_list}
         for network, _ in self.network_list:
             assert network.id in id_map
-            # its description is same as its name
+            # its description is the same as its name
             assert id_map.get(network.id) == network.name
 
     def test_all_image_exists(self):
@@ -90,7 +90,7 @@ class TestValidityNetwork:
             check_images_validity(network.images, file)
 
     def test_all_tags_exists_in_enum_info(self):
-        """All tags in network information has a tag which is described
+        """All tags in network information have a tag which is described
         in the enum information `enum/tags/network.json`."""
         tag_value_list = [item.value for item in self.network_tag_list]
         for network, _ in self.network_list:

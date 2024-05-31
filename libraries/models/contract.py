@@ -1,6 +1,6 @@
-from typing import Annotated, Callable, Type
+from typing import Annotated, Callable, Iterator
 
-from pydantic import NonNegativeInt, WrapValidator
+from pydantic import NonNegativeInt, WrapValidator, RootModel
 
 from libraries.models.address import Address
 from libraries.models.id import Id
@@ -12,12 +12,12 @@ class Contract(CamelCaseModel):
     """The base model of information about each asset contract in blockchain networks.
 
     Attributes:
-        address: address of the asset contract. (:class:`Address`: constrained :class:`str`.)
-        decimals: decimals of the asset contract. (:class:`NonNegativeInt`: constrained :class:`int`.)
-        name: name of the asset contract. (:class:`str`)
-        network: network ID of the asset contract in network information. (:class:`Id`: constrained :class:`str`.)
-        symbol: the symbol string of the asset contract. (:class:`str`)
-        tags: tags of the asset contract. (:class:`TagList`: constrained :class:`list` of :class:`Tag`.)
+        address: address of the asset contract (`Address`: constrained `str`.)
+        decimals: decimals of the asset contract (`NonNegativeInt`: constrained `int`.)
+        name: name of the asset contract (`str`)
+        network: network ID of the asset contract in network information (`Id`: constrained `str`.)
+        symbol: the symbol string of the asset contract (`str`)
+        tags: tags of the asset contract (`TagList`: constrained `list` of `Tag`.)
     """
 
     address: Address
@@ -38,11 +38,11 @@ def __validate_contract_list(
         handler: The handler of the Pydantic validator.
 
     Returns:
-        The validated list of :class:`Class`.
+        The validated list of `Class`.
 
     Notes:
         The list of contracts must be sorted by network ID and address in ascending order,
-        and the list of contracts must be unique by address in same network.
+        and the list of contracts must be unique by address in the same network.
     """
     for idx in range(len(value) - 1):
         fst, snd = idx, idx + 1
@@ -62,5 +62,13 @@ def __validate_contract_list(
     return handler(value)
 
 
-ContractList: Type = Annotated[list[Contract], WrapValidator(__validate_contract_list)]
-"""Constrained :class:`list` of :class:`Contract`."""
+class ContractList(
+    RootModel[Annotated[list[Contract], WrapValidator(__validate_contract_list)]]
+):
+    """Constrained `list` of `Contract`."""
+
+    def __iter__(self) -> Iterator[Contract]:
+        return iter(self.root)
+
+    def __getitem__(self, item) -> Contract:
+        return self.root[item]

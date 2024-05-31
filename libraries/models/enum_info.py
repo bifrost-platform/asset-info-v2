@@ -1,6 +1,6 @@
-from typing import Callable, Annotated
+from typing import Callable, Annotated, Iterator
 
-from pydantic import WrapValidator
+from pydantic import WrapValidator, RootModel
 
 from libraries.models.description import Description
 from libraries.models.id import Id
@@ -11,8 +11,8 @@ class EnumInfo(CamelCaseModel):
     """The base model of information about each enumerated value.
 
     Attributes:
-        value: ID of the enumerated value. (:class:`Id`: constrained :class:`str`.)
-        description: description of the enumerated value. (:class:`Description`: constrained :class:`str`.)
+        value: ID of the enumerated value (`Id`: constrained `str`.)
+        description: description of the enumerated value (`Description`: constrained `str`.)
     """
 
     value: Id
@@ -29,7 +29,7 @@ def _validate_enum_info_list(
         handler: The handler of the Pydantic validator.
 
     Returns:
-        The validated list of :class:`EnumInfo`.
+        The validated list of `EnumInfo`.
 
     Notes:
         The list of enum information must be sorted by value in ascending order and unique.
@@ -44,5 +44,13 @@ def _validate_enum_info_list(
     return handler(value)
 
 
-EnumInfoList = Annotated[list[EnumInfo], WrapValidator(_validate_enum_info_list)]
-"""A constrained :class:`list` of :class:`EnumInfo`."""
+class EnumInfoList(
+    RootModel[Annotated[list[EnumInfo], WrapValidator(_validate_enum_info_list)]]
+):
+    """A constrained `list` of `EnumInfo`."""
+
+    def __iter__(self) -> Iterator[EnumInfo]:
+        return iter(self.root)
+
+    def __getitem__(self, item) -> EnumInfo:
+        return self.root[item]

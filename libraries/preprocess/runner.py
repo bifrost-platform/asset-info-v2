@@ -16,7 +16,7 @@ def run_image_preprocess[T](model_type: Type[T]) -> None:
     """
     image_path_list = get_base_image_list(get_model_dir_path(model_type))
     for image_path in image_path_list:
-        create_downscaled_image(image_path.path)
+        create_downscaled_image(image_path)
 
 
 def run_enum_preprocess[T](model_type: Type[T]) -> None:

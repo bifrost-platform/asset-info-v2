@@ -29,7 +29,7 @@ class EthErc20Interface:
         assert self.node.is_connected()
         with open(PWD.joinpath("libraries/constants/erc20.abi.json")) as fp:
             self.contract = self.node.eth.contract(
-                self.node.to_checksum_address(address), abi=fp.read()
+                self.node.to_checksum_address(address.root), abi=fp.read()
             )
 
     def get_name(self) -> str:
