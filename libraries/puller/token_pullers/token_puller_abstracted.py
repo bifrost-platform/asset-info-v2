@@ -20,7 +20,6 @@ from yarl import URL
 from libraries.models.address import Address
 from libraries.models.asset import Asset
 from libraries.models.contract import Contract
-from libraries.models.engine import EngineEnum
 from libraries.models.id import Id
 from libraries.models.image_info import ImageInfo
 from libraries.models.image_type import ImageTypeEnum
@@ -199,7 +198,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         Raises:
             ValueError: If the node URL is invalid.
         """
-        if network.engine == EngineEnum.EVM:
+        if network.engine.is_evm:
             web3 = Web3(HTTPProvider(str(url)))
             if (
                 not web3.is_connected()
@@ -260,9 +259,14 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
                 filter(lambda x: x.network == self.network.id, asset.contracts)
             )
             return contract.address, contract.name, contract.symbol, contract.decimals
-        assert self.network.engine == EngineEnum.EVM
+        assert self.network.engine.is_evm
         it = EthErc20Interface(self.node_url, address)
-        return it.contract.address, it.get_name(), it.get_symbol(), it.get_decimals()
+        return (
+            Address(it.contract.address),
+            it.get_name(),
+            it.get_symbol(),
+            it.get_decimals(),
+        )
 
     def __make_asset_information(
         self, address: Address, name: str, symbol: str, decimals: int

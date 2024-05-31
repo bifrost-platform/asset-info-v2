@@ -5,7 +5,6 @@ from requests import post, get
 from yarl import URL
 
 from libraries.models.address import Address
-from libraries.models.engine import EngineEnum
 from libraries.models.network import Network
 from libraries.puller.getters.token_count_getter import TOKEN_COUNT_PER_PAGE
 from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAbstracted
@@ -50,7 +49,7 @@ class TokenPullerDexguru(TokenPullerAbstracted):
         return set(addresses)
 
     def _get_token_url(self, address: Address) -> URL:
-        return self.dexguru_url / "token" / address
+        return self.dexguru_url / "token" / address.root
 
     def _get_token_image_url(self, address: Address) -> URL | None:
         if address in self.token_image_map:
@@ -113,7 +112,7 @@ class TokenPullerDexguru(TokenPullerAbstracted):
         Raises:
             AssertionError: If the network engine is not EVM.
         """
-        assert network.engine == EngineEnum.EVM
+        assert network.engine.is_evm
         chain_id = network.id.split("-")[-1]
         return {
             "operationName": "TopTokens",
