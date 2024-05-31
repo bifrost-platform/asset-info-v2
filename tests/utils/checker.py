@@ -7,7 +7,7 @@ from svgpathtools import svg2paths2
 
 from libraries.models.image_info import ImageInfo
 from libraries.models.image_type import ImageType
-from libraries.utils.file import get_model_dir_path
+from libraries.models.info_category import InfoCategory
 from libraries.utils.model import CamelCaseModel
 
 
@@ -17,7 +17,7 @@ def check_info_json_existence(model_type: Type[CamelCaseModel]) -> None:
     Args:
         model_type: Name of the directory which contains directories for models.
     """
-    model_dir = get_model_dir_path(model_type)
+    model_dir = InfoCategory.get_info_category(model_type).get_model_dir_path()
     for name in os.listdir(model_dir):
         sub_dir = model_dir.joinpath(name)
         if not os.path.isdir(sub_dir):

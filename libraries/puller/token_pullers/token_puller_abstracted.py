@@ -23,6 +23,7 @@ from libraries.models.contract import Contract
 from libraries.models.id import Id
 from libraries.models.image_info import ImageInfo
 from libraries.models.image_type import ImageType
+from libraries.models.info_category import InfoCategory
 from libraries.models.network import Network
 from libraries.models.reference import Reference
 from libraries.preprocess.image import downscale_png, png_to_square
@@ -31,7 +32,7 @@ from libraries.puller.getters.http_url_getter import get_http_url
 from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import get_token_count
 from libraries.utils.eth_erc20 import EthErc20Interface
-from libraries.utils.file import get_model_dir_path, PWD, get_model_info_list
+from libraries.utils.file import PWD
 
 ETH_REFERENCE_BASE: dict[Id, URL] = {
     Id("coingecko"): URL("https://www.coingecko.com/en/coins/"),
@@ -219,7 +220,9 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             The first element is the map of all asset information.
             The second element is the map of asset addresses and asset information.
         """
-        all_assets = {asset.id: asset for asset, _ in get_model_info_list(Asset)}
+        all_assets = {
+            asset.id: asset for asset, _ in InfoCategory.asset().get_model_info_list()
+        }
         network_assets = {}
         for asset in all_assets.values():
             for contract in filter(lambda x: x.network == network.id, asset.contracts):
@@ -440,7 +443,11 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
                 if contract.address.lower() in self.network_assets:
                     self.network_assets.update({contract.address.lower(): new_info})
             # Get the path of the asset information
-            path = get_model_dir_path(Asset).joinpath(new_info.id.root)
+            path = (
+                InfoCategory.get_info_category(Asset)
+                .get_model_dir_path()
+                .joinpath(new_info.id.root)
+            )
             if not exists(path):
                 mkdir(path)
             # Save the asset information

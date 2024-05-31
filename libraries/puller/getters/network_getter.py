@@ -8,8 +8,8 @@ from prompt_toolkit.document import Document
 from prompt_toolkit.validation import Validator, ValidationError
 
 from libraries.models.id import Id
+from libraries.models.info_category import InfoCategory
 from libraries.models.network import Network
-from libraries.utils.file import get_model_info_list
 
 
 class NetworkValidator(Validator):
@@ -48,7 +48,8 @@ def get_network() -> Network:
         The network information if it exists, otherwise None.
     """
     networks = sorted(
-        [network for network, _ in get_model_info_list(Network)], key=lambda x: x.id
+        [network for network, _ in InfoCategory.network().get_model_info_list()],
+        key=lambda x: x.id,
     )
     network_ids = [network.id for network in networks if len(network.explorers) > 0]
     printf(

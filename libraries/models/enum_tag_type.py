@@ -1,5 +1,6 @@
 from enum import StrEnum
 
+from libraries.models.enum_info import EnumTypeModel
 from libraries.utils.model import EnumModel
 
 
@@ -19,8 +20,12 @@ class _EnumTagTypeEnum(StrEnum):
     PROTOCOL: str = "protocol"
 
 
-class EnumTagType(EnumModel[_EnumTagTypeEnum]):
+class EnumTagType(EnumTypeModel[_EnumTagTypeEnum]):
     """An alias of `_EnumTagTypeEnum`."""
+
+    @property
+    def type(self) -> str:
+        return "tags"
 
     @classmethod
     def ascending_list(cls) -> list["EnumModel"]:

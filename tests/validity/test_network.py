@@ -11,7 +11,7 @@ from tests.utils.checker import (
     check_info_json_existence,
     check_images_validity,
 )
-from tests.utils.reader import read_models, read_enum_info
+from tests.utils.reader import read_models
 
 
 class TestValidityNetwork:
@@ -35,9 +35,9 @@ class TestValidityNetwork:
         """Set up the class before tests in this class."""
         self.asset_list = read_models(Asset)
         self.network_list = read_models(Network)
-        self.network_id_list = read_enum_info(EnumIdType.network())
-        self.network_explorer_id_list = read_enum_info(EnumIdType.network_explorer())
-        self.network_tag_list = read_enum_info(EnumTagType.network())
+        self.network_id_list = EnumIdType.network().get_enum_info()
+        self.network_explorer_id_list = EnumIdType.network_explorer().get_enum_info()
+        self.network_tag_list = EnumTagType.network().get_enum_info()
 
     def test_all_dir_has_info_json(self):
         """All directories for network information have a `info.json` file."""

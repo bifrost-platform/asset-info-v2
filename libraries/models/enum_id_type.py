@@ -1,6 +1,6 @@
 from enum import StrEnum
 
-from libraries.models.info_category import InfoCategoryEnum
+from libraries.models.enum_info import EnumTypeModel
 from libraries.utils.model import EnumModel
 
 
@@ -22,8 +22,12 @@ class _EnumIdTypeEnum(StrEnum):
     PROTOCOL: str = "protocol"
 
 
-class EnumIdType(EnumModel[_EnumIdTypeEnum]):
+class EnumIdType(EnumTypeModel[_EnumIdTypeEnum]):
     """An alias of `_EnumIdTypeEnum`."""
+
+    @property
+    def type(self) -> str:
+        return "ids"
 
     @classmethod
     def ascending_list(cls) -> list["EnumModel"]:
@@ -73,26 +77,3 @@ class EnumIdType(EnumModel[_EnumIdTypeEnum]):
             The enum type for protocol.
         """
         return EnumIdType(_EnumIdTypeEnum.PROTOCOL)
-
-    @staticmethod
-    def get_enum_type(info_category: InfoCategoryEnum) -> "EnumIdType":
-        """Gets the enum type from the info category.
-
-        Args:
-            info_category: The info category.
-
-        Returns:
-            The enum type.
-
-        Raises:
-            ValueError: If the info category is unknown.
-        """
-        match info_category:
-            case InfoCategoryEnum.ASSET:
-                return EnumIdType.asset()
-            case InfoCategoryEnum.NETWORK:
-                return EnumIdType.network()
-            case InfoCategoryEnum.PROTOCOL:
-                return EnumIdType.protocol()
-            case _:
-                raise ValueError(f"Unknown info category: {info_category}")
