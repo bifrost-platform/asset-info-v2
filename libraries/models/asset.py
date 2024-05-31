@@ -1,4 +1,4 @@
-from libraries.models.contract import ContractList
+from libraries.models.contract_list import ContractList
 from libraries.models.id import Id
 from libraries.models.image_info import ImageInfo
 from libraries.models.reference import ReferenceList

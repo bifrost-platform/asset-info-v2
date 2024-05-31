@@ -41,21 +41,21 @@
       ]
     },
     {
-      "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
-      "decimals": 18,
-      "name": "Dai Stablecoin",
-      "network": "evm-43114",
-      "symbol": "DAI",
-      "tags": [
-        "mainnet"
-      ]
-    },
-    {
       "address": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
       "decimals": 18,
       "name": "Dai Stablecoin",
       "network": "evm-43114",
       "symbol": "DAI.e",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+      "decimals": 18,
+      "name": "Dai Stablecoin",
+      "network": "evm-43114",
+      "symbol": "DAI",
       "tags": [
         "mainnet"
       ]
