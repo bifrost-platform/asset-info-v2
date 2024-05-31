@@ -1,6 +1,7 @@
 from enum import StrEnum
+from typing import Self
 
-from libraries.utils.model import EnumModel
+from libraries.models.templates.enum_model import EnumModel
 
 
 class _EngineEnum(StrEnum):
@@ -37,5 +38,5 @@ class Engine(EnumModel[_EngineEnum]):
         return self.root == _EngineEnum.UNKNOWN
 
     @classmethod
-    def ascending_list(cls) -> list["Engine"]:
+    def ascending_list(cls) -> list[Self]:
         return [Engine(engine) for engine in _EngineEnum]
