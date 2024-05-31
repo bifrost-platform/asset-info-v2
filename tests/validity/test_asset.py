@@ -58,7 +58,7 @@ class TestValidityAsset:
                 network = next(
                     item for item, _ in self.network_list if item.id == contract.network
                 )
-                assert network.network in contract.tags
+                assert network.network.root in contract.tags
 
     def test_all_contracts_tag_exists_in_enum_info(self):
         """All contracts in asset information have a tag which is described

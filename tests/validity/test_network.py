@@ -63,7 +63,7 @@ class TestValidityNetwork:
             assert network.currency.name == contract.name
             if not network.network.is_unknown:
                 assert "native-coin" in contract.tags
-                assert network.network in contract.tags
+                assert network.network.root in contract.tags
 
     def test_all_explorer_id_exists_in_enum_info(self):
         """All explorer ID in network information has an ID which is described
