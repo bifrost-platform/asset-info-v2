@@ -6,7 +6,6 @@ from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_tag_type import EnumTagType
 from libraries.models.network import Network
-from libraries.models.network_type import NetworkTypeEnum
 from tests.utils.checker import (
     check_info_json_existence,
     check_images_validity,
@@ -62,7 +61,7 @@ class TestValidityNetwork:
             assert network.currency.decimals == contract.decimals
             assert network.currency.symbol == contract.symbol
             assert network.currency.name == contract.name
-            if network.network != NetworkTypeEnum.UNKNOWN:
+            if not network.network.is_unknown:
                 assert "native-coin" in contract.tags
                 assert network.network in contract.tags
 
