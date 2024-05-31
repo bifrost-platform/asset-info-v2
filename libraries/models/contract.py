@@ -2,8 +2,8 @@ from pydantic import NonNegativeInt
 
 from libraries.models.address import Address
 from libraries.models.id import Id
-from libraries.models.tag import TagList
 from libraries.utils.model import CamelCaseModel
+from libraries.models.tag_list import TagList
 
 
 class Contract(CamelCaseModel):
