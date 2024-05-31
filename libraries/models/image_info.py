@@ -106,6 +106,6 @@ class ImageInfo(CamelCaseModel):
         return iter(
             [
                 (image_type, self.get(image_type))
-                for image_type in ImageType.get_ascending_type_list()
+                for image_type in ImageType.ascending_list()
             ]
         )

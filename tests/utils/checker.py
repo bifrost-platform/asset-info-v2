@@ -65,7 +65,7 @@ def __check_image_preprocessed(image_info: ImageInfo) -> None:
     """
     exist_images = [
         idx
-        for idx, image_type in enumerate(ImageType.get_ascending_type_list())
+        for idx, image_type in enumerate(ImageType.ascending_list())
         if image_info.get(image_type)
     ]
     max_image = 0 if len(exist_images) == 0 else max(exist_images) + 1

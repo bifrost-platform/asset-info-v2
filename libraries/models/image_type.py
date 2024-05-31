@@ -1,11 +1,10 @@
-from enum import Enum
+from enum import StrEnum
 from pathlib import Path
-from typing import Type, Annotated, Any
 
-from pydantic import RootModel, BeforeValidator
+from libraries.utils.model import EnumModel
 
 
-class _ImageTypeEnum(str, Enum):
+class _ImageTypeEnum(StrEnum):
     """Enumerated values for the different types of images.
 
     Attributes:
@@ -16,60 +15,15 @@ class _ImageTypeEnum(str, Enum):
         SVG: enumerated value for SVG image.
     """
 
-    PNG128: str = "png128"
-    PNG256: str = "png256"
     PNG32: str = "png32"
     PNG64: str = "png64"
+    PNG128: str = "png128"
+    PNG256: str = "png256"
     SVG: str = "svg"
 
 
-__ImageTypeType: Type = Annotated[
-    _ImageTypeEnum,
-    BeforeValidator(lambda x: _ImageTypeEnum(x) if isinstance(x, str) else x),
-]
-"""An annotated type for the type of image."""
-
-_IMAGE_TYPE_ORDER: list[_ImageTypeEnum] = [
-    _ImageTypeEnum.PNG32,
-    _ImageTypeEnum.PNG64,
-    _ImageTypeEnum.PNG128,
-    _ImageTypeEnum.PNG256,
-    _ImageTypeEnum.SVG,
-]
-
-
-class ImageType(RootModel[__ImageTypeType]):
+class ImageType(EnumModel[_ImageTypeEnum]):
     """An alias of `_ImageTypeEnum`."""
-
-    def __eq__(self, other: Any) -> bool:
-        match other:
-            case ImageType():
-                return self.root == other.root
-            case str():
-                return self.root == other
-
-    def __lt__(self, other: "ImageType") -> bool:
-        idx_self = _IMAGE_TYPE_ORDER.index(self.root)
-        idx_other = _IMAGE_TYPE_ORDER.index(other.root)
-        return idx_self < idx_other
-
-    def __le__(self, other: "ImageType") -> bool:
-        return self.__lt__(other) or self.__eq__(other)
-
-    def __gt__(self, other: "ImageType") -> bool:
-        return not self.__le__(other)
-
-    def __ge__(self, other: "ImageType") -> bool:
-        return not self.__lt__(other)
-
-    @property
-    def value(self) -> str:
-        """Gets the value of the enum type.
-
-        Returns:
-            The value of the enum type.
-        """
-        return self.root.value
 
     @property
     def is_png128(self) -> bool:
@@ -158,19 +112,7 @@ class ImageType(RootModel[__ImageTypeType]):
         Raises:
             ValueError: If the image type is unknown.
         """
-        match self.root:
-            case _ImageTypeEnum.PNG128:
-                return r"^image-128\.png$"
-            case _ImageTypeEnum.PNG256:
-                return r"^image-256\.png$"
-            case _ImageTypeEnum.PNG32:
-                return r"^image-32\.png$"
-            case _ImageTypeEnum.PNG64:
-                return r"^image-64\.png$"
-            case _ImageTypeEnum.SVG:
-                return r"^image\.svg$"
-            case _:
-                raise ValueError(f"Unknown image type: {self}")
+        return rf"^{self.file_name.replace('.', '\\.')}$"
 
     @property
     def file_name(self) -> str:
@@ -265,17 +207,9 @@ class ImageType(RootModel[__ImageTypeType]):
         """
         return ImageType(_ImageTypeEnum.SVG)
 
-    @staticmethod
-    def get_ascending_type_list() -> list["ImageType"]:
-        """Gets the list of image types in ascending order."""
-        return [ImageType(image_type) for image_type in _IMAGE_TYPE_ORDER]
-
-    @staticmethod
-    def get_descending_type_list() -> list["ImageType"]:
-        """Gets the list of image types in descending order."""
-        return [
-            ImageType(image_type) for image_type in list(reversed(_IMAGE_TYPE_ORDER))
-        ]
+    @classmethod
+    def ascending_list(cls) -> list["ImageType"]:
+        return [ImageType(image_type) for image_type in _ImageTypeEnum]
 
     @staticmethod
     def get_image_type_from_path(image_path: Path) -> "ImageType":

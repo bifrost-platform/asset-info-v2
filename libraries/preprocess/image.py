@@ -7,9 +7,7 @@ from PIL import Image
 from libraries.models.image_type import ImageType
 from libraries.utils.file import search
 
-PNG_SIZES: list[ImageType] = [
-    typ for typ in ImageType.get_descending_type_list() if typ.is_png
-]
+PNG_SIZES: list[ImageType] = [typ for typ in ImageType.descending_list() if typ.is_png]
 
 
 def __png_to_square_body(img: Image, size: int | None = None) -> tuple[Image, int]:
@@ -149,7 +147,7 @@ def get_base_image_list(base_dir: Path) -> list[Path]:
     """
     dirs_already_found = set()
     file_list = []
-    for image_type in ImageType.get_descending_type_list():
+    for image_type in ImageType.descending_list():
         images = search(base_dir, image_type.regex_pattern)
         new_images = [file for file in images if file.parent not in dirs_already_found]
         file_list.extend(new_images)

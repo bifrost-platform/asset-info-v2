@@ -1,12 +1,10 @@
-from enum import Enum
-from typing import Type, Annotated
-
-from pydantic import RootModel, BeforeValidator
+from enum import StrEnum
 
 from libraries.models.info_category import InfoCategoryEnum
+from libraries.utils.model import EnumModel
 
 
-class _EnumIdTypeEnum(str, Enum):
+class _EnumIdTypeEnum(StrEnum):
     """Enumerated values for the different types of enumerated ID information.
 
     Attributes:
@@ -24,24 +22,12 @@ class _EnumIdTypeEnum(str, Enum):
     PROTOCOL: str = "protocol"
 
 
-__EnumIdTypeType: Type = Annotated[
-    _EnumIdTypeEnum,
-    BeforeValidator(lambda x: _EnumIdTypeEnum(x) if isinstance(x, str) else x),
-]
-"""An annotated type for the type of enumerated ID information."""
-
-
-class EnumIdType(RootModel[__EnumIdTypeType]):
+class EnumIdType(EnumModel[_EnumIdTypeEnum]):
     """An alias of `_EnumIdTypeEnum`."""
 
-    @property
-    def value(self) -> str:
-        """Gets the value of the enum type.
-
-        Returns:
-            The value of the enum type.
-        """
-        return self.root.value
+    @classmethod
+    def ascending_list(cls) -> list["EnumModel"]:
+        return [EnumIdType(enum_id_type) for enum_id_type in _EnumIdTypeEnum]
 
     @staticmethod
     def asset() -> "EnumIdType":
