@@ -2,9 +2,9 @@ from pathlib import Path
 from typing import Tuple
 
 from libraries.models.asset import Asset
-from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_tag_type import EnumTagType
+from libraries.models.enum_type_id import EnumTypeId
+from libraries.models.enum_type_tag import EnumTypeTag
 from libraries.models.network import Network
 from tests.utils.checker import (
     check_info_json_existence,
@@ -38,11 +38,11 @@ class TestValidityAsset:
         """Set up the class before tests in this class."""
         self.asset_list = read_models(Asset)
         self.network_list = read_models(Network)
-        self.asset_id_list = EnumIdType.asset().get_enum_info()
-        self.asset_reference_id_list = EnumIdType.asset_reference().get_enum_info()
-        self.network_id_list = EnumIdType.network().get_enum_info()
-        self.asset_contract_tag_list = EnumTagType.asset_contracts().get_enum_info()
-        self.asset_tag_list = EnumTagType.asset().get_enum_info()
+        self.asset_id_list = EnumTypeId.asset().get_enum_info()
+        self.asset_reference_id_list = EnumTypeId.asset_reference().get_enum_info()
+        self.network_id_list = EnumTypeId.network().get_enum_info()
+        self.asset_contract_tag_list = EnumTypeTag.asset_contracts().get_enum_info()
+        self.asset_tag_list = EnumTypeTag.asset().get_enum_info()
 
     def test_all_dir_has_info_json(self):
         """All directories for asset information have a `info.json` file."""
