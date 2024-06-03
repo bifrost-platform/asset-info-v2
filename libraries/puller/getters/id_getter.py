@@ -46,9 +46,8 @@ class IdValidator(Validator):
             if (input_id := Id(text)) not in self.forbidden_id:
                 if self.permitted_id and input_id not in self.permitted_id:
                     raise ValidationError(
-                        message=f"Input ID is not permitted: {','.join(self.permitted_id)}"
+                        message=f"Input ID is not permitted: {','.join(value.root for value in self.permitted_id)}"
                     )
-                return input_id
             else:
                 raise ValidationError(message="Input ID is forbidden")
         except PydanticValidationError:
@@ -72,9 +71,18 @@ def get_id(
         The forbidden rule is prioritized over the permitted rule.
     """
     printf(
-        HTML(f"<b>{msg}</b>" + (": " + ", ".join(permitted_id) if permitted_id else ""))
+        HTML(
+            f"<b>{msg}</b>"
+            + (
+                ": " + ", ".join(value.root for value in permitted_id)
+                if permitted_id
+                else ""
+            )
+        )
     )
-    completer = WordCompleter(list(permitted_id)) if permitted_id else None
+    completer = (
+        WordCompleter([value.root for value in permitted_id]) if permitted_id else None
+    )
     input_id = prompt(
         HTML("<b>> </b>"),
         completer=completer,

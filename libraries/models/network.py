@@ -12,18 +12,15 @@ class Network(CamelCaseModel):
     """The base model of information about each blockchain network.
 
     Attributes:
-        currency: currency information of the network. (:class:`Currency`)
-        engine: engine type of the network. (:class:`Engine`)
-        explorers: explorers' information of the network.
-                   (:class:`ReferenceList`: constrained :class:`list` of :class:`Reference`.)
-        id: ID of the network. (:class:`Id`: constrained :class:`str`.)
-        images: information about the existence of each image type. (:class:`ImageInfo`)
-        name: name of the network. (:class:`str`)
-        network: type of the network. (:class:`NetworkType`)
-        tags: tags of the network.
-              (:class:`TagList`: constrained :class:`list` of :class:`Tag`.)
-        unknown_asset_id: ID of the unknown asset of the network.
-                          (:class:`Id`: constrained :class:`str`.)
+        currency: currency information of the network (`Currency`)
+        engine: engine type of the network (`Engine`)
+        explorers: explorers' information of the network (`ReferenceList`: constrained `list` of `Reference`.)
+        id: ID of the network (`Id`: constrained `str`.)
+        images: information about the existence of each image type (`ImageInfo`)
+        name: name of the network (`str`)
+        network: type of the network (`NetworkType`)
+        tags: tags of the network (`TagList`: constrained `list` of `Tag`.)
+        unknown_asset_id: ID of the unknown asset of the network (`Id`: constrained `str`.)
     """
 
     currency: Currency

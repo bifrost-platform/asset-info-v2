@@ -1,10 +1,10 @@
-from enum import Enum
-from typing import Type, Annotated
+from enum import StrEnum
 
-from pydantic import BeforeValidator, RootModel
+from libraries.models.enum_info import EnumTypeModel
+from libraries.utils.model import EnumModel
 
 
-class _EnumTagTypeEnum(str, Enum):
+class _EnumTagTypeEnum(StrEnum):
     """Enumerated values for the different types of enumerated tag information.
 
     Attributes:
@@ -20,24 +20,16 @@ class _EnumTagTypeEnum(str, Enum):
     PROTOCOL: str = "protocol"
 
 
-__EnumTagTypeType: Type = Annotated[
-    _EnumTagTypeEnum,
-    BeforeValidator(lambda x: _EnumTagTypeEnum(x) if isinstance(x, str) else x),
-]
-"""An annotated type for the type of enumerated tag information."""
-
-
-class EnumTagType(RootModel[__EnumTagTypeType]):
+class EnumTagType(EnumTypeModel[_EnumTagTypeEnum]):
     """An alias of `_EnumTagTypeEnum`."""
 
     @property
-    def value(self) -> str:
-        """Gets the value of the enum type.
+    def type(self) -> str:
+        return "tags"
 
-        Returns:
-            The value of the enum type.
-        """
-        return self.root.value
+    @classmethod
+    def ascending_list(cls) -> list["EnumModel"]:
+        return [EnumTagType(enum_tag_type) for enum_tag_type in _EnumTagTypeEnum]
 
     @staticmethod
     def asset() -> "EnumTagType":

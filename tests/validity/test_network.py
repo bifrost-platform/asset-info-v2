@@ -1,4 +1,3 @@
-import re
 from pathlib import Path
 from typing import Tuple
 
@@ -7,12 +6,11 @@ from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_tag_type import EnumTagType
 from libraries.models.network import Network
-from libraries.models.network_type import NetworkTypeEnum
 from tests.utils.checker import (
     check_info_json_existence,
     check_images_validity,
 )
-from tests.utils.reader import read_models, read_enum_info
+from tests.utils.reader import read_models
 
 
 class TestValidityNetwork:
@@ -36,9 +34,9 @@ class TestValidityNetwork:
         """Set up the class before tests in this class."""
         self.asset_list = read_models(Asset)
         self.network_list = read_models(Network)
-        self.network_id_list = read_enum_info(EnumIdType.network())
-        self.network_explorer_id_list = read_enum_info(EnumIdType.network_explorer())
-        self.network_tag_list = read_enum_info(EnumTagType.network())
+        self.network_id_list = EnumIdType.network().get_enum_info()
+        self.network_explorer_id_list = EnumIdType.network_explorer().get_enum_info()
+        self.network_tag_list = EnumTagType.network().get_enum_info()
 
     def test_all_dir_has_info_json(self):
         """All directories for network information have a `info.json` file."""
@@ -63,7 +61,7 @@ class TestValidityNetwork:
             assert network.currency.decimals == contract.decimals
             assert network.currency.symbol == contract.symbol
             assert network.currency.name == contract.name
-            if network.network != NetworkTypeEnum.UNKNOWN:
+            if not network.network.is_unknown:
                 assert "native-coin" in contract.tags
                 assert network.network in contract.tags
 
@@ -103,9 +101,8 @@ class TestValidityNetwork:
         asset_id_list = [item.id for item, _ in self.asset_list]
         for network, _ in self.network_list:
             assert network.unknown_asset_id in asset_id_list
-            match re.match(r"^unknown-(.+)$", network.unknown_asset_id):
-                case match if match is not None:
-                    print(match.group(1))
-                    assert match.group(1) in network.tags
-                case None:
-                    pass
+            if network.unknown_asset_id.root.startswith("unknown-"):
+                assert (
+                    network.unknown_asset_id.root.removeprefix("unknown-")
+                    in network.tags
+                )

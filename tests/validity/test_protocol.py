@@ -6,7 +6,7 @@ from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_tag_type import EnumTagType
 from libraries.models.protocol import Protocol
 from tests.utils.checker import check_info_json_existence, check_images_validity
-from tests.utils.reader import read_models, read_enum_info
+from tests.utils.reader import read_models
 
 
 class TestValidityProtocol:
@@ -20,9 +20,9 @@ class TestValidityProtocol:
     def setup_class(self):
         """Set up the class before tests in this class."""
         self.protocol_list = read_models(Protocol)
-        self.network_id_list = read_enum_info(EnumIdType.network())
-        self.protocol_id_list = read_enum_info(EnumIdType.protocol())
-        self.protocol_tag_list = read_enum_info(EnumTagType.protocol())
+        self.network_id_list = EnumIdType.network().get_enum_info()
+        self.protocol_id_list = EnumIdType.protocol().get_enum_info()
+        self.protocol_tag_list = EnumTagType.protocol().get_enum_info()
 
     def test_all_dir_has_info_json(self):
         """All directories for protocol information have a `info.json` file."""

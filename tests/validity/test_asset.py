@@ -10,7 +10,7 @@ from tests.utils.checker import (
     check_info_json_existence,
     check_images_validity,
 )
-from tests.utils.reader import read_models, read_enum_info
+from tests.utils.reader import read_models
 
 
 class TestValidityAsset:
@@ -38,11 +38,11 @@ class TestValidityAsset:
         """Set up the class before tests in this class."""
         self.asset_list = read_models(Asset)
         self.network_list = read_models(Network)
-        self.asset_id_list = read_enum_info(EnumIdType.asset())
-        self.asset_reference_id_list = read_enum_info(EnumIdType.asset_reference())
-        self.network_id_list = read_enum_info(EnumIdType.network())
-        self.asset_contract_tag_list = read_enum_info(EnumTagType.asset_contracts())
-        self.asset_tag_list = read_enum_info(EnumTagType.asset())
+        self.asset_id_list = EnumIdType.asset().get_enum_info()
+        self.asset_reference_id_list = EnumIdType.asset_reference().get_enum_info()
+        self.network_id_list = EnumIdType.network().get_enum_info()
+        self.asset_contract_tag_list = EnumTagType.asset_contracts().get_enum_info()
+        self.asset_tag_list = EnumTagType.asset().get_enum_info()
 
     def test_all_dir_has_info_json(self):
         """All directories for asset information have a `info.json` file."""

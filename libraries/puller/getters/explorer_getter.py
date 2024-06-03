@@ -50,12 +50,17 @@ def get_explorer_id(explorers: list[Reference]) -> Id:
         The explorer ID if it exists, otherwise None.
     """
     explorer_ids = sorted([explorer.id for explorer in explorers])
-    printf(HTML("<b>Enter the explorer ID: </b>" + ", ".join(explorer_ids)))
-    explorer_completer = WordCompleter(explorer_ids)
+    printf(
+        HTML(
+            "<b>Enter the explorer ID: </b>"
+            + ", ".join(value.root for value in explorer_ids)
+        )
+    )
+    explorer_completer = WordCompleter([value.root for value in explorer_ids])
     explorer_id = prompt(
         HTML("<b>> </b>"),
         completer=explorer_completer,
-        placeholder=explorer_ids[0],
+        placeholder=explorer_ids[0].root if len(explorer_ids) != 0 else None,
         validator=ExplorerValidator(explorer_ids),
     )
-    return explorer_id
+    return Id(explorer_id)
