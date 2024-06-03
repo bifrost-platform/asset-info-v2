@@ -1,15 +1,15 @@
-from enum import Enum
-from typing import Type, Annotated
+from enum import StrEnum
 
-from pydantic import BeforeValidator
+from libraries.utils.model import EnumModel
 
 
-class NetworkTypeEnum(str, Enum):
+class _NetworkTypeEnum(StrEnum):
     """Enumerated values for the different types of blockchain networks.
 
     Attributes:
         MAINNET: enumerated value for mainnet.
         TESTNET: enumerated value for testnet.
+        UNKNOWN: enumerated value for unknown network.
     """
 
     MAINNET: str = "mainnet"
@@ -17,8 +17,36 @@ class NetworkTypeEnum(str, Enum):
     UNKNOWN: str = "unknown"
 
 
-NetworkType: Type = Annotated[
-    NetworkTypeEnum,
-    BeforeValidator(lambda x: NetworkTypeEnum(x) if isinstance(x, str) else x),
-]
-"""A alias of :class:`NetworkTypeEnum`."""
+class NetworkType(EnumModel[_NetworkTypeEnum]):
+    """An alias of `_NetworkTypeEnum`."""
+
+    @property
+    def is_mainnet(self) -> bool:
+        """Checks if the network type is mainnet.
+
+        Returns:
+            True if the network type is mainnet, False otherwise.
+        """
+        return self.root == _NetworkTypeEnum.MAINNET
+
+    @property
+    def is_testnet(self) -> bool:
+        """Checks if the network type is testnet.
+
+        Returns:
+            True if the network type is testnet, False otherwise.
+        """
+        return self.root == _NetworkTypeEnum.TESTNET
+
+    @property
+    def is_unknown(self) -> bool:
+        """Checks if the network type is unknown.
+
+        Returns:
+            True if the network type is unknown, False otherwise.
+        """
+        return self.root == _NetworkTypeEnum.UNKNOWN
+
+    @classmethod
+    def ascending_list(cls) -> list["EnumModel"]:
+        return [NetworkType(network_type) for network_type in _NetworkTypeEnum]

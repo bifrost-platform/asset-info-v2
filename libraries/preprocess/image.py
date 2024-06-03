@@ -4,12 +4,10 @@ from pathlib import Path
 import cairosvg
 from PIL import Image
 
-from libraries.models.image_type import ImageTypeEnum
+from libraries.models.image_type import ImageType
 from libraries.utils.file import search
 
-PNG_SIZES: list[ImageTypeEnum] = [
-    typ for typ in ImageTypeEnum.get_descending_type_list() if typ.is_png()
-]
+PNG_SIZES: list[ImageType] = [typ for typ in ImageType.descending_list() if typ.is_png]
 
 
 def __png_to_square_body(img: Image, size: int | None = None) -> tuple[Image, int]:
@@ -44,7 +42,7 @@ def png_to_square(png_path: Path, dest_path: Path, size: int | None = None) -> N
     """
     with Image.open(png_path) as img:
         desired_size = size or max(
-            list(img.size) + [min(size.get_size() for size in PNG_SIZES)]
+            list(img.size) + [min(image_type.size for image_type in PNG_SIZES)]
         )
         img, _ = __png_to_square_body(img, desired_size)
         img.save(dest_path, "png", optimize=True)
@@ -52,7 +50,7 @@ def png_to_square(png_path: Path, dest_path: Path, size: int | None = None) -> N
 
 def downscale_png(
     dir_path: Path, png_path: Path, overwrite: bool = True
-) -> list[ImageTypeEnum]:
+) -> list[ImageType]:
     """Downscales the PNG image in the given directory.
 
     Args:
@@ -67,14 +65,14 @@ def downscale_png(
     with Image.open(png_path) as img:
         squared_img, img_size = __png_to_square_body(img)
         target_sizes = [
-            size.get_size() for size in PNG_SIZES if size.get_size() <= img_size
+            image_type.size for image_type in PNG_SIZES if image_type.size <= img_size
         ]
         for size in target_sizes:
-            new_png_path = ImageTypeEnum.get_png_image_type(size).get_path(dir_path)
+            new_png_path = ImageType.get_png_image_type(size).get_path(dir_path)
             if overwrite or not os.path.isfile(new_png_path):
                 new_img = squared_img.resize((size, size))
                 new_img.save(new_png_path, "png", optimize=True)
-                downloaded_type.append(ImageTypeEnum.get_png_image_type(size))
+                downloaded_type.append(ImageType.get_png_image_type(size))
     return downloaded_type
 
 
@@ -88,8 +86,8 @@ def __convert_png_to_downscaled(png_path: Path) -> None:
         The PNG image is downscaled to two squared times smaller than the original
         image size (minimum: 32x32).
     """
-    image_type = ImageTypeEnum.get_image_type(png_path)
-    if image_type.is_png():
+    image_type = ImageType.get_image_type_from_path(png_path)
+    if image_type.is_png:
         downscale_png(png_path.parent, png_path)
 
 
@@ -127,16 +125,12 @@ def create_downscaled_image(base_image_path: Path) -> None:
     Notes:
         The base image path is the smallest image's path in each information directory.
     """
-    match ImageTypeEnum.get_image_type(base_image_path):
-        case ImageTypeEnum.SVG:
-            __convert_svg_to_png256(base_image_path)
-            __convert_png_to_downscaled(
-                ImageTypeEnum.PNG256.get_path(base_image_path.parent)
-            )
-        case image_type if image_type.is_png():
-            __convert_png_to_downscaled(base_image_path)
-        case _:
-            raise ValueError(f"Unknown image path: {base_image_path}")
+    image_type = ImageType.get_image_type_from_path(base_image_path)
+    if image_type.is_svg:
+        __convert_svg_to_png256(base_image_path)
+        __convert_png_to_downscaled(ImageType.PNG256.get_path(base_image_path.parent))
+    elif image_type.is_png:
+        __convert_png_to_downscaled(base_image_path)
 
 
 def get_base_image_list(base_dir: Path) -> list[Path]:
@@ -153,8 +147,8 @@ def get_base_image_list(base_dir: Path) -> list[Path]:
     """
     dirs_already_found = set()
     file_list = []
-    for image_type in ImageTypeEnum.get_descending_type_list():
-        images = search(base_dir, image_type.get_regex_pattern())
+    for image_type in ImageType.descending_list():
+        images = search(base_dir, image_type.regex_pattern)
         new_images = [file for file in images if file.parent not in dirs_already_found]
         file_list.extend(new_images)
         dirs_already_found.update([file.parent for file in new_images])

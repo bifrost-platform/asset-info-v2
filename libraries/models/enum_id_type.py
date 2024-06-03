@@ -1,12 +1,10 @@
-from enum import Enum
-from typing import Type, Annotated
+from enum import StrEnum
 
-from pydantic import RootModel, BeforeValidator
-
-from libraries.models.info_category import InfoCategoryEnum
+from libraries.models.enum_info import EnumTypeModel
+from libraries.utils.model import EnumModel
 
 
-class _EnumIdTypeEnum(str, Enum):
+class _EnumIdTypeEnum(StrEnum):
     """Enumerated values for the different types of enumerated ID information.
 
     Attributes:
@@ -24,24 +22,16 @@ class _EnumIdTypeEnum(str, Enum):
     PROTOCOL: str = "protocol"
 
 
-__EnumIdTypeType: Type = Annotated[
-    _EnumIdTypeEnum,
-    BeforeValidator(lambda x: _EnumIdTypeEnum(x) if isinstance(x, str) else x),
-]
-"""An annotated type for the type of enumerated ID information."""
-
-
-class EnumIdType(RootModel[__EnumIdTypeType]):
+class EnumIdType(EnumTypeModel[_EnumIdTypeEnum]):
     """An alias of `_EnumIdTypeEnum`."""
 
     @property
-    def value(self) -> str:
-        """Gets the value of the enum type.
+    def type(self) -> str:
+        return "ids"
 
-        Returns:
-            The value of the enum type.
-        """
-        return self.root.value
+    @classmethod
+    def ascending_list(cls) -> list["EnumModel"]:
+        return [EnumIdType(enum_id_type) for enum_id_type in _EnumIdTypeEnum]
 
     @staticmethod
     def asset() -> "EnumIdType":
@@ -87,26 +77,3 @@ class EnumIdType(RootModel[__EnumIdTypeType]):
             The enum type for protocol.
         """
         return EnumIdType(_EnumIdTypeEnum.PROTOCOL)
-
-    @staticmethod
-    def get_enum_type(info_category: InfoCategoryEnum) -> "EnumIdType":
-        """Gets the enum type from the info category.
-
-        Args:
-            info_category: The info category.
-
-        Returns:
-            The enum type.
-
-        Raises:
-            ValueError: If the info category is unknown.
-        """
-        match info_category:
-            case InfoCategoryEnum.ASSET:
-                return EnumIdType.asset()
-            case InfoCategoryEnum.NETWORK:
-                return EnumIdType.network()
-            case InfoCategoryEnum.PROTOCOL:
-                return EnumIdType.protocol()
-            case _:
-                raise ValueError(f"Unknown info category: {info_category}")

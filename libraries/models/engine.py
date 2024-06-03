@@ -1,10 +1,9 @@
-from enum import Enum
-from typing import Annotated, Type
+from enum import StrEnum
 
-from pydantic import BeforeValidator, RootModel
+from libraries.utils.model import EnumModel
 
 
-class _EngineEnum(str, Enum):
+class _EngineEnum(StrEnum):
     """Enumerated values for the different engines of a blockchain network.
 
     Attributes:
@@ -16,14 +15,7 @@ class _EngineEnum(str, Enum):
     UNKNOWN: str = "unknown"
 
 
-__EngineType: Type = Annotated[
-    _EngineEnum,
-    BeforeValidator(lambda x: _EngineEnum(x) if isinstance(x, str) else x),
-]
-"""An annotated type for the engine of a blockchain network."""
-
-
-class Engine(RootModel[__EngineType]):
+class Engine(EnumModel[_EngineEnum]):
     """An alias of `_EngineEnum`."""
 
     @property
@@ -43,3 +35,7 @@ class Engine(RootModel[__EngineType]):
             Whether the engine is an unknown engine.
         """
         return self.root == _EngineEnum.UNKNOWN
+
+    @classmethod
+    def ascending_list(cls) -> list["Engine"]:
+        return [Engine(engine) for engine in _EngineEnum]

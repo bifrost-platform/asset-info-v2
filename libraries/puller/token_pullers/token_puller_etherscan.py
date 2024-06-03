@@ -73,9 +73,9 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
         # Get the available images for the token.
         available_images: dict[Id, str] = dict()
         for size in PNG_SIZES:
-            url = sub(r"_\d+", f"_{size.get_size()}", base_url)
+            url = sub(r"_\d+", f"_{size.size}", base_url)
             if url == base_url and not bool(search(r"_\d+", base_url)):
-                url = sub(r".png", f"_{size.get_size()}.png", base_url)
+                url = sub(r".png", f"_{size.size}.png", base_url)
             response = get(url, headers=HEADER)
             if response.status_code == 200 and response.url == url:
                 available_images.update({Id(size.lower()): url})

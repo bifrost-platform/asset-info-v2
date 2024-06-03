@@ -1,11 +1,11 @@
 from typing import Type
 
 from libraries.models.asset import Asset
+from libraries.models.info_category import InfoCategory
 from libraries.models.network import Network
 from libraries.models.protocol import Protocol
 from libraries.preprocess.enum_info import update_id_enum
 from libraries.preprocess.image import get_base_image_list, create_downscaled_image
-from libraries.utils.file import get_model_dir_path
 
 
 def run_image_preprocess[T](model_type: Type[T]) -> None:
@@ -14,7 +14,9 @@ def run_image_preprocess[T](model_type: Type[T]) -> None:
     Args:
         model_type: The type of the model.
     """
-    image_path_list = get_base_image_list(get_model_dir_path(model_type))
+    image_path_list = get_base_image_list(
+        InfoCategory.get_info_category(model_type).get_model_dir_path()
+    )
     for image_path in image_path_list:
         create_downscaled_image(image_path)
 

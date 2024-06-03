@@ -1,8 +1,10 @@
-from enum import Enum
+from enum import StrEnum
 from pathlib import Path
 
+from libraries.utils.model import EnumModel
 
-class ImageTypeEnum(str, Enum):
+
+class _ImageTypeEnum(StrEnum):
     """Enumerated values for the different types of images.
 
     Attributes:
@@ -13,36 +15,204 @@ class ImageTypeEnum(str, Enum):
         SVG: enumerated value for SVG image.
     """
 
-    PNG128: str = "png128"
-    PNG256: str = "png256"
     PNG32: str = "png32"
     PNG64: str = "png64"
+    PNG128: str = "png128"
+    PNG256: str = "png256"
     SVG: str = "svg"
 
-    @staticmethod
-    def get_ascending_type_list() -> list["ImageTypeEnum"]:
-        """Gets the list of image types in ascending order."""
-        return [
-            ImageTypeEnum.PNG32,
-            ImageTypeEnum.PNG64,
-            ImageTypeEnum.PNG128,
-            ImageTypeEnum.PNG256,
-            ImageTypeEnum.SVG,
-        ]
+
+class ImageType(EnumModel[_ImageTypeEnum]):
+    """An alias of `_ImageTypeEnum`."""
+
+    @property
+    def is_png128(self) -> bool:
+        """Checks if the image type is 128x128 PNG.
+
+        Returns:
+            True if the image type is 128x128 PNG, False otherwise.
+
+        Raises:
+            ValueError: If the image type is unknown.
+        """
+        return self.root == _ImageTypeEnum.PNG128
+
+    @property
+    def is_png256(self) -> bool:
+        """Checks if the image type is 256x256 PNG.
+
+        Returns:
+            True if the image type is 256x256 PNG, False otherwise.
+
+        Raises:
+            ValueError: If the image type is unknown.
+        """
+        return self.root == _ImageTypeEnum.PNG256
+
+    @property
+    def is_png32(self) -> bool:
+        """Checks if the image type is 32x32 PNG.
+
+        Returns:
+            True if the image type is 32x32 PNG, False otherwise.
+
+        Raises:
+            ValueError: If the image type is unknown.
+        """
+        return self.root == _ImageTypeEnum.PNG32
+
+    @property
+    def is_png64(self) -> bool:
+        """Checks if the image type is 64x64 PNG.
+
+        Returns:
+            True if the image type is 64x64 PNG, False otherwise.
+
+        Raises:
+            ValueError: If the image type is unknown.
+        """
+        return self.root == _ImageTypeEnum.PNG64
+
+    @property
+    def is_svg(self) -> bool:
+        """Checks if the image type is SVG.
+
+        Returns:
+            True if the image type is SVG, False otherwise.
+
+        Raises:
+            ValueError: If the image type is unknown.
+        """
+        return self.root == _ImageTypeEnum.SVG
+
+    @property
+    def is_png(self) -> bool:
+        """Checks if the image type is PNG.
+
+        Returns:
+            True if the image type is PNG, False otherwise.
+
+        Raises:
+            ValueError: If the image type is unknown.
+        """
+        if self.is_svg:
+            return False
+        elif self.is_png128 or self.is_png256 or self.is_png32 or self.is_png64:
+            return True
+        else:
+            raise ValueError(f"Unknown image type: {self}")
+
+    @property
+    def regex_pattern(self) -> str:
+        """Gets the regex pattern of the image type.
+
+        Returns:
+            The regex pattern of its image.
+
+        Raises:
+            ValueError: If the image type is unknown.
+        """
+        return rf"^{self.file_name.replace('.', '\\.')}$"
+
+    @property
+    def file_name(self) -> str:
+        """Gets the file name of the image type.
+
+        Returns:
+            The file name of its image.
+
+        Raises:
+            ValueError: If the image type is unknown.
+        """
+        match self.root:
+            case _ImageTypeEnum.PNG128:
+                return "image-128.png"
+            case _ImageTypeEnum.PNG256:
+                return "image-256.png"
+            case _ImageTypeEnum.PNG32:
+                return "image-32.png"
+            case _ImageTypeEnum.PNG64:
+                return "image-64.png"
+            case _ImageTypeEnum.SVG:
+                return "image.svg"
+            case _:
+                raise ValueError(f"Unknown image type: {self}")
+
+    @property
+    def size(self) -> int:
+        """Gets the size of the image type.
+
+        Returns:
+            The size of its image.
+
+        Raises:
+            ValueError: If the image type is unknown.
+        """
+        match self.root:
+            case _ImageTypeEnum.PNG128:
+                return 128
+            case _ImageTypeEnum.PNG256:
+                return 256
+            case _ImageTypeEnum.PNG32:
+                return 32
+            case _ImageTypeEnum.PNG64:
+                return 64
+            case _ImageTypeEnum.SVG:
+                return 128
+            case _:
+                raise ValueError(f"Unknown image type: {self}")
 
     @staticmethod
-    def get_descending_type_list() -> list["ImageTypeEnum"]:
-        """Gets the list of image types in descending order."""
-        return [
-            ImageTypeEnum.SVG,
-            ImageTypeEnum.PNG256,
-            ImageTypeEnum.PNG128,
-            ImageTypeEnum.PNG64,
-            ImageTypeEnum.PNG32,
-        ]
+    def png128() -> "ImageType":
+        """Gets the enum type for 128x128 PNG image.
+
+        Returns:
+            The enum type for 128x128 PNG image.
+        """
+        return ImageType(_ImageTypeEnum.PNG128)
 
     @staticmethod
-    def get_image_type(image_path: Path) -> "ImageTypeEnum":
+    def png256() -> "ImageType":
+        """Gets the enum type for 256x256 PNG image.
+
+        Returns:
+            The enum type for 256x256 PNG image.
+        """
+        return ImageType(_ImageTypeEnum.PNG256)
+
+    @staticmethod
+    def png32() -> "ImageType":
+        """Gets the enum type for 32x32 PNG image.
+
+        Returns:
+            The enum type for 32x32 PNG image.
+        """
+        return ImageType(_ImageTypeEnum.PNG32)
+
+    @staticmethod
+    def png64() -> "ImageType":
+        """Gets the enum type for 64x64 PNG image.
+
+        Returns:
+            The enum type for 64x64 PNG image.
+        """
+        return ImageType(_ImageTypeEnum.PNG64)
+
+    @staticmethod
+    def svg() -> "ImageType":
+        """Gets the enum type for SVG image.
+
+        Returns:
+            The enum type for SVG image.
+        """
+        return ImageType(_ImageTypeEnum.SVG)
+
+    @classmethod
+    def ascending_list(cls) -> list["ImageType"]:
+        return [ImageType(image_type) for image_type in _ImageTypeEnum]
+
+    @staticmethod
+    def get_image_type_from_path(image_path: Path) -> "ImageType":
         """Gets the image type from the image path.
 
         Args:
@@ -56,20 +226,20 @@ class ImageTypeEnum(str, Enum):
         """
         match image_path.name:
             case "image-128.png":
-                return ImageTypeEnum.PNG128
+                return ImageType.png128()
             case "image-256.png":
-                return ImageTypeEnum.PNG256
+                return ImageType.png256()
             case "image-32.png":
-                return ImageTypeEnum.PNG32
+                return ImageType.png32()
             case "image-64.png":
-                return ImageTypeEnum.PNG64
+                return ImageType.png64()
             case "image.svg":
-                return ImageTypeEnum.SVG
+                return ImageType.svg()
             case _:
                 raise ValueError(f"Unknown image path: {image_path}")
 
     @staticmethod
-    def get_png_image_type(size: int) -> "ImageTypeEnum":
+    def get_png_image_type(size: int) -> "ImageType":
         """Gets the PNG image type from the size.
 
         Args:
@@ -83,13 +253,13 @@ class ImageTypeEnum(str, Enum):
         """
         match size:
             case 128:
-                return ImageTypeEnum.PNG128
+                return ImageType.png128()
             case 256:
-                return ImageTypeEnum.PNG256
+                return ImageType.png256()
             case 32:
-                return ImageTypeEnum.PNG32
+                return ImageType.png32()
             case 64:
-                return ImageTypeEnum.PNG64
+                return ImageType.png64()
             case _:
                 raise ValueError(f"Unknown png size: {size}")
 
@@ -105,96 +275,4 @@ class ImageTypeEnum(str, Enum):
         Raises:
             ValueError: If the image type is unknown.
         """
-        match self:
-            case ImageTypeEnum.PNG128:
-                return base_dir.joinpath("image-128.png")
-            case ImageTypeEnum.PNG256:
-                return base_dir.joinpath("image-256.png")
-            case ImageTypeEnum.PNG32:
-                return base_dir.joinpath("image-32.png")
-            case ImageTypeEnum.PNG64:
-                return base_dir.joinpath("image-64.png")
-            case ImageTypeEnum.SVG:
-                return base_dir.joinpath("image.svg")
-            case _:
-                raise ValueError(f"Unknown image type: {self}")
-
-    def get_regex_pattern(self) -> str:
-        """Gets the regex pattern of the image type.
-
-        Returns:
-            The regex pattern of its image.
-
-        Raises:
-            ValueError: If the image type is unknown.
-        """
-        match self:
-            case ImageTypeEnum.PNG128:
-                return r"^image-128\.png$"
-            case ImageTypeEnum.PNG256:
-                return r"^image-256\.png$"
-            case ImageTypeEnum.PNG32:
-                return r"^image-32\.png$"
-            case ImageTypeEnum.PNG64:
-                return r"^image-64\.png$"
-            case ImageTypeEnum.SVG:
-                return r"^image\.svg$"
-            case _:
-                raise ValueError(f"Unknown image type: {self}")
-
-    def get_size(self) -> int:
-        """Gets the size of the image type.
-
-        Returns:
-            The size of its image.
-
-        Raises:
-            ValueError: If the image type is unknown.
-        """
-        match self:
-            case ImageTypeEnum.PNG128:
-                return 128
-            case ImageTypeEnum.PNG256:
-                return 256
-            case ImageTypeEnum.PNG32:
-                return 32
-            case ImageTypeEnum.PNG64:
-                return 64
-            case ImageTypeEnum.SVG:
-                return 128
-            case _:
-                raise ValueError(f"Unknown image type: {self}")
-
-    def is_png(self) -> bool:
-        """Checks if the image type is PNG.
-
-        Returns:
-            True if the image type is PNG, False otherwise.
-
-        Raises:
-            ValueError: If the image type is unknown.
-        """
-        match self:
-            case ImageTypeEnum.PNG128 | ImageTypeEnum.PNG256 | ImageTypeEnum.PNG32 | ImageTypeEnum.PNG64:
-                return True
-            case ImageTypeEnum.SVG:
-                return False
-            case _:
-                raise ValueError(f"Unknown image type: {self}")
-
-    def is_svg(self) -> bool:
-        """Checks if the image type is SVG.
-
-        Returns:
-            True if the image type is SVG, False otherwise.
-
-        Raises:
-            ValueError: If the image type is unknown.
-        """
-        match self:
-            case ImageTypeEnum.PNG128 | ImageTypeEnum.PNG256 | ImageTypeEnum.PNG32 | ImageTypeEnum.PNG64:
-                return False
-            case ImageTypeEnum.SVG:
-                return True
-            case _:
-                raise ValueError(f"Unknown image type: {self}")
+        return base_dir.joinpath(self.file_name)

@@ -3,10 +3,7 @@ from typing import Tuple, Type
 
 from pydantic import ValidationError
 
-from libraries.models.enum_id_type import EnumIdType
-from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_tag_type import EnumTagType
-from libraries.utils.file import get_model_info_list, get_enum_info
+from libraries.models.info_category import InfoCategory
 
 
 def read_models[T](model_type: Type[T]) -> list[Tuple[T, Path]]:
@@ -19,28 +16,13 @@ def read_models[T](model_type: Type[T]) -> list[Tuple[T, Path]]:
         A list of validated models.
     """
     try:
-        model_list = get_model_info_list(model_type)
+        model_list = InfoCategory.get_info_category(model_type).get_model_info_list()
     except ValidationError as e:
         raise AssertionError(f"Failed to validation {model_type}\n{e}")
     for model, file in model_list:
         if model.id != file.parent.name:
             raise AssertionError(
-                f"ID of model '{model.id}' does not match the directory name"
+                f"ID of model '{model.id.root}' does not match the directory name"
                 + "'{file.path.parent.name}'"
             )
     return model_list
-
-
-def read_enum_info(enum_type: EnumTagType | EnumIdType) -> list[EnumInfo]:
-    """Reads the enum information from the given enum type and enum name.
-
-    Args:
-        enum_type: The type of the enum.
-
-    Returns:
-        A list of enum information.
-    """
-    try:
-        return get_enum_info(enum_type)
-    except ValidationError as e:
-        raise AssertionError(f"Failed to validation {enum_type}\n{e}")
