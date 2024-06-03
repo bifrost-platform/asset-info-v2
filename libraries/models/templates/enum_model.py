@@ -52,7 +52,7 @@ class EnumModel[T: StrEnum](RootModel[Annotated[T, BeforeValidator(_check_enum)]
         Returns:
             The order of the Enum.
         """
-        raise self.ascending_list().index(self.root)
+        return self.ascending_list().index(self.root)
 
     @property
     def value(self) -> str:
