@@ -6,8 +6,8 @@ from prompt_toolkit import print_formatted_text as printf, HTML
 from requests import get
 from yarl import URL
 
-from libraries.models.address import Address
-from libraries.models.id import Id
+from libraries.models.terminals.address import Address
+from libraries.models.terminals.id import Id
 from libraries.models.network import Network
 from libraries.preprocess.image import PNG_SIZES
 from libraries.puller.getters.id_getter import get_id

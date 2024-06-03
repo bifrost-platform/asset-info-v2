@@ -4,8 +4,8 @@ from typing import Tuple
 from libraries.models.asset import Asset
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_info_list import EnumInfoList
-from libraries.models.enum_type_id import EnumTypeId
-from libraries.models.enum_type_tag import EnumTypeTag
+from libraries.models.terminals.enum_type_id import EnumTypeId
+from libraries.models.terminals.enum_type_tag import EnumTypeTag
 from libraries.models.network import Network
 from tests.utils.checker import (
     check_info_json_existence,

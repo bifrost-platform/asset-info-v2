@@ -1,8 +1,8 @@
 from pydantic import HttpUrl
 
 from libraries.models.abstractions.info_model import InfoModel
-from libraries.models.id_list import IdList
-from libraries.models.info_category import InfoCategory
+from libraries.models.terminals.id_list import IdList
+from libraries.models.terminals.info_category import InfoCategory
 
 
 class Protocol(InfoModel):

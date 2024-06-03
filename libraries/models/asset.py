@@ -1,7 +1,7 @@
 from libraries.models.abstractions.info_model import InfoModel
 from libraries.models.contract_list import ContractList
-from libraries.models.info_category import InfoCategory
 from libraries.models.reference_list import ReferenceList
+from libraries.models.terminals.info_category import InfoCategory
 
 
 class Asset(InfoModel):

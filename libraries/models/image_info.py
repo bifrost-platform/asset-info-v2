@@ -1,6 +1,6 @@
 from typing import Iterator, Self
 
-from libraries.models.image_type import ImageType
+from libraries.models.terminals.image_type import ImageType
 from libraries.models.templates.camelcase_model import CamelCaseModel
 
 

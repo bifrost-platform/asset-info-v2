@@ -2,7 +2,7 @@ from typing import Union, Self
 
 from pydantic import RootModel
 
-from libraries.models.address_evm import AddressEvm
+from libraries.models.terminals.address_evm import AddressEvm
 
 
 class Address(RootModel[Union[AddressEvm]]):

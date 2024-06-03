@@ -7,7 +7,7 @@ from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit.document import Document
 from prompt_toolkit.validation import Validator, ValidationError
 
-from libraries.models.id import Id
+from libraries.models.terminals.id import Id
 from libraries.models.network import Network
 
 

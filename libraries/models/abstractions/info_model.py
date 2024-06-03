@@ -3,10 +3,10 @@ from json import loads
 from pathlib import Path
 from typing import Self
 
-from libraries.models.id import Id
+from libraries.models.terminals.id import Id
 from libraries.models.image_info import ImageInfo
-from libraries.models.info_category import InfoCategory
-from libraries.models.tag_list import TagList
+from libraries.models.terminals.info_category import InfoCategory
+from libraries.models.terminals.tag_list import TagList
 from libraries.models.templates.camelcase_model import CamelCaseModel
 from libraries.utils.file import search
 

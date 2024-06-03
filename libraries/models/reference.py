@@ -1,6 +1,6 @@
 from pydantic import HttpUrl
 
-from libraries.models.id import Id
+from libraries.models.terminals.id import Id
 from libraries.models.templates.camelcase_model import CamelCaseModel
 
 

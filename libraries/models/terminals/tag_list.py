@@ -1,6 +1,6 @@
 from typing import Self
 
-from libraries.models.tag import Tag
+from libraries.models.terminals.tag import Tag
 from libraries.models.templates.list_model import ListModel
 
 

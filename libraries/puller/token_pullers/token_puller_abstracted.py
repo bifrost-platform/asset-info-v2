@@ -17,14 +17,14 @@ from requests import get
 from web3 import Web3, HTTPProvider
 from yarl import URL
 
-from libraries.models.address import Address
 from libraries.models.asset import Asset
 from libraries.models.contract import Contract
-from libraries.models.id import Id
 from libraries.models.image_info import ImageInfo
-from libraries.models.image_type import ImageType
 from libraries.models.network import Network
 from libraries.models.reference import Reference
+from libraries.models.terminals.address import Address
+from libraries.models.terminals.id import Id
+from libraries.models.terminals.image_type import ImageType
 from libraries.preprocess.image import downscale_png, png_to_square
 from libraries.preprocess.runner import run_enum_preprocess
 from libraries.puller.getters.http_url_getter import get_http_url

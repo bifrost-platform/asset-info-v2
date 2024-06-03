@@ -2,7 +2,7 @@ from enum import StrEnum
 from pathlib import Path
 from typing import Self
 
-from libraries.models.enum_type_id import EnumTypeId
+from libraries.models.terminals.enum_type_id import EnumTypeId
 from libraries.models.templates.enum_model import EnumModel
 from libraries.utils.file import PWD
 

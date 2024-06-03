@@ -5,7 +5,7 @@ from web3 import Web3, HTTPProvider
 from web3.contract import Contract
 from web3.exceptions import BadFunctionCallOutput
 
-from libraries.models.address import Address
+from libraries.models.terminals.address import Address
 from libraries.utils.file import PWD
 
 

@@ -22,16 +22,16 @@ The `EnumTypeModel` is an abstracted class for creating new enum type models.
 It is a subclass of [`EnumModel`](../templates/enum_model.py) and provides custom validation and getters for the path to
 the enum files and the enum info list.
 
-See the [`EnumTypeId`](../enum_type_id.py) and [`EnumTypeTag`](../enum_type_tag.py) for examples.
+See the [`EnumTypeId`](../terminals/enum_type_id.py) and [`EnumTypeTag`](../terminals/enum_type_tag.py) for examples.
 
 ### [Information Model](./info_model.py)
 
 This abstraction is dependent on the below models:
 
-- [`libraries.models.id`](../id.py)
+- [`libraries.models.id`](../terminals/id.py)
 - [`libraries.models.image_info`](../image_info.py)
-- [`libraries.models.info_category`](../info_category.py)
-- [`libraries.models.tag_list`](../tag_list.py)
+- [`libraries.models.info_category`](../terminals/info_category.py)
+- [`libraries.models.tag_list`](../terminals/tag_list.py)
 
 The `InfoModel` is an abstracted class for creating new info models.
 It is a subclass of [`CamelCaseModel`](../templates/camelcase_model.py) and provides essential properties and getters

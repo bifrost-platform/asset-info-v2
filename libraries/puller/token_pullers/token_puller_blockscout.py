@@ -5,8 +5,8 @@ from prompt_toolkit import print_formatted_text as printf, HTML
 from requests import get
 from yarl import URL
 
-from libraries.models.address import Address
-from libraries.models.id import Id
+from libraries.models.terminals.address import Address
+from libraries.models.terminals.id import Id
 from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import TOKEN_COUNT_PER_PAGE
 from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAbstracted

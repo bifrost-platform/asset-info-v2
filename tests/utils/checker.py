@@ -7,7 +7,7 @@ from svgpathtools import svg2paths2
 
 from libraries.models.abstractions.info_model import InfoModel
 from libraries.models.image_info import ImageInfo
-from libraries.models.image_type import ImageType
+from libraries.models.terminals.image_type import ImageType
 
 
 def check_info_json_existence(model_type: Type[InfoModel]) -> None:

@@ -1,10 +1,10 @@
 from libraries.models.abstractions.info_model import InfoModel
 from libraries.models.currency import Currency
-from libraries.models.engine import Engine
-from libraries.models.id import Id
-from libraries.models.info_category import InfoCategory
-from libraries.models.network_type import NetworkType
 from libraries.models.reference_list import ReferenceList
+from libraries.models.terminals.engine import Engine
+from libraries.models.terminals.id import Id
+from libraries.models.terminals.info_category import InfoCategory
+from libraries.models.terminals.network_type import NetworkType
 
 
 class Network(InfoModel):
