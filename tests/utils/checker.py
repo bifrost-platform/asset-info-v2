@@ -5,19 +5,18 @@ from typing import Type
 from PIL import Image
 from svgpathtools import svg2paths2
 
+from libraries.models.abstractions.info_model import InfoModel
 from libraries.models.image_info import ImageInfo
 from libraries.models.image_type import ImageType
-from libraries.models.info_category import InfoCategory
-from libraries.models.templates.camelcase_model import CamelCaseModel
 
 
-def check_info_json_existence(model_type: Type[CamelCaseModel]) -> None:
+def check_info_json_existence(model_type: Type[InfoModel]) -> None:
     """Check if all directories in subdirectory of `model_dir_name` have a `info.json` file.
 
     Args:
         model_type: Name of the directory which contains directories for models.
     """
-    model_dir = InfoCategory.get_info_category(model_type).get_model_dir_path()
+    model_dir = model_type.get_info_category().get_model_dir_path()
     for name in os.listdir(model_dir):
         sub_dir = model_dir.joinpath(name)
         if not os.path.isdir(sub_dir):

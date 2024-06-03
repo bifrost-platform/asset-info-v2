@@ -1,12 +1,10 @@
+from libraries.models.abstractions.info_model import InfoModel
 from libraries.models.contract_list import ContractList
-from libraries.models.id import Id
-from libraries.models.image_info import ImageInfo
+from libraries.models.info_category import InfoCategory
 from libraries.models.reference_list import ReferenceList
-from libraries.models.tag_list import TagList
-from libraries.models.templates.camelcase_model import CamelCaseModel
 
 
-class Asset(CamelCaseModel):
+class Asset(InfoModel):
     """The base model of information about assets in blockchain networks.
 
     Attributes:
@@ -20,8 +18,8 @@ class Asset(CamelCaseModel):
     """
 
     contracts: ContractList
-    id: Id
-    images: ImageInfo
-    name: str
     references: ReferenceList
-    tags: TagList
+
+    @staticmethod
+    def get_info_category() -> InfoCategory:
+        return InfoCategory.asset()

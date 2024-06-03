@@ -3,10 +3,10 @@ from typing import Tuple, Type
 
 from pydantic import ValidationError
 
-from libraries.models.info_category import InfoCategory
+from libraries.models.abstractions.info_model import InfoModel
 
 
-def read_models[T](model_type: Type[T]) -> list[Tuple[T, Path]]:
+def read_models[T: InfoModel](model_type: Type[T]) -> list[Tuple[T, Path]]:
     """Reads all models from the given directory and validates a list of models.
 
     Args:
@@ -16,7 +16,7 @@ def read_models[T](model_type: Type[T]) -> list[Tuple[T, Path]]:
         A list of validated models.
     """
     try:
-        model_list = InfoCategory.get_info_category(model_type).get_model_info_list()
+        model_list = model_type.get_info_list()
     except ValidationError as e:
         raise AssertionError(f"Failed to validation {model_type}\n{e}")
     for model, file in model_list:

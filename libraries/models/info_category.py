@@ -1,14 +1,10 @@
 from enum import StrEnum
 from pathlib import Path
-from typing import Type, Self
+from typing import Self
 
-from libraries.models.asset import Asset as AssetModel
 from libraries.models.enum_type_id import EnumTypeId
-from libraries.models.network import Network as NetworkModel
-from libraries.models.protocol import Protocol as ProtocolModel
-from libraries.models.templates.camelcase_model import CamelCaseModel
 from libraries.models.templates.enum_model import EnumModel
-from libraries.utils.file import PWD, get_model_info, search
+from libraries.utils.file import PWD
 
 
 class _InfoCategoryEnum(StrEnum):
@@ -55,23 +51,6 @@ class InfoCategory(EnumModel[_InfoCategoryEnum]):
         """
         return self.root == _InfoCategoryEnum.PROTOCOL
 
-    @property
-    def model_type(self) -> Type:
-        """Gets the model type from the information category.
-
-        Returns:
-            The model type.
-        """
-        match self.root:
-            case _InfoCategoryEnum.ASSET:
-                return AssetModel
-            case _InfoCategoryEnum.NETWORK:
-                return NetworkModel
-            case _InfoCategoryEnum.PROTOCOL:
-                return ProtocolModel
-            case _:
-                raise ValueError(f"Unknown information category: {self}")
-
     @classmethod
     def ascending_list(cls) -> list[Self]:
         return [InfoCategory(info_category) for info_category in _InfoCategoryEnum]
@@ -103,17 +82,6 @@ class InfoCategory(EnumModel[_InfoCategoryEnum]):
         """
         return InfoCategory(_InfoCategoryEnum.PROTOCOL)
 
-    @staticmethod
-    def get_info_category(model_type: Type[CamelCaseModel]) -> Self:
-        if model_type == AssetModel:
-            return InfoCategory.asset()
-        elif model_type == NetworkModel:
-            return InfoCategory.network()
-        elif model_type == ProtocolModel:
-            return InfoCategory.protocol()
-        else:
-            raise ValueError(f"Unknown model type: {model_type}")
-
     def get_enum_type(self) -> EnumTypeId:
         """Gets the enum type from the information category.
 
@@ -140,14 +108,3 @@ class InfoCategory(EnumModel[_InfoCategoryEnum]):
             The model directory.
         """
         return PWD.joinpath(self.root)
-
-    def get_model_info_list[T](self) -> list[tuple[T, Path]]:
-        """Reads the enum information from the given enum tag type.
-
-        Returns:
-            The enum information.
-        """
-        return [
-            get_model_info(self.model_type, file)
-            for file in search(self.get_model_dir_path(), r"^info\.json$")
-        ]

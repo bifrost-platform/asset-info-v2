@@ -23,7 +23,6 @@ from libraries.models.contract import Contract
 from libraries.models.id import Id
 from libraries.models.image_info import ImageInfo
 from libraries.models.image_type import ImageType
-from libraries.models.info_category import InfoCategory
 from libraries.models.network import Network
 from libraries.models.reference import Reference
 from libraries.preprocess.image import downscale_png, png_to_square
@@ -220,9 +219,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             The first element is the map of all asset information.
             The second element is the map of asset addresses and asset information.
         """
-        all_assets = {
-            asset.id: asset for asset, _ in InfoCategory.asset().get_model_info_list()
-        }
+        all_assets = {asset.id: asset for asset, _ in Asset.get_info_list()}
         network_assets = {}
         for asset in all_assets.values():
             for contract in filter(lambda x: x.network == network.id, asset.contracts):
@@ -444,7 +441,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
                     self.network_assets.update({contract.address.lower(): new_info})
             # Get the path of the asset information
             path = (
-                InfoCategory.get_info_category(Asset)
+                Asset.get_info_category()
                 .get_model_dir_path()
                 .joinpath(new_info.id.root)
             )

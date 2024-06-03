@@ -1,13 +1,11 @@
 from pydantic import HttpUrl
 
-from libraries.models.id import Id
+from libraries.models.abstractions.info_model import InfoModel
 from libraries.models.id_list import IdList
-from libraries.models.image_info import ImageInfo
-from libraries.models.tag_list import TagList
-from libraries.models.templates.camelcase_model import CamelCaseModel
+from libraries.models.info_category import InfoCategory
 
 
-class Protocol(CamelCaseModel):
+class Protocol(InfoModel):
     """The base model of information about each protocol.
 
     Attributes:
@@ -19,9 +17,9 @@ class Protocol(CamelCaseModel):
         url: main URL of the protocol (`HttpUrl`: constrained `str`.)
     """
 
-    id: Id
-    images: ImageInfo
-    name: str
     networks: IdList
-    tags: TagList
     url: HttpUrl
+
+    @staticmethod
+    def get_info_category() -> InfoCategory:
+        return InfoCategory.protocol()
