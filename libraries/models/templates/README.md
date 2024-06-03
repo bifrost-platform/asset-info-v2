@@ -1,6 +1,7 @@
 # Models.Templates
 
 This library contains templates for creating new models.
+The modules on this library are dependent on the only [`pydantic`](https://docs.pydantic.dev/) module.
 
 ## Table of Contents
 
