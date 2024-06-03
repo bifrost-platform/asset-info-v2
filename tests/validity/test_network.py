@@ -4,9 +4,9 @@ from typing import Tuple
 from libraries.models.asset import Asset
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_info_list import EnumInfoList
+from libraries.models.network import Network
 from libraries.models.terminals.enum_type_id import EnumTypeId
 from libraries.models.terminals.enum_type_tag import EnumTypeTag
-from libraries.models.network import Network
 from tests.utils.checker import (
     check_info_json_existence,
     check_images_validity,
@@ -66,7 +66,7 @@ class TestValidityNetwork:
             assert network.currency.name == contract.name
             if not network.network.is_unknown:
                 assert "native-coin" in contract.tags
-                assert network.network.root in contract.tags
+                assert str(network.network) in contract.tags
 
     def test_all_explorer_id_exists_in_enum_info(self):
         """All explorer ID in network information has an ID which is described
@@ -104,8 +104,8 @@ class TestValidityNetwork:
         asset_id_list = [item.id for item, _ in self.asset_list]
         for network, _ in self.network_list:
             assert network.unknown_asset_id in asset_id_list
-            if network.unknown_asset_id.root.startswith("unknown-"):
+            if str(network.unknown_asset_id).startswith("unknown-"):
                 assert (
-                    network.unknown_asset_id.root.removeprefix("unknown-")
+                    str(network.unknown_asset_id).removeprefix("unknown-")
                     in network.tags
                 )

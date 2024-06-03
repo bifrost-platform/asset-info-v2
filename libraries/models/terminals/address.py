@@ -10,7 +10,7 @@ class Address(RootModel[Union[AddressEvm]]):
 
     def __eq__(self, other: Self) -> bool:
         if self.is_evm_address and other.is_evm_address:
-            return AddressEvm.__eq__(self.root, other.root)
+            return self.root.__eq__(other.root)
         else:
             raise ValueError(
                 f"Cannot compare difference addresses {type(self.root)} and {type(other.root)}."
@@ -21,7 +21,7 @@ class Address(RootModel[Union[AddressEvm]]):
 
     def __lt__(self, other: Self) -> bool:
         if self.is_evm_address and other.is_evm_address:
-            return AddressEvm.__lt__(self.root, other.root)
+            return self.root.__lt__(other.root)
         else:
             raise ValueError(
                 f"Cannot compare difference addresses {type(self.root)} and {type(other.root)}."
@@ -35,6 +35,12 @@ class Address(RootModel[Union[AddressEvm]]):
 
     def __ge__(self, other: Self) -> bool:
         return not self.__lt__(other)
+
+    def __hash__(self) -> int:
+        return self.root.__hash__()
+
+    def __str__(self) -> str:
+        return self.root.__str__()
 
     @property
     def is_evm_address(self) -> bool:

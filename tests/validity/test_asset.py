@@ -4,9 +4,9 @@ from typing import Tuple
 from libraries.models.asset import Asset
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_info_list import EnumInfoList
+from libraries.models.network import Network
 from libraries.models.terminals.enum_type_id import EnumTypeId
 from libraries.models.terminals.enum_type_tag import EnumTypeTag
-from libraries.models.network import Network
 from tests.utils.checker import (
     check_info_json_existence,
     check_images_validity,
@@ -63,7 +63,7 @@ class TestValidityAsset:
                 network = next(
                     item for item, _ in self.network_list if item.id == contract.network
                 )
-                assert network.network.root in contract.tags
+                assert str(network.network) in contract.tags
 
     def test_all_contracts_tag_exists_in_enum_info(self):
         """All contracts in asset information have a tag which is described

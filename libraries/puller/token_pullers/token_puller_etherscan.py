@@ -6,9 +6,9 @@ from prompt_toolkit import print_formatted_text as printf, HTML
 from requests import get
 from yarl import URL
 
+from libraries.models.network import Network
 from libraries.models.terminals.address import Address
 from libraries.models.terminals.id import Id
-from libraries.models.network import Network
 from libraries.preprocess.image import PNG_SIZES
 from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import TOKEN_COUNT_PER_PAGE
@@ -58,7 +58,7 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
         return set(addresses)
 
     def _get_token_url(self, address: Address) -> URL:
-        return self.etherscan_url / "token" / address.root
+        return self.etherscan_url / "token" / str(address)
 
     def _get_token_image_url(self, address: Address) -> URL | None:
         # Get the token page for getting the token image URL.

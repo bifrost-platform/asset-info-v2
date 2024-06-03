@@ -7,8 +7,8 @@ from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit.document import Document
 from prompt_toolkit.validation import Validator, ValidationError
 
-from libraries.models.terminals.id import Id
 from libraries.models.network import Network
+from libraries.models.terminals.id import Id
 
 
 class NetworkValidator(Validator):
@@ -54,14 +54,14 @@ def get_network() -> Network:
     printf(
         HTML(
             "<b>Enter the network ID: </b>"
-            + ", ".join(value.root for value in network_ids)
+            + ", ".join(str(value) for value in network_ids)
         )
     )
-    network_completer = WordCompleter([value.root for value in network_ids])
+    network_completer = WordCompleter([str(value) for value in network_ids])
     network_id = prompt(
         HTML("<b>> </b>"),
         completer=network_completer,
-        placeholder=network_ids[0].root if len(network_ids) != 0 else None,
+        placeholder=str(network_ids[0]) if len(network_ids) != 0 else None,
         validator=NetworkValidator(network_ids),
     )
     return next(filter(lambda x: x.id == Id(network_id), networks))

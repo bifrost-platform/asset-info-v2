@@ -45,6 +45,12 @@ class EnumModel[T: StrEnum](RootModel[Annotated[T, BeforeValidator(_check_enum)]
     def __ge__(self, other: Self) -> bool:
         return not self.__lt__(other)
 
+    def __hash__(self) -> int:
+        return self.root.__hash__()
+
+    def __str__(self) -> str:
+        return self.root.value
+
     @property
     def order(self) -> int:
         """Get the order of the Enum.
@@ -61,7 +67,7 @@ class EnumModel[T: StrEnum](RootModel[Annotated[T, BeforeValidator(_check_enum)]
         Returns:
             The value of the Enum.
         """
-        return self.root.value
+        return self.__str__()
 
     @classmethod
     @abstractmethod

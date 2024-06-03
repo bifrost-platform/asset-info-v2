@@ -22,7 +22,7 @@ def read_models[T: InfoModel](model_type: Type[T]) -> list[Tuple[T, Path]]:
     for model, file in model_list:
         if model.id != file.parent.name:
             raise AssertionError(
-                f"ID of model '{model.id.root}' does not match the directory name"
+                f"ID of model '{str(model.id)}' does not match the directory name"
                 + "'{file.path.parent.name}'"
             )
     return model_list

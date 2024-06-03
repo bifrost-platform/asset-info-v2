@@ -46,7 +46,7 @@ class TokenPullerBlockscout(TokenPullerAbstracted):
         return set(addresses)
 
     def _get_token_url(self, address: Address) -> URL:
-        return self.blockscout_url / "token" / address.root
+        return self.blockscout_url / "token" / str(address)
 
     def _get_token_image_url(self, address: Address) -> URL | None:
         image_urls = self.__find_image_urls(address)

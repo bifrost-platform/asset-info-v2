@@ -46,7 +46,7 @@ class IdValidator(Validator):
             if (input_id := Id(text)) not in self.forbidden_id:
                 if self.permitted_id and input_id not in self.permitted_id:
                     raise ValidationError(
-                        message=f"Input ID is not permitted: {','.join(value.root for value in self.permitted_id)}"
+                        message=f"Input ID is not permitted: {','.join(str(value) for value in self.permitted_id)}"
                     )
             else:
                 raise ValidationError(message="Input ID is forbidden")
@@ -74,19 +74,19 @@ def get_id(
         HTML(
             f"<b>{msg}</b>"
             + (
-                ": " + ", ".join(value.root for value in permitted_id)
+                ": " + ", ".join(str(value) for value in permitted_id)
                 if permitted_id
                 else ""
             )
         )
     )
     completer = (
-        WordCompleter([value.root for value in permitted_id]) if permitted_id else None
+        WordCompleter([str(value) for value in permitted_id]) if permitted_id else None
     )
     input_id = prompt(
         HTML("<b>> </b>"),
         completer=completer,
-        placeholder=permitted_id.copy().pop() if permitted_id else None,
+        placeholder=str(permitted_id.copy().pop()) if permitted_id else None,
         validator=IdValidator(forbidden_id, permitted_id),
     )
     return Id(input_id)

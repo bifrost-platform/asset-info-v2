@@ -26,6 +26,9 @@ class AddressEvm(StrModel):
             case _:
                 raise ValueError(f"Cannot compare {self} with {other}")
 
+    def __hash__(self) -> int:
+        return int(self.root, 16)
+
     def validate_str(self) -> Self:
         if not Web3.is_address(self.root):
             raise ValueError(f"Invalid EVM address: {self.root}")
