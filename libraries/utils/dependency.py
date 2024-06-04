@@ -1,4 +1,7 @@
 from re import search
+from tomllib import load
+
+from libraries.utils.file import PWD
 
 REQUIREMENT_REFERENCE_REGEX = r"^\-r ([\w]+)\.txt$"
 
@@ -32,11 +35,18 @@ def read_requirements(key: str) -> list[str]:
     return ref_reqs + reqs
 
 
-packages = ["libraries.models", "libraries.utils"]
-"""List of packages to be used by the users."""
+def read_essential_packages() -> list[str]:
+    """Reads the essential packages.
 
-install_require_key = "essential"
-"""The key of the essential requirements."""
-
-extras_require_keys = ["all", "dev", "test"]
-"""The keys of the extra requirements."""
+    Returns:
+        The list of essential packages.
+    """
+    with open(PWD.joinpath("pyproject.toml"), "rb") as fp:
+        data = load(fp)
+        return (
+            data.get("tool", {})
+            .get("setuptools", {})
+            .get("packages", {})
+            .get("find", {})
+            .get("include", [])
+        )
