@@ -1,4 +1,5 @@
 from abc import ABCMeta, abstractmethod
+from asyncio import gather, run
 from copy import deepcopy
 from json import dump, dumps
 from os import mkdir
@@ -22,13 +23,13 @@ from libraries.models.contract import Contract
 from libraries.models.image_info import ImageInfo
 from libraries.models.network import Network
 from libraries.models.reference import Reference
+from libraries.models.reference_list import ReferenceList
 from libraries.models.terminals.address import Address
 from libraries.models.terminals.id import Id
 from libraries.models.terminals.image_type import ImageType
 from libraries.models.terminals.tag import Tag
 from libraries.preprocess.image import downscale_png, png_to_square
 from libraries.preprocess.runner import run_enum_preprocess
-from libraries.puller.getters.http_url_getter import get_http_url
 from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import get_token_count
 from libraries.utils.eth_erc20 import EthErc20Interface
@@ -76,7 +77,16 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         self.network = network
         self.tmp_dir = Path(mkdtemp(prefix="tmp_", dir=PWD))
         self.token_count = get_token_count()
-        self.node_url = get_http_url(f"Enter the node URL of {self.network.name}")
+        self.node_url = next(
+            (
+                rpc.url
+                for rpc in ReferenceList.get_ref_list(
+                    PWD.joinpath("libraries/constants/rpc.json")
+                )
+                if rpc.id == self.network.id
+            ),
+            None,
+        )
         self.__check_node_url(network, URL(self.node_url))
         self.flag_image_pull = confirm("Do you want to pull images?")
         self.all_assets, self.network_assets = self.__get_assets(self.network)
@@ -262,12 +272,10 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             return contract.address, contract.name, contract.symbol, contract.decimals
         assert self.network.engine.is_evm
         it = EthErc20Interface(self.node_url, str(address))
-        return (
-            Address(it.contract.address),
-            it.get_name(),
-            it.get_symbol(),
-            it.get_decimals(),
+        name, symbol, decimals = run(
+            gather(*[it.get_name(), it.get_symbol(), it.get_decimals()])
         )
+        return Address(it.contract.address), name, symbol, decimals
 
     def __make_asset_information(
         self, address: Address, name: str, symbol: str, decimals: int

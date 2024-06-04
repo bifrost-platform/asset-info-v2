@@ -30,7 +30,7 @@ class EthErc20Interface:
                 self.node.to_checksum_address(address), abi=fp.read()
             )
 
-    def get_name(self) -> str:
+    async def get_name(self) -> str:
         """Get the name of the token.
 
         Returns:
@@ -43,7 +43,7 @@ class EthErc20Interface:
             result = self.node.eth.call(method.build_transaction())
             return result.decode("utf-8").replace("\x00", "")
 
-    def get_symbol(self) -> str:
+    async def get_symbol(self) -> str:
         """Get the symbol of the token.
 
         Returns:
@@ -56,7 +56,7 @@ class EthErc20Interface:
             result = self.node.eth.call(method.build_transaction())
             return result.decode("utf-8").replace("\x00", "")
 
-    def get_decimals(self) -> int:
+    async def get_decimals(self) -> int:
         """Get the decimals of the token.
 
         Returns:
@@ -64,7 +64,7 @@ class EthErc20Interface:
         """
         return self.contract.functions.decimals().call()
 
-    def get_total_supply_raw(self) -> int:
+    async def get_total_supply_raw(self) -> int:
         """Get the current total supply of the token in raw format.
 
         Returns:
@@ -72,15 +72,15 @@ class EthErc20Interface:
         """
         return self.contract.functions.totalSupply().call()
 
-    def get_total_supply(self) -> Decimal:
+    async def get_total_supply(self) -> Decimal:
         """Get the current total supply of the token.
 
         Returns:
             The total supply of the token's current total supply.
         """
-        return self.__convert_raw_to_decimal(self.get_total_supply_raw())
+        return self.__convert_raw_to_decimal(await self.get_total_supply_raw())
 
-    def get_balance_raw(self, address: str) -> int:
+    async def get_balance_raw(self, address: str) -> int:
         """Get the current token balance of the account in raw format.
 
         Args:
@@ -91,7 +91,7 @@ class EthErc20Interface:
         """
         return self.contract.functions.balanceOf(address).call()
 
-    def get_balance(self, address: str) -> Decimal:
+    async def get_balance(self, address: str) -> Decimal:
         """Get the current token balance of the account.
 
         Args:
@@ -100,9 +100,9 @@ class EthErc20Interface:
         Returns:
             The account's current token balance.
         """
-        return self.__convert_raw_to_decimal(self.get_balance_raw(address))
+        return self.__convert_raw_to_decimal(await self.get_balance_raw(address))
 
-    def get_allowance_raw(self, owner: str, spender: str) -> int:
+    async def get_allowance_raw(self, owner: str, spender: str) -> int:
         """Get the current allowance of the owner to the spender in raw format.
 
         Args:
@@ -114,7 +114,7 @@ class EthErc20Interface:
         """
         return self.contract.functions.allowance(owner, spender).call()
 
-    def get_allowance(self, owner: str, spender: str) -> Decimal:
+    async def get_allowance(self, owner: str, spender: str) -> Decimal:
         """Get the current allowance of the owner to the spender.
 
         Args:
@@ -124,9 +124,11 @@ class EthErc20Interface:
         Returns:
             The owner's allowance to the spender.
         """
-        return self.__convert_raw_to_decimal(self.get_allowance_raw(owner, spender))
+        return self.__convert_raw_to_decimal(
+            await self.get_allowance_raw(owner, spender)
+        )
 
-    def __convert_raw_to_decimal(self, raw: int) -> Decimal:
+    async def __convert_raw_to_decimal(self, raw: int) -> Decimal:
         """Convert the raw format to the decimal format.
 
         Args:

@@ -1,6 +1,8 @@
+from asyncio import gather
 from pathlib import Path
 from typing import Tuple
 
+import pytest
 from pydantic import HttpUrl
 from web3 import Web3, HTTPProvider
 
@@ -125,13 +127,25 @@ class TestValidityNetwork:
                     in network.tags
                 )
 
-    def test_rpc_url(self):
+    @pytest.mark.asyncio
+    async def test_rpc_url_map(self):
         """All networks have a valid RPC URL."""
-        for network, _ in self.network_list:
-            if node_url := self.rpc_map.get(network.id, None):
-                if network.engine.is_evm:
-                    node = Web3(HTTPProvider(node_url))
-                    assert node.is_connected()
-                    assert node.eth.chain_id == int(
-                        str(network.id).removeprefix("evm-")
-                    )
+        await gather(
+            *[self.__test_rpc_url(network) for network, _ in self.network_list]
+        )
+
+    async def __test_rpc_url(self, network: Network):
+        """Test the RPC URL of the network.
+
+        Args:
+            network: The network information.
+        """
+        if node_url := self.rpc_map.get(network.id, None):
+            if network.engine.is_evm:
+                node = Web3(HTTPProvider(node_url))
+                assert node.is_connected()
+                assert node.eth.chain_id == int(str(network.id).removeprefix("evm-"))
+            else:
+                pass
+        else:
+            pass

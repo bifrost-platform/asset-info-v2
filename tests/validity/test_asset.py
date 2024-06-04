@@ -1,6 +1,9 @@
+from asyncio import gather
+from copy import deepcopy
 from pathlib import Path
 from typing import Tuple
 
+import pytest
 from pydantic import HttpUrl
 
 from libraries.models.asset import Asset
@@ -88,26 +91,40 @@ class TestValidityAsset:
                 for tag in contract.tags:
                     assert tag in tag_value_list
 
-    def test_all_contracts_info_valid(self):
+    @pytest.mark.asyncio
+    async def test_all_contracts_info_valid(self):
         """All contracts in asset information are valid."""
         for asset, _ in self.asset_list:
-            for contract in asset.contracts:
-                network = self.network_map.get(contract.network, None)
-                # Skip unknown asset
-                if asset.id == network.unknown_asset_id:
-                    continue
-                # Skip native coin
-                if contract.address == network.currency.address:
-                    continue
-                # Check contract validity
-                if node_url := self.rpc_map.get(network.id, None):
-                    if network.engine.is_evm:
-                        erc20 = EthErc20Interface(node_url, str(contract.address))
-                        assert contract.name == erc20.get_name()
-                        assert contract.symbol == erc20.get_symbol()
-                        assert contract.decimals == erc20.get_decimals()
-                    else:
-                        pass
+            await gather(*[self.__test_all_contract_info_valid(asset)])
+
+    async def __test_all_contract_info_valid(self, asset: Asset):
+        """Test the validity of the contract information.
+
+        Args:
+            asset: The asset information.
+        """
+        for contract in asset.contracts:
+            network = self.network_map.get(contract.network, None)
+            # Skip unknown asset
+            if asset.id == network.unknown_asset_id:
+                return
+            # Skip native coin
+            if contract.address == network.currency.address:
+                return
+            # Check contract validity
+            if node_url := self.rpc_map.get(network.id, None):
+                if network.engine.is_evm:
+                    erc20 = EthErc20Interface(node_url, str(contract.address))
+                    name, symbol, decimals = await gather(
+                        *[erc20.get_name(), erc20.get_symbol(), erc20.get_decimals()]
+                    )
+                    expected = deepcopy(contract)
+                    expected.name = name
+                    expected.symbol = symbol
+                    expected.decimals = decimals
+                    assert contract == expected
+                else:
+                    pass
 
     def test_all_id_exists_in_enum_info(self):
         """All asset information has an ID which is described in the enum
