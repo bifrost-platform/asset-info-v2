@@ -48,10 +48,14 @@ class TestValidityNetwork:
             asset = asset_map.get(network.currency.id, None)
             assert asset is not None
             contract = next(
-                (c for c in asset.contracts if c.network == network.id), None
+                (
+                    c
+                    for c in asset.contracts
+                    if c.network == network.id and c.address == network.currency.address
+                ),
+                None,
             )
             assert contract is not None
-            assert network.currency.address == contract.address
             assert network.currency.decimals == contract.decimals
             assert network.currency.symbol == contract.symbol
             assert network.currency.name == contract.name
