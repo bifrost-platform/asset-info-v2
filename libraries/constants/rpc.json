@@ -1,0 +1,94 @@
+[
+  {
+    "id": "evm-1",
+    "url": "https://public-rpc.thebifrost.io/main/eth"
+  },
+  {
+    "id": "evm-10",
+    "url": "https://public-rpc.thebifrost.io/main/op"
+  },
+  {
+    "id": "evm-1001",
+    "url": "https://public-rpc.thebifrost.io/test/klaytn"
+  },
+  {
+    "id": "evm-11155111",
+    "url": "https://public-rpc.thebifrost.io/test/eth"
+  },
+  {
+    "id": "evm-11155420",
+    "url": "https://public-rpc.thebifrost.io/test/op"
+  },
+  {
+    "id": "evm-137",
+    "url": "https://public-rpc.thebifrost.io/main/polygon"
+  },
+  {
+    "id": "evm-3068",
+    "url": "https://public-02.mainnet.bifrostnetwork.com/rpc"
+  },
+  {
+    "id": "evm-420",
+    "url": null
+  },
+  {
+    "id": "evm-42161",
+    "url": "https://public-rpc.thebifrost.io/main/arbitrum"
+  },
+  {
+    "id": "evm-421613",
+    "url": null
+  },
+  {
+    "id": "evm-421614",
+    "url": "https://public-rpc.thebifrost.io/test/arbitrum"
+  },
+  {
+    "id": "evm-43113",
+    "url": "https://public-rpc.thebifrost.io/test/avax"
+  },
+  {
+    "id": "evm-43114",
+    "url": "https://public-rpc.thebifrost.io/main/avax"
+  },
+  {
+    "id": "evm-49088",
+    "url": "https://public-02.testnet.bifrostnetwork.com/rpc"
+  },
+  {
+    "id": "evm-5",
+    "url": null
+  },
+  {
+    "id": "evm-56",
+    "url": "https://public-rpc.thebifrost.io/main/bsc"
+  },
+  {
+    "id": "evm-80001",
+    "url": null
+  },
+  {
+    "id": "evm-80002",
+    "url": "https://public-rpc.thebifrost.io/test/polygon"
+  },
+  {
+    "id": "evm-8217",
+    "url": "https://public-rpc.thebifrost.io/main/klaytn"
+  },
+  {
+    "id": "evm-8453",
+    "url": "https://public-rpc.thebifrost.io/main/base"
+  },
+  {
+    "id": "evm-84531",
+    "url": null
+  },
+  {
+    "id": "evm-84532",
+    "url": "https://public-rpc.thebifrost.io/test/base"
+  },
+  {
+    "id": "evm-97",
+    "url": "https://public-rpc.thebifrost.io/test/bsc"
+  }
+]

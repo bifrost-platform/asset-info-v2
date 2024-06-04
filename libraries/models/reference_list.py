@@ -1,3 +1,5 @@
+from json import loads
+from pathlib import Path
 from typing import Self
 
 from libraries.models.reference import Reference
@@ -17,3 +19,16 @@ class ReferenceList(ListModel[Reference]):
                     + f"""{fst.id}, before {snd.id}"""
                 )
         return self
+
+    @staticmethod
+    def get_ref_list(file_path: Path) -> Self:
+        """Gets the reference list from the given file path.
+
+        Args:
+            file_path: The file path of the reference list.
+
+        Returns:
+            The reference list.
+        """
+        with open(file_path, "r") as fp:
+            return ReferenceList.model_validate(loads(fp.read()))

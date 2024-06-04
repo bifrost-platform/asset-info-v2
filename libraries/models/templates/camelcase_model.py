@@ -10,7 +10,6 @@ class CamelCaseModel(BaseModel):
         extra="forbid",
         strict=True,
         str_strip_whitespace=True,
-        str_min_length=1,
         use_enum_values=True,
         validate_assignment=True,
     )
