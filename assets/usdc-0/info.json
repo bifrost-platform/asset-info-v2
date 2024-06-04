@@ -33,7 +33,7 @@
     {
       "address": "0x176efbA371f5f50BDC058e5B568F4fCd58d0Ddd4",
       "decimals": 6,
-      "name": "USD Coin",
+      "name": "USDC",
       "network": "evm-11155111",
       "symbol": "USDC",
       "tags": [

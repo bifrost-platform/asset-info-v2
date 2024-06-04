@@ -3,9 +3,9 @@ from typing import Tuple
 
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_info_list import EnumInfoList
+from libraries.models.protocol import Protocol
 from libraries.models.terminals.enum_type_id import EnumTypeId
 from libraries.models.terminals.enum_type_tag import EnumTypeTag
-from libraries.models.protocol import Protocol
 from tests.utils.checker import check_info_json_existence, check_images_validity
 from tests.utils.reader import read_models
 

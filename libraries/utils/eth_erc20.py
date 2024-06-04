@@ -3,7 +3,7 @@ from decimal import Decimal
 from pydantic import HttpUrl
 from web3 import Web3, HTTPProvider
 from web3.contract import Contract
-from web3.exceptions import BadFunctionCallOutput
+from web3.exceptions import Web3Exception
 
 from libraries.utils.file import PWD
 
@@ -25,7 +25,6 @@ class EthErc20Interface:
 
     def __init__(self, node_url: HttpUrl, address: str):
         self.node = Web3(HTTPProvider(node_url))
-        assert self.node.is_connected()
         with open(PWD.joinpath("libraries/constants/erc20.abi.json")) as fp:
             self.contract = self.node.eth.contract(
                 self.node.to_checksum_address(address), abi=fp.read()
@@ -40,7 +39,7 @@ class EthErc20Interface:
         method = self.contract.functions.name()
         try:
             return method.call()
-        except BadFunctionCallOutput:
+        except Web3Exception:
             result = self.node.eth.call(method.build_transaction())
             return result.decode("utf-8").replace("\x00", "")
 
@@ -53,7 +52,7 @@ class EthErc20Interface:
         method = self.contract.functions.symbol()
         try:
             return method.call()
-        except BadFunctionCallOutput:
+        except Web3Exception:
             result = self.node.eth.call(method.build_transaction())
             return result.decode("utf-8").replace("\x00", "")
 

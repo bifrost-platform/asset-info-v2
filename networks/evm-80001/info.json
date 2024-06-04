@@ -7,12 +7,7 @@
     "symbol": "MATIC"
   },
   "engine": "evm",
-  "explorers": [
-    {
-      "id": "etherscan",
-      "url": "https://mumbai.polygonscan.com"
-    }
-  ],
+  "explorers": [],
   "id": "evm-80001",
   "images": {
     "png128": true,

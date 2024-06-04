@@ -71,6 +71,17 @@
         "native-coin",
         "testnet"
       ]
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "MATIC",
+      "network": "evm-80002",
+      "symbol": "MATIC",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
     }
   ],
   "id": "matic-0",

@@ -7,16 +7,7 @@
     "symbol": "ETH"
   },
   "engine": "evm",
-  "explorers": [
-    {
-      "id": "blockscout",
-      "url": "https://base-goerli.blockscout.com"
-    },
-    {
-      "id": "etherscan",
-      "url": "https://goerli.basescan.org"
-    }
-  ],
+  "explorers": [],
   "id": "evm-84531",
   "images": {
     "png128": true,
