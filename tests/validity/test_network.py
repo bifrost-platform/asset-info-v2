@@ -1,24 +1,11 @@
-from asyncio import gather
 from pathlib import Path
-from typing import Tuple
-
-import pytest
-from pydantic import HttpUrl
-from web3 import Web3, HTTPProvider
 
 from libraries.models.asset import Asset
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_info_list import EnumInfoList
 from libraries.models.network import Network
-from libraries.models.reference_list import ReferenceList
 from libraries.models.terminals.enum_type_id import EnumTypeId
 from libraries.models.terminals.enum_type_tag import EnumTypeTag
-from libraries.models.terminals.id import Id
-from libraries.utils.file import PWD
-from tests.utils.checker import (
-    check_info_json_existence,
-    check_images_validity,
-)
 from tests.utils.reader import read_models
 
 
@@ -31,15 +18,13 @@ class TestValidityNetwork:
         network_id_list: List of network ID enum information.
         network_explorer_id_list: List of network explorer ID enum information.
         network_tag_list: List of network tag enum information.
-        rpc_map: Mapping of network ID to RPC URL.
     """
 
-    asset_list = list[Tuple[Asset, Path]]
-    network_list = list[Tuple[Network, Path]]
+    asset_list = list[tuple[Asset, Path]]
+    network_list = list[tuple[Network, Path]]
     network_id_list = list[EnumInfo]
     network_explorer_id_list = list[EnumInfo]
     network_tag_list = list[EnumInfo]
-    rpc_map: dict[Id, HttpUrl]
 
     def setup_class(self):
         """Set up the class before tests in this class."""
@@ -50,17 +35,6 @@ class TestValidityNetwork:
             EnumTypeId.network_explorer()
         )
         self.network_tag_list = EnumInfoList.get_info_list(EnumTypeTag.network())
-        self.rpc_map = {
-            rpc.id: rpc.url
-            for rpc in ReferenceList.get_ref_list(
-                PWD.joinpath("libraries/constants/rpc.json")
-            )
-            if rpc.url
-        }
-
-    def test_all_dir_has_info_json(self):
-        """All directories for network information have a `info.json` file."""
-        check_info_json_existence(Network)
 
     def test_currency_exists_in_asset_contract(self):
         """The Currency exists in asset contract and its information is match with it.
@@ -102,11 +76,6 @@ class TestValidityNetwork:
             # its description is the same as its name
             assert id_map.get(network.id) == network.name
 
-    def test_all_image_exists(self):
-        """All networks' images are valid."""
-        for network, file in self.network_list:
-            check_images_validity(network.images, file)
-
     def test_all_tags_exists_in_enum_info(self):
         """All tags in network information have a tag which is described
         in the enum information `enum/tags/network.json`."""
@@ -126,26 +95,3 @@ class TestValidityNetwork:
                     str(network.unknown_asset_id).removeprefix("unknown-")
                     in network.tags
                 )
-
-    @pytest.mark.asyncio
-    async def test_rpc_url_map(self):
-        """All networks have a valid RPC URL."""
-        await gather(
-            *[self.__test_rpc_url(network) for network, _ in self.network_list]
-        )
-
-    async def __test_rpc_url(self, network: Network):
-        """Test the RPC URL of the network.
-
-        Args:
-            network: The network information.
-        """
-        if node_url := self.rpc_map.get(network.id, None):
-            if network.engine.is_evm:
-                node = Web3(HTTPProvider(node_url))
-                assert node.is_connected()
-                assert node.eth.chain_id == int(str(network.id).removeprefix("evm-"))
-            else:
-                pass
-        else:
-            pass

@@ -1,19 +1,17 @@
 from pathlib import Path
-from typing import Tuple
 
 from libraries.models.enum_info import EnumInfo
 from libraries.models.enum_info_list import EnumInfoList
 from libraries.models.protocol import Protocol
 from libraries.models.terminals.enum_type_id import EnumTypeId
 from libraries.models.terminals.enum_type_tag import EnumTypeTag
-from tests.utils.checker import check_info_json_existence, check_images_validity
 from tests.utils.reader import read_models
 
 
 class TestValidityProtocol:
     """Tests the validity of protocol information."""
 
-    protocol_list: list[Tuple[Protocol, Path]]
+    protocol_list: list[tuple[Protocol, Path]]
     network_id_list = list[EnumInfo]
     protocol_id_list = list[EnumInfo]
     protocol_tag_list = list[EnumInfo]
@@ -25,10 +23,6 @@ class TestValidityProtocol:
         self.protocol_id_list = EnumInfoList.get_info_list(EnumTypeId.protocol())
         self.protocol_tag_list = EnumInfoList.get_info_list(EnumTypeTag.protocol())
 
-    def test_all_dir_has_info_json(self):
-        """All directories for protocol information have a `info.json` file."""
-        check_info_json_existence(Protocol)
-
     def test_all_id_exists_in_enum_info(self):
         """All ID in protocol information has an ID which is described
         in the enum information `enum/ids/protocol.json`."""
@@ -37,11 +31,6 @@ class TestValidityProtocol:
             assert protocol.id in id_map
             # its description is the same as its name
             assert id_map.get(protocol.id) == protocol.name
-
-    def test_all_image_exists(self):
-        """All protocols' images are valid."""
-        for protocol, file in self.protocol_list:
-            check_images_validity(protocol.images, file)
 
     def test_all_networks_exists_in_enum_info(self):
         """All networks in protocol information have a network which is described

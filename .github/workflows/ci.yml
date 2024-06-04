@@ -17,8 +17,18 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Set up requirements for simple test
+        if: github.event_name == 'pull_request'
+        run: pip install -e ".[test_simple]"
+
+      - name: Test without rpc using test
+        if: github.event_name == 'pull_request'
+        run: pytest -l --skip-rpc-using-test --skip-image-test --ignore=tests/additional/test_file.py
+
       - name: Set up requirements
+        if: github.event_name == 'push'
         run: pip install -e ".[test]"
 
-      - name: Test
+      - name: Test with rpc using test
+        if: github.event_name == 'push'
         run: pytest -l

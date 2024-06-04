@@ -29,6 +29,7 @@ dependencies = { file = ["requirements/essential.txt"] }
 all = { file = ["requirements/essential.txt", "requirements/dev.txt", "requirements/test.txt"] }
 dev = { file = ["requirements/essential.txt", "requirements/dev.txt"] }
 test = { file = ["requirements/essential.txt", "requirements/dev.txt", "requirements/test.txt"] }
+test_simple = { file = ["requirements/essential.txt", "requirements/test.txt"] }
 
 [tool.setuptools.packages.find]
 where = ["."]
