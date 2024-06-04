@@ -2,9 +2,9 @@ from pathlib import Path
 from typing import Tuple
 
 from libraries.models.asset import Asset
-from libraries.models.enum_id_type import EnumIdType
 from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_tag_type import EnumTagType
+from libraries.models.enum_type_id import EnumTypeId
+from libraries.models.enum_type_tag import EnumTypeTag
 from libraries.models.network import Network
 from tests.utils.checker import (
     check_info_json_existence,
@@ -34,9 +34,9 @@ class TestValidityNetwork:
         """Set up the class before tests in this class."""
         self.asset_list = read_models(Asset)
         self.network_list = read_models(Network)
-        self.network_id_list = EnumIdType.network().get_enum_info()
-        self.network_explorer_id_list = EnumIdType.network_explorer().get_enum_info()
-        self.network_tag_list = EnumTagType.network().get_enum_info()
+        self.network_id_list = EnumTypeId.network().get_enum_info()
+        self.network_explorer_id_list = EnumTypeId.network_explorer().get_enum_info()
+        self.network_tag_list = EnumTypeTag.network().get_enum_info()
 
     def test_all_dir_has_info_json(self):
         """All directories for network information have a `info.json` file."""
@@ -63,7 +63,7 @@ class TestValidityNetwork:
             assert network.currency.name == contract.name
             if not network.network.is_unknown:
                 assert "native-coin" in contract.tags
-                assert network.network in contract.tags
+                assert network.network.root in contract.tags
 
     def test_all_explorer_id_exists_in_enum_info(self):
         """All explorer ID in network information has an ID which is described

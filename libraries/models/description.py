@@ -1,21 +1,13 @@
-from typing import Annotated, Any
+from re import search
+from typing import Self
 
-from pydantic import StringConstraints, RootModel
-
-DESCRIPTION_PATTERN: str = r".+[^.]$"
-"""Regex pattern for a description."""
+from libraries.models.templates.str_model import StrModel
 
 
-class Description(
-    RootModel[Annotated[str, StringConstraints(pattern=DESCRIPTION_PATTERN)]]
-):
+class Description(StrModel):
     """A constrained `str` for the description of `EnumInfo` (The description must not end with a period.)"""
 
-    def __eq__(self, other: Any) -> bool:
-        match other:
-            case Description():
-                return self.root == other.root
-            case str():
-                return self.root == other
-            case _:
-                return False
+    def validate_str(self) -> Self:
+        if not search(r".+[^.]$", self.root):
+            raise ValueError(f"Invalid description: {self.root}")
+        return self

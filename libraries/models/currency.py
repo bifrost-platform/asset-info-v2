@@ -2,7 +2,7 @@ from pydantic import NonNegativeInt
 
 from libraries.models.address import Address
 from libraries.models.id import Id
-from libraries.utils.model import CamelCaseModel
+from libraries.models.templates.camelcase_model import CamelCaseModel
 
 
 class Currency(CamelCaseModel):
