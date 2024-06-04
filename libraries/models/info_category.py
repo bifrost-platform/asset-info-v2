@@ -1,13 +1,14 @@
 from enum import StrEnum
 from pathlib import Path
-from typing import Type
+from typing import Type, Self
 
 from libraries.models.asset import Asset as AssetModel
-from libraries.models.enum_id_type import EnumIdType
+from libraries.models.enum_type_id import EnumTypeId
 from libraries.models.network import Network as NetworkModel
 from libraries.models.protocol import Protocol as ProtocolModel
+from libraries.models.templates.camelcase_model import CamelCaseModel
+from libraries.models.templates.enum_model import EnumModel
 from libraries.utils.file import PWD, get_model_info, search
-from libraries.utils.model import CamelCaseModel, EnumModel
 
 
 class _InfoCategoryEnum(StrEnum):
@@ -72,11 +73,11 @@ class InfoCategory(EnumModel[_InfoCategoryEnum]):
                 raise ValueError(f"Unknown information category: {self}")
 
     @classmethod
-    def ascending_list(cls) -> list["EnumModel"]:
+    def ascending_list(cls) -> list[Self]:
         return [InfoCategory(info_category) for info_category in _InfoCategoryEnum]
 
     @staticmethod
-    def asset() -> "InfoCategory":
+    def asset() -> Self:
         """Gets the information category for asset.
 
         Returns:
@@ -85,7 +86,7 @@ class InfoCategory(EnumModel[_InfoCategoryEnum]):
         return InfoCategory(_InfoCategoryEnum.ASSET)
 
     @staticmethod
-    def network() -> "InfoCategory":
+    def network() -> Self:
         """Gets the information category for network.
 
         Returns:
@@ -94,7 +95,7 @@ class InfoCategory(EnumModel[_InfoCategoryEnum]):
         return InfoCategory(_InfoCategoryEnum.NETWORK)
 
     @staticmethod
-    def protocol() -> "InfoCategory":
+    def protocol() -> Self:
         """Gets the information category for protocol.
 
         Returns:
@@ -103,7 +104,7 @@ class InfoCategory(EnumModel[_InfoCategoryEnum]):
         return InfoCategory(_InfoCategoryEnum.PROTOCOL)
 
     @staticmethod
-    def get_info_category(model_type: Type[CamelCaseModel]) -> "InfoCategory":
+    def get_info_category(model_type: Type[CamelCaseModel]) -> Self:
         if model_type == AssetModel:
             return InfoCategory.asset()
         elif model_type == NetworkModel:
@@ -113,7 +114,7 @@ class InfoCategory(EnumModel[_InfoCategoryEnum]):
         else:
             raise ValueError(f"Unknown model type: {model_type}")
 
-    def get_enum_type(self) -> EnumIdType:
+    def get_enum_type(self) -> EnumTypeId:
         """Gets the enum type from the information category.
 
         Returns:
@@ -124,11 +125,11 @@ class InfoCategory(EnumModel[_InfoCategoryEnum]):
         """
         match self.root:
             case _InfoCategoryEnum.ASSET:
-                return EnumIdType.asset()
+                return EnumTypeId.asset()
             case _InfoCategoryEnum.NETWORK:
-                return EnumIdType.network()
+                return EnumTypeId.network()
             case _InfoCategoryEnum.PROTOCOL:
-                return EnumIdType.protocol()
+                return EnumTypeId.protocol()
             case _:
                 raise ValueError(f"Unknown information category: {self}")
 

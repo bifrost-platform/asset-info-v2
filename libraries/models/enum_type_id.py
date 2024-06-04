@@ -1,10 +1,10 @@
 from enum import StrEnum
+from typing import Self
 
-from libraries.models.enum_info import EnumTypeModel
-from libraries.utils.model import EnumModel
+from libraries.models.templates.enum_type_model import EnumTypeModel
 
 
-class _EnumIdTypeEnum(StrEnum):
+class _EnumTypeIdEnum(StrEnum):
     """Enumerated values for the different types of enumerated ID information.
 
     Attributes:
@@ -22,7 +22,7 @@ class _EnumIdTypeEnum(StrEnum):
     PROTOCOL: str = "protocol"
 
 
-class EnumIdType(EnumTypeModel[_EnumIdTypeEnum]):
+class EnumTypeId(EnumTypeModel[_EnumTypeIdEnum]):
     """An alias of `_EnumIdTypeEnum`."""
 
     @property
@@ -30,50 +30,50 @@ class EnumIdType(EnumTypeModel[_EnumIdTypeEnum]):
         return "ids"
 
     @classmethod
-    def ascending_list(cls) -> list["EnumModel"]:
-        return [EnumIdType(enum_id_type) for enum_id_type in _EnumIdTypeEnum]
+    def ascending_list(cls) -> list[Self]:
+        return [EnumTypeId(enum_id_type) for enum_id_type in _EnumTypeIdEnum]
 
     @staticmethod
-    def asset() -> "EnumIdType":
+    def asset() -> Self:
         """Gets the enum type for asset.
 
         Returns:
             The enum type for asset.
         """
-        return EnumIdType(_EnumIdTypeEnum.ASSET)
+        return EnumTypeId(_EnumTypeIdEnum.ASSET)
 
     @staticmethod
-    def asset_reference() -> "EnumIdType":
+    def asset_reference() -> Self:
         """Gets the enum type for reference in asset.
 
         Returns:
             The enum type for reference in asset.
         """
-        return EnumIdType(_EnumIdTypeEnum.ASSET_REFERENCE)
+        return EnumTypeId(_EnumTypeIdEnum.ASSET_REFERENCE)
 
     @staticmethod
-    def network() -> "EnumIdType":
+    def network() -> Self:
         """Gets the enum type for network.
 
         Returns:
             The enum type for network.
         """
-        return EnumIdType(_EnumIdTypeEnum.NETWORK)
+        return EnumTypeId(_EnumTypeIdEnum.NETWORK)
 
     @staticmethod
-    def network_explorer() -> "EnumIdType":
+    def network_explorer() -> Self:
         """Gets the enum type for explorer in network.
 
         Returns:
             The enum type for explorer in network.
         """
-        return EnumIdType(_EnumIdTypeEnum.NETWORK_EXPLORER)
+        return EnumTypeId(_EnumTypeIdEnum.NETWORK_EXPLORER)
 
     @staticmethod
-    def protocol() -> "EnumIdType":
+    def protocol() -> Self:
         """Gets the enum type for protocol.
 
         Returns:
             The enum type for protocol.
         """
-        return EnumIdType(_EnumIdTypeEnum.PROTOCOL)
+        return EnumTypeId(_EnumTypeIdEnum.PROTOCOL)

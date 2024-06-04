@@ -1,7 +1,8 @@
 from enum import StrEnum
 from pathlib import Path
+from typing import Self
 
-from libraries.utils.model import EnumModel
+from libraries.models.templates.enum_model import EnumModel
 
 
 class _ImageTypeEnum(StrEnum):
@@ -163,7 +164,7 @@ class ImageType(EnumModel[_ImageTypeEnum]):
                 raise ValueError(f"Unknown image type: {self}")
 
     @staticmethod
-    def png128() -> "ImageType":
+    def png128() -> Self:
         """Gets the enum type for 128x128 PNG image.
 
         Returns:
@@ -172,7 +173,7 @@ class ImageType(EnumModel[_ImageTypeEnum]):
         return ImageType(_ImageTypeEnum.PNG128)
 
     @staticmethod
-    def png256() -> "ImageType":
+    def png256() -> Self:
         """Gets the enum type for 256x256 PNG image.
 
         Returns:
@@ -181,7 +182,7 @@ class ImageType(EnumModel[_ImageTypeEnum]):
         return ImageType(_ImageTypeEnum.PNG256)
 
     @staticmethod
-    def png32() -> "ImageType":
+    def png32() -> Self:
         """Gets the enum type for 32x32 PNG image.
 
         Returns:
@@ -190,7 +191,7 @@ class ImageType(EnumModel[_ImageTypeEnum]):
         return ImageType(_ImageTypeEnum.PNG32)
 
     @staticmethod
-    def png64() -> "ImageType":
+    def png64() -> Self:
         """Gets the enum type for 64x64 PNG image.
 
         Returns:
@@ -199,7 +200,7 @@ class ImageType(EnumModel[_ImageTypeEnum]):
         return ImageType(_ImageTypeEnum.PNG64)
 
     @staticmethod
-    def svg() -> "ImageType":
+    def svg() -> Self:
         """Gets the enum type for SVG image.
 
         Returns:
@@ -208,11 +209,11 @@ class ImageType(EnumModel[_ImageTypeEnum]):
         return ImageType(_ImageTypeEnum.SVG)
 
     @classmethod
-    def ascending_list(cls) -> list["ImageType"]:
+    def ascending_list(cls) -> list[Self]:
         return [ImageType(image_type) for image_type in _ImageTypeEnum]
 
     @staticmethod
-    def get_image_type_from_path(image_path: Path) -> "ImageType":
+    def get_image_type_from_path(image_path: Path) -> Self:
         """Gets the image type from the image path.
 
         Args:
@@ -239,7 +240,7 @@ class ImageType(EnumModel[_ImageTypeEnum]):
                 raise ValueError(f"Unknown image path: {image_path}")
 
     @staticmethod
-    def get_png_image_type(size: int) -> "ImageType":
+    def get_png_image_type(size: int) -> Self:
         """Gets the PNG image type from the size.
 
         Args:

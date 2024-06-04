@@ -1,6 +1,7 @@
 from enum import StrEnum
+from typing import Self
 
-from libraries.utils.model import EnumModel
+from libraries.models.templates.enum_model import EnumModel
 
 
 class _NetworkTypeEnum(StrEnum):
@@ -48,5 +49,5 @@ class NetworkType(EnumModel[_NetworkTypeEnum]):
         return self.root == _NetworkTypeEnum.UNKNOWN
 
     @classmethod
-    def ascending_list(cls) -> list["EnumModel"]:
+    def ascending_list(cls) -> list[Self]:
         return [NetworkType(network_type) for network_type in _NetworkTypeEnum]

@@ -1,10 +1,10 @@
 from enum import StrEnum
+from typing import Self
 
-from libraries.models.enum_info import EnumTypeModel
-from libraries.utils.model import EnumModel
+from libraries.models.templates.enum_type_model import EnumTypeModel
 
 
-class _EnumTagTypeEnum(StrEnum):
+class _EnumTypeTagEnum(StrEnum):
     """Enumerated values for the different types of enumerated tag information.
 
     Attributes:
@@ -20,7 +20,7 @@ class _EnumTagTypeEnum(StrEnum):
     PROTOCOL: str = "protocol"
 
 
-class EnumTagType(EnumTypeModel[_EnumTagTypeEnum]):
+class EnumTypeTag(EnumTypeModel[_EnumTypeTagEnum]):
     """An alias of `_EnumTagTypeEnum`."""
 
     @property
@@ -28,41 +28,41 @@ class EnumTagType(EnumTypeModel[_EnumTagTypeEnum]):
         return "tags"
 
     @classmethod
-    def ascending_list(cls) -> list["EnumModel"]:
-        return [EnumTagType(enum_tag_type) for enum_tag_type in _EnumTagTypeEnum]
+    def ascending_list(cls) -> list[Self]:
+        return [EnumTypeTag(enum_tag_type) for enum_tag_type in _EnumTypeTagEnum]
 
     @staticmethod
-    def asset() -> "EnumTagType":
+    def asset() -> Self:
         """Gets the enum type for asset.
 
         Returns:
             The enum type for asset.
         """
-        return EnumTagType(_EnumTagTypeEnum.ASSET)
+        return EnumTypeTag(_EnumTypeTagEnum.ASSET)
 
     @staticmethod
-    def asset_contracts() -> "EnumTagType":
+    def asset_contracts() -> Self:
         """Gets the enum type for contracts in asset.
 
         Returns:
             The enum type for contracts in asset.
         """
-        return EnumTagType(_EnumTagTypeEnum.ASSET_CONTRACTS)
+        return EnumTypeTag(_EnumTypeTagEnum.ASSET_CONTRACTS)
 
     @staticmethod
-    def network() -> "EnumTagType":
+    def network() -> Self:
         """Gets the enum type for network.
 
         Returns:
             The enum type for network.
         """
-        return EnumTagType(_EnumTagTypeEnum.NETWORK)
+        return EnumTypeTag(_EnumTypeTagEnum.NETWORK)
 
     @staticmethod
-    def protocol() -> "EnumTagType":
+    def protocol() -> Self:
         """Gets the enum type for protocol.
 
         Returns:
             The enum type for protocol.
         """
-        return EnumTagType(_EnumTagTypeEnum.PROTOCOL)
+        return EnumTypeTag(_EnumTypeTagEnum.PROTOCOL)
