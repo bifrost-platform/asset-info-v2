@@ -1,7 +1,5 @@
 import os
-from json import loads
 from pathlib import Path
-from typing import Type, Tuple
 
 from libraries.utils.string import is_regex_in
 
@@ -29,20 +27,3 @@ def search(base_dir: Path, pattern: str) -> list[Path]:
             ]
         )
     return searched_files
-
-
-def get_model_info[T](model_type: Type[T], file_path: Path) -> Tuple[T, Path]:
-    """Gets the model information from the given model type and file path.
-
-    Args:
-        model_type: The type of the model.
-        file_path: The path of the model.
-
-    Returns:
-        The model information.
-    """
-    with open(file_path, "r") as fp:
-        return (
-            model_type.model_validate(loads(fp.read())),
-            file_path,
-        )

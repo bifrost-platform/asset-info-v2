@@ -1,6 +1,6 @@
 from abc import ABCMeta, abstractmethod
 from copy import deepcopy
-from json import dump
+from json import dump, dumps
 from os import mkdir
 from os.path import exists
 from pathlib import Path
@@ -17,15 +17,15 @@ from requests import get
 from web3 import Web3, HTTPProvider
 from yarl import URL
 
-from libraries.models.address import Address
 from libraries.models.asset import Asset
 from libraries.models.contract import Contract
-from libraries.models.id import Id
 from libraries.models.image_info import ImageInfo
-from libraries.models.image_type import ImageType
-from libraries.models.info_category import InfoCategory
 from libraries.models.network import Network
 from libraries.models.reference import Reference
+from libraries.models.terminals.address import Address
+from libraries.models.terminals.id import Id
+from libraries.models.terminals.image_type import ImageType
+from libraries.models.terminals.tag import Tag
 from libraries.preprocess.image import downscale_png, png_to_square
 from libraries.preprocess.runner import run_enum_preprocess
 from libraries.puller.getters.http_url_getter import get_http_url
@@ -120,7 +120,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         printf(
             HTML(f"<b>  Source: <skyblue>{self._get_token_url(address)}</skyblue></b>")
         )
-        info = self.network_assets.get(address.lower(), None)
+        info = self.network_assets.get(address, None)
         if info is not None and not confirm("Would you like to renew the information?"):
             return None
         gen_info = (
@@ -203,7 +203,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             web3 = Web3(HTTPProvider(str(url)))
             if (
                 not web3.is_connected()
-                or str(web3.eth.chain_id) != network.id.split("-")[-1]
+                or str(web3.eth.chain_id) != str(network.id).split("-")[-1]
             ):
                 printf(HTML(f"<red>Invalid node URL: {url}</red>"))
                 raise ValueError("Invalid node URL")
@@ -220,16 +220,14 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             The first element is the map of all asset information.
             The second element is the map of asset addresses and asset information.
         """
-        all_assets = {
-            asset.id: asset for asset, _ in InfoCategory.asset().get_model_info_list()
-        }
-        network_assets = {}
+        all_assets = {asset.id: asset for asset, _ in Asset.get_info_list()}
+        network_assets: dict[Address, Asset] = {}
         for asset in all_assets.values():
             for contract in filter(lambda x: x.network == network.id, asset.contracts):
-                if contract.address.lower() in network_assets:
+                if contract.address in network_assets:
                     raise ValueError(f"Duplicate address found: {contract.address}")
                 else:
-                    network_assets[contract.address.lower()] = asset
+                    network_assets[contract.address] = asset
         return all_assets, network_assets
 
     def __get_target_token_list(self) -> list[Address]:
@@ -241,7 +239,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         top_token_list = sorted(self._get_top_token_list(), key=lambda x: x[0])
         target_token_list = list()
         for _, token in top_token_list:
-            if asset := self.network_assets.get(token.lower(), None):
+            if asset := self.network_assets.get(token, None):
                 if self.flag_image_pull and not asset.images.svg:
                     target_token_list.append(token)
             else:
@@ -263,7 +261,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             )
             return contract.address, contract.name, contract.symbol, contract.decimals
         assert self.network.engine.is_evm
-        it = EthErc20Interface(self.node_url, address)
+        it = EthErc20Interface(self.node_url, str(address))
         return (
             Address(it.contract.address),
             it.get_name(),
@@ -325,7 +323,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             name=name,
             network=self.network.id,
             symbol=symbol,
-            tags=[self.network.network],
+            tags=[Tag(str(self.network.network))],
         )
 
     def __pull_asset_information(self, contract: Contract, asset_id: Id) -> Asset:
@@ -369,8 +367,8 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             f"Enter the asset ID on https://{ref_base_url.host} if exists"
         )
         if asset_id != "":
-            url = ref_base_url / asset_id.root
-            response = get(str(url))
+            url = ref_base_url / str(asset_id)
+            response = get(str(url), headers={"User-Agent": "Mozilla/5.0"})
             if response.status_code == 200:
                 return Reference(id=ref_id, url=HttpUrl(str(url)))
         return None
@@ -397,7 +395,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         if (image := self._download_token_image(token_image_url)) is None:
             return None
         # Save the image
-        image_path = Path(mkdtemp(prefix=info.id.root, dir=self.tmp_dir))
+        image_path = Path(mkdtemp(prefix=str(info.id), dir=self.tmp_dir))
         with NamedTemporaryFile(
             mode="w+b", dir=image_path, suffix="_origin.png"
         ) as fp_origin:
@@ -435,18 +433,18 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         new_info = deepcopy(info)
         for image_type in image_info[1] if image_info else []:
             new_info.images.set(image_type)
-        printf(HTML(f"<grey>{new_info.model_dump(mode='json')}</grey>"))
+        printf(HTML(f"<grey>{dumps(new_info.model_dump(mode='json'))}</grey>"))
         if confirm("Would you like to save this asset information?"):
             # Update all_assets and network_assets
             self.all_assets.update({new_info.id: new_info})
             for contract in new_info.contracts:
-                if contract.address.lower() in self.network_assets:
-                    self.network_assets.update({contract.address.lower(): new_info})
+                if contract.address in self.network_assets:
+                    self.network_assets.update({contract.address: new_info})
             # Get the path of the asset information
             path = (
-                InfoCategory.get_info_category(Asset)
+                Asset.get_info_category()
                 .get_model_dir_path()
-                .joinpath(new_info.id.root)
+                .joinpath(str(new_info.id))
             )
             if not exists(path):
                 mkdir(path)

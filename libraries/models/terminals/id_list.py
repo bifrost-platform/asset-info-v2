@@ -1,6 +1,6 @@
 from typing import Self
 
-from libraries.models.id import Id
+from libraries.models.terminals.id import Id
 from libraries.models.templates.list_model import ListModel
 
 

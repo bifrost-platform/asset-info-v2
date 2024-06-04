@@ -1,5 +1,7 @@
+from json import loads
 from typing import Self
 
+from libraries.models.abstractions.enum_type_model import EnumTypeModel
 from libraries.models.enum_info import EnumInfo
 from libraries.models.templates.list_model import ListModel
 
@@ -16,3 +18,16 @@ class EnumInfoList(ListModel[EnumInfo]):
                     + f"""'{self.root[fst].value}', before '{self.root[snd].value}'"""
                 )
         return self
+
+    @staticmethod
+    def get_info_list(enum_type: EnumTypeModel) -> Self:
+        """Gets the enum information list from the given enum type.
+
+        Args:
+            enum_type: The enum type model.
+
+        Returns:
+            The enum information list.
+        """
+        with open(enum_type.get_enum_path(), "r") as fp:
+            return EnumInfoList.model_validate(loads(fp.read()))

@@ -23,11 +23,14 @@ class ListModel[T](
 ):
     """A constrained `list` of T."""
 
+    def __getitem__(self, key: int) -> T:
+        return self.root[key]
+
     def __iter__(self) -> Iterator[T]:
         return iter(self.root)
 
-    def __getitem__(self, key: int) -> T:
-        return self.root[key]
+    def __len__(self) -> int:
+        return len(self.root)
 
     @abstractmethod
     def validate_items(self) -> list[T]:

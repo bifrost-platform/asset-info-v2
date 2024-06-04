@@ -56,6 +56,9 @@ class StrModel(
     def __hash__(self) -> int:
         return hash(self.root)
 
+    def __str__(self) -> str:
+        return self.root
+
     @abstractmethod
     def validate_str(self) -> str:
         """Validate the string.

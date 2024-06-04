@@ -6,7 +6,7 @@ from prompt_toolkit import (
 )
 from prompt_toolkit.shortcuts import clear
 
-from libraries.models.id import Id
+from libraries.models.terminals.id import Id
 from libraries.puller.getters.explorer_getter import get_explorer_id
 from libraries.puller.getters.network_getter import get_network
 from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAbstracted

@@ -1,6 +1,7 @@
 # Models.Templates
 
 This library contains templates for creating new models.
+The modules on this library are dependent on the only [`pydantic`](https://docs.pydantic.dev/) module.
 
 ## Table of Contents
 
@@ -9,7 +10,6 @@ This library contains templates for creating new models.
     - [List of Templates](#list-of-templates)
         - [Camelcase Model](#camelcase-model)
         - [Enum Model](#enum-model)
-        - [Enum Type Model](#enum-type-model)
         - [List Model](#list-model)
         - [String Model](#string-model)
 
@@ -69,20 +69,6 @@ another_a = MyEnumModel("a")
 print(a == another_a)
 # True
 ```
-
-### [Enum Type Model](./enum_type_model.py)
-
-Caution: This template is dependent on the below modules:
-
-- [`libraries.models.enum_info_list`](../enum_info_list.py)
-- [`libraries.models.templates.enum_model`](./enum_model.py)
-- [`libraries.utils.file`](../../utils/file.py)
-
-The `EnumTypeModel` is a template for creating new enum type models.
-It is a subclass of [`EnumModel`](#enum-model) and provides custom validation and getters for the path to the enum
-files and the enum info list.
-
-See the [`EnumTypeId`](../enum_type_id.py) and [`EnumTypeTag`](../enum_type_tag.py) for examples.
 
 ### [List Model](./list_model.py)
 
