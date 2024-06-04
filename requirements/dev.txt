@@ -1,5 +1,4 @@
 # Specifies the required packages for developing the project.
--r essential.txt
 CairoSVG==2.7.1
 bs4==0.0.2
 pillow==10.2.0

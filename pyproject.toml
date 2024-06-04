@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "asset-info-v2"
-authors = [{ "name" = "Backend Team of Bifrost", email = "contact@pi-lab.io" }]
+authors = [{ name = "Backend Team of Bifrost", email = "contact@pi-lab.io" }]
 description = "Information about asset ver.2"
 readme = "README.md"
 keywords = ["asset", "blockchain"]
@@ -15,7 +15,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 requires-python = ">=3.12"
-dynamic = ["version", "dependencies"]
+dynamic = ["version", "dependencies", "optional-dependencies"]
 
 [project.urls]
 Documentation = "https://github.com/bifrost-platform/asset-info-v2"
@@ -24,6 +24,11 @@ Source = "https://github.com/bifrost-platform/asset-info-v2"
 [tool.setuptools.dynamic]
 version = { file = ["VERSION"] }
 dependencies = { file = ["requirements/essential.txt"] }
+
+[tool.setuptools.dynamic.optional-dependencies]
+all = { file = ["requirements/essential.txt", "requirements/dev.txt", "requirements/test.txt"] }
+dev = { file = ["requirements/essential.txt", "requirements/dev.txt"] }
+test = { file = ["requirements/essential.txt", "requirements/dev.txt", "requirements/test.txt"] }
 
 [tool.setuptools.packages.find]
 where = ["."]

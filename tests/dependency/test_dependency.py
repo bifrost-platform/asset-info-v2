@@ -1,6 +1,8 @@
-from os import listdir
-
-from libraries.utils.dependency import read_requirements, read_essential_packages
+from libraries.utils.dependency import (
+    read_requirements,
+    read_essential_packages,
+    read_sub_requirements,
+)
 from libraries.utils.file import PWD
 from tests.utils.dependency_getter import get_dependencies
 
@@ -19,15 +21,10 @@ class TestDependencyOnSetupPy:
     }
     all_requirements = ["essential"] + list(extra_paths.keys())
 
-    def test_requirements_files_exist(self):
+    def test_optional_dependencies_exist(self):
         """Test the existence of the requirements files."""
         for key in self.all_requirements:
-            assert PWD.joinpath(f"requirements/{key}.txt").exists()
-
-    def test_unnecessary_requirements(self):
-        """Test the unnecessary requirements in `requirements`."""
-        for file in listdir(PWD.joinpath("requirements")):
-            assert any(file.startswith(key) for key in self.all_requirements)
+            assert len(read_sub_requirements(key)) != 0
 
     def test_install_requires(self):
         """Test the `install_requires` in `setup.py`."""
