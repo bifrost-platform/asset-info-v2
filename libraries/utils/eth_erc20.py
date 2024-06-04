@@ -5,7 +5,6 @@ from web3 import Web3, HTTPProvider
 from web3.contract import Contract
 from web3.exceptions import BadFunctionCallOutput
 
-from libraries.models.address import Address
 from libraries.utils.file import PWD
 
 
@@ -24,12 +23,12 @@ class EthErc20Interface:
     node: Web3
     contract: Contract
 
-    def __init__(self, node_url: HttpUrl, address: Address):
+    def __init__(self, node_url: HttpUrl, address: str):
         self.node = Web3(HTTPProvider(node_url))
         assert self.node.is_connected()
         with open(PWD.joinpath("libraries/constants/erc20.abi.json")) as fp:
             self.contract = self.node.eth.contract(
-                self.node.to_checksum_address(address.root), abi=fp.read()
+                self.node.to_checksum_address(address), abi=fp.read()
             )
 
     def get_name(self) -> str:
@@ -82,7 +81,7 @@ class EthErc20Interface:
         """
         return self.__convert_raw_to_decimal(self.get_total_supply_raw())
 
-    def get_balance_raw(self, address: Address) -> int:
+    def get_balance_raw(self, address: str) -> int:
         """Get the current token balance of the account in raw format.
 
         Args:
@@ -93,7 +92,7 @@ class EthErc20Interface:
         """
         return self.contract.functions.balanceOf(address).call()
 
-    def get_balance(self, address: Address) -> Decimal:
+    def get_balance(self, address: str) -> Decimal:
         """Get the current token balance of the account.
 
         Args:
@@ -104,7 +103,7 @@ class EthErc20Interface:
         """
         return self.__convert_raw_to_decimal(self.get_balance_raw(address))
 
-    def get_allowance_raw(self, owner: Address, spender: Address) -> int:
+    def get_allowance_raw(self, owner: str, spender: str) -> int:
         """Get the current allowance of the owner to the spender in raw format.
 
         Args:
@@ -116,7 +115,7 @@ class EthErc20Interface:
         """
         return self.contract.functions.allowance(owner, spender).call()
 
-    def get_allowance(self, owner: Address, spender: Address) -> Decimal:
+    def get_allowance(self, owner: str, spender: str) -> Decimal:
         """Get the current allowance of the owner to the spender.
 
         Args:

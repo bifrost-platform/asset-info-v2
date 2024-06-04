@@ -1,7 +1,7 @@
 from enum import StrEnum
 from typing import Self
 
-from libraries.models.templates.enum_type_model import EnumTypeModel
+from libraries.models.abstractions.enum_type_model import EnumTypeModel
 
 
 class _EnumTypeTagEnum(StrEnum):

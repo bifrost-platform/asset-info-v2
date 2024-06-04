@@ -1,14 +1,13 @@
+from libraries.models.abstractions.info_model import InfoModel
 from libraries.models.currency import Currency
-from libraries.models.engine import Engine
-from libraries.models.id import Id
-from libraries.models.image_info import ImageInfo
-from libraries.models.network_type import NetworkType
 from libraries.models.reference_list import ReferenceList
-from libraries.models.tag_list import TagList
-from libraries.models.templates.camelcase_model import CamelCaseModel
+from libraries.models.terminals.engine import Engine
+from libraries.models.terminals.id import Id
+from libraries.models.terminals.info_category import InfoCategory
+from libraries.models.terminals.network_type import NetworkType
 
 
-class Network(CamelCaseModel):
+class Network(InfoModel):
     """The base model of information about each blockchain network.
 
     Attributes:
@@ -26,9 +25,9 @@ class Network(CamelCaseModel):
     currency: Currency
     engine: Engine
     explorers: ReferenceList
-    id: Id
-    images: ImageInfo
-    name: str
     network: NetworkType
-    tags: TagList
     unknown_asset_id: Id
+
+    @staticmethod
+    def get_info_category() -> InfoCategory:
+        return InfoCategory.network()

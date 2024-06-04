@@ -4,7 +4,7 @@ from pathlib import Path
 import cairosvg
 from PIL import Image
 
-from libraries.models.image_type import ImageType
+from libraries.models.terminals.image_type import ImageType
 from libraries.utils.file import search
 
 PNG_SIZES: list[ImageType] = [typ for typ in ImageType.descending_list() if typ.is_png]

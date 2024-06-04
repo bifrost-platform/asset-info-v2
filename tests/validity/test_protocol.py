@@ -2,8 +2,9 @@ from pathlib import Path
 from typing import Tuple
 
 from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_type_id import EnumTypeId
-from libraries.models.enum_type_tag import EnumTypeTag
+from libraries.models.enum_info_list import EnumInfoList
+from libraries.models.terminals.enum_type_id import EnumTypeId
+from libraries.models.terminals.enum_type_tag import EnumTypeTag
 from libraries.models.protocol import Protocol
 from tests.utils.checker import check_info_json_existence, check_images_validity
 from tests.utils.reader import read_models
@@ -20,9 +21,9 @@ class TestValidityProtocol:
     def setup_class(self):
         """Set up the class before tests in this class."""
         self.protocol_list = read_models(Protocol)
-        self.network_id_list = EnumTypeId.network().get_enum_info()
-        self.protocol_id_list = EnumTypeId.protocol().get_enum_info()
-        self.protocol_tag_list = EnumTypeTag.protocol().get_enum_info()
+        self.network_id_list = EnumInfoList.get_info_list(EnumTypeId.network())
+        self.protocol_id_list = EnumInfoList.get_info_list(EnumTypeId.protocol())
+        self.protocol_tag_list = EnumInfoList.get_info_list(EnumTypeTag.protocol())
 
     def test_all_dir_has_info_json(self):
         """All directories for protocol information have a `info.json` file."""

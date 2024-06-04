@@ -3,9 +3,10 @@ from typing import Tuple
 
 from libraries.models.asset import Asset
 from libraries.models.enum_info import EnumInfo
-from libraries.models.enum_type_id import EnumTypeId
-from libraries.models.enum_type_tag import EnumTypeTag
+from libraries.models.enum_info_list import EnumInfoList
 from libraries.models.network import Network
+from libraries.models.terminals.enum_type_id import EnumTypeId
+from libraries.models.terminals.enum_type_tag import EnumTypeTag
 from tests.utils.checker import (
     check_info_json_existence,
     check_images_validity,
@@ -38,11 +39,15 @@ class TestValidityAsset:
         """Set up the class before tests in this class."""
         self.asset_list = read_models(Asset)
         self.network_list = read_models(Network)
-        self.asset_id_list = EnumTypeId.asset().get_enum_info()
-        self.asset_reference_id_list = EnumTypeId.asset_reference().get_enum_info()
-        self.network_id_list = EnumTypeId.network().get_enum_info()
-        self.asset_contract_tag_list = EnumTypeTag.asset_contracts().get_enum_info()
-        self.asset_tag_list = EnumTypeTag.asset().get_enum_info()
+        self.asset_id_list = EnumInfoList.get_info_list(EnumTypeId.asset())
+        self.asset_reference_id_list = EnumInfoList.get_info_list(
+            EnumTypeId.asset_reference()
+        )
+        self.network_id_list = EnumInfoList.get_info_list(EnumTypeId.network())
+        self.asset_contract_tag_list = EnumInfoList.get_info_list(
+            EnumTypeTag.asset_contracts()
+        )
+        self.asset_tag_list = EnumInfoList.get_info_list(EnumTypeTag.asset())
 
     def test_all_dir_has_info_json(self):
         """All directories for asset information have a `info.json` file."""
@@ -58,7 +63,7 @@ class TestValidityAsset:
                 network = next(
                     item for item, _ in self.network_list if item.id == contract.network
                 )
-                assert network.network.root in contract.tags
+                assert str(network.network) in contract.tags
 
     def test_all_contracts_tag_exists_in_enum_info(self):
         """All contracts in asset information have a tag which is described

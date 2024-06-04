@@ -1,8 +1,8 @@
 from pydantic import NonNegativeInt
 
-from libraries.models.address import Address
-from libraries.models.id import Id
-from libraries.models.tag_list import TagList
+from libraries.models.terminals.address import Address
+from libraries.models.terminals.id import Id
+from libraries.models.terminals.tag_list import TagList
 from libraries.models.templates.camelcase_model import CamelCaseModel
 
 
