@@ -19,8 +19,8 @@ Related issue: [ASSET-000](https://pi-lab.atlassian.net/browse/ASSET-000)
 
 ## Checklist
 
-- [ ] Did you pass the tests?
+- [ ] Did you pass the tests? (Did you execute `pytest -l` in your PC and get a green light?)
 - [ ] Did you run the pre-process?
 - [ ] Have you added and run tests to validate the changes?
 - [ ] Have you updated the documentation?
-- [ ] Have you updated the version in `setup.py` if you need?
+- [ ] Have you updated the version in `{PWD}/VERSION` if you need?
