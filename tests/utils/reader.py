@@ -1,12 +1,12 @@
 from pathlib import Path
-from typing import Tuple, Type
+from typing import Type
 
 from pydantic import ValidationError
 
 from libraries.models.abstractions.info_model import InfoModel
 
 
-def read_models[T: InfoModel](model_type: Type[T]) -> list[Tuple[T, Path]]:
+def read_models[T: InfoModel](model_type: Type[T]) -> list[tuple[T, Path]]:
     """Reads all models from the given directory and validates a list of models.
 
     Args:

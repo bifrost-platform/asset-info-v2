@@ -11,7 +11,7 @@
       ]
     },
     {
-      "address": "0x0000000000000000000000000000000000000000",
+      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
       "name": "Avalanche",
       "network": "evm-43113",
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "address": "0x0000000000000000000000000000000000000000",
+      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
       "name": "Avalanche",
       "network": "evm-43114",

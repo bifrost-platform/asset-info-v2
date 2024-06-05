@@ -1,6 +1,33 @@
 from re import search
+from tomllib import load
+
+from libraries.utils.file import PWD
 
 REQUIREMENT_REFERENCE_REGEX = r"^\-r ([\w]+)\.txt$"
+
+
+def read_sub_requirements(key: str) -> list[str]:
+    """Reads the sub requirements from the given key.
+
+    Args:
+        key: The key of the requirements.
+
+    Returns:
+        The list of sub requirements.
+    """
+    if key == "essential":
+        return ["requirements/essential.txt"]
+    else:
+        with open(PWD.joinpath("pyproject.toml"), "rb") as fp:
+            data = load(fp)
+            return (
+                data.get("tool", {})
+                .get("setuptools", {})
+                .get("dynamic", {})
+                .get("optional-dependencies", {})
+                .get(key, {})
+                .get("file", [])
+            )
 
 
 def read_requirements(key: str) -> list[str]:
@@ -12,13 +39,17 @@ def read_requirements(key: str) -> list[str]:
     Returns:
         The list of requirements.
     """
-    with open(f"requirements/{key}.txt") as file:
-        req_lines = list(
-            filter(
-                lambda x: not x.startswith("#"),
-                file.read().splitlines(),
+    req_lines = list()
+    for sub_req in read_sub_requirements(key):
+        with open(PWD.joinpath(sub_req)) as file:
+            req_lines.extend(
+                list(
+                    filter(
+                        lambda x: not x.startswith("#"),
+                        file.read().splitlines(),
+                    )
+                )
             )
-        )
     ref_keys = [
         search(REQUIREMENT_REFERENCE_REGEX, req).group(1)
         for req in filter(lambda x: x.startswith("-r"), req_lines)
@@ -32,11 +63,18 @@ def read_requirements(key: str) -> list[str]:
     return ref_reqs + reqs
 
 
-packages = ["libraries.models", "libraries.utils"]
-"""List of packages to be used by the users."""
+def read_essential_packages() -> list[str]:
+    """Reads the essential packages.
 
-install_require_key = "essential"
-"""The key of the essential requirements."""
-
-extras_require_keys = ["all", "dev", "test"]
-"""The keys of the extra requirements."""
+    Returns:
+        The list of essential packages.
+    """
+    with open(PWD.joinpath("pyproject.toml"), "rb") as fp:
+        data = load(fp)
+        return (
+            data.get("tool", {})
+            .get("setuptools", {})
+            .get("packages", {})
+            .get("find", {})
+            .get("include", [])
+        )

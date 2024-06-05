@@ -8,7 +8,7 @@
   },
   "engine": "evm",
   "explorers": [],
-  "id": "evm-80001",
+  "id": "evm-80002",
   "images": {
     "png128": true,
     "png256": true,
@@ -16,7 +16,7 @@
     "png64": true,
     "svg": true
   },
-  "name": "Polygon Testnet Mumbai",
+  "name": "Polygon Testnet Amoy",
   "network": "testnet",
   "tags": [
     "polygon"

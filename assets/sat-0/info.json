@@ -13,7 +13,7 @@
     {
       "address": "0x7c55004de2348Bf8751A028047A1848Efab31eA9",
       "decimals": 18,
-      "name": "Super Athletes Token",
+      "name": "SAT",
       "network": "evm-11155111",
       "symbol": "SAT",
       "tags": [
@@ -33,7 +33,7 @@
     {
       "address": "0x3325B631CD1B972628f021c3bB776e21290baB21",
       "decimals": 18,
-      "name": "Super Athletes Token",
+      "name": "Unified SAT",
       "network": "evm-49088",
       "symbol": "SAT",
       "tags": [

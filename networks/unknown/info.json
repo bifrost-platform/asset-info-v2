@@ -1,6 +1,6 @@
 {
   "currency": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "decimals": 0,
     "id": "unknown",
     "name": "Unknown Asset",

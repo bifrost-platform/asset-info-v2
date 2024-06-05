@@ -13,7 +13,7 @@
     {
       "address": "0xDa007Bea12013Ee90D5DEC4111DBA5bd98314F93",
       "decimals": 18,
-      "name": "P2D",
+      "name": "Unified P2D",
       "network": "evm-49088",
       "symbol": "P2D",
       "tags": [
@@ -23,7 +23,7 @@
     {
       "address": "0x3ce414000C518FC55846388ef0aaB5d0abf275Be",
       "decimals": 18,
-      "name": "P2D",
+      "name": "Play to Donate",
       "network": "evm-56",
       "symbol": "P2D",
       "tags": [
@@ -33,7 +33,7 @@
     {
       "address": "0x018185EB57D6DA77A269EC740e80EF6eBEE793EC",
       "decimals": 18,
-      "name": "P2D",
+      "name": "Play to Donate",
       "network": "evm-97",
       "symbol": "P2D",
       "tags": [
@@ -49,7 +49,7 @@
     "png64": true,
     "svg": true
   },
-  "name": "P2D",
+  "name": "Play to Donate",
   "references": [],
   "tags": []
 }
