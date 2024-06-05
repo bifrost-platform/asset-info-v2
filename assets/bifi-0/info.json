@@ -13,9 +13,9 @@
     {
       "address": "0xa2b384F74058D5C4Ca2994414388DD456dd63fdA",
       "decimals": 18,
-      "name": "BiFi",
+      "name": "BIFI",
       "network": "evm-11155111",
-      "symbol": "BiFi",
+      "symbol": "BIFI",
       "tags": [
         "testnet"
       ]

@@ -8,7 +8,7 @@ from prompt_toolkit.document import Document
 from prompt_toolkit.validation import Validator, ValidationError
 from pydantic import ValidationError as PydanticValidationError
 
-from libraries.models.id import Id
+from libraries.models.terminals.id import Id
 
 
 class IdValidator(Validator):
@@ -46,9 +46,8 @@ class IdValidator(Validator):
             if (input_id := Id(text)) not in self.forbidden_id:
                 if self.permitted_id and input_id not in self.permitted_id:
                     raise ValidationError(
-                        message=f"Input ID is not permitted: {','.join(self.permitted_id)}"
+                        message=f"Input ID is not permitted: {','.join(str(value) for value in self.permitted_id)}"
                     )
-                return input_id
             else:
                 raise ValidationError(message="Input ID is forbidden")
         except PydanticValidationError:
@@ -72,13 +71,22 @@ def get_id(
         The forbidden rule is prioritized over the permitted rule.
     """
     printf(
-        HTML(f"<b>{msg}</b>" + (": " + ", ".join(permitted_id) if permitted_id else ""))
+        HTML(
+            f"<b>{msg}</b>"
+            + (
+                ": " + ", ".join(str(value) for value in permitted_id)
+                if permitted_id
+                else ""
+            )
+        )
     )
-    completer = WordCompleter(list(permitted_id)) if permitted_id else None
+    completer = (
+        WordCompleter([str(value) for value in permitted_id]) if permitted_id else None
+    )
     input_id = prompt(
         HTML("<b>> </b>"),
         completer=completer,
-        placeholder=permitted_id.copy().pop() if permitted_id else None,
+        placeholder=str(permitted_id.copy().pop()) if permitted_id else None,
         validator=IdValidator(forbidden_id, permitted_id),
     )
     return Id(input_id)

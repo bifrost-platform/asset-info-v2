@@ -1,20 +1,19 @@
 from pydantic import NonNegativeInt
 
-from libraries.models.address import Address
-from libraries.models.id import Id
-from libraries.utils.model import CamelCaseModel
+from libraries.models.terminals.address import Address
+from libraries.models.terminals.id import Id
+from libraries.models.templates.camelcase_model import CamelCaseModel
 
 
 class Currency(CamelCaseModel):
     """The base model of information on assets as currencies in blockchain networks.
 
     Attributes:
-        address: address regarded as a currency contract in asset information.
-                 (:class:`Address`: constrained :class:`str`.)
-        decimals: decimals of the currency. (:class:`NonNegativeInt`: constrained :class:`int`.)
-        id: ID of the currency in asset information. (:class:`Id`: constrained :class:`str`.)
-        name: name of the currency. (:class:`str`)
-        symbol: the symbol string of the currency. (:class:`str`)
+        address: address regarded as a currency contract in asset information (`Address`: constrained `str`.)
+        decimals: decimals of the currency (`NonNegativeInt`: constrained `int`.)
+        id: ID of the currency in asset information (`Id`: constrained `str`.)
+        name: name of the currency (`str`)
+        symbol: the symbol string of the currency (`str`)
     """
 
     address: Address

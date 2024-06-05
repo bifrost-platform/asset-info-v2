@@ -7,8 +7,8 @@ from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit.document import Document
 from prompt_toolkit.validation import Validator, ValidationError
 
-from libraries.models.id import Id
 from libraries.models.reference import Reference
+from libraries.models.terminals.id import Id
 
 
 class ExplorerValidator(Validator):
@@ -50,12 +50,17 @@ def get_explorer_id(explorers: list[Reference]) -> Id:
         The explorer ID if it exists, otherwise None.
     """
     explorer_ids = sorted([explorer.id for explorer in explorers])
-    printf(HTML("<b>Enter the explorer ID: </b>" + ", ".join(explorer_ids)))
-    explorer_completer = WordCompleter(explorer_ids)
+    printf(
+        HTML(
+            "<b>Enter the explorer ID: </b>"
+            + ", ".join(str(value) for value in explorer_ids)
+        )
+    )
+    explorer_completer = WordCompleter([str(value) for value in explorer_ids])
     explorer_id = prompt(
         HTML("<b>> </b>"),
         completer=explorer_completer,
-        placeholder=explorer_ids[0],
+        placeholder=str(explorer_ids[0]) if len(explorer_ids) != 0 else None,
         validator=ExplorerValidator(explorer_ids),
     )
-    return explorer_id
+    return Id(explorer_id)

@@ -68,6 +68,10 @@
     "description": "Polygon Testnet Mumbai"
   },
   {
+    "value": "evm-80002",
+    "description": "Polygon Testnet Amoy"
+  },
+  {
     "value": "evm-8217",
     "description": "Klaytn Mainnet Cypress"
   },

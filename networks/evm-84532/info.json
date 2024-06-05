@@ -1,6 +1,6 @@
 {
   "currency": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "decimals": 18,
     "id": "eth-0",
     "name": "Sepolia Ether",

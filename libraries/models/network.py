@@ -1,37 +1,33 @@
+from libraries.models.abstractions.info_model import InfoModel
 from libraries.models.currency import Currency
-from libraries.models.engine import Engine
-from libraries.models.id import Id
-from libraries.models.image_info import ImageInfo
-from libraries.models.network_type import NetworkType
-from libraries.models.reference import ReferenceList
-from libraries.models.tag import TagList
-from libraries.utils.model import CamelCaseModel
+from libraries.models.reference_list import ReferenceList
+from libraries.models.terminals.engine import Engine
+from libraries.models.terminals.id import Id
+from libraries.models.terminals.info_category import InfoCategory
+from libraries.models.terminals.network_type import NetworkType
 
 
-class Network(CamelCaseModel):
+class Network(InfoModel):
     """The base model of information about each blockchain network.
 
     Attributes:
-        currency: currency information of the network. (:class:`Currency`)
-        engine: engine type of the network. (:class:`Engine`)
-        explorers: explorers' information of the network.
-                   (:class:`ReferenceList`: constrained :class:`list` of :class:`Reference`.)
-        id: ID of the network. (:class:`Id`: constrained :class:`str`.)
-        images: information about the existence of each image type. (:class:`ImageInfo`)
-        name: name of the network. (:class:`str`)
-        network: type of the network. (:class:`NetworkType`)
-        tags: tags of the network.
-              (:class:`TagList`: constrained :class:`list` of :class:`Tag`.)
-        unknown_asset_id: ID of the unknown asset of the network.
-                          (:class:`Id`: constrained :class:`str`.)
+        currency: currency information of the network (`Currency`)
+        engine: engine type of the network (`Engine`)
+        explorers: explorers' information of the network (`ReferenceList`: constrained `list` of `Reference`.)
+        id: ID of the network (`Id`: constrained `str`.)
+        images: information about the existence of each image type (`ImageInfo`)
+        name: name of the network (`str`)
+        network: type of the network (`NetworkType`)
+        tags: tags of the network (`TagList`: constrained `list` of `Tag`.)
+        unknown_asset_id: ID of the unknown asset of the network (`Id`: constrained `str`.)
     """
 
     currency: Currency
     engine: Engine
     explorers: ReferenceList
-    id: Id
-    images: ImageInfo
-    name: str
     network: NetworkType
-    tags: TagList
     unknown_asset_id: Id
+
+    @staticmethod
+    def get_info_category() -> InfoCategory:
+        return InfoCategory.network()

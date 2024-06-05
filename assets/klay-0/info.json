@@ -1,7 +1,7 @@
 {
   "contracts": [
     {
-      "address": "0x0000000000000000000000000000000000000000",
+      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
       "name": "KLAY",
       "network": "evm-1001",
@@ -12,7 +12,7 @@
       ]
     },
     {
-      "address": "0x0000000000000000000000000000000000000000",
+      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
       "name": "KLAY",
       "network": "evm-8217",

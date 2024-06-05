@@ -1,28 +1,25 @@
-from libraries.models.contract import ContractList
-from libraries.models.id import Id
-from libraries.models.image_info import ImageInfo
-from libraries.models.reference import ReferenceList
-from libraries.models.tag import TagList
-from libraries.utils.model import CamelCaseModel
+from libraries.models.abstractions.info_model import InfoModel
+from libraries.models.contract_list import ContractList
+from libraries.models.reference_list import ReferenceList
+from libraries.models.terminals.info_category import InfoCategory
 
 
-class Asset(CamelCaseModel):
+class Asset(InfoModel):
     """The base model of information about assets in blockchain networks.
 
     Attributes:
-        contracts: contracts' information about the asset in blockchain networks.
-                   (:class:`ContractList`: constrained :class:`list` of :class:`Contract`.)
-        id: ID of the asset. (:class:`Id`: constrained :class:`str`.)
-        images: information about the existence of each image type. (:class:`ImageInfo`)
-        name: name of the asset. (:class:`str`: must be the same as one of the contract's names.)
-        references: reference information for the asset.
-                    (:class:`ReferenceList`: constrained :class:`list` of :class:`Reference`.)
-        tags: tags of the asset. (:class:`TagList`: constrained :class:`list` of :class:`Tag`.)
+        contracts: contracts' information about the asset in blockchain networks (`ContractList`: constrained `list` of
+            `Contract`.)
+        id: ID of the asset (`Id`: constrained `str`.)
+        images: information about the existence of each image type (`ImageInfo`)
+        name: name of the asset (`str`: must be the same as one of the contract's names.)
+        references: reference information for the asset (`ReferenceList`: constrained `list` of `Reference`.)
+        tags: tags of the asset (`TagList`: constrained `list` of `Tag`.)
     """
 
     contracts: ContractList
-    id: Id
-    images: ImageInfo
-    name: str
     references: ReferenceList
-    tags: TagList
+
+    @staticmethod
+    def get_info_category() -> InfoCategory:
+        return InfoCategory.asset()

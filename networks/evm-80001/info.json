@@ -1,18 +1,13 @@
 {
   "currency": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "decimals": 18,
     "id": "matic-0",
     "name": "MATIC",
     "symbol": "MATIC"
   },
   "engine": "evm",
-  "explorers": [
-    {
-      "id": "etherscan",
-      "url": "https://mumbai.polygonscan.com"
-    }
-  ],
+  "explorers": [],
   "id": "evm-80001",
   "images": {
     "png128": true,

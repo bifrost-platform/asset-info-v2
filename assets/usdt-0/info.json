@@ -23,7 +23,7 @@
     {
       "address": "0x7870D8a5a669a0BA0C1f940EAe4e945a5583CF3A",
       "decimals": 6,
-      "name": "Tether USD",
+      "name": "USDT",
       "network": "evm-11155111",
       "symbol": "USDT",
       "tags": [
@@ -33,7 +33,7 @@
     {
       "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
       "decimals": 6,
-      "name": "(POS) Tether USD",
+      "name": "(PoS) Tether USD",
       "network": "evm-137",
       "symbol": "USDT",
       "tags": [

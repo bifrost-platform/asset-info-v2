@@ -1,22 +1,13 @@
 {
   "currency": {
-    "address": "0x0000000000000000000000000000000000000000",
+    "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "decimals": 18,
     "id": "eth-0",
     "name": "Goerli Ether",
     "symbol": "ETH"
   },
   "engine": "evm",
-  "explorers": [
-    {
-      "id": "blockscout",
-      "url": "https://base-goerli.blockscout.com"
-    },
-    {
-      "id": "etherscan",
-      "url": "https://goerli.basescan.org"
-    }
-  ],
+  "explorers": [],
   "id": "evm-84531",
   "images": {
     "png128": true,

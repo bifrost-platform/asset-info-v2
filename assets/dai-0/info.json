@@ -41,7 +41,7 @@
       ]
     },
     {
-      "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+      "address": "0xbA7dEebBFC5fA1100Fb055a87773e1E99Cd3507a",
       "decimals": 18,
       "name": "Dai Stablecoin",
       "network": "evm-43114",
@@ -63,7 +63,7 @@
     {
       "address": "0x2353859d0c5CD0CB4Da701d2aCA9f1222Ad71110",
       "decimals": 18,
-      "name": "DAI",
+      "name": "Unified DAI",
       "network": "evm-49088",
       "symbol": "DAI",
       "tags": [
@@ -103,7 +103,7 @@
     {
       "address": "0x4e64812e093167EbA03b829284C1C959CC28DA72",
       "decimals": 18,
-      "name": "DAI stable",
+      "name": "DAI",
       "network": "evm-84532",
       "symbol": "DAI",
       "tags": [

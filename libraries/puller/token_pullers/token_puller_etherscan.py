@@ -6,9 +6,9 @@ from prompt_toolkit import print_formatted_text as printf, HTML
 from requests import get
 from yarl import URL
 
-from libraries.models.address import Address
-from libraries.models.id import Id
 from libraries.models.network import Network
+from libraries.models.terminals.address import Address
+from libraries.models.terminals.id import Id
 from libraries.preprocess.image import PNG_SIZES
 from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import TOKEN_COUNT_PER_PAGE
@@ -58,7 +58,7 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
         return set(addresses)
 
     def _get_token_url(self, address: Address) -> URL:
-        return self.etherscan_url / "token" / address
+        return self.etherscan_url / "token" / str(address)
 
     def _get_token_image_url(self, address: Address) -> URL | None:
         # Get the token page for getting the token image URL.
@@ -73,9 +73,9 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
         # Get the available images for the token.
         available_images: dict[Id, str] = dict()
         for size in PNG_SIZES:
-            url = sub(r"_\d+", f"_{size.get_size()}", base_url)
+            url = sub(r"_\d+", f"_{size.size}", base_url)
             if url == base_url and not bool(search(r"_\d+", base_url)):
-                url = sub(r".png", f"_{size.get_size()}.png", base_url)
+                url = sub(r".png", f"_{size.size}.png", base_url)
             response = get(url, headers=HEADER)
             if response.status_code == 200 and response.url == url:
                 available_images.update({Id(size.lower()): url})

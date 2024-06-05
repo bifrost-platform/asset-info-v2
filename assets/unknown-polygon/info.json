@@ -19,6 +19,16 @@
       "tags": [
         "testnet"
       ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Polygon Asset",
+      "network": "evm-80002",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
     }
   ],
   "id": "unknown-polygon",
