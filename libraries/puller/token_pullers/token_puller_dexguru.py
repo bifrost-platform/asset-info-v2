@@ -2,6 +2,7 @@ from math import ceil
 
 from bs4 import BeautifulSoup
 from requests import post, get
+from web3 import Web3
 from yarl import URL
 
 from libraries.models.network import Network
@@ -10,9 +11,7 @@ from libraries.puller.getters.token_count_getter import TOKEN_COUNT_PER_PAGE
 from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAbstracted
 
 DEXGURU_GRAPHQL_URL: URL = URL("https://explorer-graph-prod.dexguru.biz/graphql")
-TOKEN_IMAGE_SELECTOR: str = (
-    "#page > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > img"
-)
+TOKEN_IMAGE_SELECTOR: str = "#page > div > div > div > div > img"
 
 
 class TokenPullerDexguru(TokenPullerAbstracted):
@@ -91,7 +90,10 @@ class TokenPullerDexguru(TokenPullerAbstracted):
             filter(
                 None,
                 [
-                    (Address(data["address"]), URL(data["logoURI"]))
+                    (
+                        Address(Web3.to_checksum_address(data["address"])),
+                        URL(data["logoURI"]),
+                    )
                     for data in data_list
                     if "address" in data and "logoURI" in data
                 ],

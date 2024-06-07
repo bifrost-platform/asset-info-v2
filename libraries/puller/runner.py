@@ -39,7 +39,10 @@ def run_token_puller() -> None:
     clear()
     if token_puller_class := TOKEN_PULLER_CLASS_MAP.get(explorer_id, None):
         token_puller = token_puller_class(network)
-        token_puller.run()
+        try:
+            token_puller.run()
+        finally:
+            del token_puller
     else:
         printf(HTML("<b><red>Error: </red>Token puller not implemented</b>"))
         return

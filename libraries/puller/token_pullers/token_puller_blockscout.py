@@ -3,6 +3,7 @@ from math import ceil
 from bs4 import BeautifulSoup
 from prompt_toolkit import print_formatted_text as printf, HTML
 from requests import get
+from web3 import Web3
 from yarl import URL
 
 from libraries.models.terminals.address import Address
@@ -11,7 +12,7 @@ from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import TOKEN_COUNT_PER_PAGE
 from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAbstracted
 
-BLOCKSCOUT_API_URL: URL = URL("https://eth.blockscout.com/api/v2/tokens")
+BLOCKSCOUT_TOKEN_ENDPOINT_PATH: str = "api/v2/tokens"
 TOKEN_IMAGE_SELECTOR: str = "#__next > div > div > div > main > div > div > div > img"
 
 
@@ -77,9 +78,8 @@ class TokenPullerBlockscout(TokenPullerAbstracted):
             return response.content
         return None
 
-    @staticmethod
     def __get_token_list(
-        page_param: dict | None = None,
+        self, page_param: dict | None = None
     ) -> tuple[list[tuple[Address, URL]], dict | None]:
         """Get the token list from the Blockscout explorer.
 
@@ -90,7 +90,9 @@ class TokenPullerBlockscout(TokenPullerAbstracted):
             The list of token address and token image URL, and the next page parameter.
         """
         page_param.update({"type": "ERC-20"})
-        response = get(str(BLOCKSCOUT_API_URL), params=page_param)
+        response = get(
+            str(self.blockscout_url / BLOCKSCOUT_TOKEN_ENDPOINT_PATH), params=page_param
+        )
         if response.status_code != 200:
             return [], None
         data: dict = response.json()
@@ -99,7 +101,7 @@ class TokenPullerBlockscout(TokenPullerAbstracted):
                 None,
                 [
                     (
-                        Address(item["address"]),
+                        Address(Web3.to_checksum_address(item["address"])),
                         URL(item["icon_url"]).with_suffix(".png"),
                     )
                     for item in data.get("items", [])
