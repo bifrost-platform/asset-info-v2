@@ -28,7 +28,7 @@ from libraries.models.terminals.address import Address
 from libraries.models.terminals.id import Id
 from libraries.models.terminals.image_type import ImageType
 from libraries.models.terminals.tag import Tag
-from libraries.preprocess.image import downscale_png, downscale_svg
+from libraries.preprocess.image import downscale_png, downscale_svg, downscale_jpg
 from libraries.preprocess.runner import run_enum_preprocess
 from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import get_token_count
@@ -416,6 +416,8 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             downloaded_type.extend(self.__save_png_image(image_path, image))
         elif ".svg" in token_image_url.suffix:
             downloaded_type.extend(self.__save_svg_image(image_path, image))
+        elif ".jpg" in token_image_url.suffix or ".jpeg" in token_image_url.suffix:
+            downloaded_type.extend(self.__save_jpg_image(image_path, image))
         # Finalize the image save
         if len(downloaded_type) == 0 or info.images.get(
             max(downloaded_type, key=lambda x: x.size)
@@ -472,6 +474,33 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
                 fp_origin.flush()
                 # Downscale the image
                 return downscale_svg(
+                    Path(image_path),
+                    Path(fp_origin.name),
+                )
+        except Exception as e:
+            printf(HTML(f"<red>{e}</red>"))
+            return []
+
+    @staticmethod
+    def __save_jpg_image(image_path: Path, image: bytes) -> list[ImageType]:
+        """Save the JPG image.
+
+        Args:
+            image_path: The path of the image.
+            image: The image bytes.
+
+        Returns:
+            The list of image type if the image is saved.
+        """
+        try:
+            with NamedTemporaryFile(
+                mode="w+b", dir=image_path, suffix="_origin.jpg"
+            ) as fp_origin:
+                # Save the original image
+                fp_origin.write(image)
+                fp_origin.flush()
+                # Downscale the image
+                return downscale_jpg(
                     Path(image_path),
                     Path(fp_origin.name),
                 )

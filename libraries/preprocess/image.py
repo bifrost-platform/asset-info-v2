@@ -78,6 +78,22 @@ def __resize_svg_to_128(
             )
 
 
+def __reform_jpg_to_png(
+    jpg_path: Path, png_path: Path | None = None, overwrite: bool = True
+) -> None:
+    """Reform JPG image to PNG image.
+
+    Args:
+        jpg_path: The path of the JPG image.
+        png_path: The path of the PNG image to save.
+        overwrite: Whether to overwrite the PNG image.
+    """
+    png_path = png_path or jpg_path.parent.joinpath("image.png")
+    if overwrite or not os.path.isfile(png_path):
+        with Image.open(jpg_path) as img:
+            img.save(png_path, "png", optimize=True)
+
+
 def downscale_png(
     dir_path: Path, png_path: Path, overwrite: bool = True
 ) -> list[ImageType]:
@@ -123,6 +139,24 @@ def downscale_svg(
     png_path = dir_path.joinpath("image-256.png")
     __convert_svg_to_png256(svg_path, png_path, overwrite)
     return downscale_png(dir_path, png_path, overwrite) + [ImageType.svg()]
+
+
+def downscale_jpg(
+    dir_path: Path, jpg_path: Path, overwrite: bool = True
+) -> list[ImageType]:
+    """Downscales the JPG image in the given directory.
+
+    Args:
+        dir_path: The directory path to save the downscaled JPG image.
+        jpg_path: The JPG image path to downscale.
+        overwrite: Whether to overwrite the downscaled JPG image.
+
+    Returns:
+        The size list of the downscaled JPG image.
+    """
+    png_path = dir_path.joinpath("image.png")
+    __reform_jpg_to_png(jpg_path, png_path, overwrite)
+    return downscale_png(dir_path, png_path, overwrite)
 
 
 def create_downscaled_image(base_image_path: Path) -> None:
