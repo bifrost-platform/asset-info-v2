@@ -91,7 +91,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         self.flag_image_pull = confirm("Do you want to pull images?")
         self.all_assets, self.network_assets = self.__get_assets(self.network)
 
-    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+    def __del__(self, exc_type, exc_val, exc_tb) -> None:
         """Remove the temporary directory and run the enum preprocessing."""
         rmtree(self.tmp_dir)
         run_enum_preprocess(Asset)
