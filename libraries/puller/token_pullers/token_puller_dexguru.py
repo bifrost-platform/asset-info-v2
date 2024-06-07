@@ -57,9 +57,9 @@ class TokenPullerDexguru(TokenPullerAbstracted):
         if token_page.status_code != 200:
             return None
         soup = BeautifulSoup(token_page.content, "html.parser")
-        if (
-            img_indirect_url := soup.select_one(TOKEN_IMAGE_SELECTOR).get("src", None)
-        ) is None:
+        if (img_soup := soup.select_one(TOKEN_IMAGE_SELECTOR)) is None:
+            return None
+        if (img_indirect_url := img_soup.get("src", None)) is None:
             return None
         if (img_url := URL(img_indirect_url).query.get("url", None)) is None:
             return None
