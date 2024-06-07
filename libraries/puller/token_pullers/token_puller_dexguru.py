@@ -91,11 +91,12 @@ class TokenPullerDexguru(TokenPullerAbstracted):
                 None,
                 [
                     (
-                        Address(Web3.to_checksum_address(data["address"])),
-                        URL(data["logoURI"]),
+                        Address(Web3.to_checksum_address(address)),
+                        URL(url),
                     )
                     for data in data_list
-                    if "address" in data and "logoURI" in data
+                    if (address := data.get("address", None)) is not None
+                    and (url := data.get("logoURI", None)) is not None
                 ],
             )
         )
@@ -115,7 +116,7 @@ class TokenPullerDexguru(TokenPullerAbstracted):
             AssertionError: If the network engine is not EVM.
         """
         assert network.engine.is_evm
-        chain_id = network.id.split("-")[-1]
+        chain_id = str(network.id).split("-")[-1]
         return {
             "operationName": "TopTokens",
             "variables": {
