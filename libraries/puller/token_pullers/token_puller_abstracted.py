@@ -405,8 +405,13 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         # Save the image
         image_path = Path(mkdtemp(prefix=str(info.id), dir=self.tmp_dir))
         downloaded_type = list()
-        if ".png" in token_image_url.suffix or token_image_url.path.startswith(
-            "image/png"
+        if (
+            # Normal case
+            ".png" in token_image_url.suffix
+            # KlaytnScope case
+            or token_image_url.path.startswith("image/png")
+            # Routescan case
+            or ".png" in URL(token_image_url.query.get("url", "")).suffix
         ):
             downloaded_type.extend(self.__save_png_image(image_path, image))
         elif ".svg" in token_image_url.suffix:

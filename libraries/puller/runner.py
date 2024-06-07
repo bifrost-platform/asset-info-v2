@@ -16,12 +16,14 @@ from libraries.puller.token_pullers.token_puller_etherscan import TokenPullerEth
 from libraries.puller.token_pullers.token_puller_klaytnscope import (
     TokenPullerKlaytnscope,
 )
+from libraries.puller.token_pullers.token_puller_routescan import TokenPullerRoutescan
 
 TOKEN_PULLER_CLASS_MAP: dict[Id, Type[TokenPullerAbstracted]] = {
     Id("blockscout"): TokenPullerBlockscout,
     Id("dexguru"): TokenPullerDexguru,
     Id("etherscan"): TokenPullerEtherscan,
     Id("klaytnscope"): TokenPullerKlaytnscope,
+    Id("routescan"): TokenPullerRoutescan,
 }
 
 
