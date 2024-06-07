@@ -127,9 +127,8 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         address, name, symbol, decimals = self.__get_contract_info(address)
         printf(HTML(f"<b>  Name: {name}</b>"))
         printf(HTML(f"<b>  Symbol: {symbol}</b>"))
-        printf(
-            HTML(f"<b>  Source: <skyblue>{self._get_token_url(address)}</skyblue></b>")
-        )
+        printed_url = str(self._get_token_url(address)).replace("&", "&amp;")
+        printf(HTML(f"<b>  Source: <skyblue>{printed_url}</skyblue></b>"))
         info = self.network_assets.get(address, None)
         if info is not None and not confirm("Would you like to renew the information?"):
             return None
@@ -215,7 +214,8 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
                 not web3.is_connected()
                 or str(web3.eth.chain_id) != str(network.id).split("-")[-1]
             ):
-                printf(HTML(f"<red>Invalid node URL: {url}</red>"))
+                printed_url = str(url).replace("&", "&amp;")
+                printf(HTML(f"<red>Invalid node URL: {printed_url}</red>"))
                 raise ValueError("Invalid node URL")
 
     @staticmethod
@@ -395,7 +395,8 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         # Get the image URL
         if (token_image_url := self._get_token_image_url(address)) is None:
             return None
-        printf(HTML(f"Image URL found: <skyblue>{token_image_url}</skyblue>"))
+        printed_url = str(token_image_url).replace("&", "&amp;")
+        printf(HTML(f"Image URL found: <skyblue>{printed_url}</skyblue>"))
         if not confirm("Would you like to download the image?"):
             return None
         # Download the image

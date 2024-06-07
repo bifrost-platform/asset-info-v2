@@ -64,7 +64,8 @@ class TokenPullerBlockscout(TokenPullerAbstracted):
                 available_images.update({Id("original"): base})
             printf(HTML(f"⎡ <b>Available images for {address}:</b>"))
             for size, url in available_images.items():
-                printf(HTML(f"⎢ <b>∙ {size}</b>: {url}"))
+                printed_url = str(url).replace("&", "&amp;")
+                printf(HTML(f"⎢ <b>∙ {size}</b>: {printed_url}"))
             selected_type = get_id(
                 "⎣ Select the image type",
                 None,
