@@ -13,11 +13,15 @@ from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAb
 from libraries.puller.token_pullers.token_puller_blockscout import TokenPullerBlockscout
 from libraries.puller.token_pullers.token_puller_dexguru import TokenPullerDexguru
 from libraries.puller.token_pullers.token_puller_etherscan import TokenPullerEtherscan
+from libraries.puller.token_pullers.token_puller_klaytnscope import (
+    TokenPullerKlaytnscope,
+)
 
 TOKEN_PULLER_CLASS_MAP: dict[Id, Type[TokenPullerAbstracted]] = {
     Id("blockscout"): TokenPullerBlockscout,
     Id("dexguru"): TokenPullerDexguru,
     Id("etherscan"): TokenPullerEtherscan,
+    Id("klaytnscope"): TokenPullerKlaytnscope,
 }
 
 
