@@ -292,6 +292,10 @@
     "description": "Hedera"
   },
   {
+    "value": "hot-0",
+    "description": "HoloToken"
+  },
+  {
     "value": "icp-0",
     "description": "Internet Computer"
   },
@@ -436,6 +440,10 @@
     "description": "Pendle"
   },
   {
+    "value": "people-0",
+    "description": "ConstitutionDAO"
+  },
+  {
     "value": "pepe-0",
     "description": "Pepe"
   },
@@ -504,6 +512,10 @@
     "description": "SHIBA INU"
   },
   {
+    "value": "smeme-0",
+    "description": "Staked Memecoin"
+  },
+  {
     "value": "snx-0",
     "description": "Synthetix Network Token"
   },
@@ -526,6 +538,10 @@
   {
     "value": "stx-0",
     "description": "Stacks"
+  },
+  {
+    "value": "super-0",
+    "description": "SuperFarm"
   },
   {
     "value": "susde-0",

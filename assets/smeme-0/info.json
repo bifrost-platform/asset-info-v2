@@ -1,0 +1,25 @@
+{
+  "id": "smeme-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Staked Memecoin",
+  "tags": [],
+  "contracts": [
+    {
+      "address": "0xC059A531B4234D05E9ef4ac51028F7E6156E2CCe",
+      "decimals": 18,
+      "name": "Staked Memecoin",
+      "network": "evm-1",
+      "symbol": "",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "references": []
+}
