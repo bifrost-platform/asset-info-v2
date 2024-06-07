@@ -1,14 +1,4 @@
 {
-  "id": "people-0",
-  "images": {
-    "png128": true,
-    "png256": false,
-    "png32": true,
-    "png64": true,
-    "svg": false
-  },
-  "name": "ConstitutionDAO",
-  "tags": [],
   "contracts": [
     {
       "address": "0x7A58c0Be72BE218B41C608b7Fe7C5bB630736C71",
@@ -21,6 +11,15 @@
       ]
     }
   ],
+  "id": "people-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "ConstitutionDAO",
   "references": [
     {
       "id": "coingecko",
@@ -30,5 +29,6 @@
       "id": "coinmarketcap",
       "url": "https://coinmarketcap.com/currencies/constitutiondao"
     }
-  ]
+  ],
+  "tags": []
 }

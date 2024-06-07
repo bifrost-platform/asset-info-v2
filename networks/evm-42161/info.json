@@ -10,11 +10,11 @@
   "explorers": [
     {
       "id": "dexguru",
-      "url": "https://arbitrum.dex.guru"
+      "url": "https://arbitrum.dex.guru/"
     },
     {
       "id": "etherscan",
-      "url": "https://arbiscan.io"
+      "url": "https://arbiscan.io/"
     }
   ],
   "id": "evm-42161",

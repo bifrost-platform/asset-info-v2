@@ -10,7 +10,7 @@
   "explorers": [
     {
       "id": "blockscout",
-      "url": "https://sepolia-explorer.arbitrum.io"
+      "url": "https://sepolia-explorer.arbitrum.io/"
     },
     {
       "id": "etherscan",

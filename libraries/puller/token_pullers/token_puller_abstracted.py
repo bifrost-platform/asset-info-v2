@@ -91,7 +91,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         self.flag_image_pull = confirm("Do you want to pull images?")
         self.all_assets, self.network_assets = self.__get_assets(self.network)
 
-    def __del__(self, exc_type, exc_val, exc_tb) -> None:
+    def __del__(self) -> None:
         """Remove the temporary directory and run the enum preprocessing."""
         rmtree(self.tmp_dir)
         run_enum_preprocess(Asset)
@@ -539,7 +539,12 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
                 mkdir(path)
             # Save the asset information
             with open(path.joinpath("info.json"), "w") as fp:
-                dump(new_info.model_dump(mode="json"), fp, indent=2)
+                dump(
+                    new_info.model_dump(mode="json", by_alias=True),
+                    fp,
+                    indent=2,
+                    sort_keys=True,
+                )
                 fp.write("\n")
             # Save the images
             for image_type in image_info[1] if image_info else []:

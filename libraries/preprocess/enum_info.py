@@ -30,12 +30,12 @@ def update_id_enum[T: InfoModel](model_type: Type[T]) -> None:
         model_type: The type of the model.
     """
     enum_info_list = [
-        model.model_dump(mode="python")
+        model.model_dump(mode="json", by_alias=True)
         for model in __get_id_enum_from_model(model_type)
     ]
     with open(
         model_type.get_info_category().get_enum_type().get_enum_path(),
         "w",
     ) as fp:
-        json.dump(enum_info_list, fp, indent=2)
+        json.dump(enum_info_list, fp, indent=2, sort_keys=True)
         fp.write("\n")

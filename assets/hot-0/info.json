@@ -1,14 +1,4 @@
 {
-  "id": "hot-0",
-  "images": {
-    "png128": false,
-    "png256": false,
-    "png32": true,
-    "png64": false,
-    "svg": false
-  },
-  "name": "HoloToken",
-  "tags": [],
   "contracts": [
     {
       "address": "0x6c6EE5e31d828De241282B9606C8e98Ea48526E2",
@@ -21,6 +11,15 @@
       ]
     }
   ],
+  "id": "hot-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "HoloToken",
   "references": [
     {
       "id": "coingecko",
@@ -30,5 +29,6 @@
       "id": "coinmarketcap",
       "url": "https://coinmarketcap.com/currencies/holo"
     }
-  ]
+  ],
+  "tags": []
 }

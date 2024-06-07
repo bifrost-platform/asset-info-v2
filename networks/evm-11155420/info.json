@@ -10,11 +10,11 @@
   "explorers": [
     {
       "id": "blockscout",
-      "url": "https://optimism-sepolia.blockscout.com"
+      "url": "https://optimism-sepolia.blockscout.com/"
     },
     {
       "id": "etherscan",
-      "url": "https://sepolia-optimism.etherscan.io"
+      "url": "https://sepolia-optimism.etherscan.io/"
     }
   ],
   "id": "evm-11155420",

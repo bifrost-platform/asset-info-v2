@@ -1,14 +1,4 @@
 {
-  "id": "aevo-0",
-  "images": {
-    "png128": true,
-    "png256": false,
-    "png32": true,
-    "png64": true,
-    "svg": false
-  },
-  "name": "Aevo",
-  "tags": [],
   "contracts": [
     {
       "address": "0xB528edBef013aff855ac3c50b381f253aF13b997",
@@ -21,6 +11,15 @@
       ]
     }
   ],
+  "id": "aevo-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Aevo",
   "references": [
     {
       "id": "coingecko",
@@ -30,5 +29,6 @@
       "id": "coinmarketcap",
       "url": "https://coinmarketcap.com/currencies/aevo"
     }
-  ]
+  ],
+  "tags": []
 }

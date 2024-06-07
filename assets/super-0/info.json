@@ -1,14 +1,4 @@
 {
-  "id": "super-0",
-  "images": {
-    "png128": true,
-    "png256": false,
-    "png32": true,
-    "png64": true,
-    "svg": false
-  },
-  "name": "SuperFarm",
-  "tags": [],
   "contracts": [
     {
       "address": "0xe53EC727dbDEB9E2d5456c3be40cFF031AB40A55",
@@ -21,6 +11,15 @@
       ]
     }
   ],
+  "id": "super-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "SuperFarm",
   "references": [
     {
       "id": "coingecko",
@@ -30,5 +29,6 @@
       "id": "coinmarketcap",
       "url": "https://coinmarketcap.com/currencies/superfarm"
     }
-  ]
+  ],
+  "tags": []
 }

@@ -10,7 +10,7 @@
   "explorers": [
     {
       "id": "blockscout",
-      "url": "https://explorer.mainnet.thebifrost.io"
+      "url": "https://explorer.mainnet.thebifrost.io/"
     }
   ],
   "id": "evm-3068",
