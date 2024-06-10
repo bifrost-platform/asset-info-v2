@@ -75,6 +75,7 @@ def __resize_svg_to_128(
                 write_to=str(resized_svg_path),
                 output_width=128,
                 output_height=128,
+                dpi=72,
             )
 
 
