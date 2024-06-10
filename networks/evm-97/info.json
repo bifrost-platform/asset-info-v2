@@ -10,7 +10,7 @@
   "explorers": [
     {
       "id": "etherscan",
-      "url": "https://testnet.bscscan.com"
+      "url": "https://testnet.bscscan.com/"
     }
   ],
   "id": "evm-97",

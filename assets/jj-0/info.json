@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x1FDD61eF9a5C31B9a2abC7D39c139c779e8412Af",
+      "decimals": 9,
+      "name": "JEJE",
+      "network": "evm-1",
+      "symbol": "JJ",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "jj-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "JEJE",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/jeje"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/jeje"
+    }
+  ],
+  "tags": []
+}

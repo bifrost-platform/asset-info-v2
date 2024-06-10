@@ -10,15 +10,15 @@
   "explorers": [
     {
       "id": "blockscout",
-      "url": "https://eth-sepolia.blockscout.com"
+      "url": "https://eth-sepolia.blockscout.com/"
     },
     {
       "id": "etherscan",
-      "url": "https://sepolia.etherscan.io"
+      "url": "https://sepolia.etherscan.io/"
     },
     {
       "id": "otterscan",
-      "url": "https://sepolia.otterscan.io"
+      "url": "https://sepolia.otterscan.io/"
     }
   ],
   "id": "evm-11155111",

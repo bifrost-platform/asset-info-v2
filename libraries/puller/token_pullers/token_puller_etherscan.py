@@ -71,7 +71,9 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
             return None
         # Parse the token page to get the token image URL.
         soup = BeautifulSoup(token_page.content, "html.parser")
-        if (prefix := soup.select_one(TOKEN_IMAGE_SELECTOR).get("src", None)) is None:
+        if (image_soup := soup.select_one(TOKEN_IMAGE_SELECTOR)) is None:
+            return None
+        if (prefix := image_soup.get("src", None)) is None:
             return None
         base_url = str((self.etherscan_url / prefix.lstrip("/")).with_suffix(".png"))
         # Get the available images for the token.

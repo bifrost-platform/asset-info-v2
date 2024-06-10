@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xc555D625828c4527d477e595fF1Dd5801B4a600e",
+      "decimals": 18,
+      "name": "MON",
+      "network": "evm-1",
+      "symbol": "MON",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "mon-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "MON",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/mon-protocol"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/mon"
+    }
+  ],
+  "tags": []
+}

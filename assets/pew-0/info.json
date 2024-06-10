@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x382ea807A61a418479318Efd96F1EFbC5c1F2C21",
+      "decimals": 18,
+      "name": "pepe in a memes world",
+      "network": "evm-1",
+      "symbol": "PEW",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "pew-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "pepe in a memes world",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/pepe-in-a-memes-world"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/pepe-in-a-memes-world"
+    }
+  ],
+  "tags": []
+}

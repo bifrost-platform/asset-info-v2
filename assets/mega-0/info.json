@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0xc06bF3589345A81f0C2845E4Db76bdb64BBBbc9D",
+      "decimals": 18,
+      "name": "Make ETH Great Again",
+      "network": "evm-1",
+      "symbol": "MEGA",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "mega-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Make ETH Great Again",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/make-eth-great-again"
+    }
+  ],
+  "tags": []
+}

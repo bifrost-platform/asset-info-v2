@@ -159,7 +159,9 @@ class TokenPullerBlockscout(TokenPullerAbstracted):
             return None
         # Parse the token page.
         soup = BeautifulSoup(token_page.content, "html.parser")
-        if (img_url := soup.select_one(TOKEN_IMAGE_SELECTOR).get("src", None)) is None:
+        if (img_soup := soup.select_one(TOKEN_IMAGE_SELECTOR)) is None:
+            return None
+        if (img_url := img_soup.get("src", None)) is None:
             return None
         return URL(img_url)
 

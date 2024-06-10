@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x76e222b07C53D28b89b0bAc18602810Fc22B49A8",
+      "decimals": 18,
+      "name": "Joe Coin",
+      "network": "evm-1",
+      "symbol": "JOE",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "joe-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Joe Coin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/joe-coin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/joe-coin"
+    }
+  ],
+  "tags": []
+}

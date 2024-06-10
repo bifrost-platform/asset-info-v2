@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x6E79B51959CF968d87826592f46f819F92466615",
+      "decimals": 9,
+      "name": "Hoppy",
+      "network": "evm-1",
+      "symbol": "HOPPY",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "hoppy-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Hoppy",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/hoppy-meme"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/hoppy-coin"
+    }
+  ],
+  "tags": []
+}

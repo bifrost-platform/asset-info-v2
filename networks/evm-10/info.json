@@ -10,15 +10,15 @@
   "explorers": [
     {
       "id": "blockscout",
-      "url": "https://optimism.blockscout.com"
+      "url": "https://optimism.blockscout.com/"
     },
     {
       "id": "dexguru",
-      "url": "https://optimism.dex.guru"
+      "url": "https://optimism.dex.guru/"
     },
     {
       "id": "etherscan",
-      "url": "https://optimistic.etherscan.io"
+      "url": "https://optimistic.etherscan.io/"
     }
   ],
   "id": "evm-10",

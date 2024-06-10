@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x9e18d5BAB2FA94a6A95F509Ecb38F8F68322AbD3",
+      "decimals": 9,
+      "name": "AMATERASU OMIKAMI",
+      "network": "evm-1",
+      "symbol": "OMIKAMI",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "omikami-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "AMATERASU OMIKAMI",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/amaterasu-omikami"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/amaterasu-omikami"
+    }
+  ],
+  "tags": []
+}

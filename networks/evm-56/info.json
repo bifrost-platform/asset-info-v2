@@ -10,11 +10,11 @@
   "explorers": [
     {
       "id": "dexguru",
-      "url": "https://bnb.dex.guru"
+      "url": "https://bnb.dex.guru/"
     },
     {
       "id": "etherscan",
-      "url": "https://bscscan.com"
+      "url": "https://bscscan.com/"
     }
   ],
   "id": "evm-56",

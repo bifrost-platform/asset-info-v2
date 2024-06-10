@@ -18,7 +18,7 @@ class Protocol(InfoModel):
     """
 
     networks: IdList
-    url: HttpUrl
+    url: HttpUrl | None
 
     @staticmethod
     def get_info_category() -> InfoCategory:

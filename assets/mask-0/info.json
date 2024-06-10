@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0x2B8AAC1630F7BC0C4b1ed8036C0fe0D71cB44709",
+      "decimals": 9,
+      "name": "Wojak Mask",
+      "network": "evm-1",
+      "symbol": "MASK",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "mask-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Wojak Mask",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/wojak-mask"
+    }
+  ],
+  "tags": []
+}

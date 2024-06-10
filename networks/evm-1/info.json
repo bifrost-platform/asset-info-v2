@@ -10,15 +10,15 @@
   "explorers": [
     {
       "id": "blockscout",
-      "url": "https://eth.blockscout.com"
+      "url": "https://eth.blockscout.com/"
     },
     {
       "id": "dexguru",
-      "url": "https://ethereum.dex.guru"
+      "url": "https://ethereum.dex.guru/"
     },
     {
       "id": "etherscan",
-      "url": "https://etherscan.io"
+      "url": "https://etherscan.io/"
     }
   ],
   "id": "evm-1",

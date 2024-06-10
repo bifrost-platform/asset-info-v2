@@ -62,9 +62,9 @@ class TokenPullerRoutescan(TokenPullerAbstracted):
         if token_page.status_code != 200:
             return None
         soup = BeautifulSoup(token_page.content, "html.parser")
-        if (
-            image_src := soup.select_one(TOKEN_IMAGE_SELECTOR).get("src", None)
-        ) is None:
+        if (image_soup := soup.select_one(TOKEN_IMAGE_SELECTOR)) is None:
+            return None
+        if (image_src := image_soup.get("src", None)) is None:
             return None
         base_url = URL(image_src)
         available_images: dict[Id, str] = dict()

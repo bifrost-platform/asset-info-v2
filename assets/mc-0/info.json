@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x949D48EcA67b17269629c7194F4b727d4Ef9E5d6",
+      "decimals": 18,
+      "name": "Merit Circle",
+      "network": "evm-1",
+      "symbol": "MC",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "mc-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Merit Circle",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/merit-circle"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/merit-circle"
+    }
+  ],
+  "tags": []
+}

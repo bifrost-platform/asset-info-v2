@@ -10,15 +10,15 @@
   "explorers": [
     {
       "id": "blockscout",
-      "url": "https://base.blockscout.com"
+      "url": "https://base.blockscout.com/"
     },
     {
       "id": "dexguru",
-      "url": "https://base.dex.guru"
+      "url": "https://base.dex.guru/"
     },
     {
       "id": "etherscan",
-      "url": "https://basescan.org"
+      "url": "https://basescan.org/"
     }
   ],
   "id": "evm-8453",

@@ -14,11 +14,11 @@
     },
     {
       "id": "dexguru",
-      "url": "https://polygon.dex.guru"
+      "url": "https://polygon.dex.guru/"
     },
     {
       "id": "etherscan",
-      "url": "https://polygonscan.com"
+      "url": "https://polygonscan.com/"
     }
   ],
   "id": "evm-137",

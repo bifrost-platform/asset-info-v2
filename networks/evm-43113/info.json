@@ -10,7 +10,7 @@
   "explorers": [
     {
       "id": "routescan",
-      "url": "https://testnet.snowtrace.io"
+      "url": "https://testnet.snowtrace.io/"
     }
   ],
   "id": "evm-43113",

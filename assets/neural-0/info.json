@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x32B053F2CBA79F80ada5078cb6b305da92BDe6e1",
+      "decimals": 18,
+      "name": "NeuralAI",
+      "network": "evm-1",
+      "symbol": "NEURAL",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "neural-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "NeuralAI",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/neuralai"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/neuralai"
+    }
+  ],
+  "tags": []
+}

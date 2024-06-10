@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xDc7AC5d5d4a9C3B5d8F3183058A92776Dc12f4f3",
+      "decimals": 9,
+      "name": "Monkas",
+      "network": "evm-1",
+      "symbol": "MONKAS",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "monkas-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Monkas",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/monkas"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/monkas"
+    }
+  ],
+  "tags": []
+}
