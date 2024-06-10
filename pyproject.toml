@@ -28,6 +28,7 @@ dependencies = { file = ["requirements/essential.txt"] }
 [tool.setuptools.dynamic.optional-dependencies]
 all = { file = ["requirements/essential.txt", "requirements/dev.txt", "requirements/test.txt"] }
 dev = { file = ["requirements/essential.txt", "requirements/dev.txt"] }
+essential = { file = ["requirements/essential.txt"] }
 test = { file = ["requirements/essential.txt", "requirements/dev.txt", "requirements/test.txt"] }
 test_simple = { file = ["requirements/essential.txt", "requirements/test.txt"] }
 
