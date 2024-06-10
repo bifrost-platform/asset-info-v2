@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0x1a8a39f2986Cf9688F6DC9e5Ee0Cc0bC8d5edd67",
+      "decimals": 9,
+      "name": "Doggacoin",
+      "network": "evm-1",
+      "symbol": "DOGGA",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "dogga-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Doggacoin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/doggacoin"
+    }
+  ],
+  "tags": []
+}

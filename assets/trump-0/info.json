@@ -14,7 +14,7 @@
   "id": "trump-0",
   "images": {
     "png128": true,
-    "png256": false,
+    "png256": true,
     "png32": true,
     "png64": true,
     "svg": false

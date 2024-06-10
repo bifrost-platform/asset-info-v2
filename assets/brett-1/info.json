@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0x66bFf695f3B16a824869a8018a3A6e3685241269",
+      "decimals": 18,
+      "name": "Brett",
+      "network": "evm-1",
+      "symbol": "BRETT",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "brett-1",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Brett",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/bretter-brett"
+    }
+  ],
+  "tags": []
+}

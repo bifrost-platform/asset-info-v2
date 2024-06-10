@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0xF89674f18309A2E97843c6e9B19C07c22cAEF6d5",
+      "decimals": 9,
+      "name": "cyb3rgam3r420",
+      "network": "evm-1",
+      "symbol": "Gamer",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "gamer-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "cyb3rgam3r420",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/cyb3rgam3r420"
+    }
+  ],
+  "tags": []
+}

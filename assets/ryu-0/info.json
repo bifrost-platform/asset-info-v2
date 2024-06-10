@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xCa530408C3e552b020a2300DebC7Bd18820fB42F",
+      "decimals": 18,
+      "name": "RyuJin",
+      "network": "evm-1",
+      "symbol": "RYU",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ryu-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "RyuJin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/ryujin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/ryujin"
+    }
+  ],
+  "tags": []
+}

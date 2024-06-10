@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0xD8E8438CF7bEEd13cFABC82F300Fb6573962c9e3",
+      "decimals": 9,
+      "name": "Pepoclown",
+      "network": "evm-1",
+      "symbol": "HONK",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "honk-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Pepoclown",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/pepoclown"
+    }
+  ],
+  "tags": []
+}

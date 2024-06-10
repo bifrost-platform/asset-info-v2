@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x8390a1DA07E376ef7aDd4Be859BA74Fb83aA02D5",
+      "decimals": 9,
+      "name": "GROK",
+      "network": "evm-1",
+      "symbol": "GROK",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "grok-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "GROK",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/grok-2"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/grok-erc"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x32F0D04B48427A14Fb3Cbc73DB869e691A9feC6f",
+      "decimals": 18,
+      "name": "Euro Cup Inu",
+      "network": "evm-1",
+      "symbol": "ECI",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "eci-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Euro Cup Inu",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/e-c-inu"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/euro-cup-inu-coin"
+    }
+  ],
+  "tags": []
+}

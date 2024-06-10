@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x4507cEf57C46789eF8d1a19EA45f4216bae2B528",
+      "decimals": 9,
+      "name": "TokenFi",
+      "network": "evm-1",
+      "symbol": "TOKEN",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "token-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "TokenFi",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/tokenfi"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/tokenfi"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0x511686014F39F487E5CDd5C37B4b37606B795ae3",
+      "decimals": 18,
+      "name": "Loyalty Labs",
+      "network": "evm-1",
+      "symbol": "LOYAL",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "loyal-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Loyalty Labs",
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/loyalty-labs1"
+    }
+  ],
+  "tags": []
+}

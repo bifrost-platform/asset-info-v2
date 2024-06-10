@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x38E68A37E401F7271568CecaAc63c6B1e19130B4",
+      "decimals": 18,
+      "name": "Banana",
+      "network": "evm-1",
+      "symbol": "BANANA",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "banana-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Banana",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/banana-gun"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/banana-gun"
+    }
+  ],
+  "tags": []
+}

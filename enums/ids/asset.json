@@ -28,6 +28,10 @@
     "value": "aioz-0"
   },
   {
+    "description": "Arbius",
+    "value": "aius-0"
+  },
+  {
     "description": "Algorand",
     "value": "algo-0"
   },
@@ -36,12 +40,24 @@
     "value": "alt-0"
   },
   {
+    "description": "Ampleforth",
+    "value": "ampl-0"
+  },
+  {
+    "description": "Andy",
+    "value": "andy-0"
+  },
+  {
     "description": "ApeCoin",
     "value": "ape-0"
   },
   {
     "description": "Aptos",
     "value": "apt-0"
+  },
+  {
+    "description": "Apu Apustaja",
+    "value": "apu-0"
   },
   {
     "description": "Arbitrum",
@@ -56,6 +72,10 @@
     "value": "atom-0"
   },
   {
+    "description": "Audius",
+    "value": "audio-0"
+  },
+  {
     "description": "Avalanche",
     "value": "avax-0"
   },
@@ -66,6 +86,14 @@
   {
     "description": "Axie Infinity Shard",
     "value": "axs-0"
+  },
+  {
+    "description": "Banana",
+    "value": "banana-0"
+  },
+  {
+    "description": "basedAI",
+    "value": "basedai-0"
   },
   {
     "description": "Bitcoin Cash Token",
@@ -84,12 +112,32 @@
     "value": "bgb-0"
   },
   {
+    "description": "Biconomy Token",
+    "value": "bico-0"
+  },
+  {
     "description": "BiFi",
     "value": "bifi-0"
   },
   {
+    "description": "Bird Dog",
+    "value": "birddog-0"
+  },
+  {
+    "description": "Bird Dog",
+    "value": "birddog-1"
+  },
+  {
     "description": "BitDAO",
     "value": "bit-0"
+  },
+  {
+    "description": "HarryPotterObamaSonic10Inu",
+    "value": "bitcoin-0"
+  },
+  {
+    "description": "Blendr Network",
+    "value": "blendr-0"
   },
   {
     "description": "Blur",
@@ -100,8 +148,24 @@
     "value": "bnb-0"
   },
   {
+    "description": "BOB",
+    "value": "bob-0"
+  },
+  {
+    "description": "BOBO",
+    "value": "bobo-0"
+  },
+  {
     "description": "Bonk",
     "value": "bonk-0"
+  },
+  {
+    "description": "Brett",
+    "value": "brett-0"
+  },
+  {
+    "description": "Brett",
+    "value": "brett-1"
   },
   {
     "description": "Bitcoin SV",
@@ -160,8 +224,16 @@
     "value": "crv-0"
   },
   {
+    "description": "CyPepe",
+    "value": "cypepe-0"
+  },
+  {
     "description": "Dai Stablecoin",
     "value": "dai-0"
+  },
+  {
+    "description": "Zero1 Token",
+    "value": "deai-0"
   },
   {
     "description": "Dexe",
@@ -172,12 +244,28 @@
     "value": "doge-0"
   },
   {
+    "description": "Dogeverse",
+    "value": "dogeverse-0"
+  },
+  {
+    "description": "Doggacoin",
+    "value": "dogga-0"
+  },
+  {
     "description": "Polkadot Token",
     "value": "dot-0"
   },
   {
+    "description": "Dusk Network",
+    "value": "dusk-0"
+  },
+  {
     "description": "dYdX",
     "value": "dydx-0"
+  },
+  {
+    "description": "Euro Cup Inu",
+    "value": "eci-0"
   },
   {
     "description": "ether.fi ETH",
@@ -190,6 +278,14 @@
   {
     "description": "Elrond",
     "value": "egld-0"
+  },
+  {
+    "description": "Elon",
+    "value": "elon-0"
+  },
+  {
+    "description": "Dogelon",
+    "value": "elon-1"
   },
   {
     "description": "ENA",
@@ -268,8 +364,20 @@
     "value": "gala-0"
   },
   {
+    "description": "cyb3rgam3r420",
+    "value": "gamer-0"
+  },
+  {
+    "description": "GenBox",
+    "value": "genai-0"
+  },
+  {
     "description": "Golem Network Token",
     "value": "glm-0"
+  },
+  {
+    "description": "GameStop",
+    "value": "gme-0"
   },
   {
     "description": "GreenMetaverseToken",
@@ -278,6 +386,14 @@
   {
     "description": "Gnosis Token",
     "value": "gno-0"
+  },
+  {
+    "description": "NodeAI",
+    "value": "gpu-0"
+  },
+  {
+    "description": "GROK",
+    "value": "grok-0"
   },
   {
     "description": "Graph Token",
@@ -290,6 +406,18 @@
   {
     "description": "Hedera",
     "value": "hbar-0"
+  },
+  {
+    "description": "Highstreet token",
+    "value": "high-0"
+  },
+  {
+    "description": "Pepoclown",
+    "value": "honk-0"
+  },
+  {
+    "description": "Hoppy",
+    "value": "hoppy-0"
   },
   {
     "description": "HoloToken",
@@ -320,6 +448,18 @@
     "value": "jasmy-0"
   },
   {
+    "description": "JEJE",
+    "value": "jj-0"
+  },
+  {
+    "description": "Joe Coin",
+    "value": "joe-0"
+  },
+  {
+    "description": "KarratCoin",
+    "value": "karrat-0"
+  },
+  {
     "description": "Kaspa",
     "value": "kas-0"
   },
@@ -328,8 +468,16 @@
     "value": "kcs-0"
   },
   {
+    "description": "Kendu Inu",
+    "value": "kendu-0"
+  },
+  {
     "description": "KLAY",
     "value": "klay-0"
+  },
+  {
+    "description": "Milady",
+    "value": "ladys-0"
   },
   {
     "description": "Lido DAO Token",
@@ -344,6 +492,10 @@
     "value": "link-0"
   },
   {
+    "description": "Loyalty Labs",
+    "value": "loyal-0"
+  },
+  {
     "description": "Livepeer Token",
     "value": "lpt-0"
   },
@@ -356,12 +508,28 @@
     "value": "lusd-0"
   },
   {
+    "description": "MAGA",
+    "value": "maga-0"
+  },
+  {
     "description": "Decentraland MANA",
     "value": "mana-0"
   },
   {
+    "description": "Wojak Mask",
+    "value": "mask-0"
+  },
+  {
     "description": "MATIC",
     "value": "matic-0"
+  },
+  {
+    "description": "Merit Circle",
+    "value": "mc-0"
+  },
+  {
+    "description": "Make ETH Great Again",
+    "value": "mega-0"
   },
   {
     "description": "Memecoin",
@@ -388,6 +556,14 @@
     "value": "mog-0"
   },
   {
+    "description": "MON",
+    "value": "mon-0"
+  },
+  {
+    "description": "Monkas",
+    "value": "monkas-0"
+  },
+  {
     "description": "MX Token",
     "value": "mx-0"
   },
@@ -396,12 +572,20 @@
     "value": "near-0"
   },
   {
+    "description": "NeuralAI",
+    "value": "neural-0"
+  },
+  {
     "description": "Nexo",
     "value": "nexo-0"
   },
   {
     "description": "APENFT",
     "value": "nft-0"
+  },
+  {
+    "description": "Non-Playable Coin",
+    "value": "npc-0"
   },
   {
     "description": "Ocean Token",
@@ -416,12 +600,20 @@
     "value": "om-0"
   },
   {
+    "description": "AMATERASU OMIKAMI",
+    "value": "omikami-0"
+  },
+  {
     "description": "Ondo",
     "value": "ondo-0"
   },
   {
     "description": "Optimism",
     "value": "op-0"
+  },
+  {
+    "description": "OpSec",
+    "value": "opsec-0"
   },
   {
     "description": "Ordinals",
@@ -434,6 +626,10 @@
   {
     "description": "Paxos Gold",
     "value": "paxg-0"
+  },
+  {
+    "description": "PeiPei",
+    "value": "peipei-0"
   },
   {
     "description": "Pendle",
@@ -452,6 +648,14 @@
     "value": "pepecoin-0"
   },
   {
+    "description": "pepe in a memes world",
+    "value": "pew-0"
+  },
+  {
+    "description": "PepeFork",
+    "value": "pork-0"
+  },
+  {
     "description": "Prime",
     "value": "prime-0"
   },
@@ -468,6 +672,10 @@
     "value": "reth-0"
   },
   {
+    "description": "Realio Network",
+    "value": "rio-0"
+  },
+  {
     "description": "Render Token",
     "value": "rndr-0"
   },
@@ -482,6 +690,10 @@
   {
     "description": "THOR Chain",
     "value": "rune-0"
+  },
+  {
+    "description": "RyuJin",
+    "value": "ryu-0"
   },
   {
     "description": "Safe Token",
@@ -536,6 +748,10 @@
     "value": "strk-0"
   },
   {
+    "description": "Super Trump",
+    "value": "strump-0"
+  },
+  {
     "description": "Stacks",
     "value": "stx-0"
   },
@@ -552,6 +768,10 @@
     "value": "sweth-0"
   },
   {
+    "description": "Tectum Emission Token",
+    "value": "tet-0"
+  },
+  {
     "description": "Theta Token",
     "value": "theta-0"
   },
@@ -564,8 +784,16 @@
     "value": "tkx-0"
   },
   {
+    "description": "TokenFi",
+    "value": "token-0"
+  },
+  {
     "description": "Wrapped TON Coin",
     "value": "ton-0"
+  },
+  {
+    "description": "Trog",
+    "value": "trog-0"
   },
   {
     "description": "MAGA",
@@ -652,6 +880,10 @@
     "value": "vet-0"
   },
   {
+    "description": "VERA",
+    "value": "vra-0"
+  },
+  {
     "description": "Wormhole Token",
     "value": "w-0"
   },
@@ -716,8 +948,28 @@
     "value": "wmatic-0"
   },
   {
+    "description": "Wojak Coin",
+    "value": "wojak-0"
+  },
+  {
+    "description": "Landwolf",
+    "value": "wolf-0"
+  },
+  {
     "description": "Wootrade Network",
     "value": "woo-0"
+  },
+  {
+    "description": "Wrapped QUIL",
+    "value": "wquil-0"
+  },
+  {
+    "description": "Wrapped liquid staked Ether 2.0",
+    "value": "wsteth-0"
+  },
+  {
+    "description": "Wrapped TAO",
+    "value": "wtao-0"
   },
   {
     "description": "Tether Gold",
@@ -734,6 +986,10 @@
   {
     "description": "XRP Token",
     "value": "xrp-0"
+  },
+  {
+    "description": "Frankencoin",
+    "value": "zchf-0"
   },
   {
     "description": "0x Protocol Token",
