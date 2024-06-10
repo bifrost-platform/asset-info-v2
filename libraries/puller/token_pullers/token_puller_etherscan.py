@@ -82,7 +82,7 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
                 url = sub(r".png", f"_{size.size}.png", base_url)
             response = get(url, headers=HEADER)
             if response.status_code == 200 and response.url == url:
-                available_images.update({Id(size.lower()): url})
+                available_images.update({Id(str(size).lower()): url})
         if base_url not in available_images.values():
             available_images.update({Id("original"): base_url})
         # Select the image type.
@@ -91,7 +91,8 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
         else:
             printf(HTML(f"⎡ <b>Available images for {address}:</b>"))
             for size, url in available_images.items():
-                printf(HTML(f"⎢ <b>∙ {size}</b>: {url}"))
+                printed_url = str(url).replace("&", "&amp;")
+                printf(HTML(f"⎢ <b>∙ {size}</b>: {printed_url}"))
             selected_type = get_id(
                 "⎣ Select the image type",
                 None,
