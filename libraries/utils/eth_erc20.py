@@ -1,3 +1,4 @@
+from asyncio import gather
 from decimal import Decimal
 
 from pydantic import HttpUrl
@@ -29,6 +30,14 @@ class EthErc20Interface:
             self.contract = self.node.eth.contract(
                 self.node.to_checksum_address(address), abi=fp.read()
             )
+
+    async def get_basic_info(self) -> tuple[str, str, int]:
+        """Get the basic information of the token.
+
+        Returns:
+            The name, symbol and decimals of the token.
+        """
+        return await gather(*[self.get_name(), self.get_symbol(), self.get_decimals()])
 
     async def get_name(self) -> str:
         """Get the name of the token.

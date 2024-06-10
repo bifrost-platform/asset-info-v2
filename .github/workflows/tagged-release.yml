@@ -12,6 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Fetch all tags
+        run: git fetch --tags
+
+      - name: Get the latest release tag
+        id: get_latest_tag
+        run: |
+          LATEST_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
+          echo "LATEST_TAG=$LATEST_TAG" >> $GITHUB_ENV
+
+      - name: Get the current release tag
+        id: get_current_tag
+        run: echo "RELEASE_TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
       - name: Set up Python 3.12
         uses: actions/setup-python@v2
         with:
@@ -20,6 +33,7 @@ jobs:
       - name: Set up requirements
         run: |
           python -m pip install --upgrade pip
+          pip install -r ".[essential]"
           python -m build
 
       - name: Release the artifacts
@@ -29,6 +43,6 @@ jobs:
           body: |
             `pip install asset-info-v2==${{ env.RELEASE_TAG }}`
 
-            **Full Changelog**: https://github.com/bifrost-platform/asset-info-v2/commits/${{ env.RELEASE_TAG }}
+            **Full Changelog**: https://github.com/bifrost-platform/asset-info-v2/compare/${{ env.LATEST_TAG }}...${{ env.RELEASE_TAG }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

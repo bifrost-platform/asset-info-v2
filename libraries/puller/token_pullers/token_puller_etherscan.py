@@ -4,12 +4,13 @@ from re import sub, search
 from bs4 import BeautifulSoup
 from prompt_toolkit import print_formatted_text as printf, HTML
 from requests import get
+from web3 import Web3
 from yarl import URL
 
 from libraries.models.network import Network
 from libraries.models.terminals.address import Address
 from libraries.models.terminals.id import Id
-from libraries.preprocess.image import PNG_SIZES
+from libraries.preprocess.image import PNG_TYPES
 from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import TOKEN_COUNT_PER_PAGE
 from libraries.puller.token_pullers.token_puller_abstracted import TokenPullerAbstracted
@@ -52,7 +53,10 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
             soup = BeautifulSoup(token_list_page.content, "html.parser")
             items = soup.select(TOKEN_ADDRESS_SELECTOR)
             addresses.extend(
-                (idx, Address(item.get("href").split("/")[-1]))
+                (
+                    idx,
+                    Address(Web3.to_checksum_address(item.get("href").split("/")[-1])),
+                )
                 for idx, item in enumerate(items, len(addresses))
             )
         return set(addresses)
@@ -72,7 +76,7 @@ class TokenPullerEtherscan(TokenPullerAbstracted):
         base_url = str((self.etherscan_url / prefix.lstrip("/")).with_suffix(".png"))
         # Get the available images for the token.
         available_images: dict[Id, str] = dict()
-        for size in PNG_SIZES:
+        for size in PNG_TYPES:
             url = sub(r"_\d+", f"_{size.size}", base_url)
             if url == base_url and not bool(search(r"_\d+", base_url)):
                 url = sub(r".png", f"_{size.size}.png", base_url)

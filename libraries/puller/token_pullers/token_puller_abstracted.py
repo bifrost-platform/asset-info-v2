@@ -1,5 +1,5 @@
 from abc import ABCMeta, abstractmethod
-from asyncio import gather, run
+from asyncio import run
 from copy import deepcopy
 from json import dump, dumps
 from os import mkdir
@@ -28,7 +28,7 @@ from libraries.models.terminals.address import Address
 from libraries.models.terminals.id import Id
 from libraries.models.terminals.image_type import ImageType
 from libraries.models.terminals.tag import Tag
-from libraries.preprocess.image import downscale_png, png_to_square
+from libraries.preprocess.image import downscale_png, downscale_svg
 from libraries.preprocess.runner import run_enum_preprocess
 from libraries.puller.getters.id_getter import get_id
 from libraries.puller.getters.token_count_getter import get_token_count
@@ -87,7 +87,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             ),
             None,
         )
-        self.__check_node_url(network, URL(self.node_url))
+        self.__check_node_url(network, URL(str(self.node_url)))
         self.flag_image_pull = confirm("Do you want to pull images?")
         self.all_assets, self.network_assets = self.__get_assets(self.network)
 
@@ -272,9 +272,7 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             return contract.address, contract.name, contract.symbol, contract.decimals
         assert self.network.engine.is_evm
         it = EthErc20Interface(self.node_url, str(address))
-        name, symbol, decimals = run(
-            gather(*[it.get_name(), it.get_symbol(), it.get_decimals()])
-        )
+        name, symbol, decimals = run(it.get_basic_info())
         return Address(it.contract.address), name, symbol, decimals
 
     def __make_asset_information(
@@ -372,9 +370,10 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             The reference information if it exists, otherwise None.
         """
         asset_id = get_id(
-            f"Enter the asset ID on https://{ref_base_url.host} if exists"
+            f"Enter the asset ID on https://{ref_base_url.host} if exists",
+            is_none_accepted=True,
         )
-        if asset_id != "":
+        if asset_id is not None:
             url = ref_base_url / str(asset_id)
             response = get(str(url), headers={"User-Agent": "Mozilla/5.0"})
             if response.status_code == 200:
@@ -404,21 +403,14 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             return None
         # Save the image
         image_path = Path(mkdtemp(prefix=str(info.id), dir=self.tmp_dir))
-        with NamedTemporaryFile(
-            mode="w+b", dir=image_path, suffix="_origin.png"
-        ) as fp_origin:
-            fp_origin.write(image)
-            fp_origin.flush()
-            with NamedTemporaryFile(
-                mode="w+b", dir=image_path, suffix="_squared.png"
-            ) as fp_square:
-                # Convert the downloaded PNG image to a squared image
-                png_to_square(Path(fp_origin.name), Path(fp_square.name))
-                # Downscale the image
-                downloaded_type = downscale_png(
-                    Path(image_path),
-                    Path(fp_square.name),
-                )
+        downloaded_type = list()
+        if ".png" in token_image_url.suffix or token_image_url.path.startswith(
+            "image/png"
+        ):
+            downloaded_type.extend(self.__save_png_image(image_path, image))
+        elif ".svg" in token_image_url.suffix:
+            downloaded_type.extend(self.__save_svg_image(image_path, image))
+        # Finalize the image save
         if len(downloaded_type) == 0 or info.images.get(
             max(downloaded_type, key=lambda x: x.size)
         ):
@@ -426,6 +418,60 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         return image_path, (
             downloaded_type if not info.images.get(max(downloaded_type)) else []
         )
+
+    @staticmethod
+    def __save_png_image(image_path: Path, image: bytes) -> list[ImageType]:
+        """Save the PNG image.
+
+        Args:
+            image_path: The path of the image.
+            image: The image bytes.
+
+        Returns:
+            The list of image type if the image is saved.
+        """
+        try:
+            with NamedTemporaryFile(
+                mode="w+b", dir=image_path, suffix="_origin.png"
+            ) as fp_origin:
+                # Save the original image
+                fp_origin.write(image)
+                fp_origin.flush()
+                # Downscale the image
+                return downscale_png(
+                    Path(image_path),
+                    Path(fp_origin.name),
+                )
+        except Exception as e:
+            printf(HTML(f"<red>{e}</red>"))
+            return []
+
+    @staticmethod
+    def __save_svg_image(image_path: Path, image: bytes) -> list[ImageType]:
+        """Save the SVG image.
+
+        Args:
+            image_path: The path of the image.
+            image: The image bytes.
+
+        Returns:
+            The list of image type if the image is saved.
+        """
+        try:
+            with NamedTemporaryFile(
+                mode="w+b", dir=image_path, suffix="_origin.svg"
+            ) as fp_origin:
+                # Save the original image
+                fp_origin.write(image)
+                fp_origin.flush()
+                # Downscale the image
+                return downscale_svg(
+                    Path(image_path),
+                    Path(fp_origin.name),
+                )
+        except Exception as e:
+            printf(HTML(f"<red>{e}</red>"))
+            return []
 
     def __save_asset_information(
         self,
