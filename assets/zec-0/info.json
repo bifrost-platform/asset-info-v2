@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x1Ba42e5193dfA8B03D15dd1B86a3113bbBEF8Eeb",
+      "decimals": 18,
+      "name": "Zcash Token",
+      "network": "evm-56",
+      "symbol": "ZEC",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "zec-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Zcash Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/zcash"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/zcash"
+    }
+  ],
+  "tags": []
+}

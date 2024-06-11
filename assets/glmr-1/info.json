@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x76F3CE6aF26de7A9854dBD153ACd8f46a2Cf5133",
+      "decimals": 18,
+      "name": "Moonbeam",
+      "network": "evm-56",
+      "symbol": "GLMR",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "glmr-1",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Moonbeam",
+  "references": [],
+  "tags": []
+}

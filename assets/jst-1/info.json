@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0xeA998D307ACA04D4f0A3B3036Aba84AE2E409C0A",
+      "decimals": 18,
+      "name": "JUST",
+      "network": "evm-56",
+      "symbol": "JST",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "jst-1",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "JUST",
+  "references": [],
+  "tags": []
+}

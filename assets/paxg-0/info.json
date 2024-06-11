@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x7950865a9140cB519342433146Ed5b40c6F210f7",
+      "decimals": 18,
+      "name": "PAX Gold",
+      "network": "evm-56",
+      "symbol": "PAXG",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "paxg-0",

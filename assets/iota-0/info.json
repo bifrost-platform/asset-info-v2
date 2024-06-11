@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xd944f1D1e9d5f9Bb90b62f9D45e447D989580782",
+      "decimals": 6,
+      "name": "MIOTAC",
+      "network": "evm-56",
+      "symbol": "IOTA",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "iota-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "MIOTAC",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/iota"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/iota"
+    }
+  ],
+  "tags": []
+}

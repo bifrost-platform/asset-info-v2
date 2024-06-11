@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x20eE7B720f4E4c4FFcB00C4065cdae55271aECCa",
+      "decimals": 6,
+      "name": "APENFT",
+      "network": "evm-56",
+      "symbol": "NFT",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "nft-0",

@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xaEC945e04baF28b135Fa7c640f624f8D90F1C3a6",
+      "decimals": 18,
+      "name": "Coin98",
+      "network": "evm-56",
+      "symbol": "C98",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "c98-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Coin98",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/coin98"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/coin98"
+    }
+  ],
+  "tags": []
+}

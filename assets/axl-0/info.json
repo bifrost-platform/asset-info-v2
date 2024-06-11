@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x8b1f4432F943c465A973FeDC6d7aa50Fc96f1f65",
+      "decimals": 6,
+      "name": "Axelar",
+      "network": "evm-56",
+      "symbol": "AXL",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "axl-0",

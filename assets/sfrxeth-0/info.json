@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x3Cd55356433C89E50DC51aB07EE0fa0A95623D53",
+      "decimals": 18,
+      "name": "Staked Frax Ether",
+      "network": "evm-56",
+      "symbol": "sfrxETH",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "sfrxeth-0",

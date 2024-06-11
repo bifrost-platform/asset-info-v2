@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x90C97F71E18723b0Cf0dfa30ee176Ab653E89F40",
+      "decimals": 18,
+      "name": "Frax",
+      "network": "evm-56",
+      "symbol": "FRAX",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "frax-0",

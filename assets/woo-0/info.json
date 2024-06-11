@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x4691937a7508860F876c9c0a2a617E7d9E945D4B",
+      "decimals": 18,
+      "name": "Wootrade Network",
+      "network": "evm-56",
+      "symbol": "WOO",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "woo-0",

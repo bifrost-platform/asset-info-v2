@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x33d08D8C7a168333a85285a68C0042b39fC3741D",
+      "decimals": 18,
+      "name": "AIOZ Network",
+      "network": "evm-56",
+      "symbol": "AIOZ",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "aioz-0",

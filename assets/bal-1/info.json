@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0xd4ed60d8368a92b5F1ca33aF61eF2A94714B2d46",
+      "decimals": 18,
+      "name": "Balancer",
+      "network": "evm-56",
+      "symbol": "BAL",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "bal-1",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Balancer",
+  "references": [],
+  "tags": []
+}

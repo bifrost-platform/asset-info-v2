@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xFd7B3A77848f1C2D67E05E54d78d174a0C850335",
+      "decimals": 18,
+      "name": "Ontology Token",
+      "network": "evm-56",
+      "symbol": "ONT",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ont-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Ontology Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/ontology"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/ontology"
+    }
+  ],
+  "tags": []
+}

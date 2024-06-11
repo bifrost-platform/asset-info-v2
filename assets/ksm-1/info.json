@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x2aa69E8D25C045B659787BC1f03ce47a388DB6E8",
+      "decimals": 18,
+      "name": "Kusama",
+      "network": "evm-56",
+      "symbol": "KSM",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ksm-1",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Kusama",
+  "references": [],
+  "tags": []
+}
