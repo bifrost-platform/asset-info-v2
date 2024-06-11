@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x6D86f0a41C3966CeF8ea139648DB707E912563C9",
+      "decimals": 18,
+      "name": "mCoin",
+      "network": "evm-56",
+      "symbol": "MCOIN",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "mcoin-1",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "mCoin",
+  "references": [],
+  "tags": []
+}

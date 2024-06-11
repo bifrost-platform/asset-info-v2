@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x13Ab6739368a4e4abf24695bf52959224367391f",
+      "decimals": 18,
+      "name": "Yield Guild Games Token",
+      "network": "evm-56",
+      "symbol": "YGG",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ygg-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Yield Guild Games Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/yield-guild-games"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/yield-guild-games"
+    }
+  ],
+  "tags": []
+}

@@ -65,6 +65,7 @@ class IdValidator(Validator):
 
 def get_id(
     msg: str,
+    guide_id: set[Id] | None = None,
     forbidden_id: set[Id] | None = None,
     permitted_id: set[Id] | None = None,
     is_none_accepted: bool = False,
@@ -73,8 +74,9 @@ def get_id(
 
     Args:
         msg: The message to display.
+        guide_id: The list of guide IDs.
         forbidden_id: The list of forbidden IDs.
-        permitted_id: The list of permitted IDs.
+        permitted_id: The list of permitted IDs (if guide_id is not provided, this will be used).
         is_none_accepted: Whether the None value is accepted.
 
     Returns:
@@ -93,9 +95,12 @@ def get_id(
             )
         )
     )
-    completer = (
-        WordCompleter([str(value) for value in permitted_id]) if permitted_id else None
-    )
+    if guide_id:
+        completer = WordCompleter([str(value) for value in guide_id])
+    elif permitted_id:
+        completer = WordCompleter([str(value) for value in permitted_id])
+    else:
+        completer = None
     input_id = prompt(
         HTML("<b>> </b>"),
         completer=completer,

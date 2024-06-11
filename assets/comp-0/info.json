@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x52CE071Bd9b1C4B00A0b92D298c512478CaD67e8",
+      "decimals": 18,
+      "name": "Compound Coin",
+      "network": "evm-56",
+      "symbol": "COMP",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "comp-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Compound Coin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/compound"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/compound"
+    }
+  ],
+  "tags": []
+}

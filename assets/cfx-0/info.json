@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x045c4324039dA91c52C55DF5D785385Aab073DcF",
+      "decimals": 18,
+      "name": "BSC Conflux",
+      "network": "evm-56",
+      "symbol": "bCFX",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "cfx-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "BSC Conflux",
+  "references": [],
+  "tags": []
+}

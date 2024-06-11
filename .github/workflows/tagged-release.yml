@@ -15,10 +15,10 @@ jobs:
       - name: Fetch all tags
         run: git fetch --tags
 
-      - name: Get the latest release tag
-        id: get_latest_tag
+      - name: Get the latest and release tag
         run: |
-          IFS=$'\n' read -r -d "" RELEASE_TAG LATEST_TAG <<< "$(git describe --tags $(git rev-list --tags --max-count=2))"
+          TAGS=$(git describe --tags $(git rev-list --tags --max-count=2))
+          IFS=$'\n' read -r -d '' RELEASE_TAG LATEST_TAG <<< $TAGS
           echo "LATEST_TAG=$LATEST_TAG" >> $GITHUB_ENV
           echo "RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_ENV
 

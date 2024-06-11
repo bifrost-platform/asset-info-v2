@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x0Ef2e7602adD1733Bfdb17aC3094d0421B502cA3",
+      "decimals": 18,
+      "name": "eCash",
+      "network": "evm-56",
+      "symbol": "XEC",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "xec-1",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "eCash",
+  "references": [],
+  "tags": []
+}

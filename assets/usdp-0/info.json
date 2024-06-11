@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xb7F8Cd00C5A06c0537E2aBfF0b58033d02e5E094",
+      "decimals": 18,
+      "name": "Paxos Standard",
+      "network": "evm-56",
+      "symbol": "PAX",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "usdp-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Paxos Standard",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/pax-dollar"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/paxos-standard"
+    }
+  ],
+  "tags": []
+}

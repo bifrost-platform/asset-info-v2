@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xA1428370F540B4C4E319224165Ecae513a391f77",
+      "decimals": 18,
+      "name": "Marlin POND",
+      "network": "evm-56",
+      "symbol": "POND",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "pond-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Marlin POND",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/marlin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/marlin"
+    }
+  ],
+  "tags": []
+}

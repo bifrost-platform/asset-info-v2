@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x1fC9004eC7E5722891f5f38baE7678efCB11d34D",
+      "decimals": 6,
+      "name": "APENFT",
+      "network": "evm-56",
+      "symbol": "NFT",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "nft-1",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "APENFT",
+  "references": [],
+  "tags": []
+}

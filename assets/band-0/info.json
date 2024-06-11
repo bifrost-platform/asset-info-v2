@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xAD6cAEb32CD2c308980a548bD0Bc5AA4306c6c18",
+      "decimals": 18,
+      "name": "Band Protocol Token",
+      "network": "evm-56",
+      "symbol": "BAND",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "band-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Band Protocol Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/band-protocol"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/band-protocol"
+    }
+  ],
+  "tags": []
+}

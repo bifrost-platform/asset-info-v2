@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x9678E42ceBEb63F23197D726B29b1CB20d0064E5",
+      "decimals": 18,
+      "name": "IoTeX Network",
+      "network": "evm-56",
+      "symbol": "IOTX",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "iotx-0",

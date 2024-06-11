@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x111111111117dC0aa78b770fA6A738034120C302",
+      "decimals": 18,
+      "name": "1INCH Token",
+      "network": "evm-56",
+      "symbol": "1INCH",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "1inch-0",

@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x29cED01C447166958605519F10DcF8b0255fB379",
+      "decimals": 18,
+      "name": "Frax",
+      "network": "evm-56",
+      "symbol": "FRAX",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "frax-1",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Frax",
+  "references": [],
+  "tags": []
+}

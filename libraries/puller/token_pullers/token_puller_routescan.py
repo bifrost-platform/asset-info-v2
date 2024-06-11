@@ -85,8 +85,7 @@ class TokenPullerRoutescan(TokenPullerAbstracted):
                 printf(HTML(f"⎢ <b>∙ {size}</b>: {printed_url}"))
             selected_type = get_id(
                 "⎣ Select the image type",
-                None,
-                set(available_images.keys()),
+                permitted_id=set(available_images.keys()),
             )
             return URL(available_images[selected_type])
 

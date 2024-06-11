@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0xa050FFb3eEb8200eEB7F61ce34FF644420FD3522",
+      "decimals": 18,
+      "name": "ARB",
+      "network": "evm-56",
+      "symbol": "Arbitrum",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "arbitrum-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "ARB",
+  "references": [],
+  "tags": []
+}

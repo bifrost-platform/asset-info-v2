@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x43C934A845205F0b514417d757d7235B8f53f1B9",
+      "decimals": 18,
+      "name": "Stellar",
+      "network": "evm-56",
+      "symbol": "XLM",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "xlm-1",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Stellar",
+  "references": [],
+  "tags": []
+}

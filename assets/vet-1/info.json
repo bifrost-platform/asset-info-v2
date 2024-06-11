@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x6FDcdfef7c496407cCb0cEC90f9C5Aaa1Cc8D888",
+      "decimals": 18,
+      "name": "VeChain",
+      "network": "evm-56",
+      "symbol": "VET",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "vet-1",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "VeChain",
+  "references": [],
+  "tags": []
+}

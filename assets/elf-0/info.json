@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xa3f020a5C92e15be13CAF0Ee5C95cF79585EeCC9",
+      "decimals": 18,
+      "name": "ELF Token",
+      "network": "evm-56",
+      "symbol": "ELF",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "elf-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "ELF Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/aelf"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/aelf"
+    }
+  ],
+  "tags": []
+}

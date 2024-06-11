@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xc748673057861a797275CD8A068AbB95A902e8de",
+      "decimals": 9,
+      "name": "Baby Doge Coin",
+      "network": "evm-56",
+      "symbol": "BabyDoge",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "babydoge-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Baby Doge Coin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/baby-doge-coin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/baby-doge-coin"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x66e4d38b20173F509A1fF5d82866949e4fE898da",
+      "decimals": 18,
+      "name": "Loopring",
+      "network": "evm-56",
+      "symbol": "LRC",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "lrc-1",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "Loopring",
+  "references": [],
+  "tags": []
+}
