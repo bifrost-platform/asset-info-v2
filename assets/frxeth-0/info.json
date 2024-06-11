@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x64048A7eEcF3a2F1BA9e144aAc3D7dB6e58F555e",
+      "decimals": 18,
+      "name": "Frax Ether",
+      "network": "evm-56",
+      "symbol": "frxETH",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "frxeth-0",

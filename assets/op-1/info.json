@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x170C84E3b1D282f9628229836086716141995200",
+      "decimals": 18,
+      "name": "Optimism",
+      "network": "evm-56",
+      "symbol": "OP",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "op-1",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Optimism",
+  "references": [],
+  "tags": []
+}

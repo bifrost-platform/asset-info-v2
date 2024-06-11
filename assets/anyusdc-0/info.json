@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x8965349fb649A33a30cbFDa057D8eC2C48AbE2A2",
+      "decimals": 18,
+      "name": "USDC",
+      "network": "evm-56",
+      "symbol": "anyUSDC",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "anyusdc-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "USDC",
+  "references": [],
+  "tags": []
+}

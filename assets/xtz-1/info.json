@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x16939ef78684453bfDFb47825F8a5F714f12623a",
+      "decimals": 18,
+      "name": "Tezos Token",
+      "network": "evm-56",
+      "symbol": "XTZ",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "xtz-1",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Tezos Token",
+  "references": [],
+  "tags": []
+}

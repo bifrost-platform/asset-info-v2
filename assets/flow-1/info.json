@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0xC943c5320B9c18C153d1e2d12cC3074bebfb31A2",
+      "decimals": 18,
+      "name": "FLOW",
+      "network": "evm-56",
+      "symbol": "FLOW",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "flow-1",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "FLOW",
+  "references": [],
+  "tags": []
+}

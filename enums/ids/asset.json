@@ -48,6 +48,10 @@
     "value": "andy-0"
   },
   {
+    "description": "USDC",
+    "value": "anyusdc-0"
+  },
+  {
     "description": "ApeCoin",
     "value": "ape-0"
   },
@@ -62,6 +66,10 @@
   {
     "description": "Arbitrum",
     "value": "arb-0"
+  },
+  {
+    "description": "ARB",
+    "value": "arbitrum-0"
   },
   {
     "description": "Arkham",
@@ -188,6 +196,10 @@
     "value": "btt-0"
   },
   {
+    "description": "BitTorrent",
+    "value": "btt-1"
+  },
+  {
     "description": "BUSD",
     "value": "busd-0"
   },
@@ -206,6 +218,14 @@
   {
     "description": "Compound Ether",
     "value": "ceth-0"
+  },
+  {
+    "description": "BSC Conflux",
+    "value": "cfx-0"
+  },
+  {
+    "description": "CHEELEE",
+    "value": "cheel-0"
   },
   {
     "description": "chiliZ",
@@ -342,6 +362,10 @@
   {
     "description": "Flow",
     "value": "flow-0"
+  },
+  {
+    "description": "FLOW",
+    "value": "flow-1"
   },
   {
     "description": "Frax",
@@ -516,6 +540,10 @@
     "value": "mana-0"
   },
   {
+    "description": "Decentraland",
+    "value": "mana-1"
+  },
+  {
     "description": "Wojak Mask",
     "value": "mask-0"
   },
@@ -610,6 +638,10 @@
   {
     "description": "Optimism",
     "value": "op-0"
+  },
+  {
+    "description": "Optimism",
+    "value": "op-1"
   },
   {
     "description": "OpSec",
@@ -868,6 +900,10 @@
     "value": "usde-0"
   },
   {
+    "description": "Paxos Standard",
+    "value": "usdp-0"
+  },
+  {
     "description": "Tether USD",
     "value": "usdt-0"
   },
@@ -878,6 +914,10 @@
   {
     "description": "VeChain",
     "value": "vet-0"
+  },
+  {
+    "description": "VeChain",
+    "value": "vet-1"
   },
   {
     "description": "VERA",
@@ -976,8 +1016,16 @@
     "value": "xaut-0"
   },
   {
+    "description": "eCash",
+    "value": "xec-1"
+  },
+  {
     "description": "Stellar",
     "value": "xlm-0"
+  },
+  {
+    "description": "Stellar",
+    "value": "xlm-1"
   },
   {
     "description": "Monero",
@@ -986,6 +1034,10 @@
   {
     "description": "XRP Token",
     "value": "xrp-0"
+  },
+  {
+    "description": "Tezos Token",
+    "value": "xtz-1"
   },
   {
     "description": "Frankencoin",

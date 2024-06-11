@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x1F1C90aEb2fd13EA972F0a71e35c0753848e3DB0",
+      "decimals": 18,
+      "name": "CHEELEE",
+      "network": "evm-56",
+      "symbol": "CHEEL",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "cheel-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": false,
+    "svg": false
+  },
+  "name": "CHEELEE",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/cheelee"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/cheelee"
+    }
+  ],
+  "tags": []
+}

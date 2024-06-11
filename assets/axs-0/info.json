@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x715D400F88C167884bbCc41C5FeA407ed4D2f8A0",
+      "decimals": 18,
+      "name": "Axie Infinity Shard",
+      "network": "evm-56",
+      "symbol": "AXS",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "axs-0",

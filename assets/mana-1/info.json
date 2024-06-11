@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x26433c8127d9b4e9B71Eaa15111DF99Ea2EeB2f8",
+      "decimals": 18,
+      "name": "Decentraland",
+      "network": "evm-56",
+      "symbol": "MANA",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "mana-1",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Decentraland",
+  "references": [],
+  "tags": []
+}

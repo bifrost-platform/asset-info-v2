@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0xfb5B838b6cfEEdC2873aB27866079AC55363D37E",
+      "decimals": 9,
+      "name": "FLOKI",
+      "network": "evm-56",
+      "symbol": "FLOKI",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "floki-0",

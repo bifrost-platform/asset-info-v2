@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0x8595F9dA7b868b1822194fAEd312235E43007b49",
+      "decimals": 18,
+      "name": "BitTorrent",
+      "network": "evm-56",
+      "symbol": "BTT",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "btt-1",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "BitTorrent",
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/bittorrent"
+    }
+  ],
+  "tags": []
+}

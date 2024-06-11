@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x25d887Ce7a35172C62FeBFD67a1856F20FaEbB00",
+      "decimals": 18,
+      "name": "Pepe",
+      "network": "evm-56",
+      "symbol": "PEPE",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "pepe-0",

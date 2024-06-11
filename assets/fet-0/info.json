@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x031b41e504677879370e9DBcF937283A8691Fa7f",
+      "decimals": 18,
+      "name": "Fetch",
+      "network": "evm-56",
+      "symbol": "FET",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "fet-0",
