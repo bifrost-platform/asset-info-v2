@@ -32,6 +32,28 @@ class ListModel[T](
     def __len__(self) -> int:
         return len(self.root)
 
+    def append(self, item: T) -> None:
+        """Append an object to the end of the list.
+
+        Args:
+            item: The object to append.
+        """
+        self.root.append(item)
+
+    def sort(self, key: Callable[[T], Any] = None, reverse: bool = False) -> None:
+        """Sort the list in ascending order and return None.
+        The sort is in-place (i.e., the list itself is modified) and stable
+        (i.e., the order of two equal elements is maintained).
+        If a key function is given, apply it once to each list item and sort them,
+        ascending or descending, according to their function values.
+        The reverse flag can be set to sort in descending order.
+
+        Args:
+            key: A callable that returns a value to compare and sort the list.
+            reverse: A flag to sort in descending order.
+        """
+        self.root.sort(key=key, reverse=reverse)
+
     @abstractmethod
     def validate_items(self) -> list[T]:
         """Validate the items in the list.
