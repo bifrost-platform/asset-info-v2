@@ -289,7 +289,9 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
         Returns:
             The asset information if it is new or updated, otherwise None.
         """
-        asset_id = get_id(f"Enter the ID of asset")
+        asset_id = get_id(
+            f"Enter the ID of asset", guide_id=set(self.all_assets.keys())
+        )
         if asset_id not in self.all_assets:
             contract = self.__pull_contract_information(address, name, symbol, decimals)
             return self.__pull_asset_information(contract, asset_id)
