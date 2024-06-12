@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0x5a7A15f8d5DaEAE4e5bA880451CDDF64FA2fAe6D",
+      "decimals": 6,
+      "name": "Promise",
+      "network": "evm-56",
+      "symbol": "PROMISE",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "promise-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Promise",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/promise"
+    }
+  ],
+  "tags": []
+}

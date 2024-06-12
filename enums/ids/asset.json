@@ -12,6 +12,14 @@
     "value": "aave-0"
   },
   {
+    "description": "Apollo Caps ETF",
+    "value": "ace-0"
+  },
+  {
+    "description": "Acet Token",
+    "value": "act-0"
+  },
+  {
     "description": "Cardano Token",
     "value": "ada-0"
   },
@@ -56,6 +64,10 @@
     "value": "alt-0"
   },
   {
+    "description": "Altura",
+    "value": "alu-0"
+  },
+  {
     "description": "Ampleforth",
     "value": "ampl-0"
   },
@@ -86,6 +98,10 @@
   {
     "description": "Apu Apustaja",
     "value": "apu-0"
+  },
+  {
+    "description": "ApolloX Token",
+    "value": "apx-0"
   },
   {
     "description": "Arbitrum",
@@ -124,6 +140,10 @@
     "value": "babydoge-0"
   },
   {
+    "description": "BakeryToken",
+    "value": "bake-0"
+  },
+  {
     "description": "Balancer",
     "value": "bal-1"
   },
@@ -158,6 +178,10 @@
   {
     "description": "Bifrost",
     "value": "bfc-0"
+  },
+  {
+    "description": "BFG Token",
+    "value": "bfg-0"
   },
   {
     "description": "BitgetToken",
@@ -200,6 +224,10 @@
     "value": "bnb-0"
   },
   {
+    "description": "Liquid Staking BNB",
+    "value": "bnbx-0"
+  },
+  {
     "description": "BinaryX",
     "value": "bnx-0"
   },
@@ -230,6 +258,10 @@
   {
     "description": "Bitcoin SV",
     "value": "bsv-0"
+  },
+  {
+    "description": "Biswap",
+    "value": "bsw-0"
   },
   {
     "description": "Bitcoin",
@@ -272,6 +304,10 @@
     "value": "cat-0"
   },
   {
+    "description": "CATAMOTO",
+    "value": "cata-0"
+  },
+  {
     "description": "Coinbase Wrapped Staked ETH",
     "value": "cbeth-0"
   },
@@ -294,6 +330,10 @@
   {
     "description": "BSC Conflux",
     "value": "cfx-0"
+  },
+  {
+    "description": "Chappyz",
+    "value": "chapz-0"
   },
   {
     "description": "CHEELEE",
@@ -328,6 +368,10 @@
     "value": "crv-0"
   },
   {
+    "description": "CertiK Token",
+    "value": "ctk-0"
+  },
+  {
     "description": "Cartesi Token",
     "value": "ctsi-0"
   },
@@ -354,6 +398,10 @@
   {
     "description": "Dogecoin",
     "value": "doge-0"
+  },
+  {
+    "description": "DOGEMOB",
+    "value": "dogemob-0"
   },
   {
     "description": "Dogeverse",
@@ -480,6 +528,10 @@
     "value": "frax-1"
   },
   {
+    "description": "Freebnk",
+    "value": "frbk-0"
+  },
+  {
     "description": "Frax Ether",
     "value": "frxeth-0"
   },
@@ -506,6 +558,14 @@
   {
     "description": "GenBox",
     "value": "genai-0"
+  },
+  {
+    "description": "Games For A Living",
+    "value": "gfal-0"
+  },
+  {
+    "description": "GamerCoin",
+    "value": "ghx-0"
   },
   {
     "description": "Golem Network Token",
@@ -548,8 +608,16 @@
     "value": "hbar-0"
   },
   {
+    "description": "HELLO",
+    "value": "hello-0"
+  },
+  {
     "description": "Highstreet token",
     "value": "high-0"
+  },
+  {
+    "description": "HODL",
+    "value": "hodl-0"
   },
   {
     "description": "Pepoclown",
@@ -562,6 +630,10 @@
   {
     "description": "HoloToken",
     "value": "hot-0"
+  },
+  {
+    "description": "ICHI",
+    "value": "ichi-0"
   },
   {
     "description": "Internet Computer",
@@ -640,6 +712,10 @@
     "value": "ladys-0"
   },
   {
+    "description": "Landshare Token",
+    "value": "land-0"
+  },
+  {
     "description": "Lido DAO Token",
     "value": "ldo-0"
   },
@@ -688,8 +764,16 @@
     "value": "mana-1"
   },
   {
+    "description": "MARU",
+    "value": "maru-0"
+  },
+  {
     "description": "Wojak Mask",
     "value": "mask-0"
+  },
+  {
+    "description": "MATH Token",
+    "value": "math-0"
   },
   {
     "description": "MATIC",
@@ -736,6 +820,10 @@
     "value": "mina-0"
   },
   {
+    "description": "Minu",
+    "value": "minu-0"
+  },
+  {
     "description": "Maker",
     "value": "mkr-0"
   },
@@ -754,6 +842,10 @@
   {
     "description": "Monkas",
     "value": "monkas-0"
+  },
+  {
+    "description": "MonSpaC",
+    "value": "mspc-0"
   },
   {
     "description": "MX Token",
@@ -832,8 +924,16 @@
     "value": "opsec-0"
   },
   {
+    "description": "Oraichain Token",
+    "value": "orai-0"
+  },
+  {
     "description": "Ordinals",
     "value": "ordi-0"
+  },
+  {
+    "description": "Orion Protocol",
+    "value": "orn-0"
   },
   {
     "description": "Play to Donate",
@@ -880,8 +980,20 @@
     "value": "prime-0"
   },
   {
+    "description": "Promise",
+    "value": "promise-0"
+  },
+  {
+    "description": "QANX Token",
+    "value": "qanx-0"
+  },
+  {
     "description": "Quant",
     "value": "qnt-0"
+  },
+  {
+    "description": "Radio Caca V2",
+    "value": "raca-0"
   },
   {
     "description": "Ribbon",
@@ -936,6 +1048,10 @@
     "value": "sats-0"
   },
   {
+    "description": "SmarDex Token",
+    "value": "sdex-0"
+  },
+  {
     "description": "Sei",
     "value": "sei-0"
   },
@@ -956,6 +1072,10 @@
     "value": "shib-0"
   },
   {
+    "description": "Staked Lista BNB",
+    "value": "slisbnb-0"
+  },
+  {
     "description": "Staked Memecoin",
     "value": "smeme-0"
   },
@@ -972,6 +1092,10 @@
     "value": "spr-0"
   },
   {
+    "description": "SaitaChain",
+    "value": "stc-0"
+  },
+  {
     "description": "Liquid staked Ether 2.0",
     "value": "steth-0"
   },
@@ -986,6 +1110,10 @@
   {
     "description": "Super Trump",
     "value": "strump-0"
+  },
+  {
+    "description": "StrikeX",
+    "value": "strx-0"
   },
   {
     "description": "Stacks",
@@ -1028,6 +1156,10 @@
     "value": "tia-0"
   },
   {
+    "description": "TOKUDA",
+    "value": "tkd-0"
+  },
+  {
     "description": "Tokenize Emblem",
     "value": "tkx-0"
   },
@@ -1066,6 +1198,14 @@
   {
     "description": "Trust Wallet",
     "value": "twt-0"
+  },
+  {
+    "description": "UBXS Token",
+    "value": "ubxs-0"
+  },
+  {
+    "description": "Ultron",
+    "value": "ulx-0"
   },
   {
     "description": "Uniswap",
@@ -1130,6 +1270,10 @@
   {
     "description": "Tether USD",
     "value": "usdt-0"
+  },
+  {
+    "description": "USDV",
+    "value": "usdv-0"
   },
   {
     "description": "Venus BTC",
@@ -1258,6 +1402,10 @@
   {
     "description": "Tether Gold",
     "value": "xaut-0"
+  },
+  {
+    "description": "XCAD Token",
+    "value": "xcad-0"
   },
   {
     "description": "eCash",

@@ -13,10 +13,10 @@
   ],
   "id": "twt-0",
   "images": {
-    "png128": false,
-    "png256": false,
+    "png128": true,
+    "png256": true,
     "png32": true,
-    "png64": false,
+    "png64": true,
     "svg": false
   },
   "name": "Trust Wallet",

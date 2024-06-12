@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xBb46693eBbEa1aC2070E59B4D043b47e2e095f86",
+      "decimals": 18,
+      "name": "BFG Token",
+      "network": "evm-56",
+      "symbol": "BFG",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "bfg-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "BFG Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/bfg-token"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/betfury"
+    }
+  ],
+  "tags": []
+}

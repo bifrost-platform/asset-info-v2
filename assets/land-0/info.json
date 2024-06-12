@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xA73164DB271931CF952cBaEfF9E8F5817b42fA5C",
+      "decimals": 18,
+      "name": "Landshare Token",
+      "network": "evm-56",
+      "symbol": "LAND",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "land-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Landshare Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/landshare"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/landshare"
+    }
+  ],
+  "tags": []
+}

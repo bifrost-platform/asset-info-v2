@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xFdc66A08B0d0Dc44c17bbd471B88f49F50CdD20F",
+      "decimals": 18,
+      "name": "SmarDex Token",
+      "network": "evm-56",
+      "symbol": "SDEX",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "sdex-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "SmarDex Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/smardex"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/smardex"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xD79bc26c424bcB52eEc2708d224868c1499422C8",
+      "decimals": 18,
+      "name": "TOKUDA",
+      "network": "evm-56",
+      "symbol": "TKD",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "tkd-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "TOKUDA",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/tokuda"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/tokuda"
+    }
+  ],
+  "tags": []
+}

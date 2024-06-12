@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x965F527D9159dCe6288a2219DB51fc6Eef120dD1",
+      "decimals": 18,
+      "name": "Biswap",
+      "network": "evm-56",
+      "symbol": "BSW",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "bsw-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Biswap",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/biswap"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/biswap"
+    }
+  ],
+  "tags": []
+}
