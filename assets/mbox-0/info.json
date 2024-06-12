@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x3203c9E46cA618C8C1cE5dC67e7e9D75f5da2377",
+      "decimals": 18,
+      "name": "Mobox",
+      "network": "evm-56",
+      "symbol": "MBOX",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "mbox-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Mobox",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/mobox"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/mobox"
+    }
+  ],
+  "tags": []
+}

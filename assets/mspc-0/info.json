@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0xbA509bdb71a29301860800e13867B59B461747Af",
+      "decimals": 8,
+      "name": "MonSpaC",
+      "network": "evm-56",
+      "symbol": "MSPC",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "mspc-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "MonSpaC",
+  "references": [],
+  "tags": []
+}

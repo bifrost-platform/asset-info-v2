@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x323665443CEf804A3b5206103304BD4872EA4253",
+      "decimals": 6,
+      "name": "USDV",
+      "network": "evm-56",
+      "symbol": "USDV",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "usdv-0",
+  "images": {
+    "png128": false,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "USDV",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/verified-usd"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/verified-usd"
+    }
+  ],
+  "tags": []
+}

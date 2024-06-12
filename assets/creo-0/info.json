@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x9521728bF66a867BC65A93Ece4a543D817871Eb7",
+      "decimals": 18,
+      "name": "CreoEngine",
+      "network": "evm-56",
+      "symbol": "CREO",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "creo-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "CreoEngine",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/creo-engine"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/creo-engine"
+    }
+  ],
+  "tags": []
+}

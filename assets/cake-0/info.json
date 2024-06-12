@@ -9,12 +9,22 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+      "decimals": 18,
+      "name": "PancakeSwap Token",
+      "network": "evm-56",
+      "symbol": "Cake",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "cake-0",
   "images": {
     "png128": true,
-    "png256": false,
+    "png256": true,
     "png32": true,
     "png64": true,
     "svg": false

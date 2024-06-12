@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x4507cEf57C46789eF8d1a19EA45f4216bae2B528",
+      "decimals": 9,
+      "name": "TokenFi",
+      "network": "evm-56",
+      "symbol": "TOKEN",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "token-0",

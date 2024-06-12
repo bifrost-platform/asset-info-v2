@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x7B56748A3Ef9970A5bAe99c58aD8bC67b26c525F",
+      "decimals": 10,
+      "name": "Chappyz",
+      "network": "evm-56",
+      "symbol": "CHAPZ",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "chapz-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Chappyz",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/chappyz"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/chappyz"
+    }
+  ],
+  "tags": []
+}

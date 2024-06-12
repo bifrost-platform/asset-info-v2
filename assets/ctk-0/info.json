@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xA8c2B8eec3d368C0253ad3dae65a5F2BBB89c929",
+      "decimals": 6,
+      "name": "CertiK Token",
+      "network": "evm-56",
+      "symbol": "CTK",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ctk-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "CertiK Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/shentu"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/shentu"
+    }
+  ],
+  "tags": []
+}

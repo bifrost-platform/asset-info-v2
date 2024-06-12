@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0x198271b868daE875bFea6e6E4045cDdA5d6B9829",
+      "decimals": 18,
+      "name": "Animal Farm Dogs",
+      "network": "evm-56",
+      "symbol": "AFD",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "afd-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Animal Farm Dogs",
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/animal-farm-dogs"
+    }
+  ],
+  "tags": []
+}

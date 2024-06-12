@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xC44F8508E1dE753e7c523F98639132eeF2AD8EA5",
+      "decimals": 18,
+      "name": "DOGEMOB",
+      "network": "evm-56",
+      "symbol": "DOGEMOB",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "dogemob-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "DOGEMOB",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/dogemob"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/dogemob"
+    }
+  ],
+  "tags": []
+}

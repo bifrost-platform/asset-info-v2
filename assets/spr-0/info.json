@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0xA29fbC10bF1c2E7B108E8704732F4bB0B10C0dA5",
+      "decimals": 18,
+      "name": "Spring",
+      "network": "evm-56",
+      "symbol": "SPR",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "spr-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Spring",
+  "references": [],
+  "tags": []
+}

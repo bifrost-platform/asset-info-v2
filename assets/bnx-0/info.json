@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x8C851d1a123Ff703BD1f9dabe631b69902Df5f97",
+      "decimals": 18,
+      "name": "BinaryX",
+      "network": "evm-56",
+      "symbol": "BNX",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "bnx-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "BinaryX",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/binaryx-old"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/binaryx"
+    }
+  ],
+  "tags": []
+}

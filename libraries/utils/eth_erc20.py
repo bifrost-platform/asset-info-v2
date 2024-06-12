@@ -47,7 +47,7 @@ class EthErc20Interface:
         """
         method = self.contract.functions.name()
         try:
-            return method.call()
+            return method.call().replace("\x08", "")
         except Web3Exception:
             result = self.node.eth.call(method.build_transaction())
             return result.decode("utf-8").replace("\x00", "")
@@ -60,7 +60,7 @@ class EthErc20Interface:
         """
         method = self.contract.functions.symbol()
         try:
-            return method.call()
+            return method.call().replace("\x08", "")
         except Web3Exception:
             result = self.node.eth.call(method.build_transaction())
             return result.decode("utf-8").replace("\x00", "")

@@ -18,7 +18,8 @@ jobs:
       - name: Get the latest and release tag
         run: |
           TAGS=$(git describe --tags $(git rev-list --tags --max-count=2))
-          IFS=$'\n' read -r -d '' RELEASE_TAG LATEST_TAG <<< $TAGS
+          RELEASE_TAG=$(echo $TAGS | sed -n '1p')
+          LATEST_TAG=$(echo $TAGS | sed -n '2p')
           echo "LATEST_TAG=$LATEST_TAG" >> $GITHUB_ENV
           echo "RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_ENV
 

@@ -296,6 +296,11 @@ class TokenPullerAbstracted(metaclass=ABCMeta):
             contract = self.__pull_contract_information(address, name, symbol, decimals)
             return self.__pull_asset_information(contract, asset_id)
         else:
+            printf(
+                HTML(
+                    f"<grey>{dumps(self.all_assets.get(asset_id).model_dump(mode='json'))}</grey>"
+                )
+            )
             if confirm(
                 f"The id '{asset_id}' is already exists. Would you like to overwrite?"
             ):

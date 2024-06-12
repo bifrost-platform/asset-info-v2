@@ -9,6 +9,16 @@
       "tags": [
         "mainnet"
       ]
+    },
+    {
+      "address": "0x5f4Bde007Dc06b867f86EBFE4802e34A1fFEEd63",
+      "decimals": 18,
+      "name": "Highstreet Token",
+      "network": "evm-56",
+      "symbol": "HIGH",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "high-0",

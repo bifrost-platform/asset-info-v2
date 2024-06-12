@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x4f1960E29b2cA581a38c5c474e123f420F8092db",
+      "decimals": 6,
+      "name": "UBXS Token",
+      "network": "evm-56",
+      "symbol": "UBXS",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "ubxs-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "UBXS Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/ubxs-token"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/ubxs"
+    }
+  ],
+  "tags": []
+}

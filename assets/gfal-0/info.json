@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x47c454cA6be2f6DEf6f32b638C80F91c9c3c5949",
+      "decimals": 18,
+      "name": "Games For A Living",
+      "network": "evm-56",
+      "symbol": "GFAL",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "gfal-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Games For A Living",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/games-for-a-living"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/games-for-a-living"
+    }
+  ],
+  "tags": []
+}

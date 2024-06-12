@@ -1,0 +1,30 @@
+{
+  "contracts": [
+    {
+      "address": "0xd404829f8634C99C7aC945b69A02a5B7a8d4De8C",
+      "decimals": 18,
+      "name": "MEME AI",
+      "network": "evm-56",
+      "symbol": "MEMEAI",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "memeai-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "MEME AI",
+  "references": [
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/meme-ai-fun"
+    }
+  ],
+  "tags": []
+}

@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xf48f91df403976060cC05dBbf8A0901b09fdeFd4",
+      "decimals": 18,
+      "name": "Minu",
+      "network": "evm-56",
+      "symbol": "MINU",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "minu-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Minu",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/minu"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/minu"
+    }
+  ],
+  "tags": []
+}
