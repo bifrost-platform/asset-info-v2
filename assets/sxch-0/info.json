@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xE58C3A44B74362048e202cb7C8036D4b0B28Af50",
+      "decimals": 18,
+      "name": "Solarx L1",
+      "network": "evm-56",
+      "symbol": "SXCH",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "sxch-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Solarx L1",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/solarx-2"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/solarx-ai"
+    }
+  ],
+  "tags": []
+}

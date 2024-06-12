@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xbb73BB2505AC4643d5C0a99c2A1F34B3DfD09D11",
+      "decimals": 9,
+      "name": "Meta Games Coin",
+      "network": "evm-56",
+      "symbol": "MGC",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "mgc-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "Meta Games Coin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/meta-games-coin"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/meta-games-coin"
+    }
+  ],
+  "tags": []
+}

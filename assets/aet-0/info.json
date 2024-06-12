@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x2Aa7E601a67d9c57BAdA24E186632539663B4945",
+      "decimals": 18,
+      "name": "AET",
+      "network": "evm-56",
+      "symbol": "AET",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "aet-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "AET",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/aet"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/aet"
+    }
+  ],
+  "tags": []
+}

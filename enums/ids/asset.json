@@ -16,8 +16,20 @@
     "value": "ada-0"
   },
   {
+    "description": "AET",
+    "value": "aet-0"
+  },
+  {
     "description": "Aevo",
     "value": "aevo-0"
+  },
+  {
+    "description": "Animal Farm Dogs",
+    "value": "afd-0"
+  },
+  {
+    "description": "AGI Token",
+    "value": "agi-0"
   },
   {
     "description": "SingularityNET Token",
@@ -26,6 +38,10 @@
   {
     "description": "AIOZ Network",
     "value": "aioz-0"
+  },
+  {
+    "description": "AITECH",
+    "value": "aitech-0"
   },
   {
     "description": "Arbius",
@@ -50,6 +66,10 @@
   {
     "description": "Ankr",
     "value": "ankr-0"
+  },
+  {
+    "description": "Ankr Staked BNB",
+    "value": "ankrbnb-0"
   },
   {
     "description": "USDC",
@@ -180,6 +200,10 @@
     "value": "bnb-0"
   },
   {
+    "description": "BinaryX",
+    "value": "bnx-0"
+  },
+  {
     "description": "BOB",
     "value": "bob-0"
   },
@@ -190,6 +214,10 @@
   {
     "description": "Bonk",
     "value": "bonk-0"
+  },
+  {
+    "description": "PRIVA",
+    "value": "bpriva-0"
   },
   {
     "description": "Brett",
@@ -224,6 +252,10 @@
     "value": "btt-1"
   },
   {
+    "description": "BurnedFi",
+    "value": "burn-0"
+  },
+  {
     "description": "BUSD",
     "value": "busd-0"
   },
@@ -236,8 +268,20 @@
     "value": "cake-0"
   },
   {
+    "description": "Catcoin",
+    "value": "cat-0"
+  },
+  {
     "description": "Coinbase Wrapped Staked ETH",
     "value": "cbeth-0"
+  },
+  {
+    "description": "CashBackPro",
+    "value": "cbp-0"
+  },
+  {
+    "description": "CC",
+    "value": "cc-0"
   },
   {
     "description": "Celo native asset",
@@ -272,6 +316,10 @@
     "value": "coti-0"
   },
   {
+    "description": "CreoEngine",
+    "value": "creo-0"
+  },
+  {
     "description": "CRO",
     "value": "cro-0"
   },
@@ -294,6 +342,10 @@
   {
     "description": "Zero1 Token",
     "value": "deai-0"
+  },
+  {
+    "description": "DEBT",
+    "value": "debt-0"
   },
   {
     "description": "Dexe",
@@ -338,6 +390,10 @@
   {
     "description": "Elrond",
     "value": "egld-0"
+  },
+  {
+    "description": "Elephant Money",
+    "value": "elephant-0"
   },
   {
     "description": "ELF Token",
@@ -596,6 +652,10 @@
     "value": "link-0"
   },
   {
+    "description": "Lista USD",
+    "value": "lisusd-0"
+  },
+  {
     "description": "Loyalty Labs",
     "value": "loyal-0"
   },
@@ -636,6 +696,10 @@
     "value": "matic-0"
   },
   {
+    "description": "Mobox",
+    "value": "mbox-0"
+  },
+  {
     "description": "Merit Circle",
     "value": "mc-0"
   },
@@ -652,8 +716,20 @@
     "value": "meme-0"
   },
   {
+    "description": "MEME AI",
+    "value": "memeai-0"
+  },
+  {
     "description": "mETH",
     "value": "meth-0"
+  },
+  {
+    "description": "Meta Games Coin",
+    "value": "mgc-0"
+  },
+  {
+    "description": "Milo Inu",
+    "value": "milo-0"
   },
   {
     "description": "Mina Protocol",
@@ -692,6 +768,10 @@
     "value": "neural-0"
   },
   {
+    "description": "MALOU",
+    "value": "never-0"
+  },
+  {
     "description": "Nexo",
     "value": "nexo-0"
   },
@@ -702,6 +782,10 @@
   {
     "description": "APENFT",
     "value": "nft-1"
+  },
+  {
+    "description": "NetMind Token",
+    "value": "nmt-0"
   },
   {
     "description": "Non-Playable Coin",
@@ -804,6 +888,10 @@
     "value": "rbn-0"
   },
   {
+    "description": "Radiant",
+    "value": "rdnt-0"
+  },
+  {
     "description": "Rocket Pool ETH",
     "value": "reth-0"
   },
@@ -860,6 +948,10 @@
     "value": "sfrxeth-0"
   },
   {
+    "description": "SeedifyFund",
+    "value": "sfund-0"
+  },
+  {
     "description": "SHIBA INU",
     "value": "shib-0"
   },
@@ -874,6 +966,10 @@
   {
     "description": "Solana",
     "value": "sol-0"
+  },
+  {
+    "description": "Spring",
+    "value": "spr-0"
   },
   {
     "description": "Liquid staked Ether 2.0",
@@ -908,12 +1004,20 @@
     "value": "sweth-0"
   },
   {
+    "description": "Solarx L1",
+    "value": "sxch-0"
+  },
+  {
     "description": "Swipe",
     "value": "sxp-0"
   },
   {
     "description": "Tectum Emission Token",
     "value": "tet-0"
+  },
+  {
+    "description": "THENA",
+    "value": "the-0"
   },
   {
     "description": "Theta Token",
@@ -934,6 +1038,10 @@
   {
     "description": "Wrapped TON Coin",
     "value": "ton-0"
+  },
+  {
+    "description": "Trias Token",
+    "value": "trias-0"
   },
   {
     "description": "Trog",
@@ -1026,6 +1134,10 @@
   {
     "description": "Venus BTC",
     "value": "vbtc-0"
+  },
+  {
+    "description": "VELO",
+    "value": "velo-0"
   },
   {
     "description": "VeChain Token",
@@ -1126,6 +1238,14 @@
   {
     "description": "Wrapped QUIL",
     "value": "wquil-0"
+  },
+  {
+    "description": "WeSendit",
+    "value": "wsi-0"
+  },
+  {
+    "description": "SOLANA",
+    "value": "wsol-0"
   },
   {
     "description": "Wrapped liquid staked Ether 2.0",

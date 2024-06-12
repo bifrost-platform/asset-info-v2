@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xF4C8E32EaDEC4BFe97E0F595AdD0f4450a863a11",
+      "decimals": 18,
+      "name": "THENA",
+      "network": "evm-56",
+      "symbol": "THE",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "the-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "THENA",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/thena"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/thena"
+    }
+  ],
+  "tags": []
+}

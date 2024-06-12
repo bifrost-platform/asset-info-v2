@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0x477bC8d23c634C154061869478bce96BE6045D12",
+      "decimals": 18,
+      "name": "SeedifyFund",
+      "network": "evm-56",
+      "symbol": "SFUND",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "sfund-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "SeedifyFund",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/seedify-fund"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/seedify-fund"
+    }
+  ],
+  "tags": []
+}

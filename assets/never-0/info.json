@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xeaC7250cf7Ef47abDCCb26dF77b81BdaC3Da4cfb",
+      "decimals": 18,
+      "name": "MALOU",
+      "network": "evm-56",
+      "symbol": "NEVER",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "never-0",
+  "images": {
+    "png128": true,
+    "png256": false,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "MALOU",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/malou"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/malou"
+    }
+  ],
+  "tags": []
+}
