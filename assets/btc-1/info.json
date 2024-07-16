@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "address": "0x52Eb8CFC008814328cF8daec9e2023Fb58384242",
+      "decimals": 8,
+      "name": "Unified BTC",
+      "network": "evm-49088",
+      "symbol": "BTC",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "btc-1",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unified BTC",
+  "references": [],
+  "tags": []
+}
