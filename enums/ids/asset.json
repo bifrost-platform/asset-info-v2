@@ -1260,6 +1260,10 @@
     "value": "usdc-0"
   },
   {
+    "description": "USD Base Coin",
+    "value": "usdc-1"
+  },
+  {
     "description": "Decentralized USD",
     "value": "usdd-0"
   },
