@@ -1,0 +1,34 @@
+{
+  "contracts": [
+    {
+      "address": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
+      "decimals": 6,
+      "name": "USD Base Coin",
+      "network": "evm-8453",
+      "symbol": "USDbC",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "usdc-1",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": false
+  },
+  "name": "USD Base Coin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/bridged-usd-coin-base"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/usd-base-coin"
+    }
+  ],
+  "tags": []
+}
