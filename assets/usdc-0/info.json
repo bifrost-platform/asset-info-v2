@@ -191,6 +191,26 @@
       ]
     },
     {
+      "address": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
+      "decimals": 6,
+      "name": "USD Base Coin",
+      "network": "evm-8453",
+      "symbol": "USDbC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xC96971f6F5A1D20EFcD465B1163812a955b414A3",
+      "decimals": 6,
+      "name": "USDC",
+      "network": "evm-84532",
+      "symbol": "USDC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0xC9C0aD3179eE2f4801454926ED5D6A2Da30b56FB",
       "decimals": 18,
       "name": "USD Coin",
