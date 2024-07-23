@@ -16,6 +16,10 @@
     "description": "Bifrost networks"
   },
   {
+    "value": "bitcoin",
+    "description": "Bitcoin networks"
+  },
+  {
     "value": "bnb",
     "description": "BNB networks"
   },

@@ -1,15 +1,20 @@
-from typing import Union, Self
+from typing import Union, Self, get_args
 
-from pydantic import RootModel
+from pydantic import RootModel, model_validator
 
+from libraries.models.terminals.address_bitcoin import AddressBitcoin
 from libraries.models.terminals.address_evm import AddressEvm
 
+ADDRESS_TYPES = Union[AddressEvm, AddressBitcoin]
 
-class Address(RootModel[Union[AddressEvm]]):
+
+class Address(RootModel[ADDRESS_TYPES]):
     """A union of constrained `str` about each address of blockchain networks."""
 
     def __eq__(self, other: Self) -> bool:
         if self.is_evm_address and other.is_evm_address:
+            return self.root.__eq__(other.root)
+        elif self.is_bitcoin_address and other.is_bitcoin_address:
             return self.root.__eq__(other.root)
         else:
             raise ValueError(
@@ -21,6 +26,8 @@ class Address(RootModel[Union[AddressEvm]]):
 
     def __lt__(self, other: Self) -> bool:
         if self.is_evm_address and other.is_evm_address:
+            return self.root.__lt__(other.root)
+        elif self.is_bitcoin_address and other.is_bitcoin_address:
             return self.root.__lt__(other.root)
         else:
             raise ValueError(
@@ -50,3 +57,26 @@ class Address(RootModel[Union[AddressEvm]]):
             Whether the address is an EVM address.
         """
         return isinstance(self.root, AddressEvm)
+
+    @property
+    def is_bitcoin_address(self) -> bool:
+        """Check if the address is a Bitcoin address.
+
+        Returns:
+            Whether the address is a Bitcoin address.
+        """
+        return isinstance(self.root, AddressBitcoin)
+
+    @model_validator(mode="after")
+    def validator(self) -> Self:
+        root_types = get_args(ADDRESS_TYPES)
+        if type(self.root) in root_types:
+            return self
+        elif isinstance(self.root, str):
+            for root_type in root_types:
+                try:
+                    self.root = root_type(self.root)
+                    return self
+                except ValueError:
+                    continue
+        raise ValueError(f"Invalid address: {self.root}")

@@ -1,5 +1,28 @@
 {
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "1111111111111111111114oLvT2",
+      "decimals": 8,
+      "name": "Bitcoin",
+      "network": "bitcoin-1",
+      "symbol": "BTC",
+      "tags": [
+        "mainnet",
+        "native-coin"
+      ]
+    },
+    {
+      "address": "1111111111111111111114oLvT2",
+      "decimals": 8,
+      "name": "Bitcoin",
+      "network": "bitcoin-2",
+      "symbol": "BTC",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    }
+  ],
   "id": "btc-0",
   "images": {
     "png128": true,
@@ -19,5 +42,7 @@
       "url": "https://www.coingecko.com/en/coins/bitcoin"
     }
   ],
-  "tags": []
+  "tags": [
+    "bitcoin"
+  ]
 }

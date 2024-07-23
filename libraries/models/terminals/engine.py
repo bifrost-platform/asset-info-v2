@@ -13,6 +13,7 @@ class _EngineEnum(StrEnum):
     """
 
     EVM: str = "evm"
+    BITCOIN: str = "bitcoin"
     UNKNOWN: str = "unknown"
 
 
@@ -27,6 +28,15 @@ class Engine(EnumModel[_EngineEnum]):
             Whether the engine is an EVM engine.
         """
         return self.root == _EngineEnum.EVM
+
+    @property
+    def is_bitcoin(self) -> bool:
+        """Check if the engine is a Bitcoin engine.
+
+        Returns:
+            Whether the engine is a Bitcoin engine.
+        """
+        return self.root == _EngineEnum.BITCOIN
 
     @property
     def is_unknown(self) -> bool:
