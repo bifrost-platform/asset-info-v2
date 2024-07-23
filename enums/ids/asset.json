@@ -1236,6 +1236,10 @@
     "value": "unknown-bifrost"
   },
   {
+    "description": "Unknown Bitcoin Asset",
+    "value": "unknown-bitcoin"
+  },
+  {
     "description": "Unknown BNB Asset",
     "value": "unknown-bnb"
   },

@@ -1,0 +1,25 @@
+{
+  "currency": {
+    "address": "1111111111111111111114oLvT2",
+    "decimals": 8,
+    "id": "btc-0",
+    "name": "Bitcoin",
+    "symbol": "BTC"
+  },
+  "engine": "bitcoin",
+  "explorers": [],
+  "id": "bitcoin-2",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Bitcoin Testnet",
+  "network": "testnet",
+  "tags": [
+    "bitcoin"
+  ],
+  "unknownAssetId": "unknown-bitcoin"
+}

@@ -1,5 +1,13 @@
 [
   {
+    "description": "Bitcoin Mainnet",
+    "value": "bitcoin-1"
+  },
+  {
+    "description": "Bitcoin Testnet",
+    "value": "bitcoin-2"
+  },
+  {
     "description": "Ethereum Mainnet",
     "value": "evm-1"
   },

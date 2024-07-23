@@ -1,0 +1,16 @@
+{
+  "contracts": [],
+  "id": "unknown-bitcoin",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Bitcoin Asset",
+  "references": [],
+  "tags": [
+    "bitcoin"
+  ]
+}
