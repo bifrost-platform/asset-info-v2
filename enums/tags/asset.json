@@ -16,6 +16,10 @@
     "description": "Main network of asset is Bifrost"
   },
   {
+    "value": "bitcoin",
+    "description": "Main network of asset is Bitcoin"
+  },
+  {
     "value": "bnb",
     "description": "Main network of asset is BNB chain"
   },
