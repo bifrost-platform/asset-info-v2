@@ -1,5 +1,6 @@
 # Specifies the essential requirements of the project.
+bitcoinlib>=0.6.15
+build>=1.2.1
 hexbytes>=0.3.1
 pydantic>=2.5.3
 web3>=6.14.0
-build>=1.2.1
