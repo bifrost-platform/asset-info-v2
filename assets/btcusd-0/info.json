@@ -25,7 +25,7 @@
       "decimals": 18,
       "name": "Bitcoin USD",
       "network": "evm-8453",
-      "symbol": "BTCUSD",
+      "symbol": "BtcUSD",
       "tags": [
         "mainnet"
       ]
@@ -33,9 +33,9 @@
     {
       "address": "0xf97fD4bE50e5E56C957DC799488cF589B6916925",
       "decimals": 18,
-      "name": "Bitcoin USD BTCUSD",
+      "name": "Bitcoin USD",
       "network": "evm-84532",
-      "symbol": "BTCUSD",
+      "symbol": "BtcUSD",
       "tags": [
         "testnet"
       ]
