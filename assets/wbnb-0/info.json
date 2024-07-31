@@ -7,7 +7,8 @@
       "network": "evm-56",
       "symbol": "WBNB",
       "tags": [
-        "mainnet"
+        "mainnet",
+        "wrapped-coin"
       ]
     },
     {
@@ -17,7 +18,8 @@
       "network": "evm-97",
       "symbol": "WBNB",
       "tags": [
-        "testnet"
+        "testnet",
+        "wrapped-coin"
       ]
     }
   ],
