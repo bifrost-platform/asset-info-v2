@@ -7,7 +7,8 @@
       "network": "evm-43114",
       "symbol": "WAVAX",
       "tags": [
-        "mainnet"
+        "mainnet",
+        "wrapped-coin"
       ]
     }
   ],
