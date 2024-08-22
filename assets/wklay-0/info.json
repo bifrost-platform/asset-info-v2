@@ -7,7 +7,8 @@
       "network": "evm-8217",
       "symbol": "WKLAY",
       "tags": [
-        "mainnet"
+        "mainnet",
+        "wrapped-coin"
       ]
     }
   ],
