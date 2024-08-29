@@ -3,7 +3,7 @@
     {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
-      "name": "KLAY",
+      "name": "KAIA",
       "network": "evm-1001",
       "symbol": "KLAY",
       "tags": [
@@ -14,7 +14,7 @@
     {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
-      "name": "KLAY",
+      "name": "KAIA",
       "network": "evm-8217",
       "symbol": "KLAY",
       "tags": [
@@ -31,7 +31,7 @@
     "png64": true,
     "svg": true
   },
-  "name": "KLAY",
+  "name": "KAIA",
   "references": [
     {
       "id": "coingecko",
@@ -43,7 +43,7 @@
     }
   ],
   "tags": [
-    "klaytn",
+    "kaia",
     "native-coin"
   ]
 }
