@@ -16,8 +16,8 @@
     "description": "Explorer powered by Etherscan"
   },
   {
-    "value": "klaytnscope",
-    "description": "Explorer for Klaytn network"
+    "value": "kaiascan",
+    "description": "Explorer for Kaia network"
   },
   {
     "value": "otterscan",

@@ -36,8 +36,8 @@
     "description": "Goerli testnet"
   },
   {
-    "value": "klaytn",
-    "description": "Klaytn networks"
+    "value": "kaia",
+    "description": "Kaia networks"
   },
   {
     "value": "l2-ethereum",

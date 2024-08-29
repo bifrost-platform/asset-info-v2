@@ -32,8 +32,8 @@
     "description": "Main network of asset is Ethereum"
   },
   {
-    "value": "klaytn",
-    "description": "Main network of asset is Klaytn"
+    "value": "kaia",
+    "description": "Main network of asset is Kaia"
   },
   {
     "value": "native-coin",
