@@ -21,37 +21,6 @@
       ]
     },
     {
-      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
-      "decimals": 18,
-      "name": "MATIC",
-      "network": "evm-137",
-      "symbol": "MATIC",
-      "tags": [
-        "mainnet",
-        "native-coin"
-      ]
-    },
-    {
-      "address": "0x21ad243b81eff53482F6F6E7C76539f2CfC0B734",
-      "decimals": 18,
-      "name": "Unified MATIC",
-      "network": "evm-3068",
-      "symbol": "MATIC",
-      "tags": [
-        "mainnet"
-      ]
-    },
-    {
-      "address": "0xad115F901a1Af99dc83D055C89641031fd1a50Dc",
-      "decimals": 18,
-      "name": "Unified MATIC",
-      "network": "evm-49088",
-      "symbol": "MATIC",
-      "tags": [
-        "testnet"
-      ]
-    },
-    {
       "address": "0xCC42724C6683B7E57334c4E856f4c9965ED682bD",
       "decimals": 18,
       "name": "Matic Token",
@@ -66,17 +35,6 @@
       "decimals": 18,
       "name": "MATIC",
       "network": "evm-80001",
-      "symbol": "MATIC",
-      "tags": [
-        "native-coin",
-        "testnet"
-      ]
-    },
-    {
-      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
-      "decimals": 18,
-      "name": "MATIC",
-      "network": "evm-80002",
       "symbol": "MATIC",
       "tags": [
         "native-coin",

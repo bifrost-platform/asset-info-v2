@@ -2,9 +2,9 @@
   "currency": {
     "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "decimals": 18,
-    "id": "matic-0",
-    "name": "MATIC",
-    "symbol": "MATIC"
+    "id": "pol-0",
+    "name": "POL",
+    "symbol": "POL"
   },
   "engine": "evm",
   "explorers": [],
