@@ -704,7 +704,7 @@
     "value": "kendu-0"
   },
   {
-    "description": "KLAY",
+    "description": "KAIA",
     "value": "klay-0"
   },
   {
@@ -1252,8 +1252,8 @@
     "value": "unknown-ethereum"
   },
   {
-    "description": "Unknown Klaytn Asset",
-    "value": "unknown-klaytn"
+    "description": "Unknown Kaia Asset",
+    "value": "unknown-kaia"
   },
   {
     "description": "Unknown Optimism Asset",
@@ -1362,10 +1362,6 @@
   {
     "description": "Witch Token",
     "value": "witch-0"
-  },
-  {
-    "description": "Wrapped Klay",
-    "value": "wklay-0"
   },
   {
     "description": "Worldcoin",
