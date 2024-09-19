@@ -1,31 +1,11 @@
 {
   "contracts": [
     {
-      "address": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0",
+      "address": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6",
       "decimals": 18,
-      "name": "Matic Token",
+      "name": "Polygon Ecosystem Token",
       "network": "evm-1",
-      "symbol": "MATIC",
-      "tags": [
-        "mainnet"
-      ]
-    },
-    {
-      "address": "0x0000000000000000000000000000000000001010",
-      "decimals": 18,
-      "name": "Matic Token",
-      "network": "evm-137",
-      "symbol": "MATIC",
-      "tags": [
-        "mainnet"
-      ]
-    },
-    {
-      "address": "0xCC42724C6683B7E57334c4E856f4c9965ED682bD",
-      "decimals": 18,
-      "name": "Matic Token",
-      "network": "evm-56",
-      "symbol": "MATIC",
+      "symbol": "POL",
       "tags": [
         "mainnet"
       ]
@@ -33,16 +13,47 @@
     {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
-      "name": "MATIC",
-      "network": "evm-80001",
-      "symbol": "MATIC",
+      "name": "POL",
+      "network": "evm-137",
+      "symbol": "POL",
+      "tags": [
+        "mainnet",
+        "native-coin"
+      ]
+    },
+    {
+      "address": "0x21ad243b81eff53482F6F6E7C76539f2CfC0B734",
+      "decimals": 18,
+      "name": "Unified POL",
+      "network": "evm-3068",
+      "symbol": "POL",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xad115F901a1Af99dc83D055C89641031fd1a50Dc",
+      "decimals": 18,
+      "name": "Unified POL",
+      "network": "evm-49088",
+      "symbol": "POL",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+      "decimals": 18,
+      "name": "POL",
+      "network": "evm-80002",
+      "symbol": "POL",
       "tags": [
         "native-coin",
         "testnet"
       ]
     }
   ],
-  "id": "matic-0",
+  "id": "pol-0",
   "images": {
     "png128": true,
     "png256": true,
@@ -50,7 +61,7 @@
     "png64": true,
     "svg": true
   },
-  "name": "MATIC",
+  "name": "Polygon Ecosystem Token",
   "references": [
     {
       "id": "coingecko",
