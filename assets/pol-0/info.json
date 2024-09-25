@@ -65,11 +65,11 @@
   "references": [
     {
       "id": "coingecko",
-      "url": "https://www.coingecko.com/en/coins/polygon"
+      "url": "https://www.coingecko.com/en/coins/pol-ex-matic"
     },
     {
       "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/polygon"
+      "url": "https://coinmarketcap.com/currencies/polygon-ecosystem-token"
     }
   ],
   "tags": [
