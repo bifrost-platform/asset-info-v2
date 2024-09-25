@@ -3,14 +3,14 @@
     "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "decimals": 18,
     "id": "klay-0",
-    "name": "KLAY",
+    "name": "KAIA",
     "symbol": "KLAY"
   },
   "engine": "evm",
   "explorers": [
     {
-      "id": "klaytnscope",
-      "url": "https://klaytnscope.com/"
+      "id": "kaiascan",
+      "url": "https://kaiascan.io/"
     }
   ],
   "id": "evm-8217",
@@ -21,10 +21,10 @@
     "png64": true,
     "svg": true
   },
-  "name": "Klaytn Mainnet Cypress",
+  "name": "Kaia Mainnet",
   "network": "mainnet",
   "tags": [
-    "klaytn"
+    "kaia"
   ],
-  "unknownAssetId": "unknown-klaytn"
+  "unknownAssetId": "unknown-kaia"
 }
