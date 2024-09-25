@@ -42,7 +42,7 @@ def __convert_svg_to_png256(
         overwrite: Whether to overwrite the PNG image.
 
     Notes:
-        The SVG image is converted to a 256x256 PNG image with 300 DPI.
+        The SVG image is converted to a 256x256 PNG image with 96 DPI.
     """
     png256_path = png_path or svg_path.parent.joinpath("image-256.png")
     if overwrite or not os.path.isfile(png256_path):
@@ -52,7 +52,7 @@ def __convert_svg_to_png256(
                 write_to=str(png256_path),
                 output_width=256,
                 output_height=256,
-                dpi=300,
+                dpi=96,
                 scale=2,
             )
 
