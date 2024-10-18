@@ -1,6 +1,16 @@
 {
   "contracts": [
     {
+      "address": "0xB000F62Ae7FB5E1D93E7358258B1abA754E0166A",
+      "decimals": 8,
+      "name": "Unified BTC",
+      "network": "evm-3068",
+      "symbol": "BTC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x52Eb8CFC008814328cF8daec9e2023Fb58384242",
       "decimals": 8,
       "name": "Unified BTC",
