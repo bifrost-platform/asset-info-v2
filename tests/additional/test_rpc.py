@@ -59,8 +59,10 @@ class TestAdditionalRpc:
         if node_url := self.rpc_map.get(network.id, None):
             if network.engine.is_evm:
                 node = Web3(HTTPProvider(node_url))
-                assert node.is_connected()
-                assert node.eth.chain_id == int(str(network.id).removeprefix("evm-"))
+                assert node.is_connected(), f"The node ${network.id} is not connected."
+                assert node.eth.chain_id == int(
+                    str(network.id).removeprefix("evm-")
+                ), "The chain ID ${node.eth.chain_id} does not match the network ID ${network.id}."
             else:
                 pass
         else:
