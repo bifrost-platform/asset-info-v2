@@ -696,6 +696,10 @@
     "value": "jst-1"
   },
   {
+    "description": "KAIA",
+    "value": "kaia-0"
+  },
+  {
     "description": "KarratCoin",
     "value": "karrat-0"
   },
@@ -710,10 +714,6 @@
   {
     "description": "Kendu Inu",
     "value": "kendu-0"
-  },
-  {
-    "description": "KAIA",
-    "value": "klay-0"
   },
   {
     "description": "Kusama",

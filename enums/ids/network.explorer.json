@@ -17,7 +17,11 @@
   },
   {
     "value": "kaiascan",
-    "description": "Explorer for Kaia network"
+    "description": "Explorer powered by BISONAI"
+  },
+  {
+    "value": "kaiascope",
+    "description": "Explorer powered by Ozys"
   },
   {
     "value": "otterscan",
