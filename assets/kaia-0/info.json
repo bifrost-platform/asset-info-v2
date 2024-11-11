@@ -5,7 +5,7 @@
       "decimals": 18,
       "name": "KAIA",
       "network": "evm-1001",
-      "symbol": "KLAY",
+      "symbol": "KAIA",
       "tags": [
         "native-coin",
         "testnet"
@@ -16,14 +16,14 @@
       "decimals": 18,
       "name": "KAIA",
       "network": "evm-8217",
-      "symbol": "KLAY",
+      "symbol": "KAIA",
       "tags": [
         "mainnet",
         "native-coin"
       ]
     }
   ],
-  "id": "klay-0",
+  "id": "kaia-0",
   "images": {
     "png128": true,
     "png256": true,
@@ -35,11 +35,11 @@
   "references": [
     {
       "id": "coingecko",
-      "url": "https://www.coingecko.com/en/coins/klaytn"
+      "url": "https://www.coingecko.com/en/coins/kaia"
     },
     {
       "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/klaytn/"
+      "url": "https://coinmarketcap.com/currencies/kaia/"
     }
   ],
   "tags": [

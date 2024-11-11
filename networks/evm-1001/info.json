@@ -2,15 +2,19 @@
   "currency": {
     "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "decimals": 18,
-    "id": "klay-0",
+    "id": "kaia-0",
     "name": "KAIA",
-    "symbol": "KLAY"
+    "symbol": "KAIA"
   },
   "engine": "evm",
   "explorers": [
     {
       "id": "kaiascan",
       "url": "https://kairos.kaiascan.io/"
+    },
+    {
+      "id": "kaiascope",
+      "url": "https://kairos.kaiascope.com/"
     }
   ],
   "id": "evm-1001",
