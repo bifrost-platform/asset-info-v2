@@ -688,6 +688,10 @@
     "value": "jst-1"
   },
   {
+    "description": "KAIA",
+    "value": "kaia-0"
+  },
+  {
     "description": "KarratCoin",
     "value": "karrat-0"
   },
@@ -702,10 +706,6 @@
   {
     "description": "Kendu Inu",
     "value": "kendu-0"
-  },
-  {
-    "description": "KLAY",
-    "value": "klay-0"
   },
   {
     "description": "Kusama",
@@ -1252,8 +1252,8 @@
     "value": "unknown-ethereum"
   },
   {
-    "description": "Unknown Klaytn Asset",
-    "value": "unknown-klaytn"
+    "description": "Unknown Kaia Asset",
+    "value": "unknown-kaia"
   },
   {
     "description": "Unknown Optimism Asset",
@@ -1362,10 +1362,6 @@
   {
     "description": "Witch Token",
     "value": "witch-0"
-  },
-  {
-    "description": "Wrapped Klay",
-    "value": "wklay-0"
   },
   {
     "description": "Worldcoin",

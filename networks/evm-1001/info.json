@@ -2,15 +2,19 @@
   "currency": {
     "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "decimals": 18,
-    "id": "klay-0",
-    "name": "KLAY",
-    "symbol": "KLAY"
+    "id": "kaia-0",
+    "name": "KAIA",
+    "symbol": "KAIA"
   },
   "engine": "evm",
   "explorers": [
     {
-      "id": "klaytnscope",
-      "url": "https://baobab.klaytnscope.com/"
+      "id": "kaiascan",
+      "url": "https://kairos.kaiascan.io/"
+    },
+    {
+      "id": "kaiascope",
+      "url": "https://kairos.kaiascope.com/"
     }
   ],
   "id": "evm-1001",
@@ -21,10 +25,10 @@
     "png64": true,
     "svg": true
   },
-  "name": "Klaytn Testnet Baobab",
+  "name": "Kaia Testnet Kairos",
   "network": "testnet",
   "tags": [
-    "klaytn"
+    "kaia"
   ],
-  "unknownAssetId": "unknown-klaytn"
+  "unknownAssetId": "unknown-kaia"
 }

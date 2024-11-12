@@ -3,7 +3,7 @@
     {
       "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
       "decimals": 0,
-      "name": "Unknown Klaytn Asset",
+      "name": "Unknown Kaia Asset",
       "network": "evm-1001",
       "symbol": "UNKNOWN",
       "tags": [
@@ -13,7 +13,7 @@
     {
       "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
       "decimals": 0,
-      "name": "Unknown Klaytn Asset",
+      "name": "Unknown Kaia Asset",
       "network": "evm-8217",
       "symbol": "UNKNOWN",
       "tags": [
@@ -21,7 +21,7 @@
       ]
     }
   ],
-  "id": "unknown-klaytn",
+  "id": "unknown-kaia",
   "images": {
     "png128": true,
     "png256": true,
@@ -29,9 +29,9 @@
     "png64": true,
     "svg": true
   },
-  "name": "Unknown Klaytn Asset",
+  "name": "Unknown Kaia Asset",
   "references": [],
   "tags": [
-    "klaytn"
+    "kaia"
   ]
 }
