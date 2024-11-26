@@ -312,6 +312,10 @@
     "value": "cata-0"
   },
   {
+    "description": "Coinbase Wrapped BTC",
+    "value": "cbbtc-0"
+  },
+  {
     "description": "Coinbase Wrapped Staked ETH",
     "value": "cbeth-0"
   },

@@ -1,0 +1,74 @@
+{
+  "contracts": [
+    {
+      "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "decimals": 8,
+      "name": "Coinbase Wrapped BTC",
+      "network": "evm-1",
+      "symbol": "cbBTC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x74B73Fd2eE237e9219dF30dfFDB206D237cbFC00",
+      "decimals": 8,
+      "name": "Unified cbBTC",
+      "network": "evm-3068",
+      "symbol": "cbBTC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x18797b650f66e7D0607aE83ffa8ad4447Ff16d8d",
+      "decimals": 8,
+      "name": "Unified cbBTC",
+      "network": "evm-49088",
+      "symbol": "cbBTC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "decimals": 8,
+      "name": "Coinbase Wrapped BTC",
+      "network": "evm-8453",
+      "symbol": "cbBTC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xc57371cD3f2a0ADfE7F404ec07F55399bb5BE24f",
+      "decimals": 8,
+      "name": "Coinbase Wrapped BTC",
+      "network": "evm-84532",
+      "symbol": "cbBTC",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "cbbtc-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Coinbase Wrapped BTC",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/coinbase-wrapped-btc"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/coinbase-wrapped-btc"
+    }
+  ],
+  "tags": []
+}
