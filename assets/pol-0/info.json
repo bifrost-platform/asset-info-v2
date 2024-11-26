@@ -11,6 +11,16 @@
       ]
     },
     {
+      "address": "0x0000000000000000000000000000000000001010",
+      "decimals": 18,
+      "name": "Polygon Ecosystem Token",
+      "network": "evm-137",
+      "symbol": "POL",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
       "name": "POL",

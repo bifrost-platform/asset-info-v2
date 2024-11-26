@@ -11,16 +11,6 @@
       ]
     },
     {
-      "address": "0x0000000000000000000000000000000000001010",
-      "decimals": 18,
-      "name": "Matic Token",
-      "network": "evm-137",
-      "symbol": "MATIC",
-      "tags": [
-        "mainnet"
-      ]
-    },
-    {
       "address": "0xCC42724C6683B7E57334c4E856f4c9965ED682bD",
       "decimals": 18,
       "name": "Matic Token",
