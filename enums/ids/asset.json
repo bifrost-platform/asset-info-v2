@@ -356,6 +356,10 @@
     "value": "comp-0"
   },
   {
+    "description": "Core Blockchain Native Token",
+    "value": "core-0"
+  },
+  {
     "description": "CorgiAI",
     "value": "corgiai-0"
   },
@@ -1254,6 +1258,10 @@
   {
     "description": "Unknown BNB Asset",
     "value": "unknown-bnb"
+  },
+  {
+    "description": "Unknown Core Asset",
+    "value": "unknown-core"
   },
   {
     "description": "Unknown Ethereum Asset",

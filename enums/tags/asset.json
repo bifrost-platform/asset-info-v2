@@ -24,6 +24,10 @@
     "description": "Main network of asset is BNB chain"
   },
   {
+    "value": "core",
+    "description": "Main network of asset is Core"
+  },
+  {
     "value": "ethereum",
     "description": "Main network of asset is Ethereum"
   },

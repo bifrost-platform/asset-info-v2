@@ -1,0 +1,37 @@
+{
+  "contracts": [
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Core Asset",
+      "network": "evm-1115",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Core Asset",
+      "network": "evm-1116",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "unknown-core",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Core Asset",
+  "references": [],
+  "tags": [
+    "core"
+  ]
+}
