@@ -1420,6 +1420,10 @@
     "value": "wsol-0"
   },
   {
+    "description": "Wrapped liquid staked BFC",
+    "value": "wstbfc-0"
+  },
+  {
     "description": "Wrapped liquid staked Ether 2.0",
     "value": "wsteth-0"
   },
