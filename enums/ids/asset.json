@@ -1104,6 +1104,10 @@
     "value": "spr-0"
   },
   {
+    "description": "Staked BFC",
+    "value": "stbfc-0"
+  },
+  {
     "description": "SaitaChain",
     "value": "stc-0"
   },
