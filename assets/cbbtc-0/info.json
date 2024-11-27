@@ -21,6 +21,16 @@
       ]
     },
     {
+      "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "decimals": 8,
+      "name": "Coinbase Wrapped BTC",
+      "network": "evm-42161",
+      "symbol": "cbBTC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x18797b650f66e7D0607aE83ffa8ad4447Ff16d8d",
       "decimals": 8,
       "name": "Unified cbBTC",
