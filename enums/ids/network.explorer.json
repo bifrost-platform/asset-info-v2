@@ -4,6 +4,10 @@
     "description": "Explorer powered by Blockscout"
   },
   {
+    "value": "corescan",
+    "description": "Explorer powered by Core"
+  },
+  {
     "value": "dexguru",
     "description": "Explorer powered by DexGuru"
   },

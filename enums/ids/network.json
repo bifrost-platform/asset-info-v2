@@ -20,12 +20,20 @@
     "value": "evm-1001"
   },
   {
+    "description": "Core Blockchain Testnet",
+    "value": "evm-1115"
+  },
+  {
     "description": "Ethereum Testnet Sepolia",
     "value": "evm-11155111"
   },
   {
     "description": "OP Sepolia Testnet",
     "value": "evm-11155420"
+  },
+  {
+    "description": "Core Blockchain Mainnet",
+    "value": "evm-1116"
   },
   {
     "description": "Polygon Mainnet",

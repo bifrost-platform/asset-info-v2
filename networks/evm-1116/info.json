@@ -1,0 +1,30 @@
+{
+  "currency": {
+    "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+    "decimals": 18,
+    "id": "core-0",
+    "name": "Core Blockchain Native Token",
+    "symbol": "CORE"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "corescan",
+      "url": "https://scan.coredao.org/"
+    }
+  ],
+  "id": "evm-1116",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Core Blockchain Mainnet",
+  "network": "mainnet",
+  "tags": [
+    "core"
+  ],
+  "unknownAssetId": "unknown-core"
+}
