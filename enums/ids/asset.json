@@ -1104,6 +1104,10 @@
     "value": "spr-0"
   },
   {
+    "description": "Staked BFC",
+    "value": "stbfc-0"
+  },
+  {
     "description": "SaitaChain",
     "value": "stc-0"
   },
@@ -1400,6 +1404,10 @@
     "value": "woo-0"
   },
   {
+    "description": "Wrapped Polygon Ecosystem Token",
+    "value": "wpol-0"
+  },
+  {
     "description": "Wrapped QUIL",
     "value": "wquil-0"
   },
@@ -1410,6 +1418,10 @@
   {
     "description": "SOLANA",
     "value": "wsol-0"
+  },
+  {
+    "description": "Wrapped liquid staked BFC",
+    "value": "wstbfc-0"
   },
   {
     "description": "Wrapped liquid staked Ether 2.0",

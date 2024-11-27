@@ -1,0 +1,35 @@
+{
+  "contracts": [
+    {
+      "address": "0xEff8378C6419b50C9D87f749f6852d96D4Cc5aE4",
+      "decimals": 18,
+      "name": "Staked BFC",
+      "network": "evm-3068",
+      "symbol": "stBFC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xF14804603D150f009893DcBaF0fca4d7B2B8394B",
+      "decimals": 18,
+      "name": "Staked BFC",
+      "network": "evm-49088",
+      "symbol": "stBFC",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "stbfc-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Staked BFC",
+  "references": [],
+  "tags": []
+}

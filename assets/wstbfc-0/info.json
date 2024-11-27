@@ -1,0 +1,35 @@
+{
+  "contracts": [
+    {
+      "address": "0x386f2F5d9A97659C86f3cA9B8B11fc3F76eFDdaE",
+      "decimals": 18,
+      "name": "Wrapped liquid staked BFC",
+      "network": "evm-3068",
+      "symbol": "wstBFC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x2d8F868D50C89E2ddAEaee813ACb035270E47C47",
+      "decimals": 18,
+      "name": "Wrapped liquid staked BFCer 2.0",
+      "network": "evm-49088",
+      "symbol": "wstBFC",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "wstbfc-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Wrapped liquid staked BFC",
+  "references": [],
+  "tags": []
+}
