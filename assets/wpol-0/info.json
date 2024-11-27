@@ -1,0 +1,31 @@
+{
+  "contracts": [
+    {
+      "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+      "decimals": 18,
+      "name": "Wrapped Polygon Ecosystem Token",
+      "network": "evm-137",
+      "symbol": "WPOL",
+      "tags": [
+        "mainnet",
+        "wrapped-coin"
+      ]
+    }
+  ],
+  "id": "wpol-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Wrapped Polygon Ecosystem Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/wrapped-pol"
+    }
+  ],
+  "tags": []
+}

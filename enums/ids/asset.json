@@ -1400,6 +1400,10 @@
     "value": "woo-0"
   },
   {
+    "description": "Wrapped Polygon Ecosystem Token",
+    "value": "wpol-0"
+  },
+  {
     "description": "Wrapped QUIL",
     "value": "wquil-0"
   },
