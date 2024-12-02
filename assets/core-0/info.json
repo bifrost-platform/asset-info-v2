@@ -21,6 +21,16 @@
         "mainnet",
         "native-coin"
       ]
+    },
+    {
+      "address": "0xA8079B9F389F0E1e6d2Deb2E434209eC6a52e6c6",
+      "decimals": 18,
+      "name": "Unified CORE",
+      "network": "evm-3068",
+      "symbol": "CORE",
+      "tags": [
+        "mainnet"
+      ]
     }
   ],
   "id": "core-0",

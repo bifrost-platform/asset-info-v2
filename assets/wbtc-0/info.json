@@ -31,6 +31,16 @@
       ]
     },
     {
+      "address": "0x5832f53d147b3d6Cd4578B9CBD62425C7ea9d0Bd",
+      "decimals": 8,
+      "name": "WBTC",
+      "network": "evm-1116",
+      "symbol": "WBTC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
       "decimals": 8,
       "name": "(PoS) Wrapped BTC",

@@ -1,6 +1,16 @@
 {
   "contracts": [
     {
+      "address": "0xad0c524Ce19ceA03654Dc377da7Bac52C56eDd10",
+      "decimals": 18,
+      "name": "Bitcoin USD",
+      "network": "evm-1116",
+      "symbol": "BtcUSD",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x6906Ccda405926FC3f04240187dd4fAd5DF6d555",
       "decimals": 18,
       "name": "Bitcoin USD",
