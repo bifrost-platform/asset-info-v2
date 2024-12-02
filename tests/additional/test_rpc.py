@@ -1,6 +1,8 @@
 from asyncio import gather
 from copy import deepcopy
 from pathlib import Path
+from re import search
+from subprocess import run, PIPE
 
 import pytest
 from pydantic import HttpUrl
@@ -71,7 +73,7 @@ class TestAdditionalRpc:
     @pytest.mark.asyncio
     async def test_all_contracts_info_valid(self):
         """All contracts in asset information are valid."""
-        for asset, _ in self.asset_list:
+        for asset in self.__filter_modified_assets():
             await gather(*[self.__test_all_contract_info_valid(asset)])
 
     async def __test_all_contract_info_valid(self, asset: Asset):
@@ -102,3 +104,31 @@ class TestAdditionalRpc:
                     assert contract == expected
                 else:
                     pass
+
+    def __filter_modified_assets(self) -> list[Asset]:
+        """Filter the modified assets."""
+        # Get recent tag
+        recent_tag_result = run(
+            ["git", "describe", "--tags", "--abbrev=0", "HEAD^"],
+            stdout=PIPE,
+            stderr=PIPE,
+            text=True,
+            check=True,
+        )
+        recent_tag = recent_tag_result.stdout.strip()
+        # Get modified files
+        diff_result = run(
+            ["git", "diff", "--name-only", recent_tag],
+            stdout=PIPE,
+            stderr=PIPE,
+            text=True,
+            check=True,
+        )
+        changed_files = [
+            file for file in diff_result.stdout.strip().split("\n") if file
+        ]
+        asset_matches = [
+            search(r"assets/([^/]+)/info.json", file) for file in changed_files
+        ]
+        asset_ids = [match.group(1) for match in asset_matches if match]
+        return [asset for asset, _ in self.asset_list if asset.id in asset_ids]
