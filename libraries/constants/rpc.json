@@ -12,12 +12,20 @@
     "url": "https://public-rpc.thebifrost.io/test/kaia"
   },
   {
+    "id": "evm-1115",
+    "url": null
+  },
+  {
     "id": "evm-11155111",
     "url": "https://public-rpc.thebifrost.io/test/eth"
   },
   {
     "id": "evm-11155420",
     "url": "https://public-rpc.thebifrost.io/test/op"
+  },
+  {
+    "id": "evm-1116",
+    "url": "https://public-rpc.thebifrost.io/main/core"
   },
   {
     "id": "evm-137",

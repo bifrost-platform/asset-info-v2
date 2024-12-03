@@ -1,0 +1,56 @@
+{
+  "contracts": [
+    {
+      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+      "decimals": 18,
+      "name": "Core Blockchain Testnet Native Token",
+      "network": "evm-1115",
+      "symbol": "tCORE",
+      "tags": [
+        "native-coin",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+      "decimals": 18,
+      "name": "Core Blockchain Native Token",
+      "network": "evm-1116",
+      "symbol": "CORE",
+      "tags": [
+        "mainnet",
+        "native-coin"
+      ]
+    },
+    {
+      "address": "0xA8079B9F389F0E1e6d2Deb2E434209eC6a52e6c6",
+      "decimals": 18,
+      "name": "Unified CORE",
+      "network": "evm-3068",
+      "symbol": "CORE",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "core-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Core Blockchain Native Token",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/core"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/core-dao"
+    }
+  ],
+  "tags": []
+}

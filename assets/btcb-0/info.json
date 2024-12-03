@@ -1,6 +1,16 @@
 {
   "contracts": [
     {
+      "address": "0x7A6888c85eDBA8E38F6C7E0485212da602761C08",
+      "decimals": 18,
+      "name": "BTCB",
+      "network": "evm-1116",
+      "symbol": "BTCB",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0xd267F821F1b8344B5A63626c8c824697194A173E",
       "decimals": 18,
       "name": "Unified BTCB",

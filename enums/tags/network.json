@@ -24,6 +24,10 @@
     "description": "BNB networks"
   },
   {
+    "value": "core",
+    "description": "Core networks"
+  },
+  {
     "value": "ethereum",
     "description": "Ethereum networks"
   },
