@@ -3,9 +3,9 @@
     {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
-      "name": "KLAY",
+      "name": "KAIA",
       "network": "evm-1001",
-      "symbol": "KLAY",
+      "symbol": "KAIA",
       "tags": [
         "native-coin",
         "testnet"
@@ -14,16 +14,16 @@
     {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
-      "name": "KLAY",
+      "name": "KAIA",
       "network": "evm-8217",
-      "symbol": "KLAY",
+      "symbol": "KAIA",
       "tags": [
         "mainnet",
         "native-coin"
       ]
     }
   ],
-  "id": "klay-0",
+  "id": "kaia-0",
   "images": {
     "png128": true,
     "png256": true,
@@ -31,19 +31,19 @@
     "png64": true,
     "svg": true
   },
-  "name": "KLAY",
+  "name": "KAIA",
   "references": [
     {
       "id": "coingecko",
-      "url": "https://www.coingecko.com/en/coins/klaytn"
+      "url": "https://www.coingecko.com/en/coins/kaia"
     },
     {
       "id": "coinmarketcap",
-      "url": "https://coinmarketcap.com/currencies/klaytn/"
+      "url": "https://coinmarketcap.com/currencies/kaia/"
     }
   ],
   "tags": [
-    "klaytn",
+    "kaia",
     "native-coin"
   ]
 }

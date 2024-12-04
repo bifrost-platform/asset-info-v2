@@ -2,9 +2,9 @@ from asyncio import gather
 from copy import deepcopy
 from pathlib import Path
 from re import search
-from subprocess import run, PIPE
 
 import pytest
+from git import Repo
 from pydantic import HttpUrl
 from web3 import Web3, HTTPProvider
 
@@ -71,9 +71,16 @@ class TestAdditionalRpc:
             pass
 
     @pytest.mark.asyncio
-    async def test_all_contracts_info_valid(self):
+    async def test_modified_contracts_info_valid(self):
         """All contracts in asset information are valid."""
         for asset in self.__filter_modified_assets():
+            await gather(*[self.__test_all_contract_info_valid(asset)])
+
+    @pytest.mark.all
+    @pytest.mark.asyncio
+    async def test_all_contracts_info_valid(self):
+        """All contracts in asset information are valid."""
+        for asset, _ in self.asset_list:
             await gather(*[self.__test_all_contract_info_valid(asset)])
 
     async def __test_all_contract_info_valid(self, asset: Asset):
@@ -106,27 +113,10 @@ class TestAdditionalRpc:
                     pass
 
     def __filter_modified_assets(self) -> list[Asset]:
-        """Filter the modified assets."""
-        # Get recent tag
-        recent_tag_result = run(
-            ["git", "describe", "--tags", "--abbrev=0", "HEAD^"],
-            stdout=PIPE,
-            stderr=PIPE,
-            text=True,
-            check=True,
-        )
-        recent_tag = recent_tag_result.stdout.strip()
-        # Get modified files
-        diff_result = run(
-            ["git", "diff", "--name-only", recent_tag],
-            stdout=PIPE,
-            stderr=PIPE,
-            text=True,
-            check=True,
-        )
-        changed_files = [
-            file for file in diff_result.stdout.strip().split("\n") if file
-        ]
+        """Filter the modified assets until the recent tag."""
+        repo = Repo(PWD)
+        recent_tag = repo.tags[-1]
+        changed_files = [item.a_path for item in repo.index.diff(recent_tag.commit)]
         asset_matches = [
             search(r"assets/([^/]+)/info.json", file) for file in changed_files
         ]

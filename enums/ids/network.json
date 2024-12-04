@@ -16,7 +16,7 @@
     "value": "evm-10"
   },
   {
-    "description": "Klaytn Testnet Baobab",
+    "description": "Kaia Testnet Kairos",
     "value": "evm-1001"
   },
   {
@@ -88,7 +88,7 @@
     "value": "evm-80002"
   },
   {
-    "description": "Klaytn Mainnet Cypress",
+    "description": "Kaia Mainnet",
     "value": "evm-8217"
   },
   {

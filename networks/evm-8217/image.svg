@@ -1,15 +1,45 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd"
-        d="M104.518 112.903L64.1104 72.0659L23.1398 113.21C31.2827 118.634 44.0348 127.897 63.7007 127.999C83.3666 128.102 99.1403 118.327 104.466 112.954L104.518 112.903ZM112.917 23.0411L71.946 63.878C85.6712 77.5415 99.1915 91.3585 112.763 105.124C134.017 78.0021 132.07 50.061 112.917 22.9899V23.0411ZM14.792 104.51L50.2828 10.094L0.503487 60.1423C-2.05718 74.7269 5.52239 93.252 14.792 104.51ZM33.4848 85.9341C36.0455 85.2688 92.4825 27.3397 104.62 15.3138C98.3209 6.92121 76.7089 -0.345512 65.9028 0.0127073L33.4848 85.9341Z"
-        fill="url(#paint0_linear_133_119)" />
-  <defs>
-    <linearGradient id="paint0_linear_133_119" x1="35.0797" y1="121.178" x2="98.6133" y2="10.0882"
-                    gradientUnits="userSpaceOnUse">
-      <stop stop-color="#850000" />
-      <stop offset="0.251" stop-color="#C70158" />
-      <stop offset="0.4824" stop-color="#DE1E41" />
-      <stop offset="0.6392" stop-color="#F63B2A" />
-      <stop offset="1" stop-color="#FF8700" />
-    </linearGradient>
-  </defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+<defs>
+<filter id="filter-remove-color" x="0%" y="0%" width="100%" height="100%">
+<feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+</filter>
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 0 0 L 153.601562 0 L 153.601562 153.601562 L 0 153.601562 Z M 0 0 "/>
+</clipPath>
+<clipPath id="clip-1">
+<path clip-rule="nonzero" d="M 36.5 27 L 86.5 27 L 86.5 99 L 36.5 99 Z M 36.5 27 "/>
+</clipPath>
+<clipPath id="clip-2">
+<rect x="0" y="0" width="154" height="154"/>
+</clipPath>
+<g id="source-1033" clip-path="url(#clip-2)">
+<g clip-path="url(#clip-1)">
+<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1" d="M 86.144531 27.136719 L 36.992188 27.136719 L 36.992188 98.5625 L 86.144531 98.5625 Z M 86.144531 27.136719 "/>
+</g>
+</g>
+<clipPath id="clip-3">
+<rect x="0" y="0" width="154" height="154"/>
+</clipPath>
+<g id="source-1036" clip-path="url(#clip-3)">
+<g clip-path="url(#clip-0)">
+<use xlink:href="#source-1033"/>
+</g>
+</g>
+<mask id="mask-0">
+<g filter="url(#filter-remove-color)">
+<use xlink:href="#source-1036"/>
+</g>
+</mask>
+<clipPath id="clip-4">
+<rect x="0" y="0" width="128" height="128"/>
+</clipPath>
+<g id="source-1035" clip-path="url(#clip-4)">
+<path fill-rule="nonzero" fill="rgb(1.568627%, 1.568627%, 1.568627%)" fill-opacity="1" d="M 62.164062 44.988281 C 62.164062 42.152344 64.480469 39.839844 67.324219 39.839844 L 76.554688 39.839844 L 76.554688 27.304688 L 67.324219 27.304688 C 57.542969 27.304688 49.613281 35.222656 49.613281 44.988281 C 49.613281 47.539062 50.15625 49.960938 51.128906 52.148438 C 43.53125 55.351562 38.488281 62.164062 37.3125 70.785156 C 35.941406 80.25 39.738281 90.460938 48.007812 95.394531 C 55.390625 100.035156 66.933594 99.726562 73.171875 93.289062 L 73.171875 97.5625 L 86.019531 97.5625 L 86.019531 50.140625 L 67.328125 50.140625 C 64.488281 50.140625 62.164062 47.828125 62.164062 44.988281 Z M 73.457031 62.679688 L 73.457031 74.585938 C 73.457031 81.160156 68.113281 86.488281 61.535156 86.488281 C 54.953125 86.488281 49.613281 81.15625 49.613281 74.585938 C 49.613281 68.011719 54.953125 62.679688 61.535156 62.679688 Z M 73.457031 62.679688 "/>
+</g>
+</defs>
+<path fill-rule="nonzero" fill="rgb(74.901961%, 94.117647%, 3.529412%)" fill-opacity="1" d="M 0 64 C 0 28.921875 28.652344 0 64 0 C 99.347656 0 128 28.921875 128 64 C 128 99.078125 99.347656 128 64 128 C 28.652344 128 0 99.078125 0 64 Z M 0 64 "/>
+<g mask="url(#mask-0)">
+<use xlink:href="#source-1035"/>
+</g>
 </svg>
