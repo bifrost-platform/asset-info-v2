@@ -1,0 +1,27 @@
+{
+  "contracts": [
+    {
+      "address": "0x4E4156F7Aa6970d96C434607aDC7AF6299751Efc",
+      "decimals": 18,
+      "name": "EverStable BtcUSD/UnifiedUSDC",
+      "network": "evm-3068",
+      "symbol": "EverStableLPToken",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "everstablelptoken-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "EverStable BtcUSD/UnifiedUSDC",
+  "references": [],
+  "tags": [
+    "bifrost"
+  ]
+}
