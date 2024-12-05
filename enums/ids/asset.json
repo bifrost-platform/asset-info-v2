@@ -504,6 +504,10 @@
     "value": "ethx-0"
   },
   {
+    "description": "EverStable BtcUSD/UnifiedUSDC",
+    "value": "everstablelptoken-0"
+  },
+  {
     "description": "Renzo Restaked ETH",
     "value": "ezeth-0"
   },
