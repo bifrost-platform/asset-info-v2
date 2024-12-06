@@ -21,6 +21,16 @@
       ]
     },
     {
+      "address": "0xAe172D8c5E428D4b7C70f9E593b207F9daC9BF3e",
+      "decimals": 18,
+      "name": "Unified BFC",
+      "network": "evm-3068",
+      "symbol": "BFC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
       "name": "Bifrost",
