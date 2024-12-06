@@ -174,9 +174,9 @@ def create_downscaled_image(base_image_path: Path) -> None:
     """
     image_type = ImageType.get_image_type_from_path(base_image_path)
     if image_type.is_svg:
-        downscale_svg(base_image_path.parent, base_image_path, overwrite=False)
+        downscale_svg(base_image_path.parent, base_image_path, overwrite=True)
     elif image_type.is_png:
-        downscale_png(base_image_path.parent, base_image_path, overwrite=False)
+        downscale_png(base_image_path.parent, base_image_path, overwrite=True)
     else:
         raise ValueError(f"Unknown image path: {base_image_path}")
 
