@@ -1,7 +1,14 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="64" cy="64" r="64" fill="white" />
-  <rect x="36" y="82" width="32" height="18" fill="#00E98D" />
-  <path d="M52 30H92V46H52V30Z" fill="#0B0E11" />
-  <path d="M52 44H68V60H52V44Z" fill="#0B0E11" />
-  <path d="M52 56H92V72H52V56Z" fill="#0B0E11" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"
+     viewBox="0 0 128 128">
+  <path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1"
+        d="M 128 64 C 128 99.347656 99.347656 128 64 128 C 28.652344 128 0 99.347656 0 64 C 0 28.652344 28.652344 0 64 0 C 99.347656 0 128 28.652344 128 64 " />
+  <path fill-rule="nonzero" fill="rgb(0%, 91.372549%, 55.294118%)" fill-opacity="1"
+        d="M 36 82 L 68 82 L 68 100 L 36 100 Z M 36 82 " />
+  <path fill-rule="nonzero" fill="rgb(4.313725%, 5.490196%, 6.666667%)" fill-opacity="1"
+        d="M 52 30 L 92 30 L 92 46 L 52 46 Z M 52 30 " />
+  <path fill-rule="nonzero" fill="rgb(4.313725%, 5.490196%, 6.666667%)" fill-opacity="1"
+        d="M 52 44 L 68 44 L 68 60 L 52 60 Z M 52 44 " />
+  <path fill-rule="nonzero" fill="rgb(4.313725%, 5.490196%, 6.666667%)" fill-opacity="1"
+        d="M 52 56 L 92 56 L 92 72 L 52 72 Z M 52 56 " />
 </svg>
