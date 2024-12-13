@@ -19,6 +19,16 @@
       "tags": [
         "testnet"
       ]
+    },
+    {
+      "address": "0xe6E4bb02EC95a770fdCfe20Fe6bB4BDF1eA3943C",
+      "decimals": 18,
+      "name": "Wrapped liquid staked BFC",
+      "network": "evm-49088",
+      "symbol": "wstBFC",
+      "tags": [
+        "testnet"
+      ]
     }
   ],
   "id": "wstbfc-0",
