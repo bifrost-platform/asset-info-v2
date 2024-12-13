@@ -11,6 +11,16 @@
       ]
     },
     {
+      "address": "0x14FB9a0af25aE3c958e03A06f0939987cf3d2285",
+      "decimals": 18,
+      "name": "Staked BFC",
+      "network": "evm-49088",
+      "symbol": "stBFC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
       "address": "0xF14804603D150f009893DcBaF0fca4d7B2B8394B",
       "decimals": 18,
       "name": "Staked BFC",
