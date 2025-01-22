@@ -31,6 +31,16 @@
       ]
     },
     {
+      "address": "0x4F2c996248ED9592e64B59f781A15dEB1e2b0D4c",
+      "decimals": 18,
+      "name": "Bitcoin USD",
+      "network": "evm-56",
+      "symbol": "BtcUSD",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0xe4b20925D9E9a62F1E492e15a81dC0de62804dd4",
       "decimals": 18,
       "name": "Bitcoin USD",
@@ -45,6 +55,16 @@
       "decimals": 18,
       "name": "Bitcoin USD",
       "network": "evm-84532",
+      "symbol": "BtcUSD",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xecB537c28BF8C74A51aB109cF8BAe7Dd9Ca4E2bf",
+      "decimals": 18,
+      "name": "Bitcoin USD",
+      "network": "evm-97",
       "symbol": "BtcUSD",
       "tags": [
         "testnet"
