@@ -4,6 +4,7 @@ from pathlib import Path
 from re import search
 
 import pytest
+import requests
 from git import Repo
 from pydantic import HttpUrl
 from web3 import Web3, HTTPProvider
@@ -61,7 +62,11 @@ class TestAdditionalRpc:
         if node_url := self.rpc_map.get(network.id, None):
             if network.engine.is_evm:
                 node = Web3(HTTPProvider(node_url))
-                assert node.is_connected(), f"The node ${network.id} is not connected."
+                if not node.is_connected():
+                    public_ip = requests.get("https://api.ipify.org").text
+                    assert (
+                        node.is_connected()
+                    ), f"The node ${network.id} is not connected. (Public IP: ${public_ip})"
                 assert node.eth.chain_id == int(
                     str(network.id).removeprefix("evm-")
                 ), "The chain ID ${node.eth.chain_id} does not match the network ID ${network.id}."
