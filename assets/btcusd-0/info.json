@@ -11,6 +11,16 @@
       ]
     },
     {
+      "address": "0x4Cda2D683E3AF90ea50855008BdB15D9454527B7",
+      "decimals": 18,
+      "name": "Bitcoin USD",
+      "network": "evm-248",
+      "symbol": "BtcUSD",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x6906Ccda405926FC3f04240187dd4fAd5DF6d555",
       "decimals": 18,
       "name": "Bitcoin USD",

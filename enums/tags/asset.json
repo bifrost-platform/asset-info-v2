@@ -40,6 +40,10 @@
     "description": "Native coin of some network"
   },
   {
+    "value": "oasys",
+    "description": "Main network of asset is Oasys"
+  },
+  {
     "value": "optimism",
     "description": "Main network of asset is Optimism"
   },

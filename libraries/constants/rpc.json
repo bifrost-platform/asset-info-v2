@@ -32,6 +32,10 @@
     "url": "https://public-rpc.thebifrost.io/main/polygon"
   },
   {
+    "id": "evm-248",
+    "url": "https://public-rpc.thebifrost.io/main/oasys"
+  },
+  {
     "id": "evm-3068",
     "url": "https://public-02.mainnet.bifrostnetwork.com/rpc"
   },

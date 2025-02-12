@@ -1,0 +1,30 @@
+{
+  "currency": {
+    "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+    "decimals": 18,
+    "id": "oas-0",
+    "name": "Oasys",
+    "symbol": "OAS"
+  },
+  "engine": "evm",
+  "explorers": [
+    {
+      "id": "blockscout",
+      "url": "https://explorer.oasys.games/"
+    }
+  ],
+  "id": "evm-248",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Oasys Mainnet",
+  "network": "mainnet",
+  "tags": [
+    "oasys"
+  ],
+  "unknownAssetId": "unknown-oasys"
+}

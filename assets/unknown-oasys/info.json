@@ -1,0 +1,27 @@
+{
+  "contracts": [
+    {
+      "address": "0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF",
+      "decimals": 0,
+      "name": "Unknown Oasys Asset",
+      "network": "evm-248",
+      "symbol": "UNKNOWN",
+      "tags": [
+        "mainnet"
+      ]
+    }
+  ],
+  "id": "unknown-oasys",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Unknown Oasys Asset",
+  "references": [],
+  "tags": [
+    "oasys"
+  ]
+}

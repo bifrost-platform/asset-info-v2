@@ -40,6 +40,10 @@
     "value": "evm-137"
   },
   {
+    "description": "Oasys Mainnet",
+    "value": "evm-248"
+  },
+  {
     "description": "Bifrost Mainnet",
     "value": "evm-3068"
   },

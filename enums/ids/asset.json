@@ -900,6 +900,10 @@
     "value": "npc-0"
   },
   {
+    "description": "Oasys",
+    "value": "oas-0"
+  },
+  {
     "description": "Ocean Token",
     "value": "ocean-0"
   },
@@ -1274,6 +1278,10 @@
   {
     "description": "Unknown Kaia Asset",
     "value": "unknown-kaia"
+  },
+  {
+    "description": "Unknown Oasys Asset",
+    "value": "unknown-oasys"
   },
   {
     "description": "Unknown Optimism Asset",

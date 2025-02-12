@@ -44,6 +44,10 @@
     "description": "Layer-2 networks of Ethereum"
   },
   {
+    "value": "oasys",
+    "description": "Oasys networks"
+  },
+  {
     "value": "optimism",
     "description": "Optimism networks"
   },

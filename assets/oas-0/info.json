@@ -1,0 +1,38 @@
+{
+  "contracts": [
+    {
+      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+      "decimals": 18,
+      "name": "Oasys",
+      "network": "evm-248",
+      "symbol": "OAS",
+      "tags": [
+        "mainnet",
+        "native-coin"
+      ]
+    }
+  ],
+  "id": "oas-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Oasys",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/oasys"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/oasys"
+    }
+  ],
+  "tags": [
+    "native-coin",
+    "oasys"
+  ]
+}
