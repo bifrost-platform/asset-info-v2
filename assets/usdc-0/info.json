@@ -61,6 +61,16 @@
       ]
     },
     {
+      "address": "0x4D17C0609B77e456Fb98Ea99a62bCeF09adae32D",
+      "decimals": 6,
+      "name": "Bridged USDC (Celer)",
+      "network": "evm-248",
+      "symbol": "USDC.e",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
       "address": "0x640952E7984f2ECedeAd8Fd97aA618Ab1210A21C",
       "decimals": 6,
       "name": "Unified USDC",

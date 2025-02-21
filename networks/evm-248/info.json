@@ -3,7 +3,7 @@
     "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "decimals": 18,
     "id": "oas-0",
-    "name": "Oasys",
+    "name": "OAS",
     "symbol": "OAS"
   },
   "engine": "evm",

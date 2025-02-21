@@ -3,7 +3,7 @@
     {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "decimals": 18,
-      "name": "Oasys",
+      "name": "OAS",
       "network": "evm-248",
       "symbol": "OAS",
       "tags": [
@@ -20,7 +20,7 @@
     "png64": true,
     "svg": true
   },
-  "name": "Oasys",
+  "name": "OAS",
   "references": [
     {
       "id": "coingecko",
