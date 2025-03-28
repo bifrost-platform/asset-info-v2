@@ -1,0 +1,19 @@
+{
+  "id": "btcfi",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "BTCFi",
+  "networks": [
+    "evm-3068",
+    "evm-49088"
+  ],
+  "tags": [
+    "lending"
+  ],
+  "url": "https://btcfi.one/"
+}

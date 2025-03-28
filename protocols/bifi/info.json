@@ -1,0 +1,23 @@
+{
+  "id": "bifi",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "BiFi",
+  "networks": [
+    "evm-1",
+    "evm-3068",
+    "evm-43114",
+    "evm-49088",
+    "evm-56",
+    "evm-8217"
+  ],
+  "tags": [
+    "lending"
+  ],
+  "url": "https://app.bifi.finance/"
+}

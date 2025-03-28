@@ -6,5 +6,9 @@
   {
     "value": "dex",
     "description": "Protocol provides DEX services"
+  },
+  {
+    "value": "lending",
+    "description": "Protocol provides lending services"
   }
 ]

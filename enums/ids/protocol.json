@@ -4,8 +4,16 @@
     "value": "1inch"
   },
   {
+    "description": "BiFi",
+    "value": "bifi"
+  },
+  {
     "description": "Bifrost Bridge",
     "value": "bifrost-bridge"
+  },
+  {
+    "description": "BTCFi",
+    "value": "btcfi"
   },
   {
     "description": "Everdex",
