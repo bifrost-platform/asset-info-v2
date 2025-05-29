@@ -14,7 +14,7 @@
     <clipPath id="clip-2">
       <rect x="0" y="0" width="154" height="154" />
     </clipPath>
-    <g id="source-321" clip-path="url(#clip-2)">
+    <g id="source-327" clip-path="url(#clip-2)">
       <g clip-path="url(#clip-1)">
         <rect x="-46.592" y="-46.592" width="221.184" height="221.184" fill="rgb(100%, 100%, 100%)" fill-opacity="1" />
       </g>
@@ -22,20 +22,20 @@
     <clipPath id="clip-3">
       <rect x="0" y="0" width="154" height="154" />
     </clipPath>
-    <g id="source-324" clip-path="url(#clip-3)">
+    <g id="source-330" clip-path="url(#clip-3)">
       <g clip-path="url(#clip-0)">
-        <use xlink:href="#source-321" />
+        <use xlink:href="#source-327" />
       </g>
     </g>
     <mask id="mask-0">
       <g filter="url(#filter-remove-color)">
-        <use xlink:href="#source-324" />
+        <use xlink:href="#source-330" />
       </g>
     </mask>
     <clipPath id="clip-4">
       <rect x="0" y="0" width="128" height="128" />
     </clipPath>
-    <g id="source-323" clip-path="url(#clip-4)">
+    <g id="source-329" clip-path="url(#clip-4)">
       <path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1"
             d="M 64 128 C 99.347656 128 128 99.347656 128 64 C 128 28.652344 99.347656 0 64 0 C 28.652344 0 0 28.652344 0 64 C 0 99.347656 28.652344 128 64 128 Z M 64 128 " />
       <path fill-rule="evenodd" fill="rgb(0%, 32.156863%, 100%)" fill-opacity="1"
@@ -45,6 +45,6 @@
     </g>
   </defs>
   <g mask="url(#mask-0)">
-    <use xlink:href="#source-323" />
+    <use xlink:href="#source-329" />
   </g>
 </svg>

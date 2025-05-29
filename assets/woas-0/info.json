@@ -1,0 +1,35 @@
+{
+  "contracts": [
+    {
+      "address": "0x5200000000000000000000000000000000000001",
+      "decimals": 18,
+      "name": "Wrapped OAS",
+      "network": "evm-248",
+      "symbol": "WOAS",
+      "tags": [
+        "mainnet",
+        "wrapped-coin"
+      ]
+    }
+  ],
+  "id": "woas-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "Wrapped OAS",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/wrapped-oas"
+    },
+    {
+      "id": "coinmarketcap",
+      "url": "https://coinmarketcap.com/currencies/wrapped-oasys"
+    }
+  ],
+  "tags": []
+}

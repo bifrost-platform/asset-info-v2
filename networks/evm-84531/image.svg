@@ -11,21 +11,21 @@
     <clipPath id="clip-1">
       <rect x="0" y="0" width="154" height="154" />
     </clipPath>
-    <g id="source-1291" clip-path="url(#clip-1)">
+    <g id="source-1257" clip-path="url(#clip-1)">
       <path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1"
             d="M 64 128 C 28.652344 128 0 99.347656 0 64 C 0 28.652344 28.652344 0 64 0 C 99.347656 0 128 28.652344 128 64 C 128 99.347656 99.347656 128 64 128 Z M 64 128 " />
     </g>
     <clipPath id="clip-2">
       <rect x="0" y="0" width="154" height="154" />
     </clipPath>
-    <g id="source-1294" clip-path="url(#clip-2)">
+    <g id="source-1260" clip-path="url(#clip-2)">
       <g clip-path="url(#clip-0)">
-        <use xlink:href="#source-1291" />
+        <use xlink:href="#source-1257" />
       </g>
     </g>
     <mask id="mask-0">
       <g filter="url(#filter-remove-color)">
-        <use xlink:href="#source-1294" />
+        <use xlink:href="#source-1260" />
       </g>
     </mask>
     <clipPath id="clip-3">
@@ -775,7 +775,7 @@
     <clipPath id="clip-251">
       <rect x="0" y="0" width="128" height="128" />
     </clipPath>
-    <g id="source-1293" clip-path="url(#clip-251)">
+    <g id="source-1259" clip-path="url(#clip-251)">
       <g clip-path="url(#clip-3)">
         <path fill-rule="evenodd" fill="rgb(99.607843%, 99.607843%, 100%)" fill-opacity="1"
               d="M 64 64 L -26.523438 63.441406 L -26.441406 60.113281 Z M 64 64 " />
@@ -1789,6 +1789,6 @@
   <path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1"
         d="M 128 64 C 128 99.347656 99.347656 128 64 128 C 28.652344 128 0 99.347656 0 64 C 0 28.652344 28.652344 0 64 0 C 99.347656 0 128 28.652344 128 64 " />
   <g mask="url(#mask-0)">
-    <use xlink:href="#source-1293" />
+    <use xlink:href="#source-1259" />
   </g>
 </svg>

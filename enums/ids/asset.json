@@ -1408,6 +1408,10 @@
     "value": "wmt-0"
   },
   {
+    "description": "Wrapped OAS",
+    "value": "woas-0"
+  },
+  {
     "description": "Wojak Coin",
     "value": "wojak-0"
   },
