@@ -1,0 +1,80 @@
+{
+  "contracts": [
+    {
+      "address": "0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
+      "decimals": 18,
+      "name": "JPY Coin",
+      "network": "evm-1",
+      "symbol": "JPYC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x1CCD78162E5Ac252c407d86B448D8f77252A4F92",
+      "decimals": 18,
+      "name": "JPY Coin",
+      "network": "evm-11155111",
+      "symbol": "JPYC",
+      "tags": [
+        "testnet"
+      ]
+    },
+    {
+      "address": "0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
+      "decimals": 18,
+      "name": "JPY Coin",
+      "network": "evm-137",
+      "symbol": "JPYC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0x84122a4a75Bfe65eF455dBA5F6d43D61359ca77e",
+      "decimals": 18,
+      "name": "Unified JPYC",
+      "network": "evm-3068",
+      "symbol": "JPYC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
+      "decimals": 18,
+      "name": "JPY Coin",
+      "network": "evm-43114",
+      "symbol": "JPYC",
+      "tags": [
+        "mainnet"
+      ]
+    },
+    {
+      "address": "0xf4e3FD23995CC4feB3676A9b9E93B8c74826B9C6",
+      "decimals": 18,
+      "name": "Unified JPYC",
+      "network": "evm-49088",
+      "symbol": "JPYC",
+      "tags": [
+        "testnet"
+      ]
+    }
+  ],
+  "id": "jpyc-0",
+  "images": {
+    "png128": true,
+    "png256": true,
+    "png32": true,
+    "png64": true,
+    "svg": true
+  },
+  "name": "JPY Coin",
+  "references": [
+    {
+      "id": "coingecko",
+      "url": "https://www.coingecko.com/en/coins/jpycoin"
+    }
+  ],
+  "tags": []
+}
